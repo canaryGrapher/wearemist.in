@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MIST</title>
+    <script>
+      document.onkeydown = checkKey;
+      //function to detect the keypresses of up arrow and the down arrow
+      function checkKey(buttonPress) {
+        buttonPress = buttonPress || window.event;
+        if (buttonPress.keyCode == "38" || buttonPress.keyCode == "40") {
+          // detecting up or down key press
+          const checkSelectedGUI = document.getElementById("GUImode");
+          const checkSelectedCLI = document.getElementById("CLImode");
+          const checkTextColor = document.getElementById("cliText");
+          if (checkSelectedGUI.style.color == "black") {
+            switchToCLI();
+          } else if (checkSelectedCLI.style.color == "black") {
+            switchToGUI();
+          }
+        } else if (buttonPress.keyCode == "13") {
+          const checkSelectedGUI = document.getElementById("GUImode");
+          if (checkSelectedGUI.style.color == "black") {
+            window.location.replace("/nongeek");
+          } else {
+            window.location.replace("/geek");
+          }
+        }
+      }
+      function switchToGUI() {
+        const guiSelector = document.getElementById("GUImode");
+        guiSelector.style.backgroundColor = "whitesmoke";
+        guiSelector.style.color = "black";
+        const cliSelector = document.getElementById("CLImode");
+        cliSelector.style.color = "white";
+        cliSelector.style.backgroundColor = "#2a6296";
+      }
+      function switchToCLI() {
+        const cliSelector = document.getElementById("CLImode");
+        cliSelector.style.backgroundColor = "whitesmoke";
+        cliSelector.style.color = "black";
+        const guiSelector = document.getElementById("GUImode");
+        guiSelector.style.color = "white";
+        guiSelector.style.backgroundColor = "#2a6296";
+      }
+
+      function goToCLIPage() {
+        window.location.replace("/Geek");
+      }
+
+      function goToGUIPage() {
+        window.location.replace("/nonGeek");
+      }
+    </script>
+    <style>
+      * {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        background-color: #486e91;
+      }
+
+      #grubSide {
+        width: 75vw;
+        height: 80vh;
+        margin: auto;
+      }
+
+      #grubTitle {
+        height: 5vh;
+        width: 100%;
+        text-align: center;
+        color: white;
+      }
+
+      #grubSelector {
+        height: 60vh;
+        width: 100%;
+        border-width: 4px;
+        border-style: solid;
+        border-color: white;
+        background-color: #2a6296;
+      }
+
+      #grubModeInfo {
+        height: 15vh;
+        width: 100%;
+        color: white;
+      }
+
+      #grubModeInfo > p {
+        font-size: 3vh;
+        text-align: center;
+        margin-top: 2vh;
+      }
+
+      #mailMist {
+        color: whitesmoke;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      #CLImode {
+        color: black;
+        background-color: whitesmoke;
+        width: 98%;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3vh;
+        font-size: 4vh;
+      }
+
+      #CLImode > p {
+        margin-left: 2vw;
+      }
+
+      #GUImode {
+        color: white;
+        background-color: #2a6296;
+        width: 98%;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 4vh;
+      }
+
+      #GUImode > p {
+        margin-left: 2vw;
+      }
+
+      .modeInfo {
+        font-size: 3vh;
+      }
+    </style>
+  </head>
+  <body onload="switchToCLI()">
+    <div id="container">
+      <div id="grubSide">
+        <div id="grubTitle">
+          <h2 id="grubHome">
+            Manipal Information and Security Team
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            version - 2.0.0-mist2020
+          </h2>
+        </div>
+        <div id="grubSelector">
+          <div id="CLImode" onmouseover="switchToCLI()" onclick="goToCLIPage()">
+            <p id="cliText">
+              Geek Mode (CLI mode) <br /><span class="modeInfo"
+                >Command Line Mode for the geek in you</span
+              >
+            </p>
+          </div>
+          <div id="GUImode" onmouseover="switchToGUI()" onclick="goToGUIPage()">
+            <p>
+              Non-Geek Mode (GUI mode) <br /><span class="modeInfo"
+                >Graphical Mode for easy viewing</span
+              >
+            </p>
+          </div>
+        </div>
+        <div id="grubModeInfo">
+          <p>
+            Use the &uarr; and the &darr; to select which entry is highlighted.
+            Press enter to boot into the selected mode.
+          </p>
+          <p>
+            If you are having trouble, contact the system administrator
+            <a
+              id="mailMist"
+              href="mailto:sudo@wearemist.in?Subject=Troubleshooting%20the%20website"
+            >
+              sudo@wearemist.in</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

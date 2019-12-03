@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MIST</title>
+    <script>
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          document.getElementById("navbar").style.height = "5vh";
+          document.getElementById("logo").style.fontSize = "25px";
+        } else {
+          document.getElementById("navbar").style.height = "10vh";
+          document.getElementById("logo").style.fontSize = "35px";
+        }
+      }
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Solway&display=swap");
+
+      * {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Solway", serif;
+      }
+
+      .subHeading {
+        font-size: 10vh;
+        font-weight: bolder;
+      }
+
+      p {
+        margin-left: 3vh;
+        margin-top: 1vh;
+        font-size: 3vh;
+      }
+
+      #navbar {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.418);
+        width: 100vw;
+        height: 10vh;
+      }
+
+      #content {
+        width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #section0 {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      #section1 {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: blue;
+      }
+
+      #section2 {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: rgb(112, 151, 49);
+      }
+      body {
+        background: #ffffff;
+      }
+
+      .circle {
+        position: relative;
+        border-radius: 50%;
+        background: rgb(166, 58, 255);
+        animation: ripple 15s infinite;
+        box-shadow: 0px 0px 1px 0px #ef3bff;
+      }
+
+      .small {
+        width: 200px;
+        height: 200px;
+        top: -100px;
+        right: -100px;
+      }
+
+      .medium {
+        width: 400px;
+        height: 400px;
+        top: -200px;
+        right: -200px;
+      }
+
+      .large {
+        width: 600px;
+        height: 600px;
+        top: -300px;
+        right: -300px;
+      }
+
+      .xlarge {
+        width: 800px;
+        height: 800px;
+        top: -400px;
+        right: -400px;
+      }
+
+      .xxlarge {
+        width: 1000px;
+        height: 1000px;
+        top: -500px;
+        right: -500px;
+      }
+
+      .shade1 {
+        opacity: 0.2;
+      }
+      .shade2 {
+        opacity: 0.5;
+      }
+
+      .shade3 {
+        opacity: 0.7;
+      }
+
+      .shade4 {
+        opacity: 0.8;
+      }
+
+      .shade5 {
+        opacity: 0.9;
+      }
+
+      @keyframes ripple {
+        0% {
+          transform: scale(0.8);
+        }
+
+        50% {
+          transform: scale(1.2);
+        }
+
+        100% {
+          transform: scale(0.8);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="navbar">
+        <div id="logoHolder"></div>
+        <div id="linkTeam" class="linkBox"></div>
+        <div id="linkSubscribe" class="linkBox"></div>
+        <div id="linkContactUs" class="linkBox"></div>
+        <div id="linkContactUs" class="linkBox"></div>
+      </div>
+      <div id="section0">
+        <div class="ripple-background">
+          <div class="circle xxlarge shade1"></div>
+          <div class="circle xlarge shade2"></div>
+          <div class="circle large shade3"></div>
+          <div class="circle mediun shade4"></div>
+          <div class="circle small shade5"></div>
+        </div>
+      </div>
+      <div id="content">
+        <div id="section1">
+          <div id="whoAreWe">
+            <h1 class="subHeading">We are MIST</h1>
+            <p>
+              We are a team of Information and Network Security enthusiasts who
+              have gathered knowledge about the field through workshops, online
+              courses, books and research. We now want to spread the knowledge
+              we have gained to other students with an interest in this
+              ever-growing area of computer science. We want to ensure that
+              students approach this field the right way and to provide them
+              with a platform to enhance and practice their skills in the same.
+              Last but not the least, we are not hackers. So if you are here
+              with the intention of hacking into your ex's facebook account, I
+              am afraid this is not the place for you.
+            </p>
+          </div>
+        </div>
+        <div id="section2">
+          <div id="whatWeDo">
+            <h1 class="subHeading">What we do</h1>
+            <p>
+              We are committed to spreading awareness about the increasing need
+              for Information and Network Security. We plan to train other
+              like-minded students to enhance their skills and aptitude in this
+              branch of computer science.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
