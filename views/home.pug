@@ -1,5 +1,11 @@
 doctype html
 head
+  meta(charset='UTF-8')
+  meta(name='description' content='Manipal Information and Security Team is a team of the Manipal Institute of Technology, Manipal that is commited to spread awareness about Cyber Security')
+  meta(name='keywords' content='security,cybersecurity,hacking,hacker,manipal,mit,udupi')
+  meta(name='author' content='Yash Aryan')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
   title MIST
   script.
     document.onkeydown = checkKey;
@@ -129,7 +135,7 @@ body(onload='switchToCLI()')
       #grubTitle
         h2#grubHome
           | Manipal Information and Security Team
-          | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          | &nbsp-&nbsp
           | version - 2.0.0-mist2020
       #grubSelector
         #CLImode(onmouseover='switchToCLI()' onclick='goToCLIPage()')
@@ -144,9 +150,9 @@ body(onload='switchToCLI()')
             span.modeInfo Graphical Mode for easy viewing
       #grubModeInfo
         p
-          | Use the &uarr; and the &darr; to select which entry is highlighted.
-          | Press enter to boot into the selected mode.
+          | Use the &uarr; and the &darr; keys to select a mode.
+          | Press enter to boot.
         p
-          | If you are having trouble, contact the system administrator
-          a#mailMist(href='mailto:sudo@wearemist.in?Subject=Troubleshooting%20the%20website')
+          | If you are having trouble, contact the system administrator 
+          a#mailMist(href='mailto:sudo@wearemist.in?Subject=Trouble%20operating%20the%20website')
             | sudo@wearemist.in

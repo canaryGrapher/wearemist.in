@@ -1,3 +1,4 @@
+var path = require("path");
 const express = require("express");
 const pug = require("pug");
 // const MongoClient = require("mongodb").MongoClient;
@@ -11,8 +12,8 @@ let database, collection;
 
 const app = express();
 
-// app.use(express.json()); // Make sure it comes back as json
-// app.use(express.static(__dirname + "public"));
+app.use(express.json()); // Make sure it comes back as json
+app.use(express.static(__dirname + "/public"));
 // app.use(bodyParser.json()); // to support JSON-encoded bodies
 // app.use(
 //   bodyParser.urlencoded({
@@ -38,7 +39,7 @@ app.get("/home", function(req, res) {
 // });
 
 app.get("/nongeek", function(req, res) {
-  res.render("nogeek");
+  res.sendFile(__dirname + "/public/nonGeek.html");
 });
 
 app.get("/geek", function(req, res) {
@@ -47,6 +48,10 @@ app.get("/geek", function(req, res) {
 
 app.get("/team", function(req, res) {
   res.render("team");
+});
+
+app.get("*", function(req, res) {
+  res.send("This feature is still under development");
 });
 
 app.listen(PORT, () => {
