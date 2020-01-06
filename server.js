@@ -47,7 +47,8 @@ app.get("/geek", function(req, res) {
 });
 
 app.get("/team", function(req, res) {
-  res.render("team");
+  // res.render("team");
+  res.sendFile(__dirname + "/public/team.html");
 });
 
 app.get("*", function(req, res) {
