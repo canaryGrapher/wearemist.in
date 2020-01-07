@@ -69,3 +69,13 @@ function showWC() {
   mc.style.backgroundColor = "#000000";
   mcCards.style.display = "none";
 }
+
+function showDialog() {
+  var dialogGrabber = document.getElementById("howToApply");
+  dialogGrabber.style.display = "inline-flex";
+}
+
+function hideDialog() {
+  var dialogGrabber = document.getElementById("howToApply");
+  dialogGrabber.style.display = "none";
+}

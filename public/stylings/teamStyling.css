@@ -113,6 +113,56 @@ a {
   transition-duration: 1s;
 }
 
+#howToApply {
+  width: 90%;
+  height: 90%;
+  position: fixed;
+  z-index: 200;
+  background-color: rgb(0, 0, 0);
+  left: 5%;
+  right: 5%;
+  top: 7%;
+  bottom: 3%;
+  border-radius: 15px;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+#closeButton {
+  font-size: 40px;
+  width: 100%;
+  height: min-content;
+}
+
+#Xbut {
+  padding: 1vh 1.5vw;
+  color: rgb(255, 255, 255);
+  width: min-content;
+  float: inline-end;
+}
+
+#Xbut:hover {
+  color: rgb(196, 24, 24);
+}
+
+#contentApply {
+  width: 93%;
+  color: rgb(255, 255, 255);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin: 2vh auto;
+}
+
+#contentApply > h1 {
+  padding-bottom: 2vh;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px #9696968c;
+}
+
+howtoapply {
+  font-size: 20px;
+}
+
 #teamLinksNavbar {
   width: 100vw;
   height: 6vh;
@@ -153,6 +203,7 @@ a {
   grid-template-columns: auto auto auto;
   row-gap: 8vh;
   justify-content: space-around;
+  font-size: 20px;
 }
 
 #workc {
@@ -166,6 +217,7 @@ a {
   grid-template-columns: auto auto auto auto;
   row-gap: 8vh;
   justify-content: space-around;
+  font-size: 20px;
 }
 
 #ccLink,
@@ -191,14 +243,29 @@ a {
   background-color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
+  background-image: url("./../images/assets/noProfile.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .cmemberInfo {
   height: 29vh;
   width: 29.5vw;
-  background-color: rgb(92, 92, 0);
+  background-color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.cmemberName {
+  margin-top: 3vh;
+}
+
+.cmemberPosition {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(71, 169, 207);
 }
 
 .mcprofile {
@@ -217,14 +284,28 @@ a {
   background-color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
+  background-image: url("./../images/assets/noProfile.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .mmemberInfo {
   height: 29vh;
   width: 29.5vw;
-  background-color: rgb(39, 250, 151);
+  background-color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  color: white;
+}
+
+.mcmemberName {
+  margin-top: 3vh;
+}
+
+.interestsMember {
+  padding-top: 1vh;
+  margin: auto;
 }
 
 .wcprofile {
@@ -243,14 +324,24 @@ a {
   background-color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
+  background-image: url("./../images/assets/noProfile.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .wmemberInfo {
   height: 9vh;
   width: 19.5vw;
-  background-color: rgb(109, 211, 13);
+  background-color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  color: white;
+}
+
+.wcmemberName {
+  font-size: 125%;
+  line-height: 9vh;
 }
 
 #spacing {
