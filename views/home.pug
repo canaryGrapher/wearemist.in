@@ -12,7 +12,7 @@ head
     //function to detect the keypresses of up arrow and the down arrow
     function checkKey(buttonPress) {
     buttonPress = buttonPress || window.event;
-    if (buttonPress.keyCode == "38" || buttonPress.keyCode == "40") {
+    if (buttonPress.keyCode == "37" || buttonPress.keyCode == "39") {
     // detecting up or down key press
     const checkSelectedGUI = document.getElementById("GUImode");
     const checkSelectedCLI = document.getElementById("CLImode");
@@ -83,6 +83,8 @@ head
     border-style: solid;
     border-color: white;
     background-color: #2a6296;
+    display: grid;
+    grid-template-columns: auto auto;
     }
     #grubModeInfo {
     height: 15vh;
@@ -102,27 +104,28 @@ head
     #CLImode {
     color: black;
     background-color: whitesmoke;
-    width: 98%;
-    height: fit-content;
+    width: 100%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3vh;
     font-size: 4vh;
+    text-align: center;
     }
     #CLImode > p {
-    margin-left: 2vw;
+    margin-top: 10%;
     }
     #GUImode {
     color: white;
     background-color: #2a6296;
-    width: 98%;
-    height: fit-content;
+    width: 100%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
     font-size: 4vh;
+    text-align: center;
     }
     #GUImode > p {
-    margin-left: 2vw;
+    margin-top: 10%;
     }
     .modeInfo {
     font-size: 3vh;
