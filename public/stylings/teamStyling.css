@@ -132,72 +132,139 @@ a {
   color: #e0e0e0;
 }
 
-#cc {
-  background-color: rgb(255, 255, 255);
-  height: 6vh;
-  line-height: 6vh;
-}
-
-#mc {
-  background-color: rgb(0, 0, 0);
-  height: 6vh;
-  line-height: 6vh;
-}
-
+#cc,
+#mc,
 #wc {
-  background-color: rgb(0, 0, 0);
+  color: white;
+  background-color: black;
   height: 6vh;
   line-height: 6vh;
 }
 
-#corec {
-  height: 50vh;
-  width: 100vw;
-  background-color: black;
-  padding-top: 10vh;
-}
-
+#corec,
 #manc {
-  height: 50vh;
+  height: max-content;
   width: 100vw;
-  background-color: black;
-}
-
-#workc {
-  height: 50vh;
-  width: 100vw;
-  background-color: black;
-}
-
-#corec {
-  height: 50vh;
-  width: 100vw;
-  background-color: rgb(0, 0, 0);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  position: relative;
+  background-color: rgb(219, 219, 219);
   display: grid;
   grid-template-columns: auto auto auto;
-  row-gap: 10vh;
+  row-gap: 8vh;
   justify-content: space-around;
 }
 
-#ccLink {
-  color: rgb(0, 0, 0);
-  padding: 2vw;
-  margin-top: auto;
-  margin-bottom: auto;
+#workc {
+  height: max-content;
+  width: 100vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  position: relative;
+  background-color: rgb(219, 219, 219);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 8vh;
+  justify-content: space-around;
 }
 
-#mcLink {
-  color: white;
-  padding: 2vw;
-}
-
+#ccLink,
+#mcLink,
 #wcLink {
   color: white;
   padding: 2vw;
 }
 
 .ccprofile {
+  height: 70vh;
+  width: 30vw;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 8px 10px #33333354;
+}
+
+.ccPhoto {
+  margin-top: 0.5vh;
+  height: 40vh;
+  width: 29.5vw;
+  background-color: rgb(0, 0, 0);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cmemberInfo {
+  height: 29vh;
+  width: 29.5vw;
+  background-color: rgb(92, 92, 0);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mcprofile {
+  height: 70vh;
+  width: 30vw;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 8px 10px #33333354;
+}
+
+.mcPhoto {
+  margin-top: 0.5vh;
+  height: 40vh;
+  width: 29.5vw;
+  background-color: rgb(0, 0, 0);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mmemberInfo {
+  height: 29vh;
+  width: 29.5vw;
+  background-color: rgb(39, 250, 151);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wcprofile {
   height: 50vh;
-  width: 25vw;
-  background-color: rgb(92, 92, 92);
+  width: 20vw;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 8px 10px #33333354;
+}
+
+.wcPhoto {
+  margin-top: 0.5vh;
+  height: 40vh;
+  width: 19.5vw;
+  background-color: rgb(0, 0, 0);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wmemberInfo {
+  height: 9vh;
+  width: 19.5vw;
+  background-color: rgb(109, 211, 13);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#spacing {
+  height: max-content;
+  width: 100vw;
+  position: relative;
+  background-color: rgb(219, 219, 219);
+  text-align: center;
+}
+
+#rightsReserved {
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding-top: 8vh;
+  padding-bottom: 5vh;
 }

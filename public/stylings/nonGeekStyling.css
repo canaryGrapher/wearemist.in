@@ -625,21 +625,6 @@ textarea {
   transition-duration: 1s;
 }
 
-@keyframes borderChange {
-  0% {
-    border-top-color: #000000;
-  }
-  25% {
-    border-right-color: #000000;
-  }
-  50% {
-    border-bottom-color: #000000;
-  }
-  100% {
-    border-left-color: #000000;
-  }
-}
-
 #section5 {
   width: 100vw;
   height: max-content;
@@ -652,7 +637,7 @@ textarea {
   padding-bottom: 2vh;
   color: #3a3a3a;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #section5 > p {
@@ -660,7 +645,7 @@ textarea {
 }
 
 #rightsReserved {
-  padding-bottom: 4vh;
+  padding-bottom: 3vh;
 }
 
 #heartEmoji {
