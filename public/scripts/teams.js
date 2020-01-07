@@ -1,3 +1,8 @@
+function loadPage() {
+  showCC();
+  hideDialog();
+}
+
 function showCC() {
   var cc = document.getElementById("cc");
   var ccCards = document.getElementById("corec");
