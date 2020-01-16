@@ -1,9 +1,11 @@
 var path = require("path");
 const express = require("express");
 const pug = require("pug");
+// const uuid = require("uuid");
+// const cookie = require("cookie-parser");
 // const MongoClient = require("mongodb").MongoClient;
 // const ObjectId = require("mongodb").ObjectID;
-const router = express.Router();
+// const router = express.Router();
 
 const CONNECTION_URL = ""; //enter mongoDB URL here
 const DATABASE_NAME = ""; //enter Database Name here
@@ -35,6 +37,7 @@ app.get("/home", function(req, res) {
 });
 
 // app.get("*", function(req, res) {
+//   console.log("This route was not defined. Redirecting to the homePage");
 //   res.redirect("/home");
 // });
 
@@ -49,6 +52,11 @@ app.get("/geek", function(req, res) {
 app.get("/team", function(req, res) {
   // res.render("team");
   res.sendFile(__dirname + "/public/team.html");
+});
+
+app.get("/articles", function(req, res) {
+  // res.render("team");
+  res.sendFile(__dirname + "/public/articles.html");
 });
 
 app.get("*", function(req, res) {

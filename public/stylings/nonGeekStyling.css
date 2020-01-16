@@ -366,35 +366,18 @@ a {
 }
 
 #photoContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: fit-content;
-  width: 96%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 96vw;
   padding-bottom: 3vh;
-  overflow: hidden;
   margin: auto;
   justify-content: space-between;
-}
-
-#topStack {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-#lowerStack {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 
 .polaroid {
   position: relative;
   height: 40vh;
-  width: 31.8%;
+  width: 31.8vw;
   background-color: rgb(206, 206, 206);
   margin-left: auto;
   margin-right: auto;
