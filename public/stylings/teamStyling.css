@@ -124,7 +124,7 @@ a {
   top: 7%;
   bottom: 3%;
   border-radius: 15px;
-  display: hidden;
+  display: none;
   flex-direction: column;
 }
 

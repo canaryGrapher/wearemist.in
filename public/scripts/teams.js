@@ -1,6 +1,5 @@
 function loadPage() {
   showCC();
-  hideDialog();
 }
 
 function showCC() {
