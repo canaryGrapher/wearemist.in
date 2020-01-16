@@ -1,3 +1,4 @@
+window.onload = showCC;
 function loadPage() {
   showCC();
 }

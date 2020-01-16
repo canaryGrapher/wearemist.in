@@ -1,14 +1,13 @@
 var path = require("path");
 const express = require("express");
 const pug = require("pug");
-// const uuid = require("uuid");
-// const cookie = require("cookie-parser");
-// const MongoClient = require("mongodb").MongoClient;
-// const ObjectId = require("mongodb").ObjectID;
-// const router = express.Router();
-
-const CONNECTION_URL = ""; //enter mongoDB URL here
-const DATABASE_NAME = ""; //enter Database Name here
+const MongoClient = require("mongodb").MongoClient;
+const ObjectId = require("mongodb").ObjectID;
+const router = express.Router();
+let CCdata, MCdata, WCdata;
+const CONNECTION_URL =
+  "mongodb+srv://superuser_MIST:th1$expl41n$everything@cluster0-jq9yi.azure.mongodb.net/test?retryWrites=true&w=majority"; //enter mongoDB URL here
+const DATABASE_NAME = "Members"; //enter Database Name here
 const COLLECTION_NAME = ""; //enter collection name here
 let database, collection;
 
@@ -36,33 +35,61 @@ app.get("/home", function(req, res) {
   res.render("home");
 });
 
-// app.get("*", function(req, res) {
-//   console.log("This route was not defined. Redirecting to the homePage");
-//   res.redirect("/home");
-// });
-
 app.get("/nongeek", function(req, res) {
   res.sendFile(__dirname + "/public/nonGeek.html");
 });
 
 app.get("/geek", function(req, res) {
-  res.render("geek");
+  res.sendFile(__dirname + "/public/underConstruction.html");
 });
 
 app.get("/team", function(req, res) {
-  // res.render("team");
-  res.sendFile(__dirname + "/public/team.html");
+  // res.sendFile(__dirname + "/public/team.html");
+  collectionCC.find().toArray((err, result1) => {
+    CCdata = result1;
+    collectionMC.find().toArray((err, result2) => {
+      MCdata = result2;
+      collectionWC.find().toArray((err, result3) => {
+        WCdata = result3;
+        console.log(CCdata);
+        console.log(MCdata);
+        console.log(WCdata);
+        res.render("team", {
+          CC: CCdata,
+          MC: MCdata,
+          WC: WCdata
+        });
+      });
+    });
+  });
 });
 
 app.get("/articles", function(req, res) {
-  // res.render("team");
-  res.sendFile(__dirname + "/public/articles.html");
+  res.sendFile(__dirname + "/public/underConstruction.html");
+});
+
+app.get("/news", function(req, res) {
+  res.sendFile(__dirname + "/public/underConstruction.html");
 });
 
 app.get("*", function(req, res) {
-  res.send("This feature is still under development");
+  res.send("I don't know what you're trying to do, but no, it will not work.");
 });
 
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
+  MongoClient.connect(
+    CONNECTION_URL,
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    (error, client) => {
+      if (error) {
+        throw error;
+      }
+      database = client.db(DATABASE_NAME);
+      collectionCC = database.collection("CoreCommittee");
+      collectionMC = database.collection("ManagementCommittee");
+      collectionWC = database.collection("WorkingCommittee");
+      console.log("Connected to mongoDB Atlas");
+    }
+  );
 });
