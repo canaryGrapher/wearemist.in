@@ -8,8 +8,6 @@ let CCdata, MCdata, WCdata;
 const CONNECTION_URL =
   "mongodb+srv://superuser_MIST:th1$expl41n$everything@cluster0-jq9yi.azure.mongodb.net/test?retryWrites=true&w=majority"; //enter mongoDB URL here
 const DATABASE_NAME = "Members"; //enter Database Name here
-const COLLECTION_NAME = ""; //enter collection name here
-let database, collection;
 
 const app = express();
 
