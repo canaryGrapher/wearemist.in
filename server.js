@@ -67,7 +67,16 @@ app.get("/articles", function(req, res) {
 });
 
 app.get("/news", function(req, res) {
-  res.sendFile(__dirname + "/public/news.html");
+  collectionNews.find().toArray((err, news) => {
+    newsPosts = news.reverse();
+    res.render("news", {
+      newsReports: newsPosts
+    });
+  });
+});
+
+app.post("/addToMailingList", function(req, res) {
+  //do something to add these to the maling list after filtering
 });
 
 app.get("*", function(req, res) {

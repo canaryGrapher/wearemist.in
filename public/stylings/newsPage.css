@@ -1,5 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo+2:800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Amarante&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
 
 :root {
   --paraTextColor: #707070;
@@ -34,39 +37,63 @@ body::-webkit-scrollbar {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Merriweather", serif;
   overflow-x: hidden;
   background-attachment: fixed;
   background-position: center;
 }
 
 #navbar {
+  margin-top: 4vh;
   width: 100vw;
-  height: 5vh;
+  /* height: fit-content; */
   display: flex;
   color: rgb(207, 207, 207);
   position: fixed;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.9);
   z-index: 100;
 }
 
 a {
   text-decoration: none;
-  color: #e0e0e0;
-}
-
-#LOGO {
-  font-weight: bold;
-  border-width: 1px;
-  border-color: #ffffff;
-  border-style: solid;
-  padding: 2px 3px;
+  color: #000000;
 }
 
 .linkBox {
   margin: auto 25px;
-  font-size: 2vh;
+  font-size: 20px;
+}
+
+#navbarScroll {
+  display: none;
+  width: 100vw;
+  display: flex;
+  color: rgb(207, 207, 207);
+  position: fixed;
+  justify-content: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+.linkBoxScroll {
+  margin: auto 12.5px;
+  font-size: 20px;
+}
+
+#pageHeaderScroll {
+  margin: 1vh;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  margin-right: 3vh;
+  margin-left: 3vh;
+  color: rgb(255, 255, 255);
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+}
+
+.linksNavibar {
+  color: white;
 }
 
 .linkBox:hover {
@@ -75,47 +102,200 @@ a {
 }
 
 .linkBox > a:hover {
-  color: #ffffff;
+  color: #313131;
   transition-duration: 0.8s;
+}
+
+#LOGO {
+  font-weight: bold;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  padding: 2px 3px;
+}
+
+#pageHeader {
+  text-align: center;
+  font-size: 25px;
+  margin: auto 3vh;
+  color: rgb(0, 0, 0);
+  font-family: "Exo 2", sans-serif;
+}
+
+#container {
+  position: relative;
 }
 
 #headBar {
   position: relative;
-  top: 5vh;
   width: 100vw;
-  height: 15vh;
-  background-color: #1a237e;
-  /* line-height: 15vh; */
+  height: 100vh;
+  background-image: url("../images/backgrounds/newsPage.jpg");
+  background-position: top;
+  background-size: cover;
   font-size: 3vh;
-  color: white;
-  display: flex;
-  justify-content: space-between;
 }
 
 #headerTitle {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 3vw;
-}
-
-#headerTitle > h1 {
-  font-size: 5vh;
+  position: relative;
+  width: 15vw;
+  left: 10%;
+  top: 60%;
+  color: rgb(255, 255, 255);
+  font-family: "Cinzel", serif;
   font-weight: bolder;
-}
-
-#headerTitle > p {
-  font-size: 2.4vh;
-}
-
-#subscriptionDetail {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 6vw;
-  background-color: #ffc107;
-  padding: 1.3vh 1.2vw;
-  color: black;
 }
 
 #subscriptionDetail:hover {
   transform: scale3d(1.08, 1.08, 1.08);
+}
+
+#footLinks {
+  height: 20vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  top: 100vh;
+}
+
+#newsHeads {
+  position: relative;
+  height: 20vh;
+  width: 100vw;
+  text-align: center;
+  line-height: 20vh;
+}
+
+#newsHeads > h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#newsBars {
+  width: 94vw;
+  background-color: rgb(255, 246, 247);
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 60px;
+  justify-content: space-around;
+}
+
+.newsPart {
+  width: 25vw;
+  /* text-align: center; */
+}
+
+.newsPhoto {
+  background-color: rgb(0, 0, 0);
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  margin-bottom: 10px;
+}
+
+.newsTitle {
+  padding: 2px 10px;
+}
+
+#footNotes {
+  margin-top: 200px;
+  position: relative;
+  background-color: black;
+  height: 30vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+}
+
+#pageName {
+  position: relative;
+  height: min-content;
+  width: min-content;
+  border-width: 1px;
+  padding: 10px 15px;
+  left: 5%;
+  top: 30%;
+  text-align: center;
+  display: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+#pageName > h1 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 5vh;
+}
+
+#pageName > p {
+  margin-top: 6px;
+  font-size: 1.4vh;
+}
+
+#subscribeForm {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  width: 17vw;
+  height: 50px;
+  margin-bottom: 4px;
+  font-size: 15px;
+  padding: 5px 1vw;
+  border-color: #ff6f00;
+  border-style: solid;
+  border-width: 1px;
+  color: white;
+  margin-right: 0;
+  border-right: 0;
+  background-color: rgba(0, 0, 0);
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+#mailSubmit {
+  width: min-content;
+  height: 61px;
+  font-size: 20px;
+  border-style: none;
+  border-width: 0;
+  color: rgb(255, 255, 255);
+  margin-left: 0;
+  border-left: 0;
+  background-color: #ff6f00;
+}
+
+#mailSubmit:hover {
+  background-color: #ffffff;
+  color: #ff6f00;
 }

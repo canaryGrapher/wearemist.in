@@ -1,0 +1,64 @@
+doctype html
+head
+  title CyberManipal | MIST
+  link(rel='stylesheet', type='text/css', href='./stylings/newsPage.css')
+  script(src='./scripts/newsPage.js')
+#container
+  #navbar
+    p#LOGO.linkBox
+      a(href='/home') MIST
+    p#home.linkBox
+      a(href='/nonGeek#section0') Home
+    p#whatwedo.linkBox
+      a(href='/nonGeek#section1') What we do
+    #pageHeader
+      h1 CyberManipal
+    p#photosLink.linkBox
+      a(href='/nonGeek#section3') Contact Us
+    p#team.linkBox
+      a(href='/team') Team
+    p#articles.linkBox
+      a(href='/articles') Articles
+  #navbarScroll
+    p#LOGO.linkBoxScroll
+      a.linksNavibar(href='/home') MIST
+    p#home.linkBoxScroll
+      a.linksNavibar(href='/nonGeek#section0') Home
+    p#whatwedo.linkBoxScroll
+      a.linksNavibar(href='/nonGeek#section1') What we do
+    #pageHeaderScroll
+      h1 CyberManipal
+    p#photosLink.linkBoxScroll
+      a.linksNavibar(href='/nonGeek#section3') Contact Us
+    p#team.linkBoxScroll
+      a.linksNavibar(href='/team') Team
+    p#articles.linkBoxScroll
+      a.linksNavibar(href='/articles') Articles
+  #headBar
+    #headerTitle
+      h1 CYBERSECURITY NEWS, HANDPICKED BY MIST
+  #newsHeads
+    h1 CyberSecurity News
+  #newsBars
+    each val, index in newsReports
+      - var titleNews = newsReports[index].newsHeading.split(" ");
+      - var divID = titleNews[0]+titleNews[1]+titleNews[2];
+      .newsPart
+        .newsPhoto(id=divID)
+        style.
+          ##{divID} {
+          background-image: url("#{newsReports[index].highlightPhoto}");
+          }
+        .newsTitle
+            p #{newsReports[index].newsHeading} 
+#footNotes
+  #pageName
+    h1 CyberManipal
+    p &copy;2020 MIST, All rights reserved
+  #socialLinks
+  #subscribeForm
+    p(for='mailingInput') Subscribe to our newsletter
+    br
+    form(action='/addToMailingList', method='POST')
+      input#mailingInput(type='email', name='subscriberEmail', placeholder='Email Address')
+      input#mailSubmit(type='submit', value='Subscribe')
