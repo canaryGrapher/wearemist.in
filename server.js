@@ -6,7 +6,7 @@ const ObjectId = require("mongodb").ObjectID;
 const router = express.Router();
 let CCdata, MCdata, WCdata;
 const CONNECTION_URL =
-  "mongodb+srv://superuser_MIST:th1$expl41n$everything@cluster0-jq9yi.azure.mongodb.net/test?retryWrites=true&w=majority"; //enter mongoDB URL here
+  "mongodb+srv://superuser_MIST:th1$expl41n$everything@cluster0-jq9yi.azure.mongodb.net/test?retryWrites=true&w=majority";
 const DATABASE_NAME1 = "Members"; //enter Database Name here
 const DATABASE_NAME2 = "Website"; //enter Database Name here
 const COLLECTION_NAME = ""; //enter collection name here
