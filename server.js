@@ -10,6 +10,7 @@ const CONNECTION_URL =
 const DATABASE_NAME1 = "Members"; //enter Database Name here
 const DATABASE_NAME2 = "Website"; //enter Database Name here
 const COLLECTION_NAME = ""; //enter collection name here
+const DATABASE_NAME = "Members"; //enter Database Name here
 
 const app = express();
 
