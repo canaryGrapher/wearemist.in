@@ -44,7 +44,13 @@ head
 #corec
   each val1, index1 in CC
     .ccprofile
-        .ccPhoto
+        - var firstName = CC[index1].name.split(" ");
+        - var divID = firstName[0]+firstName[1]
+        .ccPhoto(id=divID)
+        style.
+          ##{divID} {
+            background-image: url("#{CC[index1].photo}");
+          }
         .cmemberInfo
             h1.cmemberName #{CC[index1].name}
             p.cmemberPosition #{CC[index1].position}
@@ -52,7 +58,13 @@ head
 #manc
   each val2, index2 in MC
     .mcprofile
-        .mcPhoto
+        - var firstName = MC[index2].name.split(" ");
+        - var divID = firstName[0]+firstName[1]
+        .mcPhoto(id=divID)
+        style.
+          ##{divID} {
+            background-image: url("#{MC[index2].photo}");
+          }
         .mmemberInfo
             h1.mcmemberName #{MC[index2].name}
             p.interestsMember #{MC[index2].interests}

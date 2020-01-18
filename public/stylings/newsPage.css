@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+:root {
+  --paraTextColor: #707070;
+  --sectionHeaderColor: #252525;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+html {
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scroll-behavior: auto;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#navbar {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  color: rgb(207, 207, 207);
+  position: fixed;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+}
+
+a {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+#LOGO {
+  font-weight: bold;
+  border-width: 1px;
+  border-color: #ffffff;
+  border-style: solid;
+  padding: 2px 3px;
+}
+
+.linkBox {
+  margin: auto 25px;
+  font-size: 2vh;
+}
+
+.linkBox:hover {
+  transform: scale(1.04);
+  transition-duration: 1s;
+}
+
+.linkBox > a:hover {
+  color: #ffffff;
+  transition-duration: 0.8s;
+}
+
+#headBar {
+  position: relative;
+  top: 5vh;
+  width: 100vw;
+  height: 15vh;
+  background-color: #1a237e;
+  /* line-height: 15vh; */
+  font-size: 3vh;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+#headerTitle {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 3vw;
+}
+
+#headerTitle > h1 {
+  font-size: 5vh;
+  font-weight: bolder;
+}
+
+#headerTitle > p {
+  font-size: 2.4vh;
+}
+
+#subscriptionDetail {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 6vw;
+  background-color: #ffc107;
+  padding: 1.3vh 1.2vw;
+  color: black;
+}
+
+#subscriptionDetail:hover {
+  transform: scale3d(1.08, 1.08, 1.08);
+}

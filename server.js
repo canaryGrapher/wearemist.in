@@ -7,9 +7,9 @@ const router = express.Router();
 let CCdata, MCdata, WCdata;
 const CONNECTION_URL =
   "mongodb+srv://superuser_MIST:th1$expl41n$everything@cluster0-jq9yi.azure.mongodb.net/test?retryWrites=true&w=majority"; //enter mongoDB URL here
-const DATABASE_NAME = "Members"; //enter Database Name here
+const DATABASE_NAME1 = "Members"; //enter Database Name here
+const DATABASE_NAME2 = "Website"; //enter Database Name here
 const COLLECTION_NAME = ""; //enter collection name here
-let database, collection;
 
 const app = express();
 
@@ -51,9 +51,6 @@ app.get("/team", function(req, res) {
       MCdata = result2;
       collectionWC.find().toArray((err, result3) => {
         WCdata = result3;
-        console.log(CCdata);
-        console.log(MCdata);
-        console.log(WCdata);
         res.render("team", {
           CC: CCdata,
           MC: MCdata,
@@ -69,7 +66,7 @@ app.get("/articles", function(req, res) {
 });
 
 app.get("/news", function(req, res) {
-  res.sendFile(__dirname + "/public/underConstruction.html");
+  res.sendFile(__dirname + "/public/news.html");
 });
 
 app.get("*", function(req, res) {
@@ -85,10 +82,14 @@ app.listen(PORT, () => {
       if (error) {
         throw error;
       }
-      database = client.db(DATABASE_NAME);
-      collectionCC = database.collection("CoreCommittee");
-      collectionMC = database.collection("ManagementCommittee");
-      collectionWC = database.collection("WorkingCommittee");
+      database1 = client.db(DATABASE_NAME1);
+      database2 = client.db(DATABASE_NAME2);
+      collectionCC = database1.collection("CoreCommittee");
+      collectionMC = database1.collection("ManagementCommittee");
+      collectionWC = database1.collection("WorkingCommittee");
+      collectionPosts = database2.collection("articles");
+      collectionArticles = database2.collection("articles");
+      collectionNews = database2.collection("news");
       console.log("Connected to mongoDB Atlas");
     }
   );
