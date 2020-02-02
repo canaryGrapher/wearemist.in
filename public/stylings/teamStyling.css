@@ -310,28 +310,16 @@ howtoapply {
 }
 
 .wcprofile {
-  height: 50vh;
+  height: 10vh;
   width: 20vw;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   box-shadow: 10px 10px 8px 10px #33333354;
 }
 
-.wcPhoto {
-  margin-top: 0.5vh;
-  height: 40vh;
-  width: 19.5vw;
-  background-color: rgb(0, 0, 0);
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url("./../images/assets/noProfile.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
 .wmemberInfo {
-  height: 9vh;
+  height: 10vh;
   width: 19.5vw;
   background-color: rgb(0, 0, 0);
   margin-left: auto;

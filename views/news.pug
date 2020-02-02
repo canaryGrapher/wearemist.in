@@ -43,14 +43,16 @@ head
     each val, index in newsReports
       - var titleNews = newsReports[index].newsHeading.split(" ");
       - var divID = titleNews[0]+titleNews[1]+titleNews[2];
+      - var newsUrl = newsReports[index].about;
       .newsPart
-        .newsPhoto(id=divID)
-        style.
-          ##{divID} {
-          background-image: url("#{newsReports[index].highlightPhoto}");
-          }
-        .newsTitle
-            p #{newsReports[index].newsHeading} 
+        a(href=newsUrl)
+          .newsPhoto(id=divID)
+          style.
+            ##{divID} {
+            background-image: url("#{newsReports[index].highlightPhoto}");
+            }
+          .newsTitle
+              p #{newsReports[index].newsHeading}
 #footNotes
   #pageName
     h1 CyberManipal

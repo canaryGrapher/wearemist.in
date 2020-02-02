@@ -75,6 +75,10 @@ a {
   background-color: rgba(0, 0, 0, 0.76);
 }
 
+#navbarScroll > #LOGO {
+  border-color: aliceblue;
+}
+
 .linkBoxScroll {
   margin: auto 12.5px;
   font-size: 20px;
@@ -299,3 +303,5 @@ input {
   background-color: #ffffff;
   color: #ff6f00;
 }
+
+
