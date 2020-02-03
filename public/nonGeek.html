@@ -2,13 +2,20 @@
 <html>
 
 <head>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>MIST</title>
-  <link rel="stylesheet" type="text/css" href="/stylings/nonGeekStyling.css">
-  <script src="/public/scripts/nonGeek.js"></script>
+  <link rel="stylesheet" type="text/css" href="./stylings/nonGeekStyling.css" media="screen" />
+  <script src="./scripts/nonGeek.js"></script>
+
 </head>
 
 <body>
   <div id="container">
+    <div id="responsiveNavbar" onclick="makeCross(this)">
+      <div class="hamString bar1"></div>
+      <div class="hamString bar2"></div>
+      <div class="hamString bar3"></div>
+    </div>
     <div id="navbar">
       <p id="LOGO" class="linkBox"><a href="/home">MIST</a></p>
       <p id="home" class="linkBox"><a href="/nonGeek#section0">Home</a></p>
@@ -46,11 +53,55 @@
           <div id="mouseAnimation">
             <div class="scroller">&darr;</div>
           </div>
-          <p>Scroll for more</p>
+          <p id="scrollerText"></p>
         </div>
       </div>
     </div>
+    <script>
+      window.onscroll = function () {
+        if (responsiveness.matches) {
+          scrollFunction();
+        }
+      };
 
+      function changeScrollerText(responsiveness) {
+        //For changing the scroll/ swipe text based on the screen size
+        var responsiveNavibar = document.getElementById("responsiveNavbar");
+        var normalNavibar = documnet.getElementById("navbar");
+        var scrollText = document.getElementById("scrollerText");
+        var responsiveness = window.matchMedia("(max-width: 1000px)");
+        changeScrollerText(responsiveness);
+        responsiveness.addListener(changeScrollerText);
+        if (responsiveness.matches) {
+          scrollText.innerHTML = "Swipe for More";
+          normalNavibar.style.display = "none";
+          responsiveNavibar.style.display = "inline-block";
+        } else {
+          scrollText.innerHTML = "Scroll for More";
+          normalNavibar.style.display = "flex";
+          responsiveNavibar.style.display = "none";
+        }
+      }
+
+
+
+      //for changing the navigation bar based on the size of the screen
+      function makeCross(x) {
+        x.classList.toggle("change");
+      }
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 350 ||
+          document.documentElement.scrollTop > 800
+        ) {
+          document.getElemenstByclassName("hamString").style.backgroundColor = "black";
+        } else {
+          document.getElemenstByclassName("hamString").style.backgroundColor = "white";
+        }
+      }
+
+    </script>
     <div id="section1">
       <h1 id="whatwedoHead">What we do?</h1>
       <div id="whatwedotext">

@@ -104,7 +104,7 @@ a {
 }
 
 #centeredText > h1 {
-  font-size: 55px;
+  font-size: 50px;
   margin-bottom: 3vh;
 }
 
@@ -131,19 +131,19 @@ a {
     transform: scale(1);
   }
   20% {
-    transform: scale(1.005);
+    transform: scale(1.009);
   }
   40% {
     transform: scale(1);
   }
   60% {
-    transform: scale(1.005);
+    transform: scale(1.009);
   }
   80% {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.005);
+    transform: scale(1.009);
   }
 }
 
@@ -271,7 +271,6 @@ a {
 
 #whatwedocards {
   width: 96vw;
-  height: fit-content;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -295,14 +294,14 @@ a {
 .cardHeader {
   font-size: 30px;
   color: rgb(233, 233, 233);
-  margin: 15px;
+  margin-top: 10px;
   font-weight: bolder;
 }
 
 .cardBody {
   color: whitesmoke;
   font-size: 18px;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -340,12 +339,10 @@ a {
 #section2 {
   height: fit-content;
   width: 100vw;
-  background-blend-mode: soft-light;
   background-attachment: fixed;
   background-position: center;
   display: flex;
   flex-direction: column;
-  margin: auto;
   background-image: linear-gradient(#1d315a, #4b6cb7, #1d315a);
 }
 
@@ -467,7 +464,6 @@ a {
 
 .socialIconBox:hover {
   transform: scale(1.1);
-  /* box-shadow: 10px 10px 5px #4e4e4e50; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -530,7 +526,7 @@ a {
 }
 
 #textForm {
-  font-size: 17px;
+  font-size: 20px;
   max-width: 30vw;
   margin: 1vh 0 3vh 0;
   color: var(--paraTextColor);
@@ -556,7 +552,7 @@ textarea {
   max-height: 15vh;
   min-width: 30vw;
   max-width: 30vw;
-  font-size: 15px;
+  font-size: 20px;
   padding: 10px 1vw;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 0px 0px 5px 5px;
@@ -564,30 +560,26 @@ textarea {
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  font-size: 15px;
+  padding-left: 10px;
+  font-size: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(0, 0, 0);
+  color: rgb(44, 44, 44);
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  font-size: 15px;
+  padding-left: 10px;
+  font-size: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(0, 0, 0);
+  color: rgb(44, 44, 44);
 }
 
 :-ms-input-placeholder {
   /* IE 10+ */
-  font-size: 15px;
+  padding-left: 10px;
+  font-size: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(0, 0, 0);
-}
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  font-size: 15px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(0, 0, 0);
+  color: rgb(44, 44, 44);
 }
 
 #submitButton {
@@ -596,17 +588,13 @@ textarea {
   width: 10vw;
   background-color: rgb(13, 134, 190);
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 30px;
   border-width: 2px;
   border-style: solid;
   border-color: white;
-  animation-name: borderChange;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 3s;
 }
 
 #submitButton:hover {
@@ -622,7 +610,6 @@ textarea {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 10vh;
 }
 
 #section6 > h1 {
@@ -645,4 +632,219 @@ textarea {
 #heartEmoji {
   color: transparent;
   text-shadow: 0 0 0 rgb(235, 59, 59);
+}
+
+@media screen and (max-width: 1000px) {
+  /* designing for section4, the social links */
+  #socialHeadHolder {
+    padding-bottom: 20px;
+    font-size: 21px;
+  }
+  #socialParagraph > p {
+    padding-top: 20px;
+    margin: auto;
+    width: 90vw;
+    font-size: 20px;
+  }
+  #contactContainer {
+    flex-direction: column;
+  }
+  #leftColumn {
+    grid-template-columns: auto auto;
+  }
+  #socialLinks {
+    grid-template-columns: auto auto auto;
+    width: 100vw;
+  }
+  .socialIcon {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+  }
+  .socialIconBox:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .socialIconBox:active {
+    transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #rightColumn {
+    width: 100vw;
+    font-size: 40px;
+  }
+  #formHolder {
+    position: relative;
+    margin: auto;
+    top: 10%;
+    display: inline-block;
+  }
+  #formHolder > h1 {
+    margin-top: 60px;
+    color: var(--sectionHeaderColor);
+    font-size: 40px;
+  }
+  #textForm {
+    font-size: 20px;
+    max-width: 90vw;
+  }
+  input {
+    width: 90vw;
+    font-size: 15px;
+    display: block;
+  }
+  textarea {
+    min-height: 15vh;
+    max-height: 15vh;
+    min-width: 90vw;
+    max-width: 90vw;
+    font-size: 20px;
+  }
+  #submitButton {
+    min-height: 8vh;
+    margin-top: 20px;
+    width: 50vw;
+    background-color: rgb(13, 134, 190);
+    color: white;
+  }
+  #submitButton:hover {
+    background-color: teal;
+    transition-duration: 1s;
+  }
+  /* For section 2, gallery */
+  #section2 {
+    min-width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#1d315a, #4b6cb7, #1d315a);
+  }
+  #photoContainer {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+  .polaroid {
+    position: relative;
+    height: 50vh;
+    min-width: 90vw;
+    margin-right: 10px;
+  }
+  #section5 {
+    margin: auto;
+    height: 60vh;
+    width: 100vw;
+    background-image: url("../images/assets/location.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10vh;
+  }
+  /*section 1, what we do cards holder */
+  #whatwedoHead {
+    padding-top: 50px;
+    font-size: 40px;
+  }
+  #whatwedotext {
+    text-align: center;
+    font-size: 20px;
+    margin: 1px 7px 30px 7px;
+  } 
+  #whatwedocards {
+    width: 96vw;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    padding-bottom: 100px;
+  }
+  .card {
+    width: 98vw;
+    height: 40vh;
+  } 
+  .cardHeader {
+    font-size: 25px;
+    margin: 15px auto 2px auto;
+  }
+  .cardBody {
+    font-size: 17px;
+  }
+  .card:hover {
+    transform: none;
+  }
+  /* Section0 styling, the start page */
+   #section0 {
+    height: 100vh;
+  } 
+  #centeredText {
+    padding-top: 15vh;
+    width: 98vw;
+    text-align: center;
+  } 
+  #centeredText > h1 {
+    font-size: 35px;
+    margin-bottom: 6vh;
+  } 
+  #centeredText > #quote {
+    font-size: 15px;
+  }
+  #quote {
+    margin: auto 10px;
+    text-align: center;
+  }
+  #highlight {
+    border-radius: 1px;
+  }
+  #quoteCredit {
+    margin-left: 0vw;
+    margin-bottom: 50px;
+  }
+  #whatWeDo {
+    width: 90vw;
+    font-size: 15px;
+    margin: 2vh auto;
+    padding-bottom: 2vh;
+  }
+  .scroller {
+    font-size: 30px;
+    animation-duration: 2s;
+  }
+
+  /* for navbar */
+    /* #navbar {
+      display: none;
+    }
+  
+    #responsiveNavbar {
+      display: flex;
+      height: 40px;
+      line-height: 20px;
+      flex-direction: column;
+      padding-left: 85vw;
+      z-index: 100;
+      position: fixed;
+      width: 100vw;
+      background-color: rgb(105, 105, 105);
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 40px;
+      height: 3px;
+      background-color: rgb(255, 255, 255);
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+      transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+    
+    .change .bar2 {
+      opacity: 0;
+    }
+    
+    .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+      transform: rotate(45deg) translate(-8px, -8px) ;
+    } */
 }

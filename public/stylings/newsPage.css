@@ -16,7 +16,7 @@
 }
 
 body::-webkit-scrollbar {
-  width: 0 !important;
+  width: 0;
 }
 
 html {
@@ -46,7 +46,6 @@ body {
 #navbar {
   margin-top: 4vh;
   width: 100vw;
-  /* height: fit-content; */
   display: flex;
   color: rgb(207, 207, 207);
   position: fixed;
@@ -65,7 +64,6 @@ a {
 }
 
 #navbarScroll {
-  display: none;
   width: 100vw;
   display: flex;
   color: rgb(207, 207, 207);
@@ -148,18 +146,6 @@ a {
   color: rgb(255, 255, 255);
   font-family: "Cinzel", serif;
   font-weight: bolder;
-}
-
-#subscriptionDetail:hover {
-  transform: scale3d(1.08, 1.08, 1.08);
-}
-
-#footLinks {
-  height: 20vh;
-  width: 100vw;
-  background-color: black;
-  position: absolute;
-  top: 100vh;
 }
 
 #newsHeads {
@@ -304,4 +290,70 @@ input {
   color: #ff6f00;
 }
 
-
+@media screen and (max-width: 1000px) {
+  #headBar {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    font-size: 40px;
+  }  
+  #headerTitle {
+    left: 5%;
+  }
+  #newsHeads {
+    height: 200px;
+    line-height: 200px;
+    font-size: 22px;
+  }
+  #newsBars {
+    width: 100vw;
+    grid-template-columns: auto auto;
+    row-gap: 40px;
+  }
+  .newsPart {
+    width: 46vw;
+  }
+  .newsPhoto {
+    height: 20vh;
+    margin-bottom: 10px;
+  }
+  .newsTitle {
+    font-size: 15px;
+  }
+  #footNotes {
+    height: 20vh;
+    width: 100vw;
+  }
+  #pageName > h1 {
+    font-size: 50px;
+  }
+  #pageName > p {
+    font-size: 20px;
+  }
+  #subscribeForm {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    font-size: 20px;
+  }
+  input {
+    width: 25vw;
+    font-size: 18px;
+  }
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 18px;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 18px;
+  }
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 18px;
+  }
+  :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 18px;
+  }
+}
