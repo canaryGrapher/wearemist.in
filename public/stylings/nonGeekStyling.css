@@ -148,54 +148,11 @@ a {
 }
 
 #highlight {
-  background-color: rgba(255, 255, 255, 0.356);
-  animation-name: changeHighlight;
-  animation-timing-function: cubic-bezier(1, 0, 0, 1);
-  animation-duration: 10s;
-  -moz-animation-direction: alternate;
-  -o-animation-direction: alternate;
-  animation-direction: alternate;
-  -webkit-animation-direction: alternate;
-  animation-iteration-count: infinite;
-  border-radius: 20px;
+  background-color: rgba(255, 255, 255);
+  color: #000000;
+  border-radius: 10px;
   padding-right: 0.5vw;
   padding-left: 0.5vw;
-}
-
-@keyframes changeHighlight {
-  0% {
-    background-color: rgba(255, 176, 176, 0.356);
-  }
-  10% {
-    background-color: rgba(255, 202, 142, 0.356);
-  }
-  20% {
-    background-color: rgba(204, 255, 157, 0.356);
-  }
-  30% {
-    background-color: rgba(143, 253, 148, 0.356);
-  }
-  40% {
-    background-color: rgba(148, 255, 211, 0.356);
-  }
-  50% {
-    background-color: rgba(137, 255, 210, 0.356);
-  }
-  60% {
-    background-color: rgba(126, 251, 255, 0.356);
-  }
-  70% {
-    background-color: rgba(116, 192, 255, 0.356);
-  }
-  80% {
-    background-color: rgba(130, 132, 255, 0.356);
-  }
-  90% {
-    background-color: rgba(199, 139, 255, 0.356);
-  }
-  100% {
-    background-color: rgba(255, 149, 172, 0.356);
-  }
 }
 
 #quoteCredit {
@@ -810,7 +767,7 @@ textarea {
   }
 
   /* for navbar */
-    /* #navbar {
+    #navbar {
       display: none;
     }
   
@@ -846,5 +803,5 @@ textarea {
     .change .bar3 {
       -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
       transform: rotate(45deg) translate(-8px, -8px) ;
-    } */
+    }
 }

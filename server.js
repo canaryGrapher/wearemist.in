@@ -6,20 +6,19 @@ const nodemailer = require("nodemailer");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 const router = express.Router();
+const dotenv = require("dotenv").config({ path: '.env' });
 let CCdata, MCdata, WCdata;
-const CONNECTION_URL =
-  "mongodb+srv://superuser_MIST:th1$expl41n$everything@cluster0-jq9yi.azure.mongodb.net/test?retryWrites=true&w=majority";
+const CONNECTION_URL = process.env.DATABASE_URL;
 const DATABASE_NAME1 = "Members"; //enter Database Name here
 const DATABASE_NAME2 = "Website"; //enter Database Name here
-const COLLECTION_NAME = ""; //enter collection name here
-const DATABASE_NAME = "Members"; //enter Database Name here
+const DATABASE_NAME3 = "UserData";
 
 var transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 587,
   auth: {
-    user: 'messagefromuserwebsite@gmail.com',
-    pass: 't#i$_account4SALE'
+    user: process.env.EMAIL_ID,
+    pass: process.env.EMAIL_PASSWORD
   }
 });
 
@@ -81,8 +80,8 @@ app.get("/articles", function (req, res) {
 app.post("/contactMailer", function (req, res) {
   console.log(req.body);
   const mailOptions = {
-    from: 'messagefromwebsite@outlook.com', // sender address
-    to: 'yasharyan307@outlook.com', // list of receivers
+    from: process.env.EMAIL_ID, // sender address
+    to: process.env.SENDER_EMAIL, // list of receivers
     subject: 'Message from user website', // Subject line
     html: `<h1>${req.body.name}</h1><br><p>${req.body.message}</p><br><br><p>Message from ${req.body.name}, email ${req.body.email}.</p><br><br><br><p>All details are as follows: ${req.body}</p>`// plain text body
   };
@@ -90,7 +89,7 @@ app.post("/contactMailer", function (req, res) {
     if (err)
       console.log(err);
     else
-      console.log("Sent the message ");
+      console.log("Sent the mail to yasharyan307@outlook.com ");
   });
   res.redirect("/nonGeek#section3");
 });
@@ -104,9 +103,14 @@ app.get("/news", function (req, res) {
   });
 });
 
-app.post("/addToMailingList", function (req, res) {
-  //do something to add these to the maling list after filtering
-});
+// app.post("/addToMailingList", function (req, res) {
+//   //do something to add these to the maling list after filtering
+//   console.log(req.body);
+//   collectionMailingList.insertOne(req.body.subscriberEmail, function (err, res) {
+//     if (err) throw err;
+//     console.log("1 document inserted");
+//     res.render("subscriberDone");
+//   });
 
 app.get("*", function (req, res) {
   res.send("I don't know what you're trying to do, but no, it will not work.");
@@ -123,12 +127,14 @@ app.listen(PORT, () => {
       }
       database1 = client.db(DATABASE_NAME1);
       database2 = client.db(DATABASE_NAME2);
+      database3 = client.db(DATABASE_NAME3);
       collectionCC = database1.collection("CoreCommittee");
       collectionMC = database1.collection("ManagementCommittee");
       collectionWC = database1.collection("WorkingCommittee");
       collectionPosts = database2.collection("articles");
       collectionArticles = database2.collection("articles");
       collectionNews = database2.collection("news");
+      collectionMailingList = database3.collection("mailingList");
       console.log("Connected to mongoDB Atlas");
     }
   );
