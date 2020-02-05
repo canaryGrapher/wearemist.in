@@ -65,7 +65,7 @@ a {
 
 #navbarScroll {
   width: 100vw;
-  display: flex;
+  display: none;
   color: rgb(207, 207, 207);
   position: fixed;
   justify-content: center;

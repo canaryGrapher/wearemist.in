@@ -765,7 +765,7 @@ textarea {
   }
 
   #logoMist {
-    display: none;
+    display: inline-block;
   }
 
   /* for navbar */

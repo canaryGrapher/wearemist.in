@@ -16,6 +16,10 @@ body {
   background-color: rgb(236, 236, 236);
 }
 
+#responsiveNavbar {
+  display: none;
+}
+
 #navbar {
   width: 100vw;
   height: 5vh;
@@ -65,6 +69,67 @@ a {
   margin-left: auto;
 }
 
-/* #leftSide {
-  width: ;
-} */
+@media screen and (max-width: 1000px) {
+  /* navbar design */
+  #navbar {
+    display: none;
+  }
+  
+  #responsiveNavbar {
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+  }
+
+  #responsiveNavItems {
+    padding-top: 50px;
+    position: absolute;
+    width: 100vw;
+    margin-top: 45px;
+    height: 60vh;
+    display: none ;
+    flex-direction: column;
+    text-align: center;
+    z-index: 100;
+    justify-content: space-between;
+  }
+  
+  #barContainer {
+    display: flex;
+    height: 45px;
+    line-height: 20px;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    margin: 3px 0;
+    transition: 0.5s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 4px) ;
+    transform: rotate(-45deg) translate(-4px, 4px) ;
+    background-color: rgb(255, 72, 72);
+  }
+  
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -4px) ;
+    transform: rotate(45deg) translate(-4px, -4px) ;
+    background-color: rgb(255, 72, 72);
+  }
+}

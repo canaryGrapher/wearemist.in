@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Articles | MIST</title>
-    <link rel="stylesheet" type="text/css" href="./stylings/articlesStyling.css">
-  </head>
-  <body>
-    <div id="navbar">
-        <p id="LOGO" class="linkBox"><a href="/home">MIST</a></p>
-        <p id="home" class="linkBox"><a href="/nonGeek#section0">Home</a></p>
-        <p id="whatwedo" class="linkBox"><a href="/nonGeek#section1">What we do</a></p>
-        <p id="contact" class="linkBox"><a href="/nonGeek#section2">Gallery</a></p>
-        <p id="photosLink" class="linkBox"><a href="/nonGeek#section3">Contact Us</2></p>
-          <p id="team" class="linkBox"><a href="/team">Team</a></p>
-        <p id="articles" class="linkBox"><a href="/articles">Articles</a></p>
-        <p id="news" class="linkBox"><a href="/news">News</a></p>
-      </div>
-      <div id="container">
-        <div id="leftSide"></div>
-        <div id="rightSide"></div>
-      </div>
-  </body>
+
+<head>
+  <title>Articles | MIST</title>
+  <link rel="stylesheet" type="text/css" href="./stylings/articlesStyling.css">
+</head>
+
+<body>
+  <div id="responsiveNavbar">
+    <div id="barContainer" onclick="makeCross(this)">
+      <div class="hamString bar1"></div>
+      <div class="hamString bar2"></div>
+      <div class="hamString bar3"></div>
+    </div>
+    <div id="responsiveNavItems">
+      <p id="res_LOGO" class="res_linkBox" onclick="clickLinks()"><a href="/home">MIST</a></p>
+      <p id="res_home" class="res_linkBox" onclick="clickLinks()"><a href="/nonGeek#section0">Home</a></p>
+      <p id="res_whatwedo" class="res_linkBox" onclick="clickLinks()"><a href="/nonGeek#section1">What we do</a>
+      </p>
+      <p id="res_contact" class="res_linkBox" onclick="clickLinks()"><a href="/nonGeek#section2">Gallery</a></p>
+      <p id="res_photosLink" class="res_linkBox" onclick="clickLinks()"><a href="/nonGeek#section3">Contact Us</a>
+      </p>
+      <p id="res_team" class="res_linkBox" onclick="clickLinks()"><a href="/team">Team</a></p>
+      <p id="res_articles" class="res_linkBox" onclick="clickLinks()"><a href="/articles">Articles</a></p>
+      <p id="res_news" class="res_linkBox" onclick="clickLinks()"><a href="/news">News</a></p>
+      <p id="res_contribute" class="res_linkBox" onclick="clickLinks()"><a href="/contributors">Contributions</a>
+      </p>
+    </div>
+  </div>
+  <div id="navbar">
+    <p id="LOGO" class="linkBox"><a href="/home">MIST</a></p>
+    <p id="home" class="linkBox"><a href="/nonGeek#section0">Home</a></p>
+    <p id="whatwedo" class="linkBox"><a href="/nonGeek#section1">What we do</a></p>
+    <p id="contact" class="linkBox"><a href="/nonGeek#section2">Gallery</a></p>
+    <p id="photosLink" class="linkBox"><a href="/nonGeek#section3">Contact Us</2>
+    </p>
+    <p id="team" class="linkBox"><a href="/team">Team</a></p>
+    <p id="articles" class="linkBox"><a href="/articles">Articles</a></p>
+    <p id="news" class="linkBox"><a href="/news">News</a></p>
+  </div>
+  <div id="container">
+    <div id="leftSide"></div>
+    <div id="rightSide"></div>
+  </div>
+</body>
+
 </html>

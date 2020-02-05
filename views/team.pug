@@ -3,6 +3,7 @@ head
   title Team | MIST
   link(rel='stylesheet', type='text/css', href='./stylings/teamStyling.css')
   script(src='./scripts/teams.js')
+  script(src='./scripts/nonGeek.js')
 #howToApply
   #closeButton
     p#Xbut(onclick='hideDialog()') &times;
@@ -13,6 +14,31 @@ head
       | Cybercrime is a dangerous crime involving computers or digital devices, in which a computer can be either a target of the crime, a tool of the crime or contain evidence of the crime. Cybercrime basically defined as any criminal activity that occurs over the Internet. There are many examples such as fraud, malware such as viruses, identity theft and cyber stalking. In present environment, since most information processing depends on the use of information technology, the control, prevention and investigation of cyber activities is vital to the success of the Organizations, Government&apos;s agencies and individuals. The procurement and maintenance of highly skill cybercrime expert by Government and Business Enterprises cannot be exaggerated.
       | Earlier, cybercrime was committed mainly by individuals or small groups. Presently, it is observed that there is highly complex cybercriminal networks bring together individuals at global level in real time to commit crimes.
       | Today, criminals that indulge in cybercrimes are not motivated by ego or expertise. Instead, they want to use their knowledge to gain profits promptly. They are using their capability to snip, deceive and exploit people as they find it easy to generate money without having to do an honest work. Cybercrimes have become major threat today.
+#responsiveNavbar
+  #barContainer(onclick='makeCross(this)')
+    .hamString.bar1
+    .hamString.bar2
+    .hamString.bar3
+  #responsiveNavItems
+    p#res_LOGO.res_linkBox(onclick='clickLinks()')
+      a(href='/home') MIST
+    p#res_home.res_linkBox(onclick='clickLinks()')
+      a(href='/nonGeek#section0') Home
+    p#res_whatwedo.res_linkBox(onclick='clickLinks()')
+      a(href='/nonGeek#section1') What we do
+    p#res_contact.res_linkBox(onclick='clickLinks()')
+      a(href='/nonGeek#section2') Gallery
+    p#res_photosLink.res_linkBox(onclick='clickLinks()')
+      a(href='/nonGeek#section3') Contact Us
+    p#res_team.res_linkBox(onclick='clickLinks()')
+      a(href='/team') Team
+    p#res_articles.res_linkBox(onclick='clickLinks()')
+      a(href='/articles') Articles
+    p#res_news.res_linkBox(onclick='clickLinks()')
+      a(href='/news') News
+    p#res_contribute.res_linkBox(onclick='clickLinks()')
+      a(href='/contributors') Contributors
+
 #navbar
   p#LOGO.linkBox
     a(href='/home') MIST
@@ -30,6 +56,8 @@ head
     a(href='/articles') Articles
   p#news.linkBox
     a(href='/news') News
+  p#contribute.linkBox
+    a(href='/contributors') Contributors
 #header
   h1 Meet the team.
   a#applyButton(onclick='showDialog()')
