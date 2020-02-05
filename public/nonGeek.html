@@ -11,97 +11,67 @@
 
 <body>
   <div id="container">
-    <div id="responsiveNavbar" onclick="makeCross(this)">
-      <div class="hamString bar1"></div>
-      <div class="hamString bar2"></div>
-      <div class="hamString bar3"></div>
+    <div id="responsiveNavbar">
+      <div id="barContainer" onclick="makeCross(this)">
+        <div class="hamString bar1"></div>
+        <div class="hamString bar2"></div>
+        <div class="hamString bar3"></div>
+      </div>
+      <div id="responsiveNavItems">
+        <p id="res_LOGO" class="res_linkBox"><a href="/home">MIST</a></p>
+        <p id="res_home" class="res_linkBox"><a href="/nonGeek#section0">Home</a></p>
+        <p id="res_whatwedo" class="res_linkBox"><a href="/nonGeek#section1">What we do</a></p>
+        <p id="res_contact" class="res_linkBox"><a href="/nonGeek#section2">Gallery</a></p>
+        <p id="res_photosLink" class="res_linkBox"><a href="/nonGeek#section3">Contact Us</a></p>
+        <p id="res_team" class="res_linkBox"><a href="/team">Team</a></p>
+        <p id="res_articles" class="res_linkBox"><a href="/articles">Articles</a></p>
+        <p id="res_news" class="res_linkBox"><a href="/news">News</a></p>
+        <p id="res_contribute" class="res_linkBox"><a href="/contributors">Contributions</a></p>
+      </div>
+
     </div>
     <div id="navbar">
       <p id="LOGO" class="linkBox"><a href="/home">MIST</a></p>
       <p id="home" class="linkBox"><a href="/nonGeek#section0">Home</a></p>
       <p id="whatwedo" class="linkBox"><a href="/nonGeek#section1">What we do</a></p>
       <p id="contact" class="linkBox"><a href="/nonGeek#section2">Gallery</a></p>
-      <p id="photosLink" class="linkBox"><a href="/nonGeek#section3">Contact Us</2>
-      </p>
+      <p id="photosLink" class="linkBox"><a href="/nonGeek#section3">Contact Us</a></p>
       <p id="team" class="linkBox"><a href="/team">Team</a></p>
       <p id="articles" class="linkBox"><a href="/articles">Articles</a></p>
       <p id="news" class="linkBox"><a href="/news">News</a></p>
+      <p id="contribute" class="linkBox"><a href="/contributors">Contributions</a></p>
     </div>
     <div id="section0">
       <div class="overlay">
-        <div id="centeredText">
-          <h1 id="mistName">Manipal Information and Security Team</h1>
-          <p id="quote">
-            <span id="highlight">"It takes 20 years to build a reputation and few minutes of
-              cyber-incident to ruin it."</span>
-          </p>
-          <p id="quoteCredit">
-            -Stephane Nappo
-          </p>
-          <p id="whatWeDo">
-            We are a team of Information and Network Security enthusiasts who
-            have gathered knowledge about the field through workshops, online
-            courses, books and research. We now want to spread the knowledge we
-            have gained to other students with an interest in this ever-growing
-            area of computer science. We want to ensure that students approach
-            this field the right way and to provide them with a platform to
-            enhance and practice their skills in the same.
-          </p>
-          <img src="./images/assets/mistLogo.png" id="logoMist" />
+        <div id="section0Content">
+          <div id="centeredText">
+            <h1 id="mistName">Manipal Information and Security Team</h1>
+            <div id="quote">
+              <span id="highlight">"It takes 20 years to build a reputation and few minutes of
+                cyber-incident to ruin it."</span>
+              <p id="quoteCredit">
+                -Stephane Nappo
+              </p>
+            </div>
+            <p id="whatWeDo">
+              We are a team of Information and Network Security enthusiasts who
+              have gathered knowledge about the field through workshops, online
+              courses, books and research. We now want to spread the knowledge we
+              have gained to other students with an interest in this ever-growing
+              area of computer science. We want to ensure that students approach
+              this field the right way and to provide them with a platform to
+              enhance and practice their skills in the same.
+            </p>
+            <img src="./images/assets/mistLogo.png" id="logoMist" />
+          </div>
         </div>
         <div id="moreInfoText">
           <div id="mouseAnimation">
             <div class="scroller">&darr;</div>
           </div>
-          <p id="scrollerText"></p>
         </div>
       </div>
     </div>
-    <script>
-      window.onscroll = function () {
-        if (responsiveness.matches) {
-          scrollFunction();
-        }
-      };
-
-      function changeScrollerText(responsiveness) {
-        //For changing the scroll/ swipe text based on the screen size
-        var responsiveNavibar = document.getElementById("responsiveNavbar");
-        var normalNavibar = documnet.getElementById("navbar");
-        var scrollText = document.getElementById("scrollerText");
-        var responsiveness = window.matchMedia("(max-width: 1000px)");
-        changeScrollerText(responsiveness);
-        responsiveness.addListener(changeScrollerText);
-        if (responsiveness.matches) {
-          scrollText.innerHTML = "Swipe for More";
-          normalNavibar.style.display = "none";
-          responsiveNavibar.style.display = "inline-block";
-        } else {
-          scrollText.innerHTML = "Scroll for More";
-          normalNavibar.style.display = "flex";
-          responsiveNavibar.style.display = "none";
-        }
-      }
-
-
-
-      //for changing the navigation bar based on the size of the screen
-      function makeCross(x) {
-        x.classList.toggle("change");
-      }
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 350 ||
-          document.documentElement.scrollTop > 800
-        ) {
-          document.getElemenstByclassName("hamString").style.backgroundColor = "black";
-        } else {
-          document.getElemenstByclassName("hamString").style.backgroundColor = "white";
-        }
-      }
-
-    </script>
     <div id="section1">
       <h1 id="whatwedoHead">What we do?</h1>
       <div id="whatwedotext">
@@ -299,11 +269,10 @@
         </div>
       </div>
     </div>
-    <div id="section5"></div>
-    <div id="section6">
+    <div id="section5">
       <div id="footer">
-        <h1><span id="heartEmoji">&#10084;</span> Handcrafted by MIST</h1>
-        <p>&copy;2020, Manipal Information and Security Team, Manipal</p>
+        <h1 id="FootHead"><span id="heartEmoji">&#10084;</span> Handcrafted by MIST</h1>
+        <p id="footText">&copy;2020, Manipal Information and Security Team, Manipal</p>
         <p id="rightsReserved">All rights reserved</p>
       </div>
     </div>

@@ -85,11 +85,14 @@ a {
   height: inherit;
 }
 
+#responsiveNavbar {
+  display: none;
+}
+
 #section0 {
   color: white;
   width: 100vw;
   height: 100vh;
-  /* background-image: url("../images/backgrounds/home.jpg"); */
   background-image: url("../images/backgrounds/endingImage.jpg");
   background-blend-mode: color-burn;
   background-size: cover;
@@ -148,7 +151,7 @@ a {
 }
 
 #highlight {
-  background-color: rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.7);
   color: #000000;
   border-radius: 10px;
   padding-right: 0.5vw;
@@ -300,7 +303,7 @@ a {
   background-position: center;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(#1d315a, #4b6cb7, #1d315a);
+  background-image: linear-gradient(#4b4b4b, #1a1a1a, #242424);
 }
 
 #photoHeader {
@@ -443,7 +446,7 @@ a {
   background-attachment: fixed;
 }
 
-#section6 {
+#section5 {
   width: 100vw;
   height: max-content;
   text-align: center;
@@ -559,17 +562,7 @@ textarea {
   transition-duration: 1s;
 }
 
-#section5 {
-  margin: auto;
-  height: 80vh;
-  width: 90vw;
-  background-image: url("../images/assets/location.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#section6 > h1 {
+#section5 > h1 {
   margin: 2vh auto;
   padding-top: 1vh;
   padding-bottom: 2vh;
@@ -578,7 +571,7 @@ textarea {
   font-size: 15px;
 }
 
-#section6 > p {
+#section5 > p {
   color: #1f1f1f;
 }
 
@@ -592,16 +585,20 @@ textarea {
 }
 
 @media screen and (max-width: 1000px) {
+  /* designing for section 5, the end statement */
+  #section5 {
+    font-size: 10px;
+  }
   /* designing for section4, the social links */
   #socialHeadHolder {
     padding-bottom: 20px;
-    font-size: 21px;
+    font-size: 20px;
   }
   #socialParagraph > p {
     padding-top: 20px;
     margin: auto;
     width: 90vw;
-    font-size: 20px;
+    font-size: 16px;
   }
   #contactContainer {
     flex-direction: column;
@@ -628,7 +625,7 @@ textarea {
   }
   #rightColumn {
     width: 100vw;
-    font-size: 40px;
+    font-size: 16px;
   }
   #formHolder {
     position: relative;
@@ -642,7 +639,7 @@ textarea {
     font-size: 40px;
   }
   #textForm {
-    font-size: 20px;
+    font-size: 16px;
     max-width: 90vw;
   }
   input {
@@ -671,11 +668,9 @@ textarea {
   /* For section 2, gallery */
   #section2 {
     min-width: 100vw;
-    background-attachment: fixed;
-    background-position: center;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(#1d315a, #4b6cb7, #1d315a);
+    background-image: linear-gradient(#6e6e6e, #1a1a1a, #919191);
   }
   #photoContainer {
     display: flex;
@@ -688,15 +683,8 @@ textarea {
     min-width: 90vw;
     margin-right: 10px;
   }
-  #section5 {
-    margin: auto;
-    height: 60vh;
-    width: 100vw;
-    background-image: url("../images/assets/location.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 10vh;
+  #footText, #rightsReserved {
+    font-size: 16px;
   }
   /*section 1, what we do cards holder */
   #whatwedoHead {
@@ -705,7 +693,7 @@ textarea {
   }
   #whatwedotext {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     margin: 1px 7px 30px 7px;
   } 
   #whatwedocards {
@@ -723,14 +711,21 @@ textarea {
     margin: 15px auto 2px auto;
   }
   .cardBody {
-    font-size: 17px;
+    font-size: 16px;
   }
   .card:hover {
     transform: none;
   }
   /* Section0 styling, the start page */
-   #section0 {
+  #section0Content {
+    margin-top: auto;
+    margin-bottom: auto;
+  } 
+  #section0 {
     height: 100vh;
+    background-image: url("../images/backgrounds/responsiveHomeBackground.jpg");
+    background-position: center;
+    background-size: cover;
   } 
   #centeredText {
     padding-top: 15vh;
@@ -745,15 +740,18 @@ textarea {
     font-size: 15px;
   }
   #quote {
-    margin: auto 10px;
+    margin: auto;
     text-align: center;
+    width: 100vw;
+    background-color: #ffffff;
+    margin-bottom: 50px;
   }
   #highlight {
     border-radius: 1px;
   }
   #quoteCredit {
     margin-left: 0vw;
-    margin-bottom: 50px;
+    color: #000000;
   }
   #whatWeDo {
     width: 90vw;
@@ -766,42 +764,70 @@ textarea {
     animation-duration: 2s;
   }
 
+  #logoMist {
+    display: none;
+  }
+
   /* for navbar */
-    #navbar {
-      display: none;
-    }
+  #navbar {
+    display: none;
+  }
   
-    #responsiveNavbar {
-      display: flex;
-      height: 40px;
-      line-height: 20px;
-      flex-direction: column;
-      padding-left: 85vw;
-      z-index: 100;
-      position: fixed;
-      width: 100vw;
-      background-color: rgb(105, 105, 105);
-    }
-    
-    .bar1, .bar2, .bar3 {
-      width: 40px;
-      height: 3px;
-      background-color: rgb(255, 255, 255);
-      margin: 4px 0;
-      transition: 0.4s;
-    }
-    
-    .change .bar1 {
-      -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-      transform: rotate(-45deg) translate(-9px, 6px) ;
-    }
-    
-    .change .bar2 {
-      opacity: 0;
-    }
-    
-    .change .bar3 {
-      -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-      transform: rotate(45deg) translate(-8px, -8px) ;
-    }
+  #responsiveNavbar {
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+  }
+
+  #responsiveNavItems {
+    padding-top: 50px;
+    position: absolute;
+    width: 100vw;
+    margin-top: 45px;
+    height: 60vh;
+    display: none ;
+    flex-direction: column;
+    text-align: center;
+    z-index: 100;
+    justify-content: space-between;
+  }
+  
+  #barContainer {
+    display: flex;
+    height: 45px;
+    line-height: 20px;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    margin: 3px 0;
+    transition: 0.5s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 4px) ;
+    transform: rotate(-45deg) translate(-4px, 4px) ;
+    background-color: rgb(255, 72, 72);
+  }
+  
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -4px) ;
+    transform: rotate(45deg) translate(-4px, -4px) ;
+    background-color: rgb(255, 72, 72);
+  }
 }

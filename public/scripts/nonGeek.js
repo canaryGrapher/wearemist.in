@@ -1,40 +1,42 @@
+var responsiveness = window.matchMedia("(max-width: 1000px)");
 function changeScrollerText(responsiveness) {
     //For changing the scroll/ swipe text based on the screen size
     var responsiveNavibar = document.getElementById("responsiveNavbar");
     var normalNavibar = documnet.getElementById("navbar");
-    var scrollText = document.getElementById("scrollerText");
+    changeScrollerText(responsiveness);
+    responsiveness.addListener(changeScrollerText);
     if (responsiveness.matches) {
-        window.onscroll = function () {
-            if (responsiveness.matches) {
-                scrollFunction();
-            }
-        };
-        scrollText.innerHTML = "Swipe for More";
         normalNavibar.style.display = "none";
         responsiveNavibar.style.display = "inline-block";
     } else {
-        scrollText.innerHTML = "Scroll for More";
         normalNavibar.style.display = "flex";
         responsiveNavibar.style.display = "none";
     }
 }
-var responsiveness = window.matchMedia("(max-width: 1000px)");
-changeScrollerText(responsiveness);
-responsiveness.addListener(changeScrollerText);
+
+function showResNav() {
+    document.getElementById("responsiveNavItems").style.display = "flex";
+    document.getElementById("responsiveNavbar").style.height = "100vh";
+    showMenu = 1;
+    document.getElementById("responsiveNavItems").style.height = "60vh";
+}
+
+function hideResNav() {
+    document.getElementById("responsiveNavItems").style.display = "none";
+    document.getElementById("responsiveNavbar").style.height = "40px";
+    showMenu = 0;
+    document.getElementById("responsiveNavItems").style.height = "0vh";
+}
 
 
+showMenu = 0;
 //for changing the navigation bar based on the size of the screen
 function makeCross(x) {
     x.classList.toggle("change");
-}
-
-function scrollFunction() {
-    if (
-        document.body.scrollTop > 350 ||
-        document.documentElement.scrollTop > 800
-    ) {
-        document.getElemenstByclassName("hamString").style.backgroundColor = "black";
-    } else {
-        document.getElemenstByclassName("hamString").style.backgroundColor = "white";
+    if (showMenu == 0) {
+        showResNav();
+    }
+    else if (showMenu == 1) {
+        hideResNav();
     }
 }
