@@ -1,6 +1,7 @@
 doctype html
 head
   title Team | MIST
+  meta(name='viewport', content='initial-scale=1, maximum-scale=1')
   link(rel='stylesheet', type='text/css', href='./stylings/teamStyling.css')
   script(src='./scripts/teams.js')
   script(src='./scripts/nonGeek.js')
@@ -9,11 +10,21 @@ head
     p#Xbut(onclick='hideDialog()') &times;
   #contentApply
     h1 How to be a part of MIST?
-    howtoapply
-      | In technically driven society, people use various devices to make life simple. Globalization results in connecting people all around the world. The increasing access to and continuous use of technology has radically impacted the way in which people communicate and conduct their daily lives. The internet connects people and companies from opposite sides of the world fast, easily, and relatively economically. Nevertheless, the internet and computer can pose some threats which can have disparaging impact on civilisations. Cybercrime is a hazard against different organisations and people whose computers are connected to the internet and particularly mobile technology.
-      | Cybercrime is a dangerous crime involving computers or digital devices, in which a computer can be either a target of the crime, a tool of the crime or contain evidence of the crime. Cybercrime basically defined as any criminal activity that occurs over the Internet. There are many examples such as fraud, malware such as viruses, identity theft and cyber stalking. In present environment, since most information processing depends on the use of information technology, the control, prevention and investigation of cyber activities is vital to the success of the Organizations, Government&apos;s agencies and individuals. The procurement and maintenance of highly skill cybercrime expert by Government and Business Enterprises cannot be exaggerated.
-      | Earlier, cybercrime was committed mainly by individuals or small groups. Presently, it is observed that there is highly complex cybercriminal networks bring together individuals at global level in real time to commit crimes.
-      | Today, criminals that indulge in cybercrimes are not motivated by ego or expertise. Instead, they want to use their knowledge to gain profits promptly. They are using their capability to snip, deceive and exploit people as they find it easy to generate money without having to do an honest work. Cybercrimes have become major threat today.
+    howtoapply 
+      li &#x25B7; We announce out recruitment dates every odd semester. These are the steps you need to follow to get in:
+      br
+      li &#x25B7; Forget what branch you are a part of in MIT. Cybersecurity is for everyone.
+      br
+      li &#x25B7; We have multiple domains. Decide what domain you want to be a part of. Even if you cannot make up your mind, we'll help you understand and find your interest.
+      br
+      li &#x25B7; Reach the venue on time, it would be available on the posters. 
+      br
+      li &#x25B7; You'll be given a question paper to solve and 60 minutes on the clock(trust us, you can finish it in 30). If you can cheat, cheat! There is one thing common among the best hackers in the world. They are brilliant cheaters.
+      br
+      li &#x25B7; We'll let you know if you got in after everyone has taken the test and we have evaluated the papers. You can keep track of the results on our Instagram and Facebook page 
+      br
+      li &#x25B7; You can always attend our workshops to keep yourselves updated.
+      br
 #responsiveNavbar
   #barContainer(onclick='makeCross(this)')
     .hamString.bar1
@@ -63,12 +74,12 @@ head
   a#applyButton(onclick='showDialog()')
     | How to apply
 #teamLinksNavbar
-  #cc.teamLinkBox
-    a#ccLink(onclick='showCC()') Core Committee
-  #mc.teamLinkBox
-    a#mcLink(onclick='showMC()') Management Committee
-  #wc.teamLinkBox
-    a#wcLink(onclick='showWC()') Working Committee
+  #cc.teamLinkBox(onclick='showCC()')
+    a#ccLink Core Committee
+  #mc.teamLinkBox(onclick='showMC()')
+    a#mcLink Management Committee
+  #wc.teamLinkBox(onclick='showWC()')
+    a#wcLink Working Committee
 #corec
   each val1, index1 in CC
     .ccprofile

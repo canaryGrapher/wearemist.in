@@ -178,7 +178,7 @@ howtoapply {
 }
 
 .teamLinkBox {
-  font-size: 2.5vh;
+  font-size: 100%;
 }
 
 .teamLinkBox > p {
@@ -288,7 +288,6 @@ howtoapply {
   background-color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
-  background-image: url("./../images/assets/noProfile.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -305,11 +304,6 @@ howtoapply {
 
 .mcmemberName {
   margin-top: 3vh;
-}
-
-.interestsMember {
-  padding-top: 1vh;
-  margin: auto;
 }
 
 .wcprofile {
@@ -332,8 +326,8 @@ howtoapply {
 }
 
 .wcmemberName {
-  font-size: 125%;
-  line-height: 9vh;
+  font-size: 80%;
+  line-height: 10vh;
 }
 
 #spacing {
@@ -433,11 +427,25 @@ howtoapply {
   }
 
   /* Committee selection navbar design */
+  .teamLinkBox {
+    font-size: 100%;
+    width: 33%;
+    height:fit-content;
+    text-align: center;
+  }
+
+  #ccLink, #mcLink, #wcLink {
+    padding: 2px;
+    width: max-content;
+ }
+
   #teamLinksNavbar {
     height: fit-content;
   }
+
   .teamLinkBox {
-    font-size: 30px;
+    font-size: 100%;
+    width: 33.33%;
   }
 
   /* cards display design */
@@ -445,14 +453,10 @@ howtoapply {
   #manc {
     grid-template-columns: auto auto;
     row-gap: 1vh;
-    font-size: 20px;
-  }
-  #workc {
-    grid-template-columns: auto auto auto;
-    row-gap: 1vh;
+    font-size: 10px;
   }
   .ccprofile {
-    height: 50vh;
+    height: 60vh;
     width: 48vw;
   }
   .ccPhoto {
@@ -461,18 +465,16 @@ howtoapply {
     width: 48vw;
   }
   .cmemberInfo {
-    height: 10vh;
+    height: 20vh;
     width: 48vw;
   }
-  .cmemberName {
-    margin-top: 1vh;
-  }
+
   .cmemberPosition {
-    font-size: 30px;
+    font-size: 15px;
   }
 
   .mcprofile {
-    height: 50vh;
+    height: 60vh;
     width: 48vw;
   }
   
@@ -482,23 +484,65 @@ howtoapply {
     width: 48vw;
   }
   .mmemberInfo {
-    height: 10vh;
+    height: 20vh;
     width: 48vw;
   }
-  .mcmemberName {
-    margin-top: 3vh;
+  .wcmemberName {
+    font-size: 15px;
+    line-height: initial;
+    margin-top: 15px;
   }
+
+  #workc {
+    grid-template-columns: auto auto auto;
+    row-gap: 5px;
+    font-size: 25px;
+  }
+
   .wcprofile {
     height: 10vh;
     width: 32vw;
-  }
-  .wmemberInfo {
-    height: 10vh;
-    width: 32vw;
-  }
-  .wcmemberName {
-    font-size: 125%;
-    line-height: 10vh;
+    margin: auto;
+    box-shadow: none;
   }
   
+  .wmemberInfo {
+    height: 10vh;
+    width: 30vw;
+  }
+
+  #closeButton {
+    font-size: 40px;
+    width: 100%;
+    height: min-content;
+  }
+  
+  #Xbut {
+    padding: 1vh 1.5vw;
+    color: rgb(255, 255, 255);
+    width: min-content;
+    float: inline-end;
+  }
+  
+  #Xbut:hover {
+    color: rgb(196, 24, 24);
+  }
+  
+  #contentApply {
+    width: 93%;
+    color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin: auto;
+  }
+  
+  #contentApply > h1 {
+    padding-bottom: 2vh;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px #9696968c;
+  }
+  
+  howtoapply {
+    font-size: 16px;
+  }
 }

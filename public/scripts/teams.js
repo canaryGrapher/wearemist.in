@@ -1,7 +1,6 @@
+window.onload = changeLinkTexts;
 window.onload = showCC;
-function loadPage() {
-  showCC();
-}
+window.onresize = changeLinkTexts;
 
 function showCC() {
   var cc = document.getElementById("cc");
@@ -83,4 +82,20 @@ function showDialog() {
 function hideDialog() {
   var dialogGrabber = document.getElementById("howToApply");
   dialogGrabber.style.display = "none";
+}
+
+function changeLinkTexts() {
+  var ccLinkName = document.getElementById("ccLink");
+  var mcLinkName = document.getElementById("mcLink");
+  var wcLinkName = document.getElementById("wcLink");
+  if (window.matchMedia('(max-width: 800px)').matches) { // If media query matches
+    ccLinkName.innerHTML = "CC";
+    mcLinkName.innerHTML = "MC";
+    wcLinkName.innerHTML = "WC";
+  }
+  else {
+    ccLinkName.innerHTML = "Core Committee";
+    mcLinkName.innerHTML = "Management Committee";
+    wcLinkName.innerHTML = "Working Committee";
+  }
 }
