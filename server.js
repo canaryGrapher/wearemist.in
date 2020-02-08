@@ -3,6 +3,7 @@ const express = require("express");
 const pug = require("pug");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const dotenv = require("dotenv").config({ path: '.env' });
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 let CCdata, MCdata, WCdata;
