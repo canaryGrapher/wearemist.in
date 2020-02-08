@@ -5,8 +5,6 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
-const router = express.Router();
-const dotenv = require("dotenv").config({ path: '.env' });
 let CCdata, MCdata, WCdata;
 const CONNECTION_URL = process.env.DATABASE_URL;
 const DATABASE_NAME1 = "Members"; //enter Database Name here
