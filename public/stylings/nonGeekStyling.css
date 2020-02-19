@@ -107,7 +107,7 @@ a {
 }
 
 #centeredText > h1 {
-  font-size: 50px;
+  font-size: 45px;
   margin-bottom: 3vh;
 }
 
@@ -122,6 +122,7 @@ a {
 }
 
 #mistName {
+  text-align: center;
   animation-name: heartbeatText;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -164,8 +165,8 @@ a {
 }
 
 #whatWeDo {
-  width: 80vw;
-  font-size: 17px;
+  width: 90vw;
+  font-size: 18px;
   margin: 2vh auto;
 }
 
@@ -691,6 +692,12 @@ textarea {
     padding-top: 50px;
     font-size: 40px;
   }
+  #whatWeDo {
+    width: 90vw;
+    font-size: 15px;
+    margin: 2vh auto;
+    padding-bottom: 2vh;
+  }
   #whatwedotext {
     text-align: center;
     font-size: 16px;
@@ -731,6 +738,9 @@ textarea {
     padding-top: 15vh;
     width: 98vw;
     text-align: center;
+  }
+  #mistName {
+    width:90vw;
   } 
   #centeredText > h1 {
     font-size: 35px;
@@ -752,12 +762,6 @@ textarea {
   #quoteCredit {
     margin-left: 0vw;
     color: #000000;
-  }
-  #whatWeDo {
-    width: 90vw;
-    font-size: 15px;
-    margin: 2vh auto;
-    padding-bottom: 2vh;
   }
   .scroller {
     font-size: 30px;

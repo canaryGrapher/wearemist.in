@@ -134,6 +134,7 @@ a {
   height: 100vh;
   background-image: url("../images/backgrounds/newsPage.jpg");
   background-position: top;
+  background-attachment: fixed;
   background-size: cover;
   font-size: 3vh;
 }
