@@ -46,6 +46,10 @@ app.get("/home", function (req, res) {
   res.render("home");
 });
 
+app.get("/Geek", function (req, res) {
+  res.sendfile(__dirname + "/public/GeekPage.html");
+});
+
 app.get("/nongeek", function (req, res) {
   res.sendFile(__dirname + "/public/nonGeek.html");
 });
