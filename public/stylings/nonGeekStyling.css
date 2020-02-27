@@ -80,7 +80,7 @@ a {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100vw;
   height: inherit;
 }
@@ -90,10 +90,10 @@ a {
 }
 
 #section0 {
-  color: white;
+  color: rgb(255, 255, 255);
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/backgrounds/endingImage.jpg");
+  background-image: url("../images/backgrounds/homeImage.jpg");
   background-blend-mode: color-burn;
   background-size: cover;
   background-position: center;
@@ -101,14 +101,18 @@ a {
 }
 
 #centeredText {
-  padding-top: 35vh;
+  padding-top: 20vh;
   width: 100vw;
   text-align: center;
 }
 
 #centeredText > h1 {
-  font-size: 45px;
-  margin-bottom: 3vh;
+  font-size: 70px;
+  margin-bottom: 10vh;
+}
+
+#biggerText {
+  font-size: 80px;
 }
 
 #centeredText > #quote {
@@ -123,37 +127,11 @@ a {
 
 #mistName {
   text-align: center;
-  animation-name: heartbeatText;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  animation-direction: alternate;
-}
-
-@keyframes heartbeatText {
-  0% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(1.009);
-  }
-  40% {
-    transform: scale(1);
-  }
-  60% {
-    transform: scale(1.009);
-  }
-  80% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.009);
-  }
+  font-family: sans-serif;
 }
 
 #highlight {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #000000;
+  color: #ffffff;
   border-radius: 10px;
   padding-right: 0.5vw;
   padding-left: 0.5vw;
@@ -168,10 +146,6 @@ a {
   width: 90vw;
   font-size: 18px;
   margin: 2vh auto;
-}
-
-#logoMist {
-  width: 120px;
 }
 
 .scroller {
@@ -730,9 +704,10 @@ textarea {
   } 
   #section0 {
     height: 100vh;
-    background-image: url("../images/backgrounds/responsiveHomeBackground.jpg");
+    background-image: url("../images/backgrounds/homeImage.jpg");
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
   } 
   #centeredText {
     padding-top: 15vh;
@@ -749,27 +724,37 @@ textarea {
   #centeredText > #quote {
     font-size: 15px;
   }
-  #quote {
-    margin: auto;
-    text-align: center;
-    width: 100vw;
-    background-color: #ffffff;
-    margin-bottom: 50px;
-  }
-  #highlight {
-    border-radius: 1px;
-  }
-  #quoteCredit {
-    margin-left: 0vw;
-    color: #000000;
-  }
+
   .scroller {
     font-size: 30px;
     animation-duration: 2s;
   }
 
-  #logoMist {
-    display: inline-block;
+  #centeredText {
+    padding-top: 20vh;
+    width: 100vw;
+    text-align: center;
+  }
+  
+  #centeredText > h1 {
+    font-size: 60px;
+    margin-bottom: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #biggerText {
+    font-size: 70px;
+  }
+  
+  #centeredText > #quote {
+    font-size: 20px;
+    padding-bottom: 0.5vh;
+  }
+  
+  #quote {
+    margin: auto 15px;
+    width: fit-content;
   }
 
   /* for navbar */
@@ -798,6 +783,7 @@ textarea {
     text-align: center;
     z-index: 100;
     justify-content: space-between;
+    font-size: 20px;
   }
   
   #barContainer {
@@ -833,5 +819,10 @@ textarea {
     -webkit-transform: rotate(45deg) translate(-4px, -4px) ;
     transform: rotate(45deg) translate(-4px, -4px) ;
     background-color: rgb(255, 72, 72);
+  }
+
+  body {
+    width: 100vw;
+    overflow-x: hidden;
   }
 }

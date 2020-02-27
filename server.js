@@ -47,7 +47,7 @@ app.get("/home", function (req, res) {
 });
 
 app.get("/Geek", function (req, res) {
-  res.sendfile(__dirname + "/public/GeekPage.html");
+  res.sendFile(__dirname + "/public/GeekPage.html");
 });
 
 app.get("/nongeek", function (req, res) {
@@ -76,8 +76,8 @@ app.get("/team", function (req, res) {
   });
 });
 
-app.get("/articles", function (req, res) {
-  res.sendFile(__dirname + "/public/underConstruction.html");
+app.get("/contributors", function (req, res) {
+  res.sendFile(__dirname + "/public/contributors.html");
 });
 
 app.post("/contactMailer", function (req, res) {
@@ -106,14 +106,15 @@ app.get("/news", function (req, res) {
   });
 });
 
-// app.post("/addToMailingList", function (req, res) {
-//   //do something to add these to the maling list after filtering
-//   console.log(req.body);
-//   collectionMailingList.insertOne(req.body.subscriberEmail, function (err, res) {
-//     if (err) throw err;
-//     console.log("1 document inserted");
-//     res.render("subscriberDone");
-//   });
+app.post("/addToMailingList", function (req, res) {
+  //do something to add these to the maling list after filtering
+  console.log(req.body);
+  collectionMailingList.insertMany(req.body.subscriberEmail, function (err, res) {
+    if (err) throw err;
+    console.log("1 document inserted");
+    res.render("subscriberDone");
+  });
+});
 
 app.get("*", function (req, res) {
   res.send("I don't know what you're trying to do, but no, it will not work.");
@@ -134,8 +135,6 @@ app.listen(PORT, () => {
       collectionCC = database1.collection("CoreCommittee");
       collectionMC = database1.collection("ManagementCommittee");
       collectionWC = database1.collection("WorkingCommittee");
-      collectionPosts = database2.collection("articles");
-      collectionArticles = database2.collection("articles");
       collectionNews = database2.collection("news");
       collectionMailingList = database3.collection("mailingList");
       console.log("Connected to mongoDB Atlas");
