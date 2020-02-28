@@ -77,10 +77,13 @@ head
     .ccprofile
         - var firstName = CC[index1].name.split(" ");
         - var divID = firstName[0]+firstName[1]
+        - var imageSrc = CC[index1].photo
         .ccPhoto(id=divID)
+          img(src=imageSrc, alt='Core Committee')
         style.
-          ##{divID} {
-            background-image: url("#{CC[index1].photo}");
+          img {
+            width: 100%;
+            height: 100%;
           }
         .cmemberInfo
             h1.cmemberName #{CC[index1].name}
@@ -91,10 +94,13 @@ head
     .mcprofile
         - var firstName = MC[index2].name.split(" ");
         - var divID = firstName[0]+firstName[1]
-        .mcPhoto(id=divID)
+        - var imageSrc = MC[index2].photo
+        .ccPhoto(id=divID)
+          img(src=imageSrc, alt='Management Committee')
         style.
-          ##{divID} {
-            background-image: url("#{MC[index2].photo}");
+          img {
+            width: 100%;
+            height: 100%;
           }
         .mmemberInfo
             h1.mcmemberName #{MC[index2].name}
