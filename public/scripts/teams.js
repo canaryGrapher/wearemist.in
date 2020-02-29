@@ -94,7 +94,7 @@ function changeLinkTexts() {
     wcLinkName.innerHTML = "WC";
   }
   else {
-    ccLinkName.innerHTML = "Core Committee";
+    ccLinkName.innerHTML = "Board";
     mcLinkName.innerHTML = "Management Committee";
     wcLinkName.innerHTML = "Working Committee";
   }
