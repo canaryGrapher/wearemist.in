@@ -109,12 +109,22 @@ body {
     caret-color: aliceblue;
 }
 
+input {
+    font-size: 20px;
+    min-width: 200%;
+    background-color: white;
+    width: max-content;
+    min-width: 30vw;
+}
+
 @media screen and (max-width: 1000px) {
     #window {
         width: 100vw;
         height: 100vh;
         font-size: 40px;
         overflow: hidden;
+        border-radius: 0px;
+        background-color: #000;
     }
 
     input {
