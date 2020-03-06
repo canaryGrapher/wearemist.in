@@ -33,3 +33,7 @@ function clickLinks() {
     hideResNav();
     hideCross();
 }
+
+function goToHome() {
+    window.location.replace("/home");
+}

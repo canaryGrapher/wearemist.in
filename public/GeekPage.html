@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Geek | MIST</title>
+    <link rel="stylesheet" type="text/css" href="./stylings/GeekStyling.css" media="screen" />
+    <script src="./scripts/Geek.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="window">
+            <div id="titleBar">
+                <div id="titleName">
+                    <p>sudo.mist@localhost</p>
+                </div>
+                <div id="buttons">
+                    <div class="navButtns" id="closeButton" onclick="exitTerminal()">
+                        <p>X</p>
+                    </div>
+                </div>
+            </div>
+            <div class="terminalArea">
+                <p>sudo.mist@manipal:<span class="accessIndicator">~ $</span></p>
+                <form class="commandSlot"><input type="text" name="command" class="app-control"></form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

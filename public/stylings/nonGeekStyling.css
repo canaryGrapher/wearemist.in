@@ -57,11 +57,11 @@ a {
 }
 
 #LOGO {
-  font-weight: bold;
-  border-width: 1px;
-  border-color: #ffffff;
-  border-style: solid;
-  padding: 2px 3px;
+  padding: 2vh 20px;
+  background-image: url("../images/logo/logoLight.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .linkBox {
@@ -98,10 +98,21 @@ a {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+#mistLogoBig {
+  margin-top: 10vh;
+}
+
+#mistLogoBig > img {
+  display: block;
+  margin: auto;
 }
 
 #centeredText {
-  padding-top: 20vh;
+  padding-top: 10vh;
   width: 100vw;
   text-align: center;
 }
@@ -702,13 +713,11 @@ textarea {
     margin-top: auto;
     margin-bottom: auto;
   } 
-  #section0 {
-    height: 100vh;
-    background-image: url("../images/backgrounds/homeImage.jpg");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-  } 
+
+  #logoSection > img{
+    height: 50px;
+    width: 50px;
+  }
 
   #centeredText {
     padding-top: 10vh;
