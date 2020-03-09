@@ -1,6 +1,6 @@
 {
   "name": "wearemist",
-  "version": "1.0.0",
+  "version": "2.2.2",
   "description": "The official website of the Manipal Institute of Technology",
   "main": "server.js",
   "scripts": {
