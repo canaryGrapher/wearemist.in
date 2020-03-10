@@ -126,15 +126,12 @@ a {
   font-size: 80px;
 }
 
-#centeredText > #quote {
-  font-size: 20px;
-  padding-bottom: 0.5vh;
-}
-
 #quote {
   margin: auto;
   width: fit-content;
   font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
 }
 
 #mistName {
@@ -505,30 +502,6 @@ textarea {
   border-radius: 0px 0px 5px 5px;
 }
 
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  padding-left: 10px;
-  font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(44, 44, 44);
-}
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  padding-left: 10px;
-  font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(44, 44, 44);
-}
-
-:-ms-input-placeholder {
-  /* IE 10+ */
-  padding-left: 10px;
-  font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(44, 44, 44);
-}
-
 #submitButton {
   min-height: 7vh;
   margin-top: 10px;
@@ -613,6 +586,7 @@ textarea {
   #rightColumn {
     width: 100vw;
     font-size: 20px;
+    height: fit-content;
   }
   #formHolder {
     position: relative;
@@ -642,6 +616,7 @@ textarea {
     min-width: 100vw;
     max-width: 100vw;
     font-size: 20px;
+    text-indent: 10px;
   }
   #submitButton {
     min-height: 8vh;

@@ -1,8 +1,11 @@
 doctype html
 head
   title CyberManipal | MIST
+  meta(name='viewport', content='initial-scale=1, maximum-scale=1')
   link(rel='stylesheet', type='text/css', href='./stylings/newsPage.css')
+  link(rel='stylesheet', type='text/css', href='https://unpkg.com/aos@next/dist/aos.css')
   script(src='./scripts/newsPage.js')
+  script(src='./scripts/wow.js')
 #container
   #responsiveNavbar
     h1#resNavbarLogo CyberManipal
@@ -39,6 +42,8 @@ head
       a(href='/nonGeek#section3') Contact Us
     p#team.linkBox
       a(href='/team') Team
+    p#contributor.linkBox
+      a(href='/contributors') Contributors
   #navbarScroll
     p#LOGO.linkBoxScroll
       a.linksNavibar(href='/home') MIST
@@ -52,6 +57,8 @@ head
       a.linksNavibar(href='/nonGeek#section3') Contact Us
     p#team.linkBoxScroll
       a.linksNavibar(href='/team') Team
+    p#contributor.linkBoxScroll
+      a.linksNavibar(href='/contributors') Contributors
   #headBar
     #headerTitle
       h1 CYBERSECURITY NEWS, HANDPICKED BY MIST
@@ -62,7 +69,7 @@ head
       - var titleNews = newsReports[index].newsHeading.split(" ");
       - var divID = titleNews[0]+titleNews[1]+titleNews[2];
       - var newsUrl = newsReports[index].about;
-      .newsPart
+      .newsPart(data-aos='flip-up')
         a(href=newsUrl)
           .newsPhoto(id=divID)
           style.
@@ -71,7 +78,7 @@ head
             }
           .newsTitle
               p #{newsReports[index].newsHeading}
-#footNotes
+#footNotes(data-aos='flip-down') 
   #pageName
     h1 CyberManipal
     p &copy;2020 MIST, All rights reserved
@@ -82,3 +89,25 @@ head
     form(action='/addToMailingList', method='POST')
       input#mailingInput(type='email', name='subscriberEmail', placeholder='Email Address')
       input#mailSubmit(type='submit', value='Subscribe')
+
+script(src='https://unpkg.com/aos@next/dist/aos.js')
+script.
+  AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  });
