@@ -65,7 +65,7 @@ function showResNav() {
 function hideResNav() {
   document.getElementById("responsiveNavItems").style.height = "0vh";
   document.getElementById("responsiveNavItems").style.display = "none";
-  document.getElementById("responsiveNavbar").style.height = "60px";
+  document.getElementById("responsiveNavbar").style.height = "fit-content";
   showMenu = 0;
   document.getElementById("responsiveNavbar").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
   document.getElementById("resNavbarLogo").style.display = "inherit";
