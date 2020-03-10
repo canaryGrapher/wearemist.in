@@ -93,6 +93,7 @@ a {
   color: rgb(255, 255, 255);
   width: 100vw;
   height: 100vh;
+  min-height: 100vh;
   background-image: url("../images/backgrounds/homeImage.jpg");
   background-blend-mode: color-burn;
   background-size: cover;
@@ -438,6 +439,7 @@ a {
 #contactForm {
   display: grid;
   grid-template-columns: auto;
+  overflow-x: hidden;
 }
 
 #contactContainer {
@@ -454,7 +456,6 @@ a {
   width: 50vw;
   text-align: center;
   font-size: 30px;
-  overflow-x: hidden;
 }
 
 #formHolder {
@@ -481,7 +482,6 @@ input {
   height: 50px;
   margin-bottom: 4px;
   font-size: 20px;
-  padding: 5px 10px;
   display: block;
   background-color: rgba(0, 0, 0, 0.05);
 }
@@ -497,7 +497,6 @@ textarea {
   min-width: 30vw;
   max-width: 30vw;
   font-size: 20px;
-  padding: 10px 1vw;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 0px 0px 5px 5px;
 }
@@ -609,6 +608,7 @@ textarea {
     width: 100vw;
     font-size: 20px;
     display: block;
+    text-indent: 10px;
   }
   textarea {
     min-height: 25px;
@@ -700,7 +700,7 @@ textarea {
   }
 
   #centeredText {
-    padding-top: 20vh;
+    padding-top: 15vh;
     width: 100vw;
     text-align: center;
   }
@@ -738,6 +738,7 @@ textarea {
 
   #quoteCredit {
    font-size: 15px;
+   padding-bottom: 20px;
   }
 
   #mouseAnimation {
@@ -817,7 +818,8 @@ textarea {
 }
 @media screen and (max-height: 500px) {
   #section0 {
-    min-height: 100vh;
+    height: fit-content;
+    padding-bottom: 20px;
   }
 
   #logoSection > img{
@@ -853,5 +855,6 @@ textarea {
 
   #quoteCredit {
    font-size: 15px;
+   padding-bottom: 20px;
   }
 }
