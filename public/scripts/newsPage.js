@@ -56,15 +56,22 @@ function showResNav() {
   document.getElementById("responsiveNavbar").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
   showMenu = 1;
   document.getElementById("responsiveNavItems").style.height = "60vh";
+  document.getElementById("barContainer").style.transform = "rotate(0deg)";
+  document.getElementById("barContainer").innerHTML = "x";
+  document.getElementById("barContainer").style.color = "#c62828";
+
 }
 
 function hideResNav() {
   document.getElementById("responsiveNavItems").style.height = "0vh";
   document.getElementById("responsiveNavItems").style.display = "none";
-  document.getElementById("responsiveNavbar").style.height = "150px";
+  document.getElementById("responsiveNavbar").style.height = "60px";
   showMenu = 0;
   document.getElementById("responsiveNavbar").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
   document.getElementById("resNavbarLogo").style.display = "inherit";
+  document.getElementById("barContainer").style.transform = "rotate(90deg)";
+  document.getElementById("barContainer").innerHTML = ">";
+  document.getElementById("barContainer").style.color = "#fff";
 }
 
 function hideCross() {
