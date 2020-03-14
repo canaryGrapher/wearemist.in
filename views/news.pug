@@ -10,7 +10,7 @@ head
     h1#resNavbarLogo CyberManipal
     #barContainer(onclick='makeCross(this)')
       p >
-    #responsiveNavItems
+    #responsiveNavItems 
       p#res_LOGO.res_linkBox(onclick='clickLinks()')
         a(href='/home') MIST
       p#res_home.res_linkBox(onclick='clickLinks()')
@@ -79,13 +79,9 @@ head
   #pageName
     h1 CyberManipal
     p &copy;2020 MIST, All rights reserved
-  #subscribeForm(data-aos='zoom-in' data-aos-duration="1500") 
-    p(for='mailingInput') Subscribe to our newsletter
-    br
-    form(action='/addToMailingList', method='POST')
-      input#mailingInput(type='email', name='subscriberEmail', placeholder='Email Address')
-      input#mailSubmit(type='submit', value='Subscribe')
-
+  #subscribeForm(data-aos='zoom-in' data-aos-duration="1500")
+    p Subscribe to our newsletter
+    button#mailSubmit Subscribe
 script(src='https://unpkg.com/aos@next/dist/aos.js')
 script.
   AOS.init({

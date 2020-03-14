@@ -458,12 +458,12 @@ howtoapply {
     row-gap: 1vh;
   }
   .ccprofile {
-    height: 50vh;
+    height: 45vh;
     width: 48vw;
   }
   .ccPhoto {
     margin-top: 0vh;
-    height: 35vh;
+    height: 30vh;
     width: 48vw;
   }
   .cmemberInfo {
@@ -480,7 +480,7 @@ howtoapply {
   }
 
   .mcprofile {
-    height: 60vh;
+    height: 40vh;
     width: 48vw;
   }
   
@@ -490,7 +490,7 @@ howtoapply {
     width: 48vw;
   }
   .mmemberInfo {
-    height: 20vh;
+    height: 15vh;
     width: 48vw;
   }
   .wcmemberName {

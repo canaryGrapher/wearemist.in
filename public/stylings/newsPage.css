@@ -195,28 +195,25 @@ a {
 }
 
 #footNotes {
-  margin-top: 200px;
+  margin-top: 100px;
   position: relative;
+  bottom: 0;
   background-color: black;
-  height: fit-content;
-  width: 100vw;
-  color: white;
+  text-align: center;
   display: flex;
   flex-direction: row;
-  padding-top: 20px;
-  padding-bottom: 40px;
 }
 
 #pageName {
-  height: min-content;
-  width: 50vw;
-  text-align: center;
-  margin: auto;
+  width: 47vw;
+  color: rgb(255, 255, 255);
+  padding: 20px 0;
+  margin-bottom: 30px;
 }
 
 #pageName > h1 {
   font-family: "Exo 2", sans-serif;
-  font-size: 5vh;
+  font-size: 6vh;
 }
 
 #pageName > p {
@@ -225,83 +222,27 @@ a {
 }
 
 #subscribeForm {
-  width: 50vw;
-  margin: auto;
+  background-color: rgb(169, 206, 36)(136, 25, 25);
+  color: #fff;
+  width: 47vw;
+  padding-bottom: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 #subscribeForm > p {
-  margin-left: 50px;
+  padding-bottom: 10px;
 }
 
-#subscribeForm > form {
-  margin-left: 50px;
-}
-
-form {
-  display: inline;
-}
-
-input {
-  width: 20vw;
-  height: 50px;
-  margin-bottom: 4px;
-  font-size: 15px;
-  padding: 5px 1vw;
-  border-color: #ff6f00;
-  border-style: solid;
-  border-width: 1px;
-  color: white;
-  margin-right: 0;
-  border-right: 0;
-  background-color: rgba(0, 0, 0);
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-input:first-child {
-  border-radius: 20px 0 0 20px;
-}
-
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  font-size: 15px;
-  color: rgb(255, 255, 255);
-}
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  font-size: 15px;
-  color: rgb(255, 255, 255);
-}
-
-:-ms-input-placeholder {
-  /* IE 10+ */
-  font-size: 15px;
-  color: rgb(255, 255, 255);
-}
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  font-size: 15px;
-  color: rgb(255, 255, 255);
-}
-
-#mailSubmit { 
-  height: 61px;
-  width: fit-content;
-  font-size: 20px;
-  border-style: none;
-  color: rgb(255, 255, 255);
-  background-color: #ff6f00;
-  text-align: center;
-  border-radius: 0 20px 20px 0;
-  margin-top: auto;
-  margin-bottom: auto;
+#mailSubmit {
+  height: 60px;
+  width: 100px;
+  background-color: orange;
 }
 
 #mailSubmit:hover {
-  background-color: #ffffff;
-  color: #ff6f00;
+  color: orange;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 1000px) {
@@ -358,12 +299,11 @@ input:first-child {
     z-index: 100;
     position: fixed;
     width: 100vw;
-    height: fit-content;
+    height: 8vh;
     background-color: rgba(0, 0, 0, 0.0);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 10px;
   }
 
   #responsiveNavItems {
@@ -389,7 +329,6 @@ input:first-child {
     transform: rotate(90deg);
     color: #fff;
     right: 0;
-
     transition-duration: 500ms;
   }
 
@@ -401,9 +340,8 @@ input:first-child {
     color: #fff;
     display: block;
     margin-left: 15px;
-    font-size: 5vh;
-    margin-top: auto;
-    margin-bottom: auto;
+    font-size: 4vh;
+    line-height: 8vh;
   }
 
   #res_linkBox {
@@ -421,9 +359,21 @@ input:first-child {
 
   /* footer design */
   
+  #footNotes {
+    margin-top: 100px;
+    position: relative;
+    bottom: 0;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
   #pageName {
     width: 100vw;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    margin-bottom: 10px;
   }
   
   #pageName > h1 {
@@ -431,75 +381,21 @@ input:first-child {
     margin: auto;
   }
 
-  #footNotes {
-    margin-top: 100px;
-    height: fit-content;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #pageName > p {
-  margin-top: 6px;
-  font-size: 2vh;
-}
-
   #subscribeForm {
-    padding-top: 20px;
-    display: block;
     width: 100vw;
-    margin: auto;
-    text-align: center;
-  }
-
-  input {
-    text-indent: 20px;
-    width: 50vw;
-    height: 40px;
-  }
-
-  input:first-child {
-    border-radius: 20px 0 0 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
 
   #mailSubmit {
-    width: min-content;
-    height: 51px;
-    font-size: 15px;
-    border-radius: 0 20px 20px 0;
-    text-align: center;
-    margin: auto;
-  }
-
-  ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    font-size: 15px;
-    color: rgb(255, 255, 255);
+    height: 60px;
+    width: 200px;
+    background-color: orange;
+    font-size: 20px;
   }
   
-  ::-moz-placeholder {
-    /* Firefox 19+ */
-    font-size: 15px;
-    color: rgb(255, 255, 255);
-  }
-  
-  :-ms-input-placeholder {
-    /* IE 10+ */
-    font-size: 15px;
-    color: rgb(255, 255, 255);
-  }
-  
-  :-moz-placeholder {
-    /* Firefox 18- */
-    font-size: 15px;
-    color: rgb(255, 255, 255);
-  }
-
-  #subscribeForm > p {
-    margin: auto;
-  }
-  
-  #subscribeForm > form {
-    margin: auto;
+  #mailSubmit:hover {
+    color: orange;
+    background-color: #fff;
   }
 }
