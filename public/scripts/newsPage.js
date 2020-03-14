@@ -6,11 +6,11 @@ window.onscroll = function () {
 window.onresize = function (event) {
   var navibar = document.getElementById("navbar");
   var naviScroll = document.getElementById("navbarScroll");
-  if (window.innerWidth <= 1000) {
+  if (window.innerWidth <= 1200) {
     navibar.style.display = "none";
     naviScroll.style.display = "none";
   }
-  if (window.innerWidth > 1000) {
+  if (window.innerWidth > 1200) {
     scrollFunction();
   }
 };
@@ -22,7 +22,7 @@ window.onload = function () {
 function scrollFunction() {
   var navibar = document.getElementById("navbar");
   var naviScroll = document.getElementById("navbarScroll");
-  if (window.innerWidth > 1000) {
+  if (window.innerWidth > 1200) {
     navibar.style.display = "none";
     naviScroll.style.display = "none";
     if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
@@ -87,7 +87,7 @@ function resScrollFunction() {
   var navibar = document.getElementById("responsiveNavbar");
   elemHeight = document.querySelector("#responsiveNavItems").offsetHeight;
   if (elemHeight == 0) {
-    if (window.innerWidth < 1000) {
+    if (window.innerWidth < 1200) {
       if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
         navibar.style.backgroundColor = "rgb(0, 0, 0, 0.8)";
       } else {
