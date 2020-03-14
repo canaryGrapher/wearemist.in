@@ -85,11 +85,22 @@ function clickLinks() {
 
 function resScrollFunction() {
   var navibar = document.getElementById("responsiveNavbar");
-  if (window.innerWidth < 1000) {
-    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-      navibar.style.backgroundColor = "rgb(0, 0, 0, 0.8)";
-    } else {
-      navibar.style.backgroundColor = "rgb(0, 0, 0, 0.0)";
+  elemHeight = document.querySelector("#responsiveNavItems").offsetHeight;
+  if (elemHeight == 0) {
+    if (window.innerWidth < 1000) {
+      if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        navibar.style.backgroundColor = "rgb(0, 0, 0, 0.8)";
+      } else {
+        navibar.style.backgroundColor = "rgb(0, 0, 0, 0.0)";
+      }
     }
   }
+}
+
+function closeSubscriptionForm() {
+  document.getElementById("subscribeFillForm").style.display = "none";
+}
+
+function showSubscriptionForm() {
+  document.getElementById("subscribeFillForm").style.display = "inherit";
 }

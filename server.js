@@ -109,11 +109,12 @@ app.get("/news", function (req, res) {
 app.post("/addToMailingList", function (req, res) {
   //do something to add these to the maling list after filtering
   console.log(req.body);
-  collectionMailingList.insertMany(req.body.subscriberEmail, function (err, res) {
-    if (err) throw err;
-    console.log("1 document inserted");
-    res.render("subscriberDone");
-  });
+  // collectionMailingList.insertMany(req.body.subscriberEmail, function (err, res) {
+  //   if (err) throw err;
+  //   console.log("1 document inserted");
+  //   res.render("subscriberDone");
+  // });
+  res.redirect("/news");
 });
 
 app.get("*", function (req, res) {

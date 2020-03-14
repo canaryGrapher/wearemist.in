@@ -5,6 +5,35 @@ head
   link(rel='stylesheet', type='text/css', href='./stylings/newsPage.css')
   link(rel='stylesheet', type='text/css', href='https://unpkg.com/aos@next/dist/aos.css')
   script(src='./scripts/newsPage.js')
+#subscribeFillForm
+  #formBoxSubscribe
+    #formBoxHeader
+      p(onclick='closeSubscriptionForm()') X
+      h1 CyberManipal
+    #formContainerSubscribe
+      form(method='POST', action='/addToMailingList')
+        #inputTextBoxes
+          .inputBOXsubscribe
+            label(for='subscriberName') Name:
+            br
+            input#subscriberName(type='text', name='subscriberName', placeholder='Your name', required)
+            br
+          .inputBOXsubscribe
+            label(for='subscriberEmail') Email:
+            br
+            input#subscriberEmail(type='email', name='subscriberEmail', placeholder='Your email address' required)
+            br
+        p#checkBoxMessage What do you want to subscribe for?
+        #checkBOXsubscribe
+          #BOX
+            input#newsletterYESorNO.checkBOX(type='checkbox', name='newsYESorNO', required, checked)
+            label.checkBoxLabel(for='newsYESorNO') Newsletter
+            br
+          #BOX
+            input#eventsYESorNO.checkBOX(type='checkbox', name='eventsYESorNO', required, checked)
+            label.checkBoxLabel(for='eventsYESorNO') Events
+            br
+        input#submitSubscribeButtn(type='submit', value='Submit')
 #container
   #responsiveNavbar
     h1#resNavbarLogo CyberManipal
@@ -81,7 +110,7 @@ head
     p &copy;2020 MIST, All rights reserved
   #subscribeForm(data-aos='zoom-in' data-aos-duration="1500")
     p Subscribe to our newsletter
-    button#mailSubmit Subscribe
+    button#mailSubmit(onclick='showSubscriptionForm()') Subscribe
 script(src='https://unpkg.com/aos@next/dist/aos.js')
 script.
   AOS.init({
