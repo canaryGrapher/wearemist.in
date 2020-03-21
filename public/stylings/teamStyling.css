@@ -40,6 +40,10 @@ body {
   background-position: center;
 }
 
+#responsiveNavbar {
+  display: none;
+}
+
 #navbar {
   width: 100vw;
   height: 5vh;
@@ -84,7 +88,6 @@ a {
   width: 100vw;
   margin: auto;
   text-align: center;
-  /* background-color: rgb(0, 0, 0); */
   background-image: url("../images/assets/teams.jpg");
   background-position: center;
   background-size: cover;
@@ -119,7 +122,7 @@ a {
   height: 90%;
   position: fixed;
   z-index: 200;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(238, 238, 238);
   left: 5%;
   right: 5%;
   top: 7%;
@@ -137,18 +140,18 @@ a {
 
 #Xbut {
   padding: 1vh 1.5vw;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   width: min-content;
   float: inline-end;
 }
 
 #Xbut:hover {
-  color: rgb(196, 24, 24);
+  color: rgb(255, 0, 0);
 }
 
 #contentApply {
   width: 93%;
-  color: rgb(255, 255, 255);
+  color: rgb(8, 8, 8);
   overflow-y: scroll;
   scrollbar-width: none;
   margin: 2vh auto;
@@ -175,7 +178,7 @@ howtoapply {
 }
 
 .teamLinkBox {
-  font-size: 2.5vh;
+  font-size: 100%;
 }
 
 .teamLinkBox > p {
@@ -229,8 +232,9 @@ howtoapply {
 }
 
 .ccprofile {
-  height: 70vh;
-  width: 30vw;
+  height: fit-content;
+  width: 25vw;
+  overflow: hidden;
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
@@ -238,20 +242,19 @@ howtoapply {
 }
 
 .ccPhoto {
-  margin-top: 0.5vh;
-  height: 40vh;
-  width: 29.5vw;
+  height: 50vh;
+  width: 25vw;
   background-color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
 .cmemberInfo {
-  height: 29vh;
-  width: 29.5vw;
+  height: 15vh;
+  width: 25vw;
   background-color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
@@ -261,10 +264,11 @@ howtoapply {
 
 .cmemberName {
   margin-top: 3vh;
+  font-size: 20px;
 }
 
 .cmemberPosition {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: rgb(71, 169, 207);
 }
@@ -280,12 +284,11 @@ howtoapply {
 
 .mcPhoto {
   margin-top: 0.5vh;
-  height: 40vh;
+  height: 60vh;
   width: 29.5vw;
   background-color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
-  background-image: url("./../images/assets/noProfile.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -302,36 +305,20 @@ howtoapply {
 
 .mcmemberName {
   margin-top: 3vh;
-}
-
-.interestsMember {
-  padding-top: 1vh;
-  margin: auto;
+  font-size: 20px;
 }
 
 .wcprofile {
-  height: 50vh;
+  height: 10vh;
   width: 20vw;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   box-shadow: 10px 10px 8px 10px #33333354;
 }
 
-.wcPhoto {
-  margin-top: 0.5vh;
-  height: 40vh;
-  width: 19.5vw;
-  background-color: rgb(0, 0, 0);
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url("./../images/assets/noProfile.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
 .wmemberInfo {
-  height: 9vh;
+  height: 10vh;
   width: 19.5vw;
   background-color: rgb(0, 0, 0);
   margin-left: auto;
@@ -341,8 +328,8 @@ howtoapply {
 }
 
 .wcmemberName {
-  font-size: 125%;
-  line-height: 9vh;
+  font-size: 80%;
+  line-height: 10vh;
 }
 
 #spacing {
@@ -359,4 +346,209 @@ howtoapply {
   font-size: 20px;
   padding-top: 8vh;
   padding-bottom: 5vh;
+}
+
+
+@media screen and (max-width: 1000px) {
+  /* navbar design */
+  #navbar {
+    display: none;
+  }
+  
+  #responsiveNavbar {
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+  }
+
+  #responsiveNavItems {
+    padding-top: 50px;
+    position: absolute;
+    width: 100vw;
+    margin-top: 45px;
+    height: 60vh;
+    display: none ;
+    flex-direction: column;
+    text-align: center;
+    z-index: 100;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+  
+  #barContainer {
+    display: flex;
+    height: 45px;
+    line-height: 20px;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    margin: 3px 0;
+    transition: 0.5s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 4px) ;
+    transform: rotate(-45deg) translate(-4px, 4px) ;
+    background-color: rgb(255, 72, 72);
+  }
+  
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -4px) ;
+    transform: rotate(45deg) translate(-4px, -4px) ;
+    background-color: rgb(255, 72, 72);
+  }
+
+  /* How to apply design  */
+  #contentApply {
+    width: 97%;
+  }
+  #contentApply > h1 {
+    text-align: center;
+    font-size: 50px;
+  }
+  howtoapply {
+    font-size: 35px;
+  }
+  #closeButton {
+    font-size: 60px;
+  }
+
+  /* Committee selection navbar design */
+  .teamLinkBox {
+    font-size: 100%;
+    width: 33%;
+    height:fit-content;
+    text-align: center;
+  }
+
+  #ccLink, #mcLink, #wcLink {
+    padding: 2px;
+    width: max-content;
+ }
+
+  #teamLinksNavbar {
+    height: fit-content;
+  }
+
+  .teamLinkBox {
+    font-size: 100%;
+    width: 33.33%;
+  }
+
+  /* cards display design */
+  #corec,
+  #manc {
+    grid-template-columns: auto auto;
+    row-gap: 1vh;
+  }
+  .ccprofile {
+    height: 50vh;
+    width: 48vw;
+  }
+  .ccPhoto {
+    margin-top: 0vh;
+    height: 35vh;
+    width: 48vw;
+  }
+  .cmemberInfo {
+    height: 15vh;
+    width: 48vw;
+  }
+
+  .cmemberName {
+    font-size: 12px;
+  }
+
+  .cmemberPosition {
+    font-size: 10px;
+  }
+
+  .mcprofile {
+    height: 60vh;
+    width: 48vw;
+  }
+  
+  .mcPhoto {
+    margin-top: 0vh;
+    height: 40vh;
+    width: 48vw;
+  }
+  .mmemberInfo {
+    height: 20vh;
+    width: 48vw;
+  }
+  .wcmemberName {
+    font-size: 15px;
+    line-height: initial;
+    margin-top: 15px;
+  }
+
+  #workc {
+    grid-template-columns: auto auto auto;
+    row-gap: 5px;
+    font-size: 25px;
+  }
+
+  .wcprofile {
+    height: 10vh;
+    width: 32vw;
+    margin: auto;
+    box-shadow: none;
+  }
+  
+  .wmemberInfo {
+    height: 10vh;
+    width: 30vw;
+  }
+
+  #closeButton {
+    font-size: 40px;
+    width: 100%;
+    height: min-content;
+  }
+  
+  #Xbut {
+    padding: 1vh 1.5vw;
+    color: rgb(0, 0, 0);
+    width: min-content;
+    float: inline-end;
+  }
+  
+  #Xbut:hover {
+    color: rgb(255, 0, 0);
+  }
+  
+  #contentApply {
+    width: 93%;
+    color: rgb(0, 0, 0);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin: auto;
+  }
+  
+  #contentApply > h1 {
+    padding-bottom: 2vh;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px #9696968c;
+  }
+  
+  howtoapply {
+    font-size: 16px;
+  }
 }
