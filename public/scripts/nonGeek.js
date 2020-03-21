@@ -1,3 +1,7 @@
+window.onload = function () {
+    document.getElementById("loaderContainer").style.display = "none";
+};
+
 function showResNav() {
     document.getElementById("responsiveNavItems").style.display = "flex";
     document.getElementById("responsiveNavbar").style.height = "100vh";

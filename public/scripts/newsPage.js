@@ -1,3 +1,8 @@
+window.onload = function () {
+  document.getElementById("navbarScroll").style.display = "none";
+  document.getElementById("loaderContainer").style.display = "none";
+};
+
 window.onscroll = function () {
   scrollFunction();
   resScrollFunction();
@@ -13,10 +18,6 @@ window.onresize = function (event) {
   if (window.innerWidth > 1200) {
     scrollFunction();
   }
-};
-
-window.onload = function () {
-  document.getElementById("navbarScroll").style.display = "none";
 };
 
 function scrollFunction() {

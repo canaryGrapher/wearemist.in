@@ -40,6 +40,62 @@ body {
   background-position: center;
 }
 
+/* For the loading screen */
+#loaderContainer {
+  display: grid;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  z-index: 1000;
+  line-height: 100vh;
+  font-size: 10vh;
+  text-align: center;
+  color: white;
+}
+
+#loaderContainer > p {
+  animation-name: slowLoading;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes slowLoading {
+  10% {
+    opacity: 10%;
+  }
+  20% {
+    opacity: 20%;
+  }
+  30% {
+    opacity: 30%;
+  }
+  40% {
+    opacity: 40%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  60% {
+    opacity: 60%;
+  }
+  70% {
+    opacity: 70%;
+  }
+  80% {
+    opacity: 80%;
+  }
+  90% {
+    opacity: 90%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 #navbar {
   width: 100vw;
   height: 5vh;

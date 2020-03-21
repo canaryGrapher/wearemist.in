@@ -1,6 +1,12 @@
-window.onload = changeLinkTexts;
-window.onload = showCC;
-window.onresize = changeLinkTexts;
+window.onload = function () {
+  showCC();
+  changeLinkTexts();
+  document.getElementById("loaderContainer").style.display = "none";
+};
+
+window.onresize = function () {
+  changeLinkTexts();
+};
 
 function showCC() {
   var cc = document.getElementById("cc");
