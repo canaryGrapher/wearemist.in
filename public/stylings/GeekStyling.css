@@ -138,6 +138,14 @@ input {
         background-color: #000;
     }
 
+    #terminalArea {
+        margin-top: 30px;
+    }
+
+    #groupInfo {
+        font-size: 35px;
+    }
+
     input {
         font-size: 50px;
     }
@@ -147,7 +155,7 @@ input {
     }
 
     .commandOutput {
-        line-height: 40px;
-        font-size: 30px;
+        line-height: 50px;
+        font-size: 50px;
     }
 }
