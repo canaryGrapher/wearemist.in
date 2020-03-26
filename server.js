@@ -11,6 +11,8 @@ const CONNECTION_URL = process.env.DATABASE_URL;
 const DATABASE_NAME1 = "Members"; //enter Database Name here
 const DATABASE_NAME2 = "Website"; //enter Database Name here
 const DATABASE_NAME3 = "UserData";
+var device = require("express-device");
+const si = require("systeminformation");
 
 var transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
@@ -25,6 +27,7 @@ const app = express();
 
 
 app.use(express.json()); // Make sure it comes back as json
+app.use(device.capture());
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.set('trust proxy', true); //setting up so that we get the IP of the user
@@ -118,8 +121,8 @@ app.post("/addToMailingList", function (req, res) {
   res.redirect("/news");
 });
 
-app.post("/getData", function (req, res) {
-  var ip = req.ip;
+app.get("/getData", function (req, res) {
+  var ip = req.connection.remoteAddress;
   console.log(ip);
   res.send(ip);
 });

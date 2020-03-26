@@ -4,7 +4,7 @@ function exitTerminal() {
 
 function loadBrowser() {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "http://localhost:3000/getData", false);
+    xhttp.open("GET", "/getData", false);
     xhttp.send();
     recievedData = xhttp.responseText;
 }
