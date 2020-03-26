@@ -15,6 +15,12 @@ html {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+    -ms-overflow-style: none;
+  }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
   }
 
 body {
@@ -30,7 +36,8 @@ body {
 #window {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     background-color: #1a1a1a;
     display: flex;
     flex-direction: column;
@@ -98,7 +105,7 @@ input {
     font-size: 20px;
     min-width: 40vw;
     background-color: white;
-    width: max-content;
+    width: 100%;
     min-width: 30vw;
 }
 

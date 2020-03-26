@@ -85,7 +85,6 @@ function handleEnter(e) {
         else {
             document.getElementById(`commandOutput${i}`).innerHTML = `sh: "${userInputCommand}": not found`;
         }
-
         addCommand();
     }
 }

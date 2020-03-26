@@ -123,7 +123,6 @@ app.post("/addToMailingList", function (req, res) {
 
 app.get("/getData", function (req, res) {
   var ip = req.connection.remoteAddress;
-  console.log(ip);
   res.send(ip);
 });
 
