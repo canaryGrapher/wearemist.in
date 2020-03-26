@@ -12,6 +12,8 @@ function loadBrowser() {
 function loadTerminal() {
     loadBrowser();
     document.getElementById("command1").focus();
+    document.getElementById("accessIdentifier").innerHTML = `${recievedData}@sudo.mist:`;
+    document.getElementById("terminalTitle").innerHTML = `${recievedData}@wearemist.in`;
 }
 var i = 1;
 
