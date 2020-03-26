@@ -15,7 +15,7 @@ html {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
-    -ms-overflow-style: none;
+    scroll-behavior: smooth;
   }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -103,7 +103,6 @@ body {
 
 input {
     font-size: 20px;
-    min-width: 40vw;
     background-color: white;
     width: 100%;
     min-width: 30vw;
@@ -124,13 +123,36 @@ input {
     line-height: 25px;
 }
 
+#availableCommands {
+    color: rgb(247, 37, 37);
+    font-size: 20px;
+}
+
 .file {
     color: #2196f3;
+}
+
+.teamContainer {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    color: #fff;
+    text-align: center;
+} 
+
+.teamHeading {
+    font-weight: bold;
+    color: rgb(255, 111, 111);
+}
+
+#newsMessage {
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1000px) {
     #window {
         width: 100vw;
+        overflow-x: hidden;
         min-height: 100vh;
         height: fit-content;
         font-size: 50px;
@@ -144,6 +166,8 @@ input {
 
     #groupInfo {
         font-size: 35px;
+        width: 95%;
+        margin: 0 auto;
     }
 
     input {
@@ -156,6 +180,20 @@ input {
 
     .commandOutput {
         line-height: 50px;
-        font-size: 50px;
+        font-size: 40px;
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .teamContainer {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: auto;
+        color: #fff;
+    } 
+
+    #newsMessage {
+        margin-bottom: 40px;
     }
 }

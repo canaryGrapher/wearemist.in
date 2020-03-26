@@ -126,7 +126,50 @@ app.get("/getData", function (req, res) {
   var modifiedIP = ip.split(":");
   var lengthOfIP = modifiedIP.length;
   var lastElement = lengthOfIP - 1;
-  res.send(modifiedIP[lastElement]);
+  var otherOption = "127.0.0.1";
+  var sendingIP = modifiedIP[lastElement] || otherOption;
+  res.send(sendingIP);
+});
+
+app.get("/getCCdata", function (req, res) {
+  var nameListCC = "";
+  collectionCC.find().toArray((err, result1) => {
+    for (var val in result1) {
+      nameListCC = nameListCC + result1[val].name + ",";
+    }
+    res.send(nameListCC);
+  });
+});
+
+app.get("/getMCdata", function (req, res) {
+  var nameListMC = "";
+  collectionMC.find().toArray((err, result1) => {
+    for (var val in result1) {
+      nameListMC = nameListMC + result1[val].name + ",";
+    }
+    res.send(nameListMC);
+  });
+});
+
+
+app.get("/getWCdata", function (req, res) {
+  var nameListMC = "";
+  collectionMC.find().toArray((err, result1) => {
+    for (var val in result1) {
+      nameListMC = nameListMC + result1[val].name + ",";
+    }
+    res.send(nameListMC);
+  });
+});
+
+app.get("/getNewsdata", function (req, res) {
+  var newsList = "";
+  collectionNews.find().toArray((err, result1) => {
+    for (var val in result1) {
+      newsList = newsList + result1[val].newsHeading + ",";
+    }
+    res.send(newsList);
+  });
 });
 
 app.get("*", function (req, res) {

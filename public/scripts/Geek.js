@@ -9,10 +9,42 @@ function loadBrowser() {
     recievedData = xhttp.responseText;
 }
 
+function loadCCdata() {
+    var CCxhttp = new XMLHttpRequest();
+    CCxhttp.open("GET", "/getCCdata", false);
+    CCxhttp.send();
+    recievedCCData = CCxhttp.responseText;
+    return recievedCCData;
+}
+
+function loadMCdata() {
+    var MCxhttp = new XMLHttpRequest();
+    MCxhttp.open("GET", "/getMCdata", false);
+    MCxhttp.send();
+    recievedMCData = MCxhttp.responseText;
+    return recievedMCData;
+}
+
+function loadNewsdata() {
+    var Newsxhttp = new XMLHttpRequest();
+    Newsxhttp.open("GET", "/getNewsdata", false);
+    Newsxhttp.send();
+    recievedNewsData = Newsxhttp.responseText;
+    return recievedNewsData;
+}
+
+function loadWCdata() {
+    var WCxhttp = new XMLHttpRequest();
+    WCxhttp.open("GET", "/getWCdata", false);
+    WCxhttp.send();
+    recievedWCData = WCxhttp.responseText;
+    return recievedWCData;
+}
+
 function loadTerminal() {
     loadBrowser();
     document.getElementById("command1").focus();
-    document.getElementById("accessIdentifier").innerHTML = `${recievedData}@sudo.mist:`;
+    document.getElementById("accessIdentifier").innerHTML = `${recievedData}@sudo.mist:<span class="accessIndicator">~$</span>`;
     document.getElementById("terminalTitle").innerHTML = `${recievedData}@wearemist.in`;
 }
 var i = 1;
@@ -45,14 +77,45 @@ function handleEnter(e) {
         else if (userInputCommand == "exit") {
             exitTerminal();
         }
-
         else if (first == "cat") {
             if (second == "team") {
-                document.getElementById(`commandOutput${i}`).innerHTML = `Enter the option number for viewing the contents<br><br>1) Board<br> 2) Management Committee<br> 3) Working Committee<br>`;
+                //making CoreComm array
+                var cc = `<span class="teamHeading">Board</span><br>`;
+                var ccArray = loadCCdata();
+                var ccArr = ccArray.split(",");
+                for (var val1 in ccArr) {
+                    cc = cc + ccArr[val1] + "<br>";
+                }
+                //making ManComm array
+                var mc = `<span class="teamHeading">Management Committee</span><br>`;
+                var mcArray = loadMCdata();
+                var mcArr = mcArray.split(",");
+                for (var val2 in mcArr) {
+                    mc = mc + mcArr[val2] + "<br>";
+                }
+                //making WorkComm array
+                var wc = `<span class="teamHeading">Working Committee</span><br>`;
+                var wcArray = loadWCdata();
+                var wcArr = wcArray.split(",");
+                for (var val3 in wcArr) {
+                    wc = wc + wcArr[val3] + "<br>";
+                }
+                document.getElementById(`commandOutput${i}`).innerHTML = `<div class="teamContainer"><div class="team">${cc}</div><div class="team">${mc}</div><div class="team">${wc}</div></div>`;
+
             }
 
             else if (second == "news") {
-                document.getElementById(`commandOutput${i}`).innerHTML = `news will be rendered`;
+                var news = `<span class="teamHeading" id="newsMessage">Loading last ten news</span><br>`;
+                var newsArray = loadNewsdata();
+                var newsArr = newsArray.split(",");
+                for (var val4 in newsArr) {
+                    news = news + newsArr[val4] + "<br><br>";
+                    console.log(val4);
+                    if (val4 == 11) {
+                        break;
+                    }
+                }
+                document.getElementById(`commandOutput${i}`).innerHTML = `${news}`;
             }
 
             else if (second == "about") {
@@ -69,7 +132,7 @@ function handleEnter(e) {
             }
 
             else if (second == null) {
-                document.getElementById(`commandOutput${i}`).innerHTML = "";
+                document.getElementById(`commandOutput${i}`).innerHTML = "Illegal use of 'cat'";
             }
 
             else {
@@ -80,11 +143,15 @@ function handleEnter(e) {
             document.getElementById(`commandOutput${i}`).innerHTML = `https://www.wearemist.in`;
         }
         else if (commandIndi == "help") {
-            document.getElementById(`commandOutput${i}`).innerHTML = `What help could you possibly need?`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><pre id="availableCommands">pwd   ls   whoami   cat   exit   man</pre>`;
+        }
+        else if (commandIndi == "whoami") {
+            document.getElementById(`commandOutput${i}`).innerHTML = `${recievedData}`;
         }
         else {
             document.getElementById(`commandOutput${i}`).innerHTML = `sh: "${userInputCommand}": not found`;
         }
+        document.getElementById(`commandOutput${i}`).classList.add("commandOutput");
         addCommand();
     }
 }
