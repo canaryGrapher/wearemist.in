@@ -123,7 +123,10 @@ app.post("/addToMailingList", function (req, res) {
 
 app.get("/getData", function (req, res) {
   var ip = req.connection.remoteAddress;
-  res.send(ip);
+  var modifiedIP = ip.split(":");
+  var lengthOfIP = modifiedIP.length;
+  var lastElement = lengthOfIP - 1;
+  res.send(modifiedIP[lastElement]);
 });
 
 app.get("*", function (req, res) {
