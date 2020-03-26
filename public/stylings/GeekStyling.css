@@ -133,7 +133,6 @@ input {
         width: 100vw;
         height: 100vh;
         font-size: 40px;
-        overflow: hidden;
         border-radius: 0px;
         background-color: #000;
     }
@@ -142,8 +141,11 @@ input {
         font-size: 40px;
     }
 
-    .navButtns {
-        font-size: 60px;
-        padding-right: 80px;
+    .commandStore {
+        font-size: 40px;
+    }
+
+    .commandOutput {
+        line-height: 40px;
     }
 }
