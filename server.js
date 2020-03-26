@@ -27,6 +27,7 @@ const app = express();
 app.use(express.json()); // Make sure it comes back as json
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json()); // to support JSON-encoded bodies
+app.set('trust proxy', true); //setting up so that we get the IP of the user
 app.use(
   bodyParser.urlencoded({
     extended: true
@@ -115,6 +116,12 @@ app.post("/addToMailingList", function (req, res) {
   //   res.render("subscriberDone");
   // });
   res.redirect("/news");
+});
+
+app.post("/getData", function (req, res) {
+  var ip = req.ip;
+  console.log(ip);
+  res.send(ip);
 });
 
 app.get("*", function (req, res) {

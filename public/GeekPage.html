@@ -5,27 +5,34 @@
     <title>Geek | MIST</title>
     <link rel="stylesheet" type="text/css" href="./stylings/GeekStyling.css" media="screen" />
     <script src="./scripts/Geek.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 </head>
 
-<body>
-    <div id="container">
-        <div id="window">
-            <div id="titleBar">
-                <div id="titleName">
-                    <p>sudo.mist@localhost</p>
-                </div>
-                <div id="buttons">
-                    <div class="navButtns" id="closeButton" onclick="exitTerminal()">
-                        <p>X</p>
+<body onload="loadTerminal()" onkeypress="handleEnter(event)">
+    <div id="window">
+        <div id="titleBar">
+            <div id="titleName">
+                <p id="terminalTitle">@wearemist.in</p>
+            </div>
+        </div>
+        <div id="groupInfo">
+            <p>Manipal Information and Security Team - version - BETA_3.2.6-def:15.03.2020<br>
+                2020 MIST, Manipal. All rights reserved.
+            </p>
+        </div>
+        <div id="terminalArea">
+            <div class="commandInstance" id="accessPanel">
+                <div class="access">
+                    <div class="accessName">
+                        <p>sudo.mist@manipal:<span class="accessIndicator">~$</span></p>
                     </div>
+                    <input type="text" name="command" class="app-control" id="command1" autocomplete="off"
+                        autocapitalize="off" autocorrect="off">
+                    <p class="commandStore" id="commandStore1"></p>
                 </div>
+                <p class="commandOutput" id="commandOutput1"></p>
             </div>
-            <div class="terminalArea">
-                <div id=""></div>
-                <p>sudo.mist@manipal:<span class="accessIndicator">~ $</span></p>
-                <input type="text" name="command" class="app-control" autocomplete="off" autocapitalize="off"
-                    autocorrect="off">
-            </div>
+            <br>
         </div>
     </div>
 </body>

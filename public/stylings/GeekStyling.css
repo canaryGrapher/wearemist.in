@@ -18,41 +18,29 @@ html {
   }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
     font-family: "open-sans";
 }
 
 #container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-image: url("../images/backgrounds/geekWall.jpg");
+    /* background-image: url("../images/backgrounds/geekWall.jpg"); */
     background-position: center;
     background-size: cover;
 }
 
 #window {
-    z-index: 20;
     position: relative;
-    width: 70vw;
-    height: 80vh;
-    margin: auto;
-    background-color: #000000d5;
-    border-radius: 10px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     font-size: 20px;
 }
 
 #titleBar {
-    width: 100%;
+    width: 100vw;
     height: 6vh;
-    background-color: #000;
+    background-color: rgb(17, 17, 17);
     color: #fff;
     display: flex;
     flex-direction: row;
@@ -63,33 +51,30 @@ body {
     margin: auto;
 }
 
-#buttons {
-    width: 5%;
-    display: flex;
-    flex-direction: row;
-    font-size: 25px;
-}
-
-.navButtns {
-    line-height: 25px;
-    color: red;
-    height: 100%;
-    width: 100%;
-    line-height: 6vh;
-    text-align: center;
-}
-
-.navButtns:hover {
+#groupInfo {
     color: #fff;
+    margin-left: 5px;
 }
 
-.terminalArea {
-    padding: 2vh 1vw;
-    width: 100%;
+#terminalArea {
+    padding: 5px;
+    width: fit-content;
     height: max-content;
     color: rgb(6, 187, 6);
     display: flex;
+    flex-direction: column;
+}
+.commandInstance {
+    display: block;
+}
+
+.access {
+    display: flex;
     flex-direction: row;
+}
+
+.accessName {
+    font-weight: bold;
 }
 
 .accessIndicator {
@@ -103,7 +88,7 @@ body {
 .app-control {
     color: #fff;
     width: 150%;
-    margin-left: 20px;
+    padding-left: 10px;
     background-color: #00000000;
     outline: none;
     caret-color: aliceblue;
@@ -111,10 +96,29 @@ body {
 
 input {
     font-size: 20px;
-    min-width: 200%;
+    min-width: 40vw;
     background-color: white;
     width: max-content;
     min-width: 30vw;
+}
+
+.commandStore {
+    padding-left: 10px;
+    display: none;
+    font-size: 20px;
+    color: white;
+}
+
+.commandOutput {
+    padding-top: 10px;
+    padding-left: 5px;
+    color: #fff;
+    max-width: 90%;
+    line-height: 25px;
+}
+
+.file {
+    color: #2196f3;
 }
 
 @media screen and (max-width: 1000px) {
