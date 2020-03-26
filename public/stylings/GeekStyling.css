@@ -131,21 +131,23 @@ input {
 @media screen and (max-width: 1000px) {
     #window {
         width: 100vw;
-        height: 100vh;
-        font-size: 40px;
+        min-height: 100vh;
+        height: fit-content;
+        font-size: 50px;
         border-radius: 0px;
         background-color: #000;
     }
 
     input {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .commandStore {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .commandOutput {
         line-height: 40px;
+        font-size: 30px;
     }
 }
