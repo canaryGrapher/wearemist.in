@@ -55,8 +55,7 @@ async function handleEnter(e) {
     if (keycode == '13') {
         var userInputCommand = document.getElementById(`command${i}`).value;
         var commandIndi = userInputCommand.split(" ");
-        console.log(commandIndi);
-        console.log(userInputCommand);
+        console.log(`Processing command "${userInputCommand}"`);
         var first = commandIndi[0];
         var second = commandIndi[1];
         var third = commandIndi[2];
@@ -110,13 +109,12 @@ async function handleEnter(e) {
                 addCommand();
             }
             else if (second == "news") {
-                var news = `<span class="teamHeading" id="newsMessage">Loading last ten news</span><br>`;
+                var news = `<span class="newsHeading" id="newsMessage">Recent ten news</span><br>`;
                 var newsArray = loadNewsdata();
                 var newsArr = newsArray.split(",");
                 for (var val4 in newsArr) {
                     news = news + newsArr[val4] + "<br><br>";
-                    console.log(val4);
-                    if (val4 == 11) {
+                    if (val4 == 9) {
                         break;
                     }
                 }
@@ -133,7 +131,7 @@ async function handleEnter(e) {
                 enhance and practice their skills in the same.<br>We are committed to spreading awareness about the increasing need
                 for Information and Network Security. We plan to train other
                 like-minded students to enhance their skills and aptitude in this
-                field.`;
+                field.<br><br>`;
                 addCommand();
             }
             else if (second == null) {
@@ -185,11 +183,11 @@ async function addCommand() {
             <p>${recievedData}@wearemist:<span class="accessIndicator">~$</span></p>
         </div>
         <input type="text" name="command" class="app-control" id="command${i}" autocomplete="off"
-            autocapitalize="off" autocorrect="off" autofocus>
+            autocapitalize="off" autocorrect="off">
         <p class="commandStore" id="commandStore${i}"></p>
     </div>
     <p class="commandOutput" id="commandOutput${i}"></p>
-</div><br>`;
+</div>`;
     var duplicatorSelector = document.getElementById("terminalArea");
     duplicatorSelector.innerHTML += addHTML;
     document.getElementById(`command${i}`).focus();
