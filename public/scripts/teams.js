@@ -1,12 +1,40 @@
 window.onload = function () {
+  document.getElementById("loaderContainer").style.display = "none";
   showCC();
   changeLinkTexts();
-  document.getElementById("loaderContainer").style.display = "none";
 };
 
 window.onresize = function () {
+  console.log("Resize");
   changeLinkTexts();
 };
+
+
+function showResNav() {
+  document.getElementById("responsiveNavItems").style.display = "flex";
+  document.getElementById("responsiveNavbar").style.height = "100vh";
+  showMenu = 1;
+  document.getElementById("responsiveNavItems").style.height = "60vh";
+}
+
+function hideResNav() {
+  document.getElementById("responsiveNavItems").style.height = "0vh";
+  document.getElementById("responsiveNavItems").style.display = "none";
+  document.getElementById("responsiveNavbar").style.height = "40px";
+  showMenu = 0;
+}
+
+showMenu = 0;
+//for changing the navigation bar based on the size of the screen
+function makeCross(x) {
+  x.classList.toggle("change");
+  if (showMenu == 0) {
+    showResNav();
+  }
+  else if (showMenu == 1) {
+    hideResNav();
+  }
+}
 
 function showCC() {
   var cc = document.getElementById("cc");
@@ -94,7 +122,7 @@ function changeLinkTexts() {
   var ccLinkName = document.getElementById("ccLink");
   var mcLinkName = document.getElementById("mcLink");
   var wcLinkName = document.getElementById("wcLink");
-  if (window.matchMedia('(max-width: 800px)').matches) { // If media query matches
+  if (window.matchMedia('(max-width: 700px)').matches) { // If media query matches
     ccLinkName.innerHTML = "CC";
     mcLinkName.innerHTML = "MC";
     wcLinkName.innerHTML = "WC";

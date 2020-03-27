@@ -152,7 +152,7 @@ async function handleEnter(e) {
                     addCommand();
                 }
                 else {
-                    document.getElementById(`commandOutput${i}`).innerHTML = `No such file found "${second}"`;
+                    document.getElementById(`commandOutput${i}`).innerHTML = `No such file found: "${second}"`;
                     addCommand();
                 }
             }
