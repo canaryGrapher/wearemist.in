@@ -7,7 +7,7 @@ function loadTerminal() {
 }
 
 var txtcounter = 0;
-var txt = "Manipal Information Security Team - version - Development-Version_4.2.2-def:27.03.2020 2020 MIST, Manipal. All rights reserved.";
+var txt = "Manipal Information Security Team - version - Development-Version_5.1.1-def:27.03.2020 2020 MIST, Manipal. All rights reserved.";
 var speed = 5;
 
 function typeWriter() {
