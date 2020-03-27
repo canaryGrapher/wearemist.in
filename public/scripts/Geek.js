@@ -7,7 +7,7 @@ function loadTerminal() {
 }
 
 var txtcounter = 0;
-var txt = "Manipal Information Security Team - version - Development-Version_5.1.1-def:27.03.2020 2020 MIST, Manipal. All rights reserved.";
+var txt = "Manipal Information Security Team - version - Development-Version_5.2.1-def:27.03.2020 2020 MIST, Manipal. All rights reserved.";
 var speed = 5;
 
 function typeWriter() {
@@ -98,31 +98,31 @@ async function handleEnter(e) {
             if (third == null) {
                 if (second == "team") {
                     //making CoreComm array
-                    var cc = `<span class="teamHeading">Board</span><br>`;
+                    var cc = `<span class="teamHeading">Board</span><br><div class="teamViewer">`;
                     var ccArray = loadCCdata();
                     var ccArr = ccArray.split(",");
                     for (var val1 in ccArr) {
-                        cc = cc + ccArr[val1] + "<br>";
+                        cc = cc + `<div class="teamMember">` + ccArr[val1] + "</div>" + " ";
                     }
                     //making ManComm array
-                    var mc = `<span class="teamHeading">Management Committee</span><br>`;
+                    var mc = `<span class="teamHeading">Management Committee</span><br><div class="teamViewer">`;
                     var mcArray = loadMCdata();
                     var mcArr = mcArray.split(",");
                     for (var val2 in mcArr) {
-                        mc = mc + mcArr[val2] + "<br>";
+                        mc = mc + `<div class="teamMember">` + mcArr[val2] + "</div>" + " ";
                     }
                     //making WorkComm array
-                    var wc = `<span class="teamHeading">Working Committee</span><br>`;
+                    var wc = `<span class="teamHeading">Working Committee</span><br><div class="teamViewer">`;
                     var wcArray = loadWCdata();
                     var wcArr = wcArray.split(",");
                     for (var val3 in wcArr) {
-                        wc = wc + wcArr[val3] + "<br>";
+                        wc = wc + `<div class="teamMember">` + wcArr[val3] + "</div>" + " ";
                     }
-                    document.getElementById(`commandOutput${i}`).innerHTML = `<div class="teamContainer"><div class="team">${cc}</div><div class="team">${mc}</div><div class="team">${wc}</div></div>`;
+                    document.getElementById(`commandOutput${i}`).innerHTML = `<div class="teamContainer"><div class="team">${cc}</div></div><br><br><div class="team">${mc}</div></div><br><br><div class="team">${wc}</div></div></div><br><br>`;
                     addCommand();
                 }
                 else if (second == "news") {
-                    var news = `<span class="newsHeading" id="newsMessage">Recent ten news</span><br>`;
+                    var news = `<span class="newsHeading" id="newsMessage">Recent news</span><br>`;
                     var newsArray = loadNewsdata();
                     var newsArr = newsArray.split(",");
                     for (var val4 in newsArr) {

@@ -55,8 +55,8 @@ head
         a(href='/team') Team
       p#res_articles.res_linkBox(onclick='clickLinks()')
         a(href='/articles') Articles
-      p#res_contribute.res_linkBox(onclick='clickLinks()')
-        a(href='/contributors') Contributors
+      p#res_contribute.res_linkBox(onclick='showSubscriptionForm()')
+        a Subscribe
   
   #navbar
     p#LOGO.linkBox
@@ -71,8 +71,8 @@ head
       a(href='/nonGeek#section3') Contact Us
     p#team.linkBox
       a(href='/team') Team
-    p#contributor.linkBox
-      a(href='/contributors') Contributors
+    p#contributor.linkBox(onclick='showSubscriptionForm()')
+      a Subscribe
   #navbarScroll
     p#LOGO.linkBoxScroll
       a.linksNavibar(href='/home') MIST
@@ -86,8 +86,8 @@ head
       a.linksNavibar(href='/nonGeek#section3') Contact Us
     p#team.linkBoxScroll
       a.linksNavibar(href='/team') Team
-    p#contributor.linkBoxScroll
-      a.linksNavibar(href='/contributors') Contributors
+    p#contributor.linkBoxScroll(onclick='showSubscriptionForm()')
+      a.linksNavibar Subscribe
   #headBar
     #headerTitle
       h1 CYBERSECURITY NEWS, HANDPICKED BY MIST

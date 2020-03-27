@@ -59,7 +59,7 @@ body {
   transform: translateY(-50%);
   width: 10vh;
   height: 10vh;
-  border-width: 2px;
+  border-width: 3px;
   border-style: solid;
   border-color: #fff;
   animation-name: slowLoading;
