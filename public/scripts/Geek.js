@@ -44,7 +44,7 @@ function loadWCdata() {
 function loadTerminal() {
     loadBrowser();
     document.getElementById("command1").focus();
-    document.getElementById("accessIdentifier").innerHTML = `${recievedData}@sudo.mist:<span class="accessIndicator">~$</span>`;
+    document.getElementById("accessIdentifier").innerHTML = `${recievedData}@wearemist:<span class="accessIndicator">~$</span>`;
     document.getElementById("terminalTitle").innerHTML = `${recievedData}@wearemist.in`;
 }
 var i = 1;
@@ -182,7 +182,7 @@ async function addCommand() {
     var addHTML = `<div class="commandInstance" id="accessPane${i}">
     <div class="access">
         <div class="accessName">
-            <p>${recievedData}@sudo.mist:<span class="accessIndicator">~$</span></p>
+            <p>${recievedData}@wearemist:<span class="accessIndicator">~$</span></p>
         </div>
         <input type="text" name="command" class="app-control" id="command${i}" autocomplete="off"
             autocapitalize="off" autocorrect="off" autofocus>
