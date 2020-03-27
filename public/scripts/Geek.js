@@ -7,7 +7,7 @@ function loadTerminal() {
 }
 
 var txtcounter = 0;
-var txt = "Manipal Information Security Team - version - Development-Version_5.2.1-def:27.03.2020 2020 MIST, Manipal. All rights reserved.";
+var txt = "Manipal Information Security Team - version - Development-Version_6.2.3-def:28.03.2020 2020 MIST, Manipal. All rights reserved.";
 var speed = 5;
 
 function typeWriter() {
@@ -202,7 +202,7 @@ async function handleEnter(e) {
         }
 
         else {
-            document.getElementById(`commandOutput${i}`).innerHTML = `sh: "${userInputCommand}": not found`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `sh: "${userInputCommand}": not found<br><br>Try typing "help" or "man" if you are lost<br><br>`;
             addCommand();
         }
         document.getElementById(`commandOutput${i}`).classList.add("commandOutput");

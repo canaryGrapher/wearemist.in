@@ -5,6 +5,8 @@ head
   link(rel='stylesheet', type='text/css', href='./stylings/newsPage.css')
   link(rel='stylesheet', type='text/css', href='https://unpkg.com/aos@next/dist/aos.css')
   script(src='./scripts/newsPage.js')
+  link(rel='icon', href='http://drive.google.com/uc?export=view&id=1T96CLtCEN_KQPS_KbMU3bwrx6OUp71tW', type='image/icon type')
+
 #loaderContainer
   #loaderRipple
   p Loading
@@ -17,23 +19,21 @@ head
       form(method='POST', action='/addToMailingList')
         #inputTextBoxes
           .inputBOXsubscribe
-            label(for='subscriberName') Name:
             br
             input#subscriberName(type='text', name='subscriberName', placeholder='Your name', required)
             br
           .inputBOXsubscribe
-            label(for='subscriberEmail') Email:
             br
             input#subscriberEmail(type='email', name='subscriberEmail', placeholder='Your email address' required)
             br
         p#checkBoxMessage What do you want to subscribe for?
         #checkBOXsubscribe
           #BOX
-            input#newsletterYESorNO.checkBOX(type='checkbox', name='newsYESorNO', required, checked)
+            input#newsletterYESorNO.checkBOX(type='checkbox', name='newsYESorNO', checked)
             label.checkBoxLabel(for='newsYESorNO') Newsletter
             br
           #BOX
-            input#eventsYESorNO.checkBOX(type='checkbox', name='eventsYESorNO', required, checked)
+            input#eventsYESorNO.checkBOX(type='checkbox', name='eventsYESorNO', checked)
             label.checkBoxLabel(for='eventsYESorNO') Events
             br
         input#submitSubscribeButtn(type='submit', value='Submit')

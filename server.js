@@ -18,8 +18,8 @@ var transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 587,
   auth: {
-    user: process.env.EMAIL_ID,
-    pass: process.env.EMAIL_PASSWORD
+    user: "messagefromuserwebsite@gmail.com",
+    pass: "t#i$_account4SALE"
   }
 });
 
@@ -58,12 +58,7 @@ app.get("/nongeek", function (req, res) {
   res.sendFile(__dirname + "/public/nonGeek.html");
 });
 
-app.get("/geek", function (req, res) {
-  res.sendFile(__dirname + "/public/underConstruction.html");
-});
-
 app.get("/team", function (req, res) {
-  // res.sendFile(__dirname + "/public/team.html");
   collectionCC.find().toArray((err, result1) => {
     CCdata = result1;
     collectionMC.find().toArray((err, result2) => {
@@ -85,11 +80,10 @@ app.get("/contributors", function (req, res) {
 });
 
 app.post("/contactMailer", function (req, res) {
-  console.log(req.body);
   const mailOptions = {
-    from: process.env.EMAIL_ID, // sender address
-    to: process.env.SENDER_EMAIL, // list of receivers
-    subject: 'Message from user website', // Subject line
+    from: "messagefromuserwebsite@gmail.com", // sender address
+    to: "yasharyan307@outlook.com", // list of receivers
+    subject: 'Message from wearemist', // Subject line
     html: `<h1>${req.body.name}</h1><br><p>${req.body.message}</p><br><br><p>Message from ${req.body.name}, email ${req.body.email}.</p><br><br><br><p>All details are as follows: ${req.body}</p>`// plain text body
   };
   transporter.sendMail(mailOptions, function (err, info) {
@@ -111,14 +105,31 @@ app.get("/news", function (req, res) {
 });
 
 app.post("/addToMailingList", function (req, res) {
-  //do something to add these to the maling list after filtering
-  console.log(req.body);
-  // collectionMailingList.insertMany(req.body.subscriberEmail, function (err, res) {
-  //   if (err) throw err;
-  //   console.log("1 document inserted");
-  //   res.render("subscriberDone");
-  // });
-  res.redirect("/news");
+  searchQuery = { email: `${req.body.subscriberEmail}` };
+  collectionMailingList.find(searchQuery).toArray((err, resultEmailExists) => {
+    if (!resultEmailExists.length) {
+      collectionMailingList.insertOne(
+        { name: req.body.subscriberName, email: req.body.subscriberEmail, newsLetter: Boolean(req.body.newsYESorNO), eventsLetter: Boolean(req.body.eventsYESorNO) }
+      );
+      const mailOptions = {
+        from: "messagefromuserwebsite@gmail.com", // sender address
+        to: `${req.body.subscriberEmail}`, // list of receivers
+        subject: 'Welcome onboard', // Subject line
+        html: `<!DOCTYPE html><html lang="en"><head> <title>Welcome!</title></head><body> <style> * { border: 0; padding: 0; margin: 0; } body { font-family: arial, "helvetica neue", helvetica, sans-serif; font-weight: normal; } #container { margin: auto; width: 100vw; } .heading { font-size: 5vh; line-height: 150%; text-align: center; margin-top: 5vh; } img { height: 60px; display: block; padding-top: 30px; margin-left: auto; margin-right: auto; } .Thanks { margin-top: 20px; text-align: center; margin-top: 3%; } .message { width: 55%; margin: 20px auto 20px auto; } a { text-decoration: none; color: #017297; text-decoration: underline; } .feedback { width: 55%; color: #0099cc; margin: 3% auto; text-align: center; } .last { width: 55%; margin: 40px auto auto auto; text-align: center; color: #949494; } #websiteLink { color: #949494; } @media screen and (max-width: 1100px) { img { height: 150px; padding-top: 100px; } .Thanks { margin-top: 10%; } .message { margin-top: 100px; width: 95vw; margin-bottom: 200px; } .feedback { width: 95vw; } .last { width: 95vw; font-size: 15px; padding-bottom: 100px; } } </style> </div> <div id="container"> <div id="contentLogo"> <div id="contentImage"><img src="http://drive.google.com/uc?export=view&id=1T96CLtCEN_KQPS_KbMU3bwrx6OUp71tW"> </div> </div> <p class="heading">Manipal Information Security Team</p> <p class="Thanks">Thanks for subscribing to our newsletter, ${req.body.subscriberName}!</p> <p class="message"> We are glad you joined us. We promise we won't spam you. We'll only send what is important for you. MIST is dedicated to Information Security and we respect privacy. So we won't be selling your details to any third party applications. Your information is in safe hands. Also, don't forget to whitelist us.<br><br>Thanks, <br>MIST</p> <p class="feedback">We love feedbacks, and if you have any, please mail us, or you can even use the message box on our <a href="https://wearemist.herokuapp.com/nonGeek">homepage</a>.</p> <p class="last">You are receiving this email because you subscribed to <a href="https://wearemist.herokuapp.in" id="websiteLink">wearemist.in</a> <br>© 2020 MIST, All rights reserved.</p></body></html>`
+      };
+      transporter.sendMail(mailOptions, function (err, info) {
+        if (err)
+          console.log(err);
+        else
+          console.log(`Sent the mail to ${req.body.subscriberEmail} `);
+      });
+      res.sendFile(__dirname + "/public/signinConfirmed.html");
+    }
+    else {
+      res.sendFile(__dirname + "/public/alreadyregistered.html");
+    }
+  });
+
 });
 
 app.get("/getData", function (req, res) {
@@ -173,7 +184,7 @@ app.get("/getNewsdata", function (req, res) {
 });
 
 app.get("*", function (req, res) {
-  res.send("I don't know what you're trying to do, but no, it will not work.");
+  res.sendFile(__dirname + "/public/errorPage.html");
 });
 
 app.listen(PORT, () => {

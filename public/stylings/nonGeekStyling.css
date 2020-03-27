@@ -391,19 +391,13 @@ a {
   background-repeat: no-repeat;
 }
 
+.polaroid:nth-last-child(2) {
+  transform: rotate(180deg);
+}
+
 .polaroid:hover {
   transform: scale(1.02);
   transition-duration: 1s;
-}
-
-#navigateGallery {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  font-weight: bold;
-  margin: auto;
-  text-decoration: none;
 }
 
 #navigateGallery > a {
