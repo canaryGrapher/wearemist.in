@@ -161,6 +161,14 @@ input {
     margin-bottom: 15px;
 }
 
+td {
+    color: #fff;
+}
+
+.commandDescription {
+    color: #2196f3;
+}
+
 @media screen and (max-width: 1000px) {
     #window {
         width: 100vw;

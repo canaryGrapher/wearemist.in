@@ -1,3 +1,22 @@
+function loadTerminal() {
+    typeWriter();
+    loadBrowser();
+    document.getElementById("command1").focus();
+    document.getElementById("accessIdentifier").innerHTML = `${recievedData}@wearemist:<span class="accessIndicator">~$</span>`;
+    document.getElementById("terminalTitle").innerHTML = `${recievedData}@wearemist.in`;
+}
+
+var txtcounter = 0;
+var txt = "Manipal Information Security Team - version - Development-Version_4.2.2-def:27.03.2020 2020 MIST, Manipal. All rights reserved.";
+var speed = 5;
+
+function typeWriter() {
+    if (txtcounter < txt.length) {
+        document.getElementById("terminalMessage").innerHTML += txt.charAt(txtcounter);
+        txtcounter++;
+        setTimeout(typeWriter, speed);
+    }
+}
 function exitTerminal() {
     window.location.replace("/home");
 }
@@ -41,14 +60,7 @@ function loadWCdata() {
     return recievedWCData;
 }
 
-function loadTerminal() {
-    loadBrowser();
-    document.getElementById("command1").focus();
-    document.getElementById("accessIdentifier").innerHTML = `${recievedData}@wearemist:<span class="accessIndicator">~$</span>`;
-    document.getElementById("terminalTitle").innerHTML = `${recievedData}@wearemist.in`;
-}
 var i = 1;
-
 // Execute a function when the user releases a key on the keyboard
 async function handleEnter(e) {
     var keycode = (e.keyCode ? e.keyCode : e.which);
@@ -83,46 +95,47 @@ async function handleEnter(e) {
         }
 
         else if (first == "cat") {
-            if (second == "team") {
-                //making CoreComm array
-                var cc = `<span class="teamHeading">Board</span><br>`;
-                var ccArray = loadCCdata();
-                var ccArr = ccArray.split(",");
-                for (var val1 in ccArr) {
-                    cc = cc + ccArr[val1] + "<br>";
-                }
-                //making ManComm array
-                var mc = `<span class="teamHeading">Management Committee</span><br>`;
-                var mcArray = loadMCdata();
-                var mcArr = mcArray.split(",");
-                for (var val2 in mcArr) {
-                    mc = mc + mcArr[val2] + "<br>";
-                }
-                //making WorkComm array
-                var wc = `<span class="teamHeading">Working Committee</span><br>`;
-                var wcArray = loadWCdata();
-                var wcArr = wcArray.split(",");
-                for (var val3 in wcArr) {
-                    wc = wc + wcArr[val3] + "<br>";
-                }
-                document.getElementById(`commandOutput${i}`).innerHTML = `<div class="teamContainer"><div class="team">${cc}</div><div class="team">${mc}</div><div class="team">${wc}</div></div>`;
-                addCommand();
-            }
-            else if (second == "news") {
-                var news = `<span class="newsHeading" id="newsMessage">Recent ten news</span><br>`;
-                var newsArray = loadNewsdata();
-                var newsArr = newsArray.split(",");
-                for (var val4 in newsArr) {
-                    news = news + newsArr[val4] + "<br><br>";
-                    if (val4 == 9) {
-                        break;
+            if (third == null) {
+                if (second == "team") {
+                    //making CoreComm array
+                    var cc = `<span class="teamHeading">Board</span><br>`;
+                    var ccArray = loadCCdata();
+                    var ccArr = ccArray.split(",");
+                    for (var val1 in ccArr) {
+                        cc = cc + ccArr[val1] + "<br>";
                     }
+                    //making ManComm array
+                    var mc = `<span class="teamHeading">Management Committee</span><br>`;
+                    var mcArray = loadMCdata();
+                    var mcArr = mcArray.split(",");
+                    for (var val2 in mcArr) {
+                        mc = mc + mcArr[val2] + "<br>";
+                    }
+                    //making WorkComm array
+                    var wc = `<span class="teamHeading">Working Committee</span><br>`;
+                    var wcArray = loadWCdata();
+                    var wcArr = wcArray.split(",");
+                    for (var val3 in wcArr) {
+                        wc = wc + wcArr[val3] + "<br>";
+                    }
+                    document.getElementById(`commandOutput${i}`).innerHTML = `<div class="teamContainer"><div class="team">${cc}</div><div class="team">${mc}</div><div class="team">${wc}</div></div>`;
+                    addCommand();
                 }
-                document.getElementById(`commandOutput${i}`).innerHTML = `${news}`;
-                addCommand();
-            }
-            else if (second == "about") {
-                document.getElementById(`commandOutput${i}`).innerHTML = `We are a team of Information and Network Security enthusiasts who
+                else if (second == "news") {
+                    var news = `<span class="newsHeading" id="newsMessage">Recent ten news</span><br>`;
+                    var newsArray = loadNewsdata();
+                    var newsArr = newsArray.split(",");
+                    for (var val4 in newsArr) {
+                        news = news + newsArr[val4] + "<br><br>";
+                        if (val4 == 9) {
+                            break;
+                        }
+                    }
+                    document.getElementById(`commandOutput${i}`).innerHTML = `${news}`;
+                    addCommand();
+                }
+                else if (second == "about") {
+                    document.getElementById(`commandOutput${i}`).innerHTML = `We are a team of Information and Network Security enthusiasts who
                 have gathered knowledge about the field through workshops, online
                 courses, books and research. We now want to spread the knowledge we
                 have gained to other students with an interest in this ever-growing
@@ -132,25 +145,35 @@ async function handleEnter(e) {
                 for Information and Network Security. We plan to train other
                 like-minded students to enhance their skills and aptitude in this
                 field.<br><br>`;
-                addCommand();
-            }
-            else if (second == null) {
-                document.getElementById(`commandOutput${i}`).innerHTML = "Illegal use of 'cat'";
-                addCommand();
+                    addCommand();
+                }
+                else if (second == null) {
+                    document.getElementById(`commandOutput${i}`).innerHTML = "Illegal use of 'cat'<br> USAGE: cat [FILENAME]";
+                    addCommand();
+                }
+                else {
+                    document.getElementById(`commandOutput${i}`).innerHTML = `No such file found "${second}"`;
+                    addCommand();
+                }
             }
             else {
-                document.getElementById(`commandOutput${i}`).innerHTML = `Arguments for this command are not supported in this terminal`;
+                document.getElementById(`commandOutput${i}`).innerHTML = `Illegal use of 'cat' <br> USAGE: cat [FILENAME]`;
                 addCommand();
             }
         }
 
         else if (userInputCommand == "pwd") {
-            document.getElementById(`commandOutput${i}`).innerHTML = `https://www.wearemist.in`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `https://www.wearemist.in/Geek`;
+            addCommand();
+        }
+        else if (userInputCommand == "date") {
+            var dateToday = new Date();
+            document.getElementById(`commandOutput${i}`).innerHTML = `${dateToday}<br>`;
             addCommand();
         }
 
         else if (userInputCommand == "help") {
-            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><pre id="availableCommands">pwd   ls   whoami   cat   exit   man   clear</pre>`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><pre id="availableCommands">ls   cat   clear   date   help   whoami   man   pwd   exit</pre><br>`;
             addCommand();
         }
 
@@ -167,6 +190,17 @@ async function handleEnter(e) {
             window.location.reload(false);
         }
 
+        else if (userInputCommand == "man") {
+            var manualPage = `<table><tr><td>ls</th><td class="commandDescription">: List files</th> </tr><tr><td>cat [filename]</td>
+              <td class="commandDescription">: Show file contents</td></tr><tr><td>clear</td><td class="commandDescription">: Refresh screen</td>
+            </tr><tr><td>date</td><td class="commandDescription">: Print date and time</td></tr><tr><td>help</td><td class="commandDescription">: Available commands</td>
+            </tr><tr><td>whoami</td><td class="commandDescription">: Display IP Address</td></tr><tr><td>man</td><td class="commandDescription">: Command help</td>
+            </tr><tr><td>pwd</td><td class="commandDescription">: Current location</td></tr><tr><td>exit</td><td class="commandDescription">: Previous page</td>
+            </tr></table><br>`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `${manualPage}`;
+            addCommand();
+        }
+
         else {
             document.getElementById(`commandOutput${i}`).innerHTML = `sh: "${userInputCommand}": not found`;
             addCommand();
@@ -177,17 +211,9 @@ async function handleEnter(e) {
 
 async function addCommand() {
     i = i + 1;
-    var addHTML = `<div class="commandInstance" id="accessPane${i}">
-    <div class="access">
-        <div class="accessName">
-            <p>${recievedData}@wearemist:<span class="accessIndicator">~$</span></p>
-        </div>
-        <input type="text" name="command" class="app-control" id="command${i}" autocomplete="off"
-            autocapitalize="off" autocorrect="off">
-        <p class="commandStore" id="commandStore${i}"></p>
-    </div>
-    <p class="commandOutput" id="commandOutput${i}"></p>
-</div>`;
+    var addHTML = `<div class="commandInstance" id="accessPane${i}"><div class="access"><div class="accessName"><p>${recievedData}@wearemist:<span class="accessIndicator">~$</span></p>
+        </div><input type="text" name="command" class="app-control" id="command${i}" autocomplete="off"autocapitalize="off" autocorrect="off">
+        <p class="commandStore" id="commandStore${i}"></p></div><p class="commandOutput" id="commandOutput${i}"></p></div>`;
     var duplicatorSelector = document.getElementById("terminalArea");
     duplicatorSelector.innerHTML += addHTML;
     document.getElementById(`command${i}`).focus();
