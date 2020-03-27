@@ -50,14 +50,16 @@ function loadTerminal() {
 var i = 1;
 
 // Execute a function when the user releases a key on the keyboard
-function handleEnter(e) {
+async function handleEnter(e) {
     var keycode = (e.keyCode ? e.keyCode : e.which);
     if (keycode == '13') {
         var userInputCommand = document.getElementById(`command${i}`).value;
         var commandIndi = userInputCommand.split(" ");
         console.log(commandIndi);
+        console.log(userInputCommand);
         var first = commandIndi[0];
         var second = commandIndi[1];
+        var third = commandIndi[2];
         //storing previous commands
         document.getElementById(`command${i}`).style.display = "none";
         document.getElementById(`commandStore${i}`).style.display = "inherit";
@@ -68,15 +70,19 @@ function handleEnter(e) {
         if (first == "ls") {
             if (second == null) {
                 document.getElementById(`commandOutput${i}`).innerHTML = `<span class="file">about</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">news</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">team</span>`;
+                addCommand();
             }
 
             else {
                 document.getElementById(`commandOutput${i}`).innerHTML = `Arguments for this command are not supported in this terminal`;
+                addCommand();
             }
         }
+
         else if (userInputCommand == "exit") {
             exitTerminal();
         }
+
         else if (first == "cat") {
             if (second == "team") {
                 //making CoreComm array
@@ -101,9 +107,8 @@ function handleEnter(e) {
                     wc = wc + wcArr[val3] + "<br>";
                 }
                 document.getElementById(`commandOutput${i}`).innerHTML = `<div class="teamContainer"><div class="team">${cc}</div><div class="team">${mc}</div><div class="team">${wc}</div></div>`;
-
+                addCommand();
             }
-
             else if (second == "news") {
                 var news = `<span class="teamHeading" id="newsMessage">Loading last ten news</span><br>`;
                 var newsArray = loadNewsdata();
@@ -116,8 +121,8 @@ function handleEnter(e) {
                     }
                 }
                 document.getElementById(`commandOutput${i}`).innerHTML = `${news}`;
+                addCommand();
             }
-
             else if (second == "about") {
                 document.getElementById(`commandOutput${i}`).innerHTML = `We are a team of Information and Network Security enthusiasts who
                 have gathered knowledge about the field through workshops, online
@@ -129,30 +134,46 @@ function handleEnter(e) {
                 for Information and Network Security. We plan to train other
                 like-minded students to enhance their skills and aptitude in this
                 field.`;
+                addCommand();
             }
-
             else if (second == null) {
                 document.getElementById(`commandOutput${i}`).innerHTML = "Illegal use of 'cat'";
+                addCommand();
             }
-
             else {
                 document.getElementById(`commandOutput${i}`).innerHTML = `Arguments for this command are not supported in this terminal`;
+                addCommand();
             }
         }
-        else if (commandIndi == "pwd") {
+
+        else if (userInputCommand == "pwd") {
             document.getElementById(`commandOutput${i}`).innerHTML = `https://www.wearemist.in`;
+            addCommand();
         }
-        else if (commandIndi == "help") {
-            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><pre id="availableCommands">pwd   ls   whoami   cat   exit   man</pre>`;
+
+        else if (userInputCommand == "help") {
+            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><pre id="availableCommands">pwd   ls   whoami   cat   exit   man   clear</pre>`;
+            addCommand();
         }
-        else if (commandIndi == "whoami") {
+
+        else if (userInputCommand == "whoami") {
             document.getElementById(`commandOutput${i}`).innerHTML = `${recievedData}`;
+            addCommand();
         }
+        else if (userInputCommand.trim() == "") {
+            console.log("No command Input");
+            addCommand();
+        }
+
+        else if (userInputCommand == "clear") {
+            window.location.reload(false);
+        }
+
         else {
             document.getElementById(`commandOutput${i}`).innerHTML = `sh: "${userInputCommand}": not found`;
+            addCommand();
         }
         document.getElementById(`commandOutput${i}`).classList.add("commandOutput");
-        addCommand();
     }
 }
 
@@ -168,9 +189,7 @@ async function addCommand() {
         <p class="commandStore" id="commandStore${i}"></p>
     </div>
     <p class="commandOutput" id="commandOutput${i}"></p>
-</div>
-<br>
-<br>`;
+</div><br>`;
     var duplicatorSelector = document.getElementById("terminalArea");
     duplicatorSelector.innerHTML += addHTML;
     document.getElementById(`command${i}`).focus();

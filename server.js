@@ -153,12 +153,12 @@ app.get("/getMCdata", function (req, res) {
 
 
 app.get("/getWCdata", function (req, res) {
-  var nameListMC = "";
-  collectionMC.find().toArray((err, result1) => {
+  var nameListWC = "";
+  collectionWC.find().toArray((err, result1) => {
     for (var val in result1) {
-      nameListMC = nameListMC + result1[val].name + ",";
+      nameListWC = nameListWC + result1[val].name + ",";
     }
-    res.send(nameListMC);
+    res.send(nameListWC);
   });
 });
 
