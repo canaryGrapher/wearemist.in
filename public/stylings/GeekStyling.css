@@ -154,19 +154,19 @@ input {
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
     #window {
         width: 100vw;
         overflow-x: hidden;
         min-height: 100vh;
         height: fit-content;
-        font-size: 3vh;
+        font-size: 15px;
         border-radius: 0px;
         background-color: #000;
     }
 
     #titleName {
-        font-size: 3vh;
+        font-size: 15px;
     }
 
     #terminalArea {
@@ -174,22 +174,22 @@ input {
     }
 
     #groupInfo {
-        font-size: 3vh;
+        font-size: 15px;
         width: 95%;
         margin: 0 auto;
     }
 
     input {
-        font-size: 3vh;
+        font-size: 15px;
     }
 
     .commandStore {
-        font-size: 50px;
+        font-size: 15px;
     }
 
     .commandOutput {
-        line-height: 50px;
-        font-size: 40px;
+        line-height: 15px;
+        font-size: 15px;
         width: 95%;
         margin-right: auto;
         margin-left: auto;
