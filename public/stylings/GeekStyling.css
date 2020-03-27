@@ -160,13 +160,13 @@ input {
         overflow-x: hidden;
         min-height: 100vh;
         height: fit-content;
-        font-size: 15px;
+        font-size: 17px;
         border-radius: 0px;
         background-color: #000;
     }
 
     #titleName {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     #terminalArea {
@@ -174,22 +174,22 @@ input {
     }
 
     #groupInfo {
-        font-size: 15px;
+        font-size: 17px;
         width: 95%;
         margin: 0 auto;
     }
 
     input {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .commandStore {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .commandOutput {
         line-height: 15px;
-        font-size: 15px;
+        font-size: 17px;
         width: 95%;
         margin-right: auto;
         margin-left: auto;
