@@ -25,6 +25,7 @@ html {
 
 body {
     font-family: "open-sans";
+    font-size: 20px;
 }
 
 #container {
@@ -46,7 +47,8 @@ body {
 
 #titleBar {
     width: 100vw;
-    height: 6vh;
+    min-height: 6vh;
+    height: fit-content;
     background-color: rgb(17, 17, 17);
     color: #fff;
     display: flex;
@@ -56,6 +58,7 @@ body {
 
 #titleName {
     margin: auto;
+    font-size: 20px;
 }
 
 #groupInfo {
@@ -158,6 +161,10 @@ input {
         font-size: 50px;
         border-radius: 0px;
         background-color: #000;
+    }
+
+    #titleName {
+        font-size: 50px;
     }
 
     #terminalArea {
