@@ -2,7 +2,7 @@ function loadTerminal() {
     typeWriter();
     loadBrowser();
     document.getElementById("command1").focus();
-    document.getElementById("accessIdentifier").innerHTML = `${recievedData}@wearemist:<span class="accessIndicator">~$</span>`;
+    document.getElementById("accessIdentifier").innerHTML = `guest@wearemist:<span class="accessIndicator">~$</span>`;
     document.getElementById("terminalTitle").innerHTML = `${recievedData}@wearemist.in`;
 }
 
@@ -173,7 +173,7 @@ async function handleEnter(e) {
         }
 
         else if (userInputCommand == "help") {
-            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><pre id="availableCommands">ls   cat   clear   date   help   whoami   man   pwd   exit</pre><br>`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><div id="availableCommands"><div class="commandIs">ls</div><div class="commandIs">cat</div><div class="commandIs">clear</div><div class="commandIs">date</div><div class="commandIs">help</div><div class="commandIs">whoami</div><div class="commandIs">man</div><div class="commandIs">pwd</div><div class="commandIs">exit</div></div><br>`;
             addCommand();
         }
 
@@ -211,7 +211,7 @@ async function handleEnter(e) {
 
 async function addCommand() {
     i = i + 1;
-    var addHTML = `<div class="commandInstance" id="accessPane${i}"><div class="access"><div class="accessName"><p>${recievedData}@wearemist:<span class="accessIndicator">~$</span></p>
+    var addHTML = `<div class="commandInstance" id="accessPane${i}"><div class="access"><div class="accessName"><p>guest@wearemist:<span class="accessIndicator">~$</span></p>
         </div><input type="text" name="command" class="app-control" id="command${i}" autocomplete="off"autocapitalize="off" autocorrect="off">
         <p class="commandStore" id="commandStore${i}"></p></div><p class="commandOutput" id="commandOutput${i}"></p></div>`;
     var duplicatorSelector = document.getElementById("terminalArea");
