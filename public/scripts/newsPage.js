@@ -23,7 +23,7 @@ window.onresize = function (event) {
 function scrollFunction() {
   var navibar = document.getElementById("navbar");
   var naviScroll = document.getElementById("navbarScroll");
-  if (window.innerWidth > 1200) {
+  if (window.innerWidth > 900) {
     navibar.style.display = "none";
     naviScroll.style.display = "none";
     if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
@@ -104,4 +104,9 @@ function closeSubscriptionForm() {
 
 function showSubscriptionForm() {
   document.getElementById("subscribeFillForm").style.display = "inherit";
+  hideResNav();
+}
+
+function redirectToBoot() {
+  window.location.href = "/";
 }

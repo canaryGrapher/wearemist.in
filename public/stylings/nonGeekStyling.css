@@ -628,6 +628,9 @@ textarea {
     grid-template-columns: auto auto;
     width: 100vw;
   }
+  #mistLogoBig {
+    margin-top: 20vh;
+  }
   .socialIcon {
     width: 100px;
     height: 100px;
@@ -760,6 +763,14 @@ textarea {
     width: 50px;
   }
 
+  #mistLogoTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
   #centeredText {
     padding-top: 15vh;
     width: 100vw;
@@ -809,6 +820,12 @@ textarea {
   /* for navbar */
   #navbar {
     display: none;
+  }
+
+  #titleBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   
   #responsiveNavbar {
@@ -886,10 +903,6 @@ textarea {
   #logoSection > img{
     height: 20px;
     width: 20px;
-  }
-
-  #mistLogoBig {
-    padding-top: 20px;
   }
 
   #centeredText {

@@ -121,12 +121,9 @@ a {
   color: #e0e0e0;
 }
 
-#LOGO {
-  font-weight: bold;
-  border-width: 1px;
-  border-color: #ffffff;
-  border-style: solid;
-  padding: 2px 3px;
+#LOGO > img {
+  width: 6vh;
+  border-radius: 0;
 }
 
 .linkBox {

@@ -362,14 +362,6 @@ a {
   transition-duration: 0.8s;
 }
 
-#LOGO {
-  font-weight: bold;
-  border-width: 1px;
-  border-color: #000000;
-  border-style: solid;
-  padding: 2px 3px;
-}
-
 #pageHeader {
   text-align: center;
   font-size: 25px;
@@ -496,7 +488,12 @@ a {
   background-color: #fff;
 }
 
-@media screen and (max-width: 900px) {
+#LOGO > img {
+  width: 6vh;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 1000px) {
   html {
     overflow: scroll;
     overflow-x: hidden;
@@ -707,7 +704,7 @@ a {
   }
 
   #BOX:last-child {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   #formContainerSubscribe > form {
@@ -737,6 +734,5 @@ a {
 
   .newsPart {
     width: 95vw;
-    /* text-align: center; */
   } 
 }

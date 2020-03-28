@@ -133,3 +133,7 @@ function changeLinkTexts() {
     wcLinkName.innerHTML = "Working Committee";
   }
 }
+
+function redirectToBoot() {
+  window.location.href = "/";
+}
