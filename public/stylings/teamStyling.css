@@ -247,8 +247,8 @@ howtoapply {
 #cc,
 #mc,
 #wc {
-  color: white;
-  background-color: black;
+  color: #000;
+  background-color: rgb(219, 219, 219);
   height: 6vh;
   line-height: 6vh;
 }
@@ -260,7 +260,7 @@ howtoapply {
   padding-top: 10vh;
   padding-bottom: 10vh;
   position: relative;
-  background-color: #212121;
+  background-color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: auto auto auto auto;
   row-gap: 8vh;
@@ -274,7 +274,7 @@ howtoapply {
   padding-top: 10vh;
   padding-bottom: 10vh;
   position: relative;
-  background-color: #212121;
+  background-color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: auto auto auto auto;
   row-gap: 8vh;
@@ -320,7 +320,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 
 .cmemberName {
@@ -340,7 +340,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: white;
+  color: #000;
 }
 
 .mcmemberName {
@@ -376,16 +376,33 @@ img {
   height: max-content;
   width: 100vw;
   position: relative;
-  background-color: #212121;
+  background-color: rgb(255, 255, 255);
   text-align: center;
 }
 
 #rightsReserved {
   position: relative;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 20px;
   padding-top: 8vh;
   padding-bottom: 5vh;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gitImage {
+  height: 30px;
+}
+
+.linkedImage {
+  height: 30px;
 }
 
 

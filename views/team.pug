@@ -104,8 +104,8 @@ head
         - var firstName = CC[index1].name.split(" ");
         - var divID = firstName[0]+firstName[1]
         - var imageSrc = CC[index1].photo
-        - var github = MC[index2].github
-        - var linkedin = MC[index2].linkedin
+        - var github = CC[index1].github
+        - var linkedin = CC[index1].linkedin
         .ccPhoto(id=divID)
           img(src=imageSrc, alt='Core Committee')
         style.
@@ -117,6 +117,15 @@ head
             h1.cmemberName #{CC[index1].name}
             p.cmemberPosition #{CC[index1].position}
             p.interestsMember #{CC[index1].interests}
+            .socialLinks
+              if CC[index1].github
+                .github
+                  a(href=CC[index1].github, target='_blank')
+                    img.gitImage(src='/images/vectors/github.svg', alt=CC[index1].name)
+              if CC[index1].linkedin
+                .linkedin
+                  a(href=CC[index1].linkedin, target='_blank')
+                    img.linkedImage(src='/images/vectors/linkedin.svg', alt=CC[index1].name)
 #manc
   each val2, index2 in MC
     .mcprofile
@@ -135,6 +144,15 @@ head
         .mmemberInfo
             h1.mcmemberName #{MC[index2].name}
             p.interestsMember #{MC[index2].interests}
+            .socialLinks
+              if MC[index2].github
+                .github
+                  a(href=MC[index2].github, target='_blank')
+                    img.gitImage(src='/images/vectors/github.svg', alt=MC[index2].name)
+              if MC[index2].linkedin
+                .linkedin
+                  a(href=MC[index2].linkedin, target='_blank')
+                    img.linkedImage(src='/images/vectors/linkedin.svg', alt=MC[index2].name)
 #workc
   each val3, index3 in WC
     .wcprofile
