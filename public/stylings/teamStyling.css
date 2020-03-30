@@ -389,8 +389,8 @@ img {
 }
 
 .socialLinks {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto auto;
   margin-top: 10px;
   width: 60%;
   margin-left: auto;
