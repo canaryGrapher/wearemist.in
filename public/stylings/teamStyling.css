@@ -315,7 +315,7 @@ img {
 }
 
 .cmemberInfo {
-  height: fit-content;
+  height: 15vh;
   width: 20vw;
   margin-left: auto;
   margin-right: auto;
