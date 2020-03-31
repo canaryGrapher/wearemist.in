@@ -118,7 +118,7 @@ async function handleEnter(e) {
                     for (var val3 in wcArr) {
                         wc = wc + `<div class="teamMember">` + wcArr[val3] + "</div>" + " ";
                     }
-                    document.getElementById(`commandOutput${i}`).innerHTML = `<div class="teamContainer"><div class="team">${cc}</div></div><br><br><div class="team">${mc}</div></div><br><br><div class="team">${wc}</div></div></div><br><br>`;
+                    document.getElementById(`commandOutput${i}`).innerHTML = `<div class="teamContainer"><div class="team">${cc}</div></div><div class="team">${mc}</div></div><div class="team">${wc}</div></div></div>`;
                     addCommand();
                 }
                 else if (second == "news") {
