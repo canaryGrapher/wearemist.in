@@ -12,10 +12,6 @@
   padding: 0;
 }
 
-body::-webkit-scrollbar {
-  width: 0 !important;
-}
-
 html {
   scrollbar-width: none;
   overflow: -moz-scrollbars-none;
@@ -31,6 +27,7 @@ html {
 
 body::-webkit-scrollbar {
   display: none;
+  width: 0 !important;
 }
 
 body {
@@ -100,4 +97,476 @@ body {
     opacity: 1;
   }
 }
+
+#container {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#navBar {
+  height: 12vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#navSocial {
+  height: 6vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#navSocialLinks {
+  display: inline;
+  line-height: 6px;
+  margin: auto 20px;
+}
+
+.socialIcon{
+  height: 3vh;
+  width: 3vh;
+  margin: auto 15px;
+}
+
+#logoNavBar {
+  height: 4vh;
+  margin-left: 25px;
+  bottom: 0;
+  margin-bottom: 5vh;
+  font-family: ubuntu;
+  vertical-align: middle;
+  position: absolute;
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+
+#navSocialOtherLinks > a {
+  text-decoration: none;
+  color: #000;
+  margin: auto 10px;
+}
+
+#navLinks {
+  height: 6vh;
+  width: 100vw;
+  line-height: 6vh;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+#navigationBar {
+  margin: auto;
+  width: fit-content;
+}
+
+#pageNameContainer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+#navigationBar > a {
+  text-decoration: none;
+  color: black;
+  margin: auto 25px;
+}
+
+#highlightNews {
+  width: 100vw;
+  height: 85vh;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+#recentHigh {
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+
+#highInfo {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5%;
+  left: 0;
+  margin-left: 5%;
+  color: #fff;
+  max-width: 50%;;
+}
+
+#articleCredit {
+  font-weight: bold;
+}
+
+#recentList {
+  height: 85%;
+  width: 300px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  right: 0;
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+#recentListTitle {
+  position: relative;
+  height: 10%;
+  line-height: 7.2vh;
+}
+
+#recentListTitle > p {
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+#recentListContent {
+  position: relative;
+  width: 285px;
+  height: 90%;
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;;
+}
+
+#recentListContent::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.recentNewsCard {
+  max-height: 88%;
+  width: 285px;
+  display: flex;
+  flex-direction: row;
+}
+
+.recentNewsCardImage {
+  width: 100px;
+  height: 100%;
+  background-color: rgb(190, 49, 190);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.recentNewsCardText {
+  margin: 0;
+  width: 60%;
+  margin-left: 10px;
+}
+
+.cardHeading {
+  font-size: 14px;
+  width: 60%;
+}
+
+.subtitleHead {
+  font-size: 15px;
+  color: rgb(105, 105, 105);
+}
+
+.cardText {
+  font-size: 13px;
+}
+
+#mainNews {
+  min-height: 30px;
+  font-family: open-sans;  
+}
+
+#titleMainNews {
+  font-size: 30px;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+#mainNewsContainer {
+  width: 90vw;
+  margin: 30px auto;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 35px;
+  column-gap: 35px;
+}
+
+.mainNewsCard {
+  height: 50vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.miniCardImage {
+  height: 70%;
+  width: 100%;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.miniCardText {
+  color: white;
+  width: 100%;
+}
+
+.heading {
+  text-align: left;
+  font-size: 17px;
+  width: 95%;
+  margin: 10px auto;
+  /* margin-top: 10px; */
+}
+
+.miniCardText {
+  position: relative;
+  text-align: center;
+  font-size: 10px;
+  bottom: 0;
+  margin-bottom: 5px;
+}
+
+.creditsCard {
+  text-align: center;
+  font-size: 14px;
+}
+
+#footerContent {
+  height: 30vh;
+  width: 100vw;
+  background-color: #000;
+  margin-top: 20vh;
+  color: #fff
+}
+
+#footerLinks {
+  display: flex;
+  flex-direction: row;
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+}
+
+#footerLinks > a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 100;
+}
+/* for */
+
+#subscribeFillForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.98);
+  position: fixed;
+  z-index: 300;
+}
+
+#formBoxSubscribe {
+  display: block;
+  width: 25%;
+  min-height: fit-content;
+  height: 80%;
+  background-color: rgb(106, 106, 214);
+  margin: 0 auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+}
+
+#formContainerSubscribe > form {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#formBoxHeader {
+  height: 25%;
+  color: rgb(106, 106, 214);
+  background-color: #fff;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+
+#formBoxHeader > p {
+  position: absolute;
+  right: 0;
+  font-size: 25px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+#formBoxHeader > p:hover {
+  color: rgb(0, 0, 0);
+}
+
+#formBoxHeader > h1 {
+  font-size: 25px;
+  position: absolute;
+  bottom: 0;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+#inputTextBoxes {
+  width: 90%;
+  margin: auto;
+}
+
+.inputBOXsubscribe {
+  width: 100%;
+  margin: auto;
+  padding: 10px 0;
+  border-radius: 50%;
+}
+
+#subscriberName, #subscriberEmail {
+  background-color: rgb(0, 0, 0, 0);
+  width: 100%;
+  height: 5vh;
+  text-indent: 10px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-width: 0px 0px 2px 0px;
+  color: #fff;
+  outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(255, 255, 255);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(255, 255, 255);
+}
+
+#checkBoxMessage {
+  width: 95%;
+  margin: 25px auto 10px auto;
+  text-align: center;
+  color: rgb(245, 245, 245);
+}
+
+#checkBOXsubscribe {
+	display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px auto;
+  width: 95%;
+  position: relative;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+#BOX {
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+#BOX > label {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.checkBOX {
+  -webkit-appearance: none;
+	background-color: rgb(255, 255, 255);
+	padding: 10px;
+	display: inline-block;
+  position: relative;
+  margin-right: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.checkBoxLabel .checkBOX {
+  /* position: absolute; */
+  top: 0px;
+  left: 0px;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  border: 2px solid #FFFFFF;
+  outline: none;
+}
+
+.checkBOX:active, .checkBOX:checked:active {
+  box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px rgb(111, 31, 240), 0 0 8px rgb(89, 12, 233), 0 0 10px rgb(103, 9, 211), 0 0 12px rgb(6, 134, 238), 0 0 14px rgb(39, 160, 207);
+}
+
+.checkBOX:checked {
+	background-color:  rgb(0, 0, 0);
+	border: 1px solid  rgb(0, 0, 0);
+  color: #0e3b5e;
+  outline: none;
+}
+
+.checkBOX:checked:after {
+	content: '\2713';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+  color: #ffffff;
+  outline: none;
+}
+
+#submitSubscribeButtn {
+  display: block;
+  width: 40%;
+  height: 45px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(111, 31, 240);
+  font-size: 15px;
+  margin: 40px auto auto auto;
+}
+
+#submitSubscribeButtn:hover {
+  background-color: #fff;
+  color: rgb(106, 106, 214);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(106, 106, 214);
+}
+
 
