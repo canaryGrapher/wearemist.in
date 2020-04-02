@@ -443,7 +443,7 @@ body {
 
 .miniCardText {
   position: relative;
-  text-align: left;
+  text-align: center;
   font-size: 12px;
   bottom: 0;
   margin-bottom: 5px;
@@ -484,8 +484,12 @@ body {
   grid-template-columns: auto auto auto auto;
 }
 
+footerrhead {
+  font-size: 19px;
+}
+
 .footerLinks {
-  font-size: 17px;
+  font-size: 15px;
   display: flex;
   flex-direction: column;
 }
@@ -725,6 +729,7 @@ address {
   }
   .miniCardText {
     font-size: 10px;
+    text-align: center;
     bottom: 0;
   }
 }
