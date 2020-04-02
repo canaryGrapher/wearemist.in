@@ -64,27 +64,55 @@
         </div>
     </div>
     <div id="container">
+        <div id="responsiveNavbar">
+            <div id="hamburgerContainer" onclick="showResNavBar()">
+                <div class="ham"></div>
+                <div class="ham"></div>
+                <div class="ham"></div>
+            </div>
+        </div>
+        <div id="responsiveNavItems">
+            <div id="mainItemsListres">
+                <h1>CyberManipal</h1>
+                <a class="resNavItems" href="/nonGeek#section0">Home</a>
+                <a class="resNavItems" href="/nonGeek#section1">About</a>
+                <a class="resNavItems" href="/nonGeek#section3">Contact</a>
+                <a class="resNavItems" href="/team">Team</a>
+                <a class="resNavItems" onclick="showSubscriptionForm()">Subscribe</a>
+            </div>
+            <div id="closeResNav" onclick="hideResNavBar()">X</div>
+        </div>
         <div id="navBar">
             <div id="navSocial">
-                <div id="emptySpace"></div>
+                <div id="emptySpace">
+                    <p id="logoNavBar">CyberManipal</p>
+                </div>
                 <div id="navSocialLinks">
-                    <a href=""><img class="socialIcon" src="images/vectors/facebook.svg"></a>
-                    <a href=""><img class="socialIcon" src="images/vectors/instagram.svg"></a>
-                    <a href=""><img class="socialIcon" src="images/vectors/github.svg"></a>
-                    <a href=""><img class="socialIcon" src="images/vectors/mail-dot-ru.svg"></a>
-                    <a href=""><img class="socialIcon" src="images/vectors/linkedin.svg"></a>
+                    <a href="https://www.facebook.com/wearemist.in/"><img class="socialIcon"
+                            src="images/vectors/facebook.svg"></a>
+                    <a href="https://www.instagram.com/sudo.mist/"><img class="socialIcon"
+                            src="images/vectors/instagram.svg"></a>
+                    <a href="https://github.com/WeAreMIST"><img class="socialIcon" src="images/vectors/github.svg"></a>
+                    <a href="mailto:sudo@wearemist.in?Subject=Message%20from%20website%20user"><img class="socialIcon"
+                            src="images/vectors/mail-dot-ru.svg"></a>
+                    <a href="https://in.linkedin.com/company/manipal-information-security-team"><img class="socialIcon"
+                            src="images/vectors/linkedin.svg"></a>
                 </div>
             </div>
             <div id="navLinks">
-                <p id="logoNavBar">CyberManipal</p>
                 <div id="navigationBar">
-                    <a href="/nonGeek#section0">Home</a>
-                    <a href="/nonGeek#section1">About</a>
-                    <a href="/nonGeek#section3">Contact</a>
-                    <a href="/team">Team</a>
-                    <a href="/nonGeek#section3">Contributors</a>
-                    <a onclick="showSubscriptionForm()">Subscribe</a>
+                    <a class="navItems" href="/nonGeek#section0">Home</a>
+                    <a class="navItems" href="/nonGeek#section1">About</a>
+                    <a class="navItems" href="/nonGeek#section3">Contact</a>
+                    <a class="navItems" href="/team">Team</a>
+                    <a class="navItems" onclick="showSubscriptionForm()">Subscribe</a>
                 </div>
+            </div>
+        </div>
+        <div id="clubNews">
+            <p id="clubNewsHeading">Club Announcements</p>
+            <div class="clubNews">
+                <div id="clubNewsNone">No news as of now</div>
             </div>
         </div>
         <div id="highlightNews">
@@ -142,10 +170,22 @@
 
         </div>
         <div id="footerContent">
-            <div id="footerLinks"><a href="">Report an article</a><a href="">Submit Content</a></div>
+            <div class="footLinks footLogo"><img src="./images/logo/logoLight.png" width="40px"><br>
+                <h2>CyberManipal</h2>
+            </div>
+            <div class="footLinks footerLinks"><b>Explore</b><a href="/nonGeek#section1">About</a><a
+                    href="/team">Team</a><a href="/contributors">Contributors</a><a
+                    onclick="showSubscriptionForm()">Subscribe</a>
+            </div>
+            <div class="footLinks footerLinks"><b>Visit</b>
+                <address>Manipal Institute of Technology,<br />Manipal,
+                    Karnataka<br />India - 576104</address>
+            </div>
+            <div class="footLinks footerLinks"><b>Other Links</b><a
+                    href="mailto:sudo@wearemist.in?Subject=Reporting%20an%20article">Report an article</a><a
+                    href="mailto:sudo@wearemist.in?Subject=Submit%20an%20Article">Submit
+                    Content</a></div>
         </div>
-
-    </div>
 </body>
 
 </html>
