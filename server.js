@@ -100,9 +100,16 @@ app.get("/news", function (req, res) {
 });
 
 app.get("/getNews", function (req, res) {
-  collectionNews.find().toArray((err, news) => {
+  collectionNews.find().sort({ _id: -1 }).toArray((err, news) => {
     newsPosts = news.reverse();
     res.send(newsPosts);
+  });
+});
+
+app.get("/getClubNews", function (req, res) {
+  collectionClubNews.find().sort({ "sortingDate": 1 }).toArray((err, clubNews) => {
+    clubNewsPosts = clubNews.reverse();
+    res.send(clubNewsPosts);
   });
 });
 
@@ -205,6 +212,7 @@ app.listen(PORT, () => {
       collectionMC = database1.collection("ManagementCommittee");
       collectionWC = database1.collection("WorkingCommittee");
       collectionNews = database2.collection("news");
+      collectionClubNews = database2.collection("clubNews");
       collectionMailingList = database3.collection("mailingList");
       console.log("Connected to mongoDB Atlas");
     }

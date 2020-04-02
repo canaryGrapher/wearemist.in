@@ -5,6 +5,7 @@
     <title>CyberManipal | MIST</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="./stylings/news.css">
+    <link rel="stylesheet" type="text/css" href="./stylings/animate.css">
     <script src="./scripts/news.js"></script>
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./images/favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./images/favicon/apple-touch-icon-114x114.png">
@@ -26,10 +27,14 @@
     <meta name="msapplication-square150x150logo" content="./images/favicon/mstile-150x150.png">
     <meta name="msapplication-wide310x150logo" content="./images/favicon/mstile-310x150.png">
     <meta name="msapplication-square310x310logo" content="./images/favicon/mstile-310x310.png">
-    <!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="./scripts/wow.js"></script>
 </head>
 
 <body>
+    <script>
+        new WOW().init();
+    </script>
     <div id="loaderContainer">
         <div id="loaderRipple">
         </div>
@@ -111,10 +116,11 @@
         </div>
         <div id="clubNews">
             <p id="clubNewsHeading">Club Announcements</p>
-            <div class="clubNews">
+            <div id="clubNewsContainer">
                 <div id="clubNewsNone">No news as of now</div>
             </div>
         </div>
+        <p id="highlightHeading">Recent News</p>
         <div id="highlightNews">
             <div id="recentHigh">
                 <div id="overlay">
@@ -130,28 +136,28 @@
                     <p>Recent</p>
                 </div>
                 <div id="recentListContent">
-                    <div class="recentNewsCard">
+                    <div class="recentNewsCard" id="recentNewsCard1">
                         <div id="recentNewsCardImage1" class="recentNewsCardImage"></div>
                         <div class="recentNewsCardText">
                             <text class="cardHeading" id="cardHeading1">Latest News</text>
                             <text class="cardText" id="cardText1">April 1, 2020</text>
                         </div>
                     </div>
-                    <div class="recentNewsCard">
+                    <div class="recentNewsCard" id="recentNewsCard2">
                         <div id="recentNewsCardImage2" class="recentNewsCardImage"></div>
                         <div class="recentNewsCardText">
                             <text class="cardHeading" id="cardHeading2">Latest News</text>
                             <text class="cardText" id="cardText2">April 1, 2020</text>
                         </div>
                     </div>
-                    <div class="recentNewsCard">
+                    <div class="recentNewsCard" id="recentNewsCard3">
                         <div id="recentNewsCardImage3" class="recentNewsCardImage"></div>
                         <div class="recentNewsCardText">
                             <text class="cardHeading" id="cardHeading3">Latest News</text>
                             <text class="cardText" id="cardText3">April 1, 2020</text>
                         </div>
                     </div>
-                    <div class="recentNewsCard">
+                    <div class="recentNewsCard" id="recentNewsCard4">
                         <div id="recentNewsCardImage4" class="recentNewsCardImage"></div>
                         <div class="recentNewsCardText">
                             <text class="cardHeading" id="cardHeading4">Latest News</text>
