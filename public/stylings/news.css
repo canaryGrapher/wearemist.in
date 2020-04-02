@@ -437,13 +437,13 @@ body {
   text-align: left;
   font-size: 15px;
   width: 95%;
-  margin: 0 auto;
+  margin: 0 auto 10px auto;
   /* margin-top: 10px; */
 }
 
 .miniCardText {
   position: relative;
-  text-align: center;
+  text-align: left;
   font-size: 12px;
   bottom: 0;
   margin-bottom: 5px;
@@ -717,9 +717,15 @@ address {
   #mainNewsContainer {
     grid-template-columns: auto auto auto;
   }
-
+  .heading {
+    text-align: left;
+    font-size: 15px;
+    width: 98%;
+    margin: 0 auto 5px auto;
+  }
   .miniCardText {
-    font-size: 3vh;
+    font-size: 10px;
+    bottom: 0;
   }
 }
 
