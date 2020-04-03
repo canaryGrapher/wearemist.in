@@ -12,10 +12,8 @@ body {
   overflow-x: hidden;
   background-attachment: fixed;
   background-position: center;
-  overflow-x: hidden;
-  overflow-y: hidden;
   background-color: rgb(236, 236, 236);
-  background-image: url("../images/backgrounds/curtains.jpg");
+  background-color: #000;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -23,11 +21,133 @@ body {
   height: 100vh;
 }
 
-h1 {
-    height: 100vh;
-    width: 100vw;
-    font-size: 60px;
-    color: rgb(29, 29, 29);
-    text-align: center;
-    margin-top: 250px;
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#navbar {
+  padding-top: 3vh;
+  height: 6vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.navItem > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navItem {
+  font-size: 3vh;
+  color: #fff;
+}
+
+.navItem:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+
+.navItem:last-child {
+  border-width: 0 0 3px 0;
+  border-style: solid;
+  border-color: #fff;
+}
+
+#pageHeading {
+  color: #fff;
+  font-family: open-sans;
+  text-align: center;
+  margin-top: 7vh;
+  font-size: 6vh;
+}
+
+#container {
+  margin-top: 2vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  color: antiquewhite;
+  text-align: center;
+}
+
+.gridTile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20vw;
+  border-width: 0.5px;
+  border-color: rgba(161, 161, 161, 0.212);
+  border-style: solid;
+  position: relative;
+}
+
+#creatorPhoto {
+  overflow: hidden;
+}
+
+#creatorNameTag {
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  z-index: 100;
+}
+
+#creatorPhotoContainer {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/backgrounds/creator.jpeg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+}
+
+#creatorPhotoContainer:hover {
+  transform: scale(1.2);
+  transition-duration: 4s;
+  opacity: 0.9;
+}
+
+#technologyStackContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#techUsed {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.techStack {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 33%;
+  width: 100%;
+}
+
+.techStack:hover {
+ transform: scale(1.2);
+ transition-duration: 4s;
+}
+
+
+.nodejs {
+  background-image: url("../images/assets/nodejs.png");
+}
+
+.mongodb {
+  background-image: url("../images/assets/mongodb.png");
+}
+
+.basicStack {
+  background-image: url("../images/assets/basicStack.png");
+}
+
+.linkLib {
+  color: rgb(168, 168, 168);
 }

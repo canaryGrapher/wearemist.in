@@ -593,13 +593,25 @@ textarea {
   color: #1f1f1f;
 }
 
-#rightsReserved {
-  padding-bottom: 3vh;
-}
-
 #heartEmoji {
   color: transparent;
   text-shadow: 0 0 0 rgb(235, 59, 59);
+}
+
+#contribute {
+  padding: 3vh;
+  font-weight: bold;
+}
+
+#contribute>a:hover {
+  color: #fff;
+  background-color: #000;;
+}
+
+#contribute > a {
+  text-decoration: none;
+  color: rgb(24, 122, 214);
+  padding: 2vh 3vh 2vh 3vh;
 }
 
 @media screen and (max-width: 1000px) {
@@ -820,6 +832,14 @@ textarea {
   /* for navbar */
   #navbar {
     display: none;
+  }
+
+  #contribute {
+    display: none;
+  }
+
+  #rightsReserved {
+    padding-bottom: 3vh;
   }
 
   #titleBar {

@@ -329,7 +329,7 @@ a {
   height: 85%;
   width: 300px;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   right: 0;
   margin-right: 10vw;
   display: flex;
@@ -487,6 +487,7 @@ a {
   padding-top: 20px;
   min-width: 100vw;
   box-sizing: border-box;
+  padding-bottom: 2vh;
 }
 
 #clubNewsNone {
@@ -974,7 +975,6 @@ timing {
     margin: 3% auto 1% auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
   }
 
@@ -1012,13 +1012,13 @@ timing {
   
   .closingX {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     font-size: 25px;
     font-family: open-sans;
     width: 100%;
     position: relative;
-    margin-top: 5%;
+    margin-top: 0%;
     text-align: center;
   }
   

@@ -46,11 +46,11 @@ function setClubNews() {
         if (loopThroughColors > 4) {
             loopThroughColors = 0;
         }
-        var clubNotice = `<div id="clubNews${y}" class="clubNewsCard" onclick="show${y}ClubMessage()"><p>${crecievedData[y].heading}</p></div>
+        var clubNotice = `<div id="clubNews${y}" class="clubNewsCard wow fadeInRight" onclick="show${y}ClubMessage()"><p>${crecievedData[y].heading}</p></div>
         <div class="popup" id="popup${y}"><div class="clubNewsContainerInbox" id="clubNewsContainerInbox${y}"><div class="imageOfThisNews" id="imageOfThisNews${y}"></div>
             <div class=" contentOfThisNews" id="contentOfThisNews${y}"><div class="headerOfThisNews" id="headerOfThisNews${y}"><h1>${crecievedData[y].heading}</h1>
                 </div><div class="descriptionOfThisNews" id="descriptionOfThisNews${y}"><date>${crecievedData[y].date}</date><p>${crecievedData[y].content}</p>
-                    <venue><b>Venue: </b>${crecievedData[y].venue}</venue><timing><b>Timing: </b>${crecievedData[y].time}</timing>
+                    <venue><b>Venue: </b>${crecievedData[y].venue}</venue><timing><b>Timing: </b>${crecievedData[y].timing}</timing>
                 </div><div class="closingX"><div class="closePopupClub" id="closePopupClub${y}" onclick="closePopup${y}()">X</div>
                 </div></div></div></div>`;
         document.getElementById("clubNewsContainer").innerHTML += `${clubNotice}`;
@@ -94,13 +94,13 @@ function setDataSmallScreen() {
     var x = 0;
     for (var val in recievedData) {
         if (x == 0) {
-            document.getElementById("recentSelectedText").innerHTML = `${recievedData[x].newsHeading}<script></script>`;
+            document.getElementById("recentSelectedText").innerHTML = `<a href="${recievedData[x].about}">${recievedData[x].newsHeading}</a>`;
             document.getElementById("articleCredit").innerHTML = recievedData[x].credit;
             document.getElementById("articleDate").innerHTML = recievedData[x].date;
             document.getElementById("recentHigh").style.backgroundImage = `url("${recievedData[x].highlightPhoto}")`;
         }
         if (x > 0) {
-            var addHTML = `<div class="mainNewsCard wow fadeInUp"><div id="imageCard${x}" class="miniCardImage"></div><div class="miniCardText"><div class="heading">${recievedData[x].newsHeading}</div><div class="cardDate">By ${recievedData[x].credit} &nbsp;&nbsp; ${recievedData[x].date}</div></div></div>`;
+            var addHTML = `<a href="${recievedData[x].about}"><div class="mainNewsCard wow fadeInUp"><div id="imageCard${x}" class="miniCardImage"></div><div class="miniCardText"><div class="heading">${recievedData[x].newsHeading}</div><div class="cardDate">By ${recievedData[x].credit} &nbsp;&nbsp; ${recievedData[x].date}</div></div></div></a>`;
             document.getElementById("mainNewsContainer").innerHTML += addHTML;
             document.getElementById(`imageCard${x}`).style.backgroundImage = `url("${recievedData[x].highlightPhoto}")`;
         }
