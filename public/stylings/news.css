@@ -578,7 +578,7 @@ address {
   display: none;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.98);
+  background-color: rgba(0, 0, 0, 0.85);
   position: fixed;
   z-index: 300;
 }
@@ -588,7 +588,7 @@ address {
   width: 25%;
   min-height: fit-content;
   height: 80%;
-  background-color: rgb(106, 106, 214);
+  background-color: rgb(56, 56, 56);
   margin: 0 auto;
   position: absolute;
   top: 50%; left: 50%;
@@ -603,7 +603,7 @@ address {
 
 #formBoxHeader {
   height: 25%;
-  color: rgb(106, 106, 214);
+  color: rgb(0, 0, 0);
   background-color: #fff;
   position: relative;
   border-radius: 10px 10px 0 0;
@@ -728,8 +728,8 @@ address {
 }
 
 .checkBOX:checked {
-	background-color:  rgb(0, 0, 0);
-	border: 1px solid  rgb(0, 0, 0);
+	background-color:  rgb(74, 127, 196);
+	border: 1px solid  rgb(74, 127, 196);
   color: #0e3b5e;
   outline: none;
 }
@@ -750,17 +750,17 @@ address {
   height: 45px;
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
-  color: rgb(111, 31, 240);
+  color: #000;
   font-size: 15px;
   margin: 40px auto auto auto;
 }
 
 #submitSubscribeButtn:hover {
-  background-color: #fff;
-  color: rgb(106, 106, 214);
+  background-color: rgb(74, 127, 196);
+  color: #fff;
   border-width: 2px;
   border-style: solid;
-  border-color: rgb(106, 106, 214);
+  border-color: rgb(74, 127, 196);
 }
 
 .popup {
