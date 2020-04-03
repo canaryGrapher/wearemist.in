@@ -75,8 +75,8 @@ app.get("/team", function (req, res) {
   });
 });
 
-app.get("/contributors", function (req, res) {
-  res.sendFile(__dirname + "/public/contributors.html");
+app.get("/credits", function (req, res) {
+  res.sendFile(__dirname + "/public/credits.html");
 });
 
 app.post("/contactMailer", function (req, res) {
