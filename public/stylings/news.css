@@ -483,11 +483,19 @@ a {
 
 #clubNewsContainer {
   display: flex;
+  flex-direction: row;
   overflow-x: scroll;
   padding-top: 20px;
   min-width: 100vw;
+  max-width: fit-content;
   box-sizing: border-box;
   padding-bottom: 2vh;
+  overflow-y: hidden;
+}
+
+#extraSpace {
+  height: 25vh;
+  width: 40vh;
 }
 
 #clubNewsNone {
@@ -881,7 +889,7 @@ timing {
     bottom: 0;
   }
   #clubNewsContainer {
-   overflow-y: scroll;
+   overflow-x: scroll;
   }
   
   .clubNewsCard {

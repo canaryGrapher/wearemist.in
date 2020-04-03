@@ -641,7 +641,7 @@ textarea {
     width: 100vw;
   }
   #mistLogoBig {
-    margin-top: 20vh;
+    margin-top: 15vh;
   }
   .socialIcon {
     width: 100px;
@@ -784,7 +784,7 @@ textarea {
   }
 
   #centeredText {
-    padding-top: 15vh;
+    padding-top: 10vh;
     width: 100vw;
     text-align: center;
   }

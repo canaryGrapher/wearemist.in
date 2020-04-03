@@ -52,6 +52,15 @@ function loadNewsdata() {
     return recievedNewsData;
 }
 
+function loadClubNewsdata() {
+    var CNewsxhttp = new XMLHttpRequest();
+    CNewsxhttp.open("GET", "/getClubNewsdata", false);
+    CNewsxhttp.send();
+    recievedClubNewsData = CNewsxhttp.responseText;
+    console.log(recievedClubNewsData);
+    return recievedClubNewsData;
+}
+
 function loadWCdata() {
     var WCxhttp = new XMLHttpRequest();
     WCxhttp.open("GET", "/getWCdata", false);
@@ -78,16 +87,9 @@ async function handleEnter(e) {
         var itm = document.getElementById("accessPanel").lastChild;
         var cln = itm.cloneNode(true);
         document.getElementById("accessPanel").appendChild(cln);
-        if (first == "ls") {
-            if (second == null) {
-                document.getElementById(`commandOutput${i}`).innerHTML = `<span class="file">about</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">news</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">team</span>`;
-                addCommand();
-            }
-
-            else {
-                document.getElementById(`commandOutput${i}`).innerHTML = `Arguments for this command are not supported in this terminal`;
-                addCommand();
-            }
+        if (userInputCommand.trim() == "ls") {
+            document.getElementById(`commandOutput${i}`).innerHTML = `<span class="file">about</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">news</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">team</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">announcements</span>`;
+            addCommand();
         }
 
         else if (userInputCommand == "exit") {
@@ -145,6 +147,18 @@ async function handleEnter(e) {
                 for Information and Network Security. We plan to train other
                 like-minded students to enhance their skills and aptitude in this
                 field.<br><br>`;
+                    addCommand();
+                }
+                else if (second == "announcements") {
+                    cNews = `<span class="newsHeading" id="newsMessage">Club Announcements</span><br>`;
+                    var clubNewsArray = loadClubNewsdata();
+                    console.log(clubNewsArray);
+                    var CnewsArr = clubNewsArray.split(",");
+                    console.log(CnewsArr);
+                    for (var val5 in CnewsArr) {
+                        cNews = cNews + CnewsArr[val5] + "<br><br>";
+                    }
+                    document.getElementById(`commandOutput${i}`).innerHTML = `${cNews}`;
                     addCommand();
                 }
                 else if (second == null) {
@@ -208,6 +222,7 @@ async function handleEnter(e) {
         document.getElementById(`commandOutput${i}`).classList.add("commandOutput");
     }
 }
+
 
 async function addCommand() {
     i = i + 1;

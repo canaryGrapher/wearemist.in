@@ -192,6 +192,17 @@ app.get("/getNewsdata", function (req, res) {
   });
 });
 
+app.get("/getClubNewsdata", function (req, res) {
+  var CnewsList = "";
+  collectionClubNews.find().sort({ "sortingDate": -1 }).toArray((err, result1) => {
+    for (var val in result1) {
+      CnewsList = CnewsList + result1[val].heading + ",";
+    }
+    console.log(CnewsList);
+    res.send(CnewsList);
+  });
+});
+
 app.get("*", function (req, res) {
   res.sendFile(__dirname + "/public/errorPage.html");
 });

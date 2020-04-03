@@ -43,6 +43,7 @@ function setClubNews() {
     }
 
     for (var club in crecievedData) {
+        var lastCheck = crecievedData.length;
         if (loopThroughColors > 4) {
             loopThroughColors = 0;
         }
@@ -59,6 +60,10 @@ function setClubNews() {
         console.log(crecievedData[y].image);
         y += 1;
         loopThroughColors += 1;
+        if (y == lastCheck) {
+            document.getElementById("clubNewsContainer").innerHTML += `<div id="extraSpace"></div>`;
+            console.log("Added extra space");
+        }
     }
 
 }
