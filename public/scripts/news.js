@@ -46,12 +46,12 @@ function setClubNews() {
         if (loopThroughColors > 4) {
             loopThroughColors = 0;
         }
-        var clubNotice = `<div id="clubNews${y}" class="clubNewsCard wow fadeInRight" onclick="show${y}ClubMessage()"><p>${crecievedData[y].heading}</p></div>
+        var clubNotice = `<div id="clubNews${y}" class="clubNewsCard wow fadeInRight" onclick="showClubMessage(this.id)"><p>${crecievedData[y].heading}</p></div>
         <div class="popup" id="popup${y}"><div class="clubNewsContainerInbox" id="clubNewsContainerInbox${y}"><div class="imageOfThisNews" id="imageOfThisNews${y}"></div>
             <div class=" contentOfThisNews" id="contentOfThisNews${y}"><div class="headerOfThisNews" id="headerOfThisNews${y}"><h1>${crecievedData[y].heading}</h1>
                 </div><div class="descriptionOfThisNews" id="descriptionOfThisNews${y}"><date>${crecievedData[y].date}</date><p>${crecievedData[y].content}</p>
                     <venue><b>Venue: </b>${crecievedData[y].venue}</venue><timing><b>Timing: </b>${crecievedData[y].timing}</timing>
-                </div><div class="closingX"><div class="closePopupClub" id="closePopupClub${y}" onclick="closePopup${y}()">X</div>
+                </div><div class="closingX"><div class="closePopupClub" id="closePopupClub${y}" onclick="closePopup(this.id)">X</div>
                 </div></div></div></div>`;
         document.getElementById("clubNewsContainer").innerHTML += `${clubNotice}`;
         document.getElementById(`clubNews${y}`).style.backgroundColor = `${colorPallete[loopThroughColors]}`;
@@ -158,90 +158,10 @@ function rotate() {
     }
 }
 
-function show0ClubMessage() {
-    document.getElementById(`popup0`).style.display = "flex";
+function showClubMessage(idOfElement) {
+    document.getElementById(`popup${idOfElement[idOfElement.length - 1]}`).style.display = "flex";
 }
 
-function closePopup0() {
-    document.getElementById(`popup0`).style.display = "none";
-}
-
-function show1ClubMessage() {
-    document.getElementById(`popup1`).style.display = "flex";
-}
-
-function closePopup1() {
-    document.getElementById(`popup1`).style.display = "none";
-}
-
-function show2ClubMessage() {
-    document.getElementById(`popup2`).style.display = "flex";
-}
-
-function closePopup2() {
-    document.getElementById(`popup2`).style.display = "none";
-}
-
-function show3ClubMessage() {
-    document.getElementById(`popup3`).style.display = "flex";
-}
-
-function closePopup3() {
-    document.getElementById(`popup3`).style.display = "none";
-}
-
-function show4ClubMessage() {
-    document.getElementById(`popup4`).style.display = "flex";
-}
-
-function closePopup4() {
-    document.getElementById(`popup4`).style.display = "none";
-}
-
-function show5ClubMessage() {
-    document.getElementById(`popup5`).style.display = "flex";
-}
-
-function closePopup5() {
-    document.getElementById(`popup5`).style.display = "none";
-}
-
-function show6ClubMessage() {
-    document.getElementById(`popup6`).style.display = "flex";
-}
-
-function closePopup6() {
-    document.getElementById(`popup6`).style.display = "none";
-}
-
-function show7ClubMessage() {
-    document.getElementById(`popup7`).style.display = "flex";
-}
-
-function closePopup7() {
-    document.getElementById(`popup7`).style.display = "none";
-}
-
-function show8ClubMessage() {
-    document.getElementById(`popup8`).style.display = "flex";
-}
-
-function closePopup8() {
-    document.getElementById(`popup8`).style.display = "none";
-}
-
-function show9ClubMessage() {
-    document.getElementById(`popup9`).style.display = "flex";
-}
-
-function closePopup9() {
-    document.getElementById(`popup9`).style.display = "none";
-}
-
-function show10ClubMessage() {
-    document.getElementById(`popup10`).style.display = "flex";
-}
-
-function closePopup10() {
-    document.getElementById(`popup10`).style.display = "none";
+function closePopup(idOfElement) {
+    document.getElementById(`popup${idOfElement[idOfElement.length - 1]}`).style.display = "none";
 }
