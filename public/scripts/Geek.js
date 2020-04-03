@@ -88,7 +88,7 @@ async function handleEnter(e) {
         var cln = itm.cloneNode(true);
         document.getElementById("accessPanel").appendChild(cln);
         if (userInputCommand.trim() == "ls") {
-            document.getElementById(`commandOutput${i}`).innerHTML = `<span class="file">about</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">news</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">team</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">announcements</span>`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `<pre class="file">about    news    team    announcements</pre>`;
             addCommand();
         }
 

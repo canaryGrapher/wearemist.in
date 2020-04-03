@@ -58,6 +58,13 @@ body {
     justify-content: space-between;
 }
 
+pre{
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+  }
+
 #titleName {
     margin: auto;
     font-size: 20px;
@@ -227,9 +234,10 @@ td {
     .commandOutput {
         line-height: 15px;
         font-size: 17px;
-        width: 95%;
+        /* width: 95%; */
         margin-right: auto;
         margin-left: auto;
+        display: inline;
     }
 
     .teamContainer {
