@@ -51,7 +51,7 @@ app.get("/home", function (req, res) {
 });
 
 app.get("/Geek", function (req, res) {
-  res.sendFile(__dirname + "/public/GeekPage.html");
+  res.sendFile(__dirname + "/public/geek.html");
 });
 
 app.get("/nongeek", function (req, res) {

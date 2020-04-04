@@ -22,7 +22,7 @@ head
   meta(name='msapplication-square150x150logo', content='./images/favicon/mstile-150x150.png')
   meta(name='msapplication-wide310x150logo', content='./images/favicon/mstile-310x150.png')
   meta(name='msapplication-square310x310logo', content='./images/favicon/mstile-310x310.png')
-  link(rel='stylesheet', type='text/css', href='./stylings/teamStyling.css')
+  link(rel='stylesheet', type='text/css', href='./stylings/team.css')
   script(src='./scripts/teams.js')
   link(rel='stylesheet', type='text/css', href='https://unpkg.com/aos@next/dist/aos.css')
   script(src='./scripts/wow.js')
@@ -85,8 +85,7 @@ head
     a(href='/nonGeek#section3') Contact Us
   p#news.linkBox
     a(href='/news') News
-  p#contribute.linkBox
-    a(href='/credits') Credits
+
 #header
   h1 Meet the team.
   a#applyButton(onclick='showDialog()')
@@ -160,6 +159,8 @@ head
             h1.wcmemberName #{WC[index3].name}
 #spacing
   p#rightsReserved &copy;2020 MIST, All rights reserved
+  #contribute
+    a(href='/credits') Check out our page Credits
 
 script(src='https://unpkg.com/aos@next/dist/aos.js')
 script.

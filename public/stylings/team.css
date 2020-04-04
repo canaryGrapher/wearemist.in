@@ -385,7 +385,7 @@ img {
   color: rgb(0, 0, 0);
   font-size: 20px;
   padding-top: 8vh;
-  padding-bottom: 5vh;
+  padding-bottom: 3vh;
 }
 
 .socialLinks {
@@ -403,6 +403,20 @@ img {
 
 .linkedImage {
   height: 30px;
+}
+
+#contribute>a {
+  color: #187AD6;
+  padding: 2vh 3vh 2vh 3vh;
+}
+
+#contribute>a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+#contribute {
+  padding-bottom: 4vh;
 }
 
 
