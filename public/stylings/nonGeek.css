@@ -391,15 +391,6 @@ a {
   background-repeat: no-repeat;
 }
 
-.polaroid:nth-last-child(2) {
-  transform: rotate(180deg);
-}
-
-.polaroid:hover {
-  transform: scale(1.02);
-  transition-duration: 1s;
-}
-
 #navigateGallery > a {
   color: rgb(255, 255, 255);
 }
