@@ -839,7 +839,7 @@ venue {
   font-size: 21px;
 }
 
-timing {
+timing, event {
   font-size: 21px;
 }
 
@@ -978,7 +978,7 @@ timing {
   }
   
   .headerOfThisNews {
-    height: 15%;
+    height: 10%;
     width: 100%;
     margin: 3% auto 1% auto;
     display: flex;
@@ -992,7 +992,7 @@ timing {
   
   .descriptionOfThisNews {
     height: fit-content;
-    padding: 5px 2%;
+    padding: 2px 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1010,10 +1010,14 @@ timing {
   }
   
   venue {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 15px;
   }
   
+  event {
+    font-size: 15px;
+  }
+
   timing {
     font-size: 15px;
   }

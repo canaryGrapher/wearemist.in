@@ -50,7 +50,7 @@ function setClubNews() {
         <div class="popup" id="popup${y}"><div class="clubNewsContainerInbox" id="clubNewsContainerInbox${y}"><div class="imageOfThisNews" id="imageOfThisNews${y}"></div>
             <div class=" contentOfThisNews" id="contentOfThisNews${y}"><div class="headerOfThisNews" id="headerOfThisNews${y}"><h1>${crecievedData[y].heading}</h1>
                 </div><div class="descriptionOfThisNews" id="descriptionOfThisNews${y}"><date>${crecievedData[y].date}</date><p>${crecievedData[y].content}</p>
-                    <venue><b>Venue: </b>${crecievedData[y].venue}</venue><timing><b>Timing: </b>${crecievedData[y].timing}</timing>
+                <venue><b>Venue: </b>${crecievedData[y].venue}</venue><timing><b>Timing: </b>${crecievedData[y].timing}</timing><event><b>Link: </b>${crecievedData[y].link}</event>
                 </div><div class="closingX"><div class="closePopupClub" id="closePopupClub${y}" onclick="closePopup(this.id)">X</div>
                 </div></div></div></div>`;
         document.getElementById("clubNewsContainer").innerHTML += `${clubNotice}`;
