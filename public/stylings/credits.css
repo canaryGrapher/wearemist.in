@@ -226,7 +226,8 @@ body::-webkit-scrollbar {
 #endMessage {
   color: #fff;
   text-align: center;
-  padding: 10vh 2vh 5vh 2vh;
+  padding: 15vh 2vh 5vh 2vh;
+  font-family: ubuntu;;
 }
 
 @media screen and (max-width: 800px) {
@@ -243,4 +244,20 @@ body::-webkit-scrollbar {
     position: relative;
     overflow: hidden;
   }
+  .navItem {
+    font-size: 2vh;
+  }
+  p {
+    font-size: 1.5vh;
+  }
+  h2 {
+    font-size: 3.5vh;
+  }
+  .photoCaption {
+    font-size: 2vh;
+  }
+  .photographer {
+    font-size: 3vh;
+  }
+
 }
