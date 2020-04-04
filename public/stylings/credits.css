@@ -187,7 +187,7 @@ body::-webkit-scrollbar {
 }
 
 #image0 {
-  background-image: url("../images/backgrounds/unsplash_logo.png");
+  background-image: url("../images/assets/unsplash_logo.png");
   background-size: contain;
 }
 
@@ -212,7 +212,15 @@ body::-webkit-scrollbar {
 }
 
 #image6 {
-  background-image: url("../images/assets/networksecurity.jpg");
+  background-image: url("../images/assets/pentest.jpg");
+}
+
+#image7 {
+  background-image: url("../images/backgrounds/alreadySubscribed.jpg");
+}
+
+#image8 {
+  background-image: url("../images/backgrounds/subscribed.jpg");
 }
 
 #endMessage {
