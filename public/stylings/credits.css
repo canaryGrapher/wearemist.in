@@ -75,14 +75,13 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 20vw;
+  height: 25vw;
+  max-width: 25vw;
+  min-width: 25vw;
   border-width: 0.5px;
   border-color: rgba(161, 161, 161, 0.212);
   border-style: solid;
   position: relative;
-}
-
-#creatorPhoto {
   overflow: hidden;
 }
 
@@ -99,12 +98,15 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 100%;
   background-image: url("../images/backgrounds/creator.jpeg");
-  background-position: center;
-  background-size: cover;
-  opacity: 0.4;
 }
 
-#creatorPhotoContainer:hover {
+.hoverImage {
+  opacity: 0.4;
+  background-position: center;
+  background-size: cover;
+}
+
+.hoverImage:hover {
   transform: scale(1.2);
   transition-duration: 4s;
   opacity: 0.9;
@@ -119,7 +121,6 @@ body::-webkit-scrollbar {
 
 #techUsed {
   background-color: #fff;
-  overflow: hidden;
 }
 
 .techStack {
@@ -131,8 +132,8 @@ body::-webkit-scrollbar {
 }
 
 .techStack:hover {
- transform: scale(1.2);
- transition-duration: 4s;
+  transform: scale(1.2);
+  transition-duration: 4s;
 }
 
 
@@ -150,4 +151,88 @@ body::-webkit-scrollbar {
 
 .linkLib {
   color: rgb(168, 168, 168);
+}
+
+#logoCreatorTag {
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  z-index: 100;
+}
+
+#logoCreatorContainer {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/backgrounds/logoCreator.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.otherhoverImage {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.6;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.otherhoverImage:hover {
+  transform: scale(1.2);
+  transition-duration: 4s;
+  opacity: 0.9;
+}
+
+#image0 {
+  background-image: url("../images/backgrounds/unsplash_logo.png");
+  background-size: contain;
+}
+
+#image1 {
+  background-image: url("../images/assets/cryptography.jpg");
+}
+
+#image2 {
+  background-image: url("../images/assets/ctfs.jpg");
+}
+
+#image3 {
+  background-image: url("../images/assets/webdev.jpg");
+}
+
+#image4 {
+  background-image: url("../images/assets/cyberawareness.jpg");
+}
+
+#image5 {
+  background-image: url("../images/assets/networking.jpg");
+}
+
+#image6 {
+  background-image: url("../images/assets/networksecurity.jpg");
+}
+
+#endMessage {
+  color: #fff;
+  text-align: center;
+  padding: 10vh 2vh 5vh 2vh;
+}
+
+@media screen and (max-width: 800px) {
+  #container {
+    grid-template-columns: auto auto;
+  }
+  .gridTile {
+    height: 50vw;
+    max-width: 50vw;
+    min-width: 50vw;
+    border-width: 0.5px;
+    border-color: rgba(161, 161, 161, 0.212);
+    border-style: solid;
+    position: relative;
+    overflow: hidden;
+  }
 }
