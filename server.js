@@ -43,10 +43,14 @@ app.set("views", "./views");
 const PORT = process.env.PORT || 3000;
 
 app.get("/", function (req, res) {
-  res.redirect("/home");
+  res.redirect("/boot");
 });
 
 app.get("/home", function (req, res) {
+  res.redirect("/boot");
+});
+
+app.get("/boot", function (req, res) {
   res.render("home");
 });
 
