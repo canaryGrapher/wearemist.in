@@ -47,7 +47,7 @@ function setClubNews() {
             loopThroughColors = 0;
         }
         if (crecievedData[y].image == "") {
-            clubNotice = `<div id="clubNews${y}" class="clubNewsCard wow fadeInRight" onclick="showClubMessage(this.id)"><p>${crecievedData[y].heading}</p></div>
+            clubNotice = `<div id="clubNews${y}" class="clubNewsCard wow fadeInLeft" onclick="showClubMessage(this.id)"><p>${crecievedData[y].heading}</p></div>
         <div class="popup" id="popup${y}"><div class="clubNewsContainerInbox" id="clubNewsContainerInbox${y}"><div class="imageOfThisNews" id="imageOfThisNews${y}"></div>
             <div class=" contentOfThisNews" id="contentOfThisNews${y}"><div class="headerOfThisNews" id="headerOfThisNews${y}"><h1>${crecievedData[y].heading}</h1>
                 </div><div class="descriptionOfThisNews" id="descriptionOfThisNews${y}"><date>${crecievedData[y].date}</date><p>${crecievedData[y].content}</p>
@@ -56,7 +56,7 @@ function setClubNews() {
                 </div></div></div></div><style>#imageOfThisNews${y}{height:20%;}</style>`;
         }
         else {
-            clubNotice = `<div id="clubNews${y}" class="clubNewsCard wow fadeInRight" onclick="showClubMessage(this.id)"><p>${crecievedData[y].heading}</p></div>
+            clubNotice = `<div id="clubNews${y}" class="clubNewsCard wow fadeInLeft" onclick="showClubMessage(this.id)"><p>${crecievedData[y].heading}</p></div>
         <div class="popup" id="popup${y}"><div class="clubNewsContainerInbox" id="clubNewsContainerInbox${y}"><div class="imageOfThisNews" id="imageOfThisNews${y}"></div>
             <div class=" contentOfThisNews" id="contentOfThisNews${y}"><div class="headerOfThisNews" id="headerOfThisNews${y}"><h1>${crecievedData[y].heading}</h1>
                 </div><div class="descriptionOfThisNews" id="descriptionOfThisNews${y}"><date>${crecievedData[y].date}</date><p>${crecievedData[y].content}</p>
@@ -93,7 +93,7 @@ function setDataBigScreen() {
         }
 
         if (i > 4 && i <= val) {
-            var addHTML = `<a href="${recievedData[i].about}"><div class="mainNewsCard wow fadeInUp"><div id="imageCard${i}" class="miniCardImage"></div><div class="miniCardText"><div class="heading">${recievedData[i].newsHeading}</div><div class="cardDate">By ${recievedData[i].credit} &nbsp;&nbsp; ${recievedData[i].date}</div></div></div></a>`;
+            var addHTML = `<a href="${recievedData[i].about}"><div class="mainNewsCard wow fadeInLeft"><div id="imageCard${i}" class="miniCardImage"></div><div class="miniCardText"><div class="heading">${recievedData[i].newsHeading}</div><div class="cardDate">By ${recievedData[i].credit} &nbsp;&nbsp; ${recievedData[i].date}</div></div></div></a>`;
             document.getElementById("mainNewsContainer").innerHTML += addHTML;
             document.getElementById(`imageCard${i}`).style.backgroundImage = `url("${recievedData[i].highlightPhoto}")`;
         }
@@ -112,7 +112,7 @@ function setDataSmallScreen() {
             document.getElementById("recentHigh").style.backgroundImage = `url("${recievedData[x].highlightPhoto}")`;
         }
         if (x > 0) {
-            var addHTML = `<a href="${recievedData[x].about}"><div class="mainNewsCard wow fadeInUp"><div id="imageCard${x}" class="miniCardImage"></div><div class="miniCardText"><div class="heading">${recievedData[x].newsHeading}</div><div class="cardDate">By ${recievedData[x].credit} &nbsp;&nbsp; ${recievedData[x].date}</div></div></div></a>`;
+            var addHTML = `<a href="${recievedData[x].about}"><div class="mainNewsCard wow fadeInLeft"><div id="imageCard${x}" class="miniCardImage"></div><div class="miniCardText"><div class="heading">${recievedData[x].newsHeading}</div><div class="cardDate">By ${recievedData[x].credit} &nbsp;&nbsp; ${recievedData[x].date}</div></div></div></a>`;
             document.getElementById("mainNewsContainer").innerHTML += addHTML;
             document.getElementById(`imageCard${x}`).style.backgroundImage = `url("${recievedData[x].highlightPhoto}")`;
         }
