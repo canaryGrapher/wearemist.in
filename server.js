@@ -93,8 +93,6 @@ app.post("/contactMailer", function (req, res) {
   transporter.sendMail(mailOptions, function (err, info) {
     if (err)
       console.log(err);
-    else
-      console.log("Sent the mail to yasharyan307@outlook.com ");
   });
   res.redirect("/nonGeek#section3");
 });
@@ -202,7 +200,6 @@ app.get("/getClubNewsdata", function (req, res) {
     for (var val in result1) {
       CnewsList = CnewsList + result1[val].heading + ",";
     }
-    console.log(CnewsList);
     res.send(CnewsList);
   });
 });
