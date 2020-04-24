@@ -1,10 +1,10 @@
-function loadTerminal() {
+window.onload = function () {
     typeWriter();
     loadBrowser();
     document.getElementById("command1").focus();
     document.getElementById("accessIdentifier").innerHTML = `guest@wearemist:<span class="accessIndicator">~$</span>`;
     document.getElementById("terminalTitle").innerHTML = `${recievedData}@wearemist.in`;
-}
+};
 
 var txtcounter = 0;
 var txt = "Manipal Information Security Team - version - Stable-Version_1.4.3-def:08.04.2020 2020 MIST, Manipal. All rights reserved.";
