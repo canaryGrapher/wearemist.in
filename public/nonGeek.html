@@ -2,23 +2,54 @@
 <html>
 
 <head>
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
   <title>MIST</title>
-  <link rel="stylesheet" type="text/css" href="./stylings/nonGeekStyling.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="./stylings/nonGeek.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="./stylings/animate.css">
   <script src="./scripts/nonGeek.js"></script>
-
+  <script src="./scripts/wow.js"></script>
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./images/favicon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./images/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./images/favicon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./images/favicon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="./images/favicon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./images/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="./images/favicon/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="./images/favicon/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="./images/favicon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="./images/favicon/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="./images/favicon/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="./images/favicon/mstile-310x310.png" />
 </head>
 
 <body>
   <script>
-
+    new WOW().init();
   </script>
-  <div class="container">
+  <div id="loaderContainer">
+    <div id="loaderRipple">
+    </div>
+    <p>Booting</p>
+  </div>
+  <div class=" container">
     <div id="responsiveNavbar">
-      <div id="barContainer" onclick="makeCross(this)">
-        <div class="hamString bar1"></div>
-        <div class="hamString bar2"></div>
-        <div class="hamString bar3"></div>
+      <div id="titleBar">
+        <div id="mistLogoTitle">
+          <img src="./images/logo/logoLight.png" height="20px" width="50px">
+        </div>
+        <div id="barContainer" onclick="makeCross(this)">
+          <div class="hamString bar1"></div>
+          <div class="hamString bar2"></div>
+          <div class="hamString bar3"></div>
+        </div>
       </div>
       <div id="responsiveNavItems">
         <p id="res_LOGO" class="res_linkBox" onclick="clickLinks()"><a href="/home">MIST</a></p>
@@ -30,34 +61,31 @@
         </p>
         <p id="res_team" class="res_linkBox" onclick="clickLinks()"><a href="/team">Team</a></p>
         <p id="res_news" class="res_linkBox" onclick="clickLinks()"><a href="/news">News</a></p>
-        <p id="res_contribute" class="res_linkBox" onclick="clickLinks()"><a href="/contributors">Contributors</a>
+        <p id="res_contribute" class="res_linkBox" onclick="clickLinks()"><a href="/credits">Credits</a>
         </p>
       </div>
     </div>
 
     <div id="navbar">
-      <p id="LOGO" class="linkBox"><a href="/home">MIST</a></p>
+      <p id="LOGO" class="linkBox" onclick="goToHome()"></p>
       <p id="home" class="linkBox"><a href="/nonGeek#section0">Home</a></p>
       <p id="whatwedo" class="linkBox"><a href="/nonGeek#section1">What we do</a></p>
       <p id="contact" class="linkBox"><a href="/nonGeek#section2">Gallery</a></p>
       <p id="photosLink" class="linkBox"><a href="/nonGeek#section3">Contact Us</a></p>
       <p id="team" class="linkBox"><a href="/team">Team</a></p>
       <p id="news" class="linkBox"><a href="/news">News</a></p>
-      <p id="contribute" class="linkBox"><a href="/contributors">Contributors</a></p>
     </div>
     <div id="section0" class="sectionContainer">
-      <div class="overlay">
-        <div id="section0Content">
-          <div id="centeredText">
-            <h1 id="mistName">Manipal <br> <span id="biggerText">Information Security </span><br>Team</h1>
-            <div id="quote">
-              <span id="highlight">"It takes 20 years to build a reputation and few minutes of
-                cyber-incident to ruin it."</span>
-              <p id="quoteCredit">
-                -Stephane Nappo
-              </p>
-            </div>
-          </div>
+      <div id="section0Content">
+        <div id="centeredText" class="wow fadeInUp">
+          <h1 id="mistName">Manipal Information Security Team</h1>
+        </div>
+        <div id="quote" class="wow fadeInUp">
+          <p><span id="highlight">"It takes 20 years to build a reputation and few minutes of
+              cyber-incident to ruin it."</span></p>
+          <p id="quoteCredit">
+            -Stephane Nappo
+          </p>
         </div>
         <div id="moreInfoText">
           <div id="mouseAnimation">
@@ -65,11 +93,12 @@
           </div>
         </div>
       </div>
+      <div id="sectionImage" class="wow zoomIn"></div>
     </div>
     <div id="section1" class="sectionContainer">
       <h1 id="whatwedoHead">What we do?</h1>
       <div id="whatwedotext">
-        <p id="whatWeDo">
+        <p id="whatWeDo" class="wow fadeInUp">
           We are a team of Information and Network Security enthusiasts who
           have gathered knowledge about the field through workshops, online
           courses, books and research. We now want to spread the knowledge we
@@ -106,30 +135,6 @@
               of a web application. Any type of parameter manipulation that
               you want to perform can typically be done with Javascript
               injection.
-            </p>
-          </div>
-        </div>
-        <div class="card" id="networkSecurity">
-          <div class="content">
-            <h3 class="cardHeader">Network Security</h3>
-            <p class="cardBody">
-              Network security consists of the policies and practices adopted
-              to prevent and monitor unauthorized access, misuse,
-              modification, or denial of a computer network and
-              network-accessible resources.
-            </p>
-          </div>
-        </div>
-        <div class="card" id="scripting">
-          <div class="content">
-            <h3 class="cardHeader">Scripting</h3>
-            <p class="cardBody">
-              Scripts, in layman's terms, are programs written for a special
-              run-time environment that automate the execution of tasks that
-              could alternatively be executed one-by-one by a human operator.
-              Originally designed to make life easier for us, they can also be
-              misused to attack websites and applications in an attempt to
-              steal valuable information.
             </p>
           </div>
         </div>
@@ -180,13 +185,12 @@
         <p>Take a peek into the MIST</p>
       </div>
       <div id="photoContainer">
-        <div class="polaroid" style="background-image: url('./images/gallery/1.jpg');"></div>
-        <div class="polaroid" style="background-image: url('./images/gallery/2.jpg');"></div>
-        <div class="polaroid" style="background-image: url('./images/gallery/3.jpg');"></div>
-        <div class="polaroid" style="background-image: url('./images/gallery/4.jpg');"></div>
-        <div class="polaroid" style="background-image: url('./images/gallery/5.jpg');"></div>
-        <div class="polaroid" style="background-image: url('./images/gallery/6.jpg');"></div>
-        <div id="navigateGallery"><a href="/gallery">View More>></a></div>
+        <div class="polaroid wow zoomIn" style="background-image: url('./images/gallery/1.jpg');"></div>
+        <div class="polaroid wow zoomIn" style="background-image: url('./images/gallery/2.jpg');"></div>
+        <div class="polaroid wow zoomIn" style="background-image: url('./images/gallery/3.jpg');"></div>
+        <div class="polaroid wow zoomIn" style="background-image: url('./images/gallery/4.jpg');"></div>
+        <div class="polaroid wow zoomIn" style="background-image: url('./images/gallery/5.jpg');"></div>
+        <div class="polaroid wow zoomIn" style="background-image: url('./images/gallery/6.jpg');"></div>
       </div>
     </div>
     <div id="section3">
@@ -203,7 +207,7 @@
       <div id="contactContainer">
         <div id="leftColumn">
           <div id="socialLinks">
-            <div class="socialIconBox">
+            <div class="socialIconBox wow fadeInLeft">
               <a href="https://www.facebook.com/wearemist.in/" target="_blank">
                 <img src="/images/vectors/facebook.svg" alt="Facebook" class="socialIcon">
                 <p class="iconSubText">
@@ -211,7 +215,7 @@
               </a>
               </p>
             </div>
-            <div class="socialIconBox">
+            <div class="socialIconBox wow fadeInLeft">
               <a href="https://github.com/WeAreMIST">
                 <img src="/images/vectors/github.svg" alt="Github" class="socialIcon">
                 <p class="iconSubText">
@@ -219,7 +223,7 @@
               </a>
               </p>
             </div>
-            <div class="socialIconBox">
+            <div class="socialIconBox wow fadeInLeft">
               <a href="https://www.instagram.com/sudo.mist/">
                 <img src="/images/vectors/instagram.svg" alt="Instagram" class="socialIcon">
                 <p class="iconSubText">
@@ -227,7 +231,7 @@
               </a>
               </p>
             </div>
-            <div class="socialIconBox">
+            <div class="socialIconBox wow fadeInLeft">
               <a href="mailto:sudo@wearemist.in?Subject=Message%20from%20website%20user">
                 <img src="/images/vectors/mail-dot-ru.svg" alt="Facebook" class="socialIcon">
                 <p class="iconSubText">
@@ -235,7 +239,7 @@
               </a>
               </p>
             </div>
-            <div class="socialIconBox">
+            <div class="socialIconBox wow fadeInLeft">
               <a href="mailto:f78c6659.manipal.edu@apac.teams.ms?Subject=Message%20from%20website%20user">
                 <img src="/images/vectors/microsoftteams.svg" alt="Facebook" class="socialIcon">
                 <p class="iconSubText">
@@ -243,7 +247,7 @@
               </a>
               </p>
             </div>
-            <div class="socialIconBox">
+            <div class="socialIconBox wow fadeInLeft">
               <a href="https://in.linkedin.com/company/manipal-information-security-team" target="_blank">
                 <img src="/images/vectors/linkedin.svg" alt="LinkedIn" class="socialIcon">
                 <p class="iconSubText">
@@ -273,8 +277,9 @@
     <div id="section5" class="sectionContainer">
       <div id="footer">
         <h1 id="FootHead"><span id="heartEmoji">&#10084;</span> Handcrafted by MIST</h1>
-        <p id="footText">&copy;2020, Manipal Information and Security Team, Manipal</p>
+        <p id="footText">&copy;2020, Manipal Information Security Team, Manipal</p>
         <p id="rightsReserved">All rights reserved</p>
+        <p id="contribute"><a href="/credits">Check out our page Credits</a></p>
       </div>
     </div>
   </div>

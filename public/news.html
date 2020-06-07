@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CyberManipal | MIST</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="./stylings/news.css">
+    <link rel="stylesheet" type="text/css" href="./stylings/animate.css">
+    <script src="./scripts/news.js"></script>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./images/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./images/favicon/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-128.png" sizes="128x128">
+    <meta name="application-name" content=" ">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="./images/favicon/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="./images/favicon/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="./images/favicon/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="./images/favicon/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="./images/favicon/mstile-310x310.png">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="./scripts/wow.js"></script>
+</head>
+
+<body>
+    <script>
+        new WOW().init();
+    </script>
+    <div id="loaderContainer">
+        <div id="loaderRipple">
+        </div>
+        <p>Loading</p>
+    </div>
+    <div id="subscribeFillForm">
+        <div id="formBoxSubscribe">
+            <div id="formBoxHeader">
+                <p onclick="closeSubscriptionForm()">X</p>
+                <h1>CyberManipal</h1>
+            </div>
+            <div id="formContainerSubscribe">
+                <form method="POST" action="/addToMailingList">
+                    <div id="inputTextBoxes">
+                        <div class="inputBOXsubscribe"><br /><input id="subscriberName" type="text"
+                                name="subscriberName" placeholder="Your name" required="required" /><br /></div>
+                        <div class="inputBOXsubscribe"><br /><input id="subscriberEmail" type="email"
+                                name="subscriberEmail" placeholder="Your email address" required="required" /><br />
+                        </div>
+                    </div>
+                    <p id="checkBoxMessage">What do you want to subscribe for?</p>
+                    <div id="checkBOXsubscribe">
+                        <div id="BOX"><input class="checkBOX" id="newsletterYESorNO" type="checkbox" name="newsYESorNO"
+                                checked="checked" /><label class="checkBoxLabel"
+                                for="newsYESorNO">Newsletter</label><br /></div>
+                        <div id="BOX"><input class="checkBOX" id="eventsYESorNO" type="checkbox" name="eventsYESorNO"
+                                checked="checked" /><label class="checkBoxLabel"
+                                for="eventsYESorNO">Events</label><br /></div>
+                    </div><input id="submitSubscribeButtn" type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="responsiveNavbar">
+            <div id="hamburgerContainer" onclick="showResNavBar()">
+                <div class="ham"></div>
+                <div class="ham"></div>
+                <div class="ham"></div>
+            </div>
+        </div>
+        <div id="responsiveNavItems">
+            <div id="mainItemsListres">
+                <h1>CyberManipal</h1>
+                <a class="resNavItems" href="/nonGeek#section0">Home</a>
+                <a class="resNavItems" href="/nonGeek#section1">About</a>
+                <a class="resNavItems" href="/nonGeek#section3">Contact</a>
+                <a class="resNavItems" href="/team">Team</a>
+                <a class="resNavItems" onclick="showSubscriptionForm()">Subscribe</a>
+                <a class="resNavItems" href="/credits">Credits</a>
+            </div>
+            <div id="closeResNav" onclick="hideResNavBar()">X</div>
+        </div>
+        <div id="navBar">
+            <div id="navSocial">
+                <div id="emptySpace">
+                    <p id="logoNavBar">CyberManipal</p>
+                </div>
+                <div id="navSocialLinks">
+                    <a href="https://www.facebook.com/wearemist.in/"><img class="socialIcon"
+                            src="images/vectors/facebook.svg"></a>
+                    <a href="https://www.instagram.com/sudo.mist/"><img class="socialIcon"
+                            src="images/vectors/instagram.svg"></a>
+                    <a href="https://github.com/WeAreMIST"><img class="socialIcon" src="images/vectors/github.svg"></a>
+                    <a href="mailto:sudo@wearemist.in?Subject=Message%20from%20website%20user"><img class="socialIcon"
+                            src="images/vectors/mail-dot-ru.svg"></a>
+                    <a href="https://in.linkedin.com/company/manipal-information-security-team"><img class="socialIcon"
+                            src="images/vectors/linkedin.svg"></a>
+                </div>
+            </div>
+            <div id="navLinks">
+                <div id="navigationBar">
+                    <a class="navItems" href="/nonGeek#section0">Home</a>
+                    <a class="navItems" href="/nonGeek#section1">About</a>
+                    <a class="navItems" href="/nonGeek#section3">Contact</a>
+                    <a class="navItems" href="/team">Team</a>
+                    <a class="navItems" onclick="showSubscriptionForm()">Subscribe</a>
+                </div>
+            </div>
+        </div>
+        <div id="clubNews">
+            <p id="clubNewsHeading">Club Announcements</p>
+            <div id="clubNewsContainer">
+                <div id="clubNewsNone">No news as of now</div>
+            </div>
+        </div>
+        <p id="highlightHeading">Recent News</p>
+        <div id="highlightNews">
+            <div id="recentHigh">
+                <div id="overlay">
+                    <div id="highInfo">
+                        <h1 id="recentSelectedText">News latest headlines</h1>
+                        <p id="recentDate">By <span id="articleCredit"></span>&nbsp;&nbsp;&nbsp;<span
+                                id="articleDate"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div id="recentList">
+                <div id="recentListTitle">
+                    <p>Recent</p>
+                </div>
+                <div id="recentListContent">
+                    <div class="recentNewsCard wow zoomIn" id="recentNewsCard1">
+                        <div id="recentNewsCardImage1" class="recentNewsCardImage"></div>
+                        <div class="recentNewsCardText">
+                            <text class="cardHeading" id="cardHeading1">Latest News</text>
+                            <text class="cardText" id="cardText1">April 1, 2020</text>
+                        </div>
+                    </div>
+                    <div class="recentNewsCard wow zoomIn" id="recentNewsCard2">
+                        <div id="recentNewsCardImage2" class="recentNewsCardImage"></div>
+                        <div class="recentNewsCardText">
+                            <text class="cardHeading" id="cardHeading2">Latest News</text>
+                            <text class="cardText" id="cardText2">April 1, 2020</text>
+                        </div>
+                    </div>
+                    <div class="recentNewsCard wow zoomIn" id="recentNewsCard3">
+                        <div id="recentNewsCardImage3" class="recentNewsCardImage"></div>
+                        <div class="recentNewsCardText">
+                            <text class="cardHeading" id="cardHeading3">Latest News</text>
+                            <text class="cardText" id="cardText3">April 1, 2020</text>
+                        </div>
+                    </div>
+                    <div class="recentNewsCard wow zoomIn" id="recentNewsCard4">
+                        <div id="recentNewsCardImage4" class="recentNewsCardImage"></div>
+                        <div class="recentNewsCardText">
+                            <text class="cardHeading" id="cardHeading4">Latest News</text>
+                            <text class="cardText" id="cardText4">April 1, 2020</text>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainNews">
+            <div id="titleMainNews">
+                <p>Cybersecurity News</p>
+                <p class="subtitleHead">Latest news, from MIST</p>
+            </div>
+            <div id="mainNewsContainer"></div>
+
+        </div>
+        <div id="footerContent">
+            <div class="footLinks footLogo"><img src="./images/logo/logoLight.png" width="80px"><br>
+                <h2>CyberManipal</h2>
+            </div>
+            <div class="footLinks footerLinks"><b>
+                    <footerrhead>Explore</footerrhead>
+                </b><a href="/nonGeek#section1">About</a><a href="/team">Team</a><a href="/credits">Credits</a><a
+                    onclick="showSubscriptionForm()">Subscribe</a>
+            </div>
+            <div class="footLinks footerLinks"><b>
+                    <footerrhead>Visit</footerrhead>
+                </b>
+                <address>Manipal Institute of Technology,<br />Manipal,
+                    Karnataka<br />India - 576104</address>
+            </div>
+            <div class="footLinks footerLinks"><b>
+                    <footerrhead>Other Links</footerrhead>
+                </b><a href="mailto:sudo@wearemist.in?Subject=Reporting%20an%20article">Report an article</a><a
+                    href="mailto:sudo@wearemist.in?Subject=Submit%20an%20Article">Submit
+                    Content</a></div>
+        </div>
+</body>
+
+</html>

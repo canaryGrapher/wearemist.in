@@ -2,9 +2,35 @@ doctype html
 head
   title Team | MIST
   meta(name='viewport', content='initial-scale=1, maximum-scale=1')
-  link(rel='stylesheet', type='text/css', href='./stylings/teamStyling.css')
+  link(rel='icon', type='image/png', href='./images/favicon/favicon-196x196.png', sizes='196x196')
+  link(rel='icon', type='image/png', href='./images/favicon/favicon-96x96.png', sizes='96x96')
+  link(rel='icon', type='image/png', href='./images/favicon/favicon-32x32.png', sizes='32x32')
+  link(rel='icon', type='image/png', href='./images/favicon/favicon-16x16.png', sizes='16x16')
+  link(rel='icon', type='image/png', href='./images/favicon/favicon-128.png', sizes='128x128')
+  link(rel='apple-touch-icon-precomposed', sizes='57x57', href='./images/favicon/apple-touch-icon-57x57.png')
+  link(rel='apple-touch-icon-precomposed', sizes='114x114', href='./images/favicon/apple-touch-icon-114x114.png')
+  link(rel='apple-touch-icon-precomposed', sizes='72x72', href='./images/favicon/apple-touch-icon-72x72.png')
+  link(rel='apple-touch-icon-precomposed', sizes='144x144', href='./images/favicon/apple-touch-icon-144x144.png')
+  link(rel='apple-touch-icon-precomposed', sizes='60x60', href='./images/favicon/apple-touch-icon-60x60.png')
+  link(rel='apple-touch-icon-precomposed', sizes='120x120', href='./images/favicon/apple-touch-icon-120x120.png')
+  link(rel='apple-touch-icon-precomposed', sizes='76x76', href='./images/favicon/apple-touch-icon-76x76.png')
+  link(rel='apple-touch-icon-precomposed', sizes='152x152', href='./images/favicon/apple-touch-icon-152x152.png')
+  meta(name='application-name', content=' ')
+  meta(name='msapplication-TileColor', content='#FFFFFF')
+  meta(name='msapplication-TileImage', content='./images/favicon/mstile-144x144.png')
+  meta(name='msapplication-square70x70logo', content='./images/favicon/mstile-70x70.png')
+  meta(name='msapplication-square150x150logo', content='./images/favicon/mstile-150x150.png')
+  meta(name='msapplication-wide310x150logo', content='./images/favicon/mstile-310x150.png')
+  meta(name='msapplication-square310x310logo', content='./images/favicon/mstile-310x310.png')
+  link(rel='stylesheet', type='text/css', href='./stylings/team.css')
   script(src='./scripts/teams.js')
-  script(src='./scripts/nonGeek.js')
+  link(rel='stylesheet', type='text/css', href='https://unpkg.com/aos@next/dist/aos.css')
+  script(src='./scripts/wow.js')
+
+
+#loaderContainer
+  #loaderRipple
+  p Loading
 #howToApply
   #closeButton
     p#Xbut(onclick='hideDialog()') &times;
@@ -13,17 +39,17 @@ head
     howtoapply 
       li We announce out recruitment dates every odd semester. These are the steps you need to follow to get in:
       br
-      li Forget what branch you are a part of in MIT. Cybersecurity is for everyone.
+      li We don't care about your educational background. Cybersecurity is for everyone.
       br
       li We have multiple domains. Decide what domain you want to be a part of. Even if you cannot make up your mind, we'll help you understand and find your interest.
       br
-      li Reach the venue on time, it would be available on the posters. 
+      li Reach the venue on time. Venue and time will be on our posters. 
       br
-      li You'll be given a question paper to solve and 60 minutes on the clock(trust us, you can finish it in 30). If you can cheat, cheat! There is one thing common among the best hackers in the world. They are brilliant cheaters.
+      li You'll be given a question paper to solve and 60 minutes on the clock(trust us, you can finish it in 30).
       br
-      li We'll let you know if you got in after everyone has taken the test and we have evaluated the papers. You can keep track of the results on our Instagram and Facebook page 
+      li We'll let you know if you got in shortly after the test. You can keep track of the results on our Instagram and Facebook page 
       br
-      li You can always attend our workshops to keep yourselves updated.
+      li Even if you didn't get in, you can always attend our workshops to keep yourselves updated.
       br
 #responsiveNavbar
   #barContainer(onclick='makeCross(this)')
@@ -44,11 +70,11 @@ head
     p#res_news.res_linkBox(onclick='clickLinks()')
       a(href='/news') News
     p#res_contribute.res_linkBox(onclick='clickLinks()')
-      a(href='/contributors') Contributors
+      a(href='/credits') Credits
 
-#navbar
-  p#LOGO.linkBox
-    a(href='/home') MIST
+#navbar(data-aos='fade-down')
+  p#LOGO.linkBox(onclick='redirectToBoot()')
+    img(src="./images/logo/logoLight.png")
   p#home.linkBox
     a(href='/nonGeek#section0') Home
   p#whatwedo.linkBox
@@ -59,15 +85,14 @@ head
     a(href='/nonGeek#section3') Contact Us
   p#news.linkBox
     a(href='/news') News
-  p#contribute.linkBox
-    a(href='/contributors') Contributors
+
 #header
   h1 Meet the team.
   a#applyButton(onclick='showDialog()')
     | How to apply
 #teamLinksNavbar
   #cc.teamLinkBox(onclick='showCC()')
-    a#ccLink Core Committee
+    a#ccLink Board
   #mc.teamLinkBox(onclick='showMC()')
     a#mcLink Management Committee
   #wc.teamLinkBox(onclick='showWC()')
@@ -78,6 +103,8 @@ head
         - var firstName = CC[index1].name.split(" ");
         - var divID = firstName[0]+firstName[1]
         - var imageSrc = CC[index1].photo
+        - var github = CC[index1].github
+        - var linkedin = CC[index1].linkedin
         .ccPhoto(id=divID)
           img(src=imageSrc, alt='Core Committee')
         style.
@@ -89,12 +116,23 @@ head
             h1.cmemberName #{CC[index1].name}
             p.cmemberPosition #{CC[index1].position}
             p.interestsMember #{CC[index1].interests}
+            .socialLinks
+              if CC[index1].github
+                .github
+                  a(href=CC[index1].github, target='_blank')
+                    img.gitImage(src='/images/vectors/github.svg', alt=CC[index1].name)
+              if CC[index1].linkedin
+                .linkedin
+                  a(href=CC[index1].linkedin, target='_blank')
+                    img.linkedImage(src='/images/vectors/linkedin.svg', alt=CC[index1].name)
 #manc
   each val2, index2 in MC
     .mcprofile
         - var firstName = MC[index2].name.split(" ");
         - var divID = firstName[0]+firstName[1]
         - var imageSrc = MC[index2].photo
+        - var github = MC[index2].github
+        - var linkedin = MC[index2].linkedin
         .ccPhoto(id=divID)
           img(src=imageSrc, alt='Management Committee')
         style.
@@ -105,6 +143,15 @@ head
         .mmemberInfo
             h1.mcmemberName #{MC[index2].name}
             p.interestsMember #{MC[index2].interests}
+            .socialLinks
+              if MC[index2].github
+                .github
+                  a(href=MC[index2].github, target='_blank')
+                    img.gitImage(src='/images/vectors/github.svg', alt=MC[index2].name)
+              if MC[index2].linkedin
+                .linkedin
+                  a(href=MC[index2].linkedin, target='_blank')
+                    img.linkedImage(src='/images/vectors/linkedin.svg', alt=MC[index2].name)
 #workc
   each val3, index3 in WC
     .wcprofile
@@ -112,3 +159,27 @@ head
             h1.wcmemberName #{WC[index3].name}
 #spacing
   p#rightsReserved &copy;2020 MIST, All rights reserved
+  #contribute
+    a(href='/credits') Check out our page Credits
+
+script(src='https://unpkg.com/aos@next/dist/aos.js')
+script.
+  AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  });
