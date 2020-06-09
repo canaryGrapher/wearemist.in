@@ -29,7 +29,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="stylings/hometemp.css">
+  <link rel="stylesheet" href="stylings/nonGeek.css">
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
   <script src="./scripts/wow.js"></script>
   <link rel="stylesheet" type="text/css" href="./stylings/animate.css">
@@ -39,6 +39,16 @@
   <script>
     new WOW().init();
   </script>
+  <div id="loaderContainer">
+    <div id="loaderRipple">
+    </div>
+    <p>Loading</p>
+    <script>
+      window.onload = function () {
+        document.getElementById("loaderContainer").style.display = "none";
+      }
+    </script>
+  </div>
   <nav class="position-absolute navbar navbar-expand-lg navbar-dark bg-dark" style="width:100vw">
     <a class="navbar-brand logo pl-4" href="/"><img class="img" src="./images/logo/logoLight.png" height="30px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
