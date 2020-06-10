@@ -62,7 +62,7 @@ app.get("/nongeek", function (req, res) {
 });
 
 app.get("/team", function (req, res) {
-  res.sendFile(__dirname + "/public/teamtemp.html");
+  res.sendFile(__dirname + "/public/team.html");
 });
 
 app.get("/teaminfo", function (req, res) {
