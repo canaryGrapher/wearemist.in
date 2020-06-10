@@ -54,10 +54,10 @@ async function renderTeammates() {
             </div>
             <div class="card-footer text-center" id="${idForFooter}"></div></div>`;
     if (itemBoard.github != "") {
-      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemBoard.github}" id="btn-1" class="text-decoration-none fab fa-github p-xs-3 p-md-3 p-lg-4"></a>'`);
+      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemBoard.github}" id="btn-1" class="text-decoration-none fab fa-github pr-3 pl-3 p-md-3 p-lg-4"></a>'`);
     }
     if (itemBoard.linkedin != "") {
-      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemBoard.linkedin}" id="btn-1" class="text-decoration-none fab fa-linkedin p-xs-3 p-md-3 p-lg-4"></a>'`);
+      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemBoard.linkedin}" id="btn-1" class="text-decoration-none fab fa-linkedin pr-3 pl-3 p-md-3 p-lg-4"></a>'`);
     }
   }
 
@@ -75,10 +75,10 @@ async function renderTeammates() {
             </div>
             <div class="card-footer text-center" id="${idForFooter}"></div></div>`;
     if (itemManComm.github != "") {
-      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemManComm.github}" id="btn-1" class="text-decoration-none fab fa-github p-xs-3 p-md-3 p-lg-4"></a>'`);
+      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemManComm.github}" id="btn-1" class="text-decoration-none fab fa-github pr-3 pl-3 p-md-3 p-lg-4"></a>'`);
     }
     if (itemManComm.linkedin != "") {
-      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemManComm.linkedin}" id="btn-1" class="text-decoration-none fab fa-linkedin p-xs-3 p-md-3 p-lg-4"></a>'`);
+      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemManComm.linkedin}" id="btn-1" class="text-decoration-none fab fa-linkedin pr-3 pl-3 p-md-3 p-lg-4"></a>'`);
     }
   }
   function getRndInteger(min, max) {
