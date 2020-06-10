@@ -104,7 +104,7 @@ footer {
 }
 
 .history-flow-chart {
-  height: 60vh;
+  height: 85vh;
   overflow-y: scroll;
   background-image: url("../images/backgrounds/worldMap.jpg");
   background-position: center;
@@ -199,4 +199,10 @@ footer {
   to {
     opacity: 1;
   }
+}
+
+@media screen and (max-width:991px) {
+.historyCards:nth-child(2n) {
+  flex-direction: column-reverse;
+}
 }
