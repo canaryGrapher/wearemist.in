@@ -1,28 +1,18 @@
+var ccCounter = 0;
+var mcCounter = 0;
+var wcCounter = 0;
+var animationChooser = ["fadeInLeft", "fadeInUp", "fadeInRight"];
+
 window.onload = function () {
-  document.getElementById("loaderContainer").style.display = "none";
   showCC();
   changeLinkTexts();
+  document.getElementById("loaderContainer").style.display = "none";
+  renderTeammates();
 };
 
 window.onresize = function () {
-  console.log("Resize");
   changeLinkTexts();
 };
-
-
-function showResNav() {
-  document.getElementById("responsiveNavItems").style.display = "flex";
-  document.getElementById("responsiveNavbar").style.height = "100vh";
-  showMenu = 1;
-  document.getElementById("responsiveNavItems").style.height = "60vh";
-}
-
-function hideResNav() {
-  document.getElementById("responsiveNavItems").style.height = "0vh";
-  document.getElementById("responsiveNavItems").style.display = "none";
-  document.getElementById("responsiveNavbar").style.height = "40px";
-  showMenu = 0;
-}
 
 showMenu = 0;
 //for changing the navigation bar based on the size of the screen
@@ -36,6 +26,82 @@ function makeCross(x) {
   }
 }
 
+async function renderTeammates() {
+  let bootstrapColorChooser = ["bg-primary", "bg-success", "bg-danger", "bg-warning", "bg-info", "bg-dark", "bg-secondary", "bg-dark", "bg-olive", "bg-orange"];
+  var xhttp = new XMLHttpRequest();
+  await xhttp.open("GET", "/teaminfo", false);
+  await xhttp.send();
+  recievedData = JSON.parse(xhttp.responseText);
+  let insertElementToBoard = document.getElementById('insertionareaforboard');
+  let insertElementToManComm = document.getElementById('insertionareaformancomm');
+  let insertElementToWorkComm = document.getElementById('insertionareaforworkcomm');
+  recievedData.CC.forEach(insertBoard);
+  recievedData.MC.forEach(insertManComm);
+  recievedData.WC.forEach(insertWorkComm);
+
+  function insertBoard(itemBoard) {
+    let counterCorrection = ccCounter % 3;
+    let ccAnimation = animationChooser[counterCorrection];
+    ccCounter = ccCounter + 1;
+    let idForFooter = itemBoard.name.split(" ").join("");
+    insertElementToBoard.innerHTML += `<div class="wow ${ccAnimation} card col-12 col-sm-6 col-md-4 text-center pt-2 pb-5">
+                <img class="rounded-circle img card-img-top mx-auto ccImages"
+                src="${itemBoard.photo}"
+                alt="${itemBoard.name}">
+            <div class="card-body text-center">
+                <h4 class="card-title">${itemBoard.name}</h4>
+                <p class="card-text text-primary">${itemBoard.position}</p>
+            </div>
+            <div class="card-footer text-center" id="${idForFooter}"></div></div>`;
+    if (itemBoard.github != "") {
+      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemBoard.github}" id="btn-1" class="text-decoration-none fab fa-github p-xs-1 p-md-3 p-lg-4"></a>'`);
+    }
+    if (itemBoard.linkedin != "") {
+      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemBoard.linkedin}" id="btn-1" class="text-decoration-none fab fa-linkedin p-xs-1 p-md-3 p-lg-4"></a>'`);
+    }
+  }
+
+  function insertManComm(itemManComm) {
+    let counterCorrection = mcCounter % 3;
+    let mcAnimation = animationChooser[counterCorrection];
+    mcCounter = mcCounter + 1;
+    let idForFooter = itemManComm.name.split(" ").join("");
+    insertElementToManComm.innerHTML += `<div class="wow ${mcAnimation} card col-12 col-sm-6 col-md-4 text-center pt-2 pb-5">
+                <img class="rounded-circle img card-img-top mx-auto ccImages"
+                src="${itemManComm.photo}"
+                alt="${itemManComm.name}">
+            <div class="card-body text-center">
+                <h4 class="card-title">${itemManComm.name}</h4>
+            </div>
+            <div class="card-footer text-center" id="${idForFooter}"></div></div>`;
+    if (itemManComm.github != "") {
+      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemManComm.github}" id="btn-1" class="text-decoration-none fab fa-github p-xs-1 p-md-3 p-lg-4"></a>'`);
+    }
+    if (itemManComm.linkedin != "") {
+      eval(`document.getElementById("${idForFooter}").innerHTML += '<a href="${itemManComm.linkedin}" id="btn-1" class="text-decoration-none fab fa-linkedin p-xs-1 p-md-3 p-lg-4"></a>'`);
+    }
+  }
+  function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  function insertWorkComm(itemWorkComm) {
+    let counterCorrection = wcCounter % 3;
+    let wcAnimation = animationChooser[counterCorrection];
+    wcCounter = wcCounter + 1;
+    let colorValue = getRndInteger(0, 9);
+    let cardColor = bootstrapColorChooser[colorValue];
+    let idForFooter = itemWorkComm.name.split(" ").join("");
+    insertElementToWorkComm.innerHTML += `<div class="wow ${wcAnimation} col-6 col-sm-4 col-md-3 mt-5">
+    <div class="card mx-auto text-white ${cardColor}" id="${idForFooter}">
+        <div class="card-body text-center">
+            <h5 class="card-title">${itemWorkComm.name}</h5>
+        </div>
+    </div>
+</div>`
+  }
+
+}
+
 function showCC() {
   var cc = document.getElementById("cc");
   var ccCards = document.getElementById("corec");
@@ -47,16 +113,15 @@ function showCC() {
   var mc = document.getElementById("mc");
   var mcCards = document.getElementById("manc");
   var mctext = document.getElementById("mcLink");
-  mc.style.backgroundColor = "#000000";
+  mc.style.backgroundColor = "#343a40";
   mctext.style.color = "#ffffff";
   mcCards.style.display = "none";
   //restoring WC tab back to normal
   var wc = document.getElementById("wc");
   var wcCards = document.getElementById("workc");
   var wctext = document.getElementById("wcLink");
-  wc.style.backgroundColor = "#000000";
   wctext.style.color = "#ffffff";
-  wc.style.backgroundColor = "#000000";
+  wc.style.backgroundColor = "#343a40";
   wcCards.style.display = "none";
 }
 
@@ -71,16 +136,15 @@ function showMC() {
   var cc = document.getElementById("cc");
   var ccCards = document.getElementById("corec");
   var cctext = document.getElementById("ccLink");
-  cc.style.backgroundColor = "#000000";
+  cc.style.backgroundColor = "#343a40";
   cctext.style.color = "#ffffff";
   ccCards.style.display = "none";
   //restoring MC tab back to normal
   var wc = document.getElementById("wc");
   var wcCards = document.getElementById("workc");
   var wctext = document.getElementById("wcLink");
-  wc.style.backgroundColor = "#000000";
   wctext.style.color = "#ffffff";
-  wc.style.backgroundColor = "#000000";
+  wc.style.backgroundColor = "#343a40";
   wcCards.style.display = "none";
 }
 
@@ -95,16 +159,15 @@ function showWC() {
   var cc = document.getElementById("cc");
   var ccCards = document.getElementById("corec");
   var cctext = document.getElementById("ccLink");
-  cc.style.backgroundColor = "#000000";
+  cc.style.backgroundColor = "#343a40";
   cctext.style.color = "#ffffff";
   ccCards.style.display = "none";
   //restoring MC tab back to normal
   var mc = document.getElementById("mc");
   var mcCards = document.getElementById("manc");
   var mctext = document.getElementById("mcLink");
-  mc.style.backgroundColor = "#000000";
   mctext.style.color = "#ffffff";
-  mc.style.backgroundColor = "#000000";
+  mc.style.backgroundColor = "#343a40";
   mcCards.style.display = "none";
 }
 

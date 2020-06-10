@@ -25,9 +25,11 @@ head
   link(rel='stylesheet', type='text/css', href='./stylings/team.css')
   script(src='./scripts/teams.js')
   link(rel='stylesheet', type='text/css', href='https://unpkg.com/aos@next/dist/aos.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css')
+  link(rel='stylesheet', type='text/css', href='./stylings/teamtemp.css')
   script(src='./scripts/wow.js')
-
-
 #loaderContainer
   #loaderRipple
   p Loading
@@ -51,41 +53,6 @@ head
       br
       li Even if you didn't get in, you can always attend our workshops to keep yourselves updated.
       br
-#responsiveNavbar
-  #barContainer(onclick='makeCross(this)')
-    .hamString.bar1
-    .hamString.bar2
-    .hamString.bar3
-  #responsiveNavItems
-    p#res_LOGO.res_linkBox(onclick='clickLinks()')
-      a(href='/home') MIST
-    p#res_home.res_linkBox(onclick='clickLinks()')
-      a(href='/nonGeek#section0') Home
-    p#res_whatwedo.res_linkBox(onclick='clickLinks()')
-      a(href='/nonGeek#section1') What we do
-    p#res_contact.res_linkBox(onclick='clickLinks()')
-      a(href='/nonGeek#section2') Gallery
-    p#res_photosLink.res_linkBox(onclick='clickLinks()')
-      a(href='/nonGeek#section3') Contact Us
-    p#res_news.res_linkBox(onclick='clickLinks()')
-      a(href='/news') News
-    p#res_contribute.res_linkBox(onclick='clickLinks()')
-      a(href='/credits') Credits
-
-#navbar(data-aos='fade-down')
-  p#LOGO.linkBox(onclick='redirectToBoot()')
-    img(src="./images/logo/logoLight.png")
-  p#home.linkBox
-    a(href='/nonGeek#section0') Home
-  p#whatwedo.linkBox
-    a(href='/nonGeek#section1') What we do
-  p#contact.linkBox
-    a(href='/nonGeek#section2') Gallery
-  p#photosLink.linkBox
-    a(href='/nonGeek#section3') Contact Us
-  p#news.linkBox
-    a(href='/news') News
-
 #header
   h1 Meet the team.
   a#applyButton(onclick='showDialog()')

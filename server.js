@@ -12,7 +12,6 @@ const DATABASE_NAME1 = "Members"; //enter Database Name here
 const DATABASE_NAME2 = "Website"; //enter Database Name here
 const DATABASE_NAME3 = "UserData";
 var device = require("express-device");
-const si = require("systeminformation");
 
 var transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
@@ -63,17 +62,17 @@ app.get("/nongeek", function (req, res) {
 });
 
 app.get("/team", function (req, res) {
+  res.sendFile(__dirname + "/public/teamtemp.html");
+});
+
+app.get("/teaminfo", function (req, res) {
   collectionCC.find().toArray((err, result1) => {
     CCdata = result1;
     collectionMC.find().toArray((err, result2) => {
       MCdata = result2;
       collectionWC.find().toArray((err, result3) => {
         WCdata = result3;
-        res.render("team", {
-          CC: CCdata,
-          MC: MCdata,
-          WC: WCdata
-        });
+        res.send({ CC: CCdata, MC: MCdata, WC: WCdata });
       });
     });
   });

@@ -49,7 +49,7 @@
       }
     </script>
   </div>
-  <nav class="position-absolute navbar navbar-expand-lg navbar-dark bg-dark" style="width:100vw">
+  <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark" style="width:100vw">
     <a class="navbar-brand logo pl-4" href="/"><img class="img" src="./images/logo/logoLight.png" height="30px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,15 +84,22 @@
       </div>
     </div>
   </div>
+  <div class="container pt-5">
+    <nav aria-label="breadcrumb pt-5 mt-5">
+      <ol class="breadcrumb mt-5 mb-0">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">nonGeek</li>
+      </ol>
+    </nav>
+  </div>
   <div class="container sectionBox whoarewe mt-5">
     <div class="row ml-2">
       <h2>Who are we?</h2>
     </div>
-    <div class="row ml-2">
+    <div class="row ml-2 col-12">
       <p>We are a team of Information and Network Security enthusiasts who have gathered knowledge about the field
         through workshops, online courses, books and research.</p>
     </div>
-
     <div id="carouselExampleControls" class="carousel slide wow zoomIn" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -145,14 +152,14 @@
     <div class="row ml-2">
       <h2>What do we do?</h2>
     </div>
-    <div class="row ml-2">
+    <div class="row ml-2 col-12">
       <p> We want to spread the knowledge we have gained to other students with an interest in this
         ever-growing area of computer science. We want to ensure that students approach this field the right
         way and to provide them with a platform to enhance and practice their skills in the same.</p>
     </div>
     <div class="row cardHolder">
       <!-- Card for cryptography -->
-      <div class="card col-sm-4 mx-auto p-4 b-0 wow fadeInLeft" style="width: 18rem;border: 0;">
+      <div class="card col-sm-4 mx-auto p-4 b-0 pb-5 mb-5 wow fadeInLeft" style="width: 18rem;border: 0;">
         <img class="card-img-top mx-auto" height="60%" src="./images/assets/cryptography.jpg" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title text-center">Cryptography</h4>
@@ -161,7 +168,7 @@
         </div>
       </div>
       <!-- Card for web development -->
-      <div class="card col-sm-4 mx-auto p-4 b-0 wow fadeInUp" style="width: 18rem;border: 0;">
+      <div class="card col-sm-4 mx-auto p-4 b-0 pb-5 mb-5 wow fadeInUp" style="width: 18rem;border: 0;">
         <img class="card-img-top mx-auto" height="60%" src="./images/assets/webdev.jpg" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title text-center">Web Development</h4>
@@ -170,7 +177,7 @@
         </div>
       </div>
       <!-- Card for Penetration Testing -->
-      <div class="card col-sm-4 mx-auto p-4 b-0 wow fadeInRight" style="width: 18rem;border: 0;">
+      <div class="card col-sm-4 mx-auto p-4 b-0 pb-5 mb-5 wow fadeInRight" style="width: 18rem;border: 0;">
         <img class="card-img-top mx-auto" height="60%" src="./images/assets/pentest.jpg" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title text-center">Penetration Testing</h4>
@@ -179,7 +186,7 @@
         </div>
       </div>
       <!-- Card for capture the flag -->
-      <div class="card col-sm-4 mx-auto p-4 b-0 wow fadeInLeft" style="width: 18rem;border: 0;">
+      <div class="card col-sm-4 mx-auto p-4 b-0 pb-5 mb-5 wow fadeInLeft" style="width: 18rem;border: 0;">
         <img class="card-img-top mx-auto" height="60%" src="./images/assets/ctfs.jpg" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title text-center">Capture the flags</h4>
@@ -188,7 +195,7 @@
         </div>
       </div>
       <!-- Card for cyber Awareness -->
-      <div class="card col-sm-4 mx-auto p-4 b-0 wow fadeInUp" style="width: 18rem;border: 0;">
+      <div class="card col-sm-4 mx-auto p-4 b-0 pb-5 mb-5 wow fadeInUp" style="width: 18rem;border: 0;">
         <img class="card-img-top mx-auto" height="60%" src="./images/assets/cyberawareness.jpg" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title text-center">Cyber Awareness</h4>
@@ -197,7 +204,7 @@
         </div>
       </div>
       <!-- Card for networking -->
-      <div class="card col-sm-4 mx-auto p-4 b-0 wow fadeInRight" style="width: 18rem;border: 0;">
+      <div class="card col-sm-4 mx-auto p-4 b-0 pb-5 mb-5 wow fadeInRight" style="width: 18rem;border: 0;">
         <img class="card-img-top mx-auto" height="60%" src="./images/assets/networking.jpg" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title text-center">Networking</h4>
@@ -230,12 +237,12 @@
     <div class="row ml-2">
       <h2>Brief History of Cybercrimes</h2>
     </div>
-    <div class="row ml-2">
+    <div class="row col-12 ml-2">
       <p>Hackers, code breakers and cyber spies all might sound like a modern artifacts of the computer age, but
         pioneers of this field can be traced back to more than half a century ago.</p>
     </div>
     <div class="container pt-4 history-flow-chart">
-      <div class="row-fluid wow fadeInLeft">
+      <div class="row-fluid">
         <div class="row d-lg-flex">
           <img class="col-lg-2 mx-auto rounded-circle col-lg-2" height="150" width="100"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/220px-Alan_Turing_Aged_16.jpg">
@@ -247,7 +254,7 @@
         </div>
       </div>
       <div class="row-fluid">
-        <div class="row d-lg-flex wow fadeInRight">
+        <div class="row d-lg-flex">
           <div class="col-lg-10">
             <h4 class="text-right pt-5 pl-3 mb-0">1966</h4>
             <p class="text-right pl-3 pb-5">The first federally prosecuted computer crime, identified as
@@ -258,7 +265,7 @@
         </div>
       </div>
       <div class="row-fluid">
-        <div class="row d-lg-flex wow fadeInLeft">
+        <div class="row d-lg-flex">
           <img class="col-lg-2 mx-auto rounded-circle col-lg-2" height="150" width="100"
             src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg">
           <div class="col-lg-10">
@@ -269,7 +276,7 @@
         </div>
       </div>
       <div class="row-fluid">
-        <div class="row d-lg-flex wow fadeInRight">
+        <div class="row d-lg-flex">
           <div class="col-lg-10">
             <h4 class="text-right pt-5 pl-3 mb-0">1981</h4>
             <p class="text-right pl-3 pb-5">Ian Murphy, known as Captain Zap, was the first person convicted
@@ -302,7 +309,7 @@
   <div class="container connect mt-5 pt-5" id="connect">
     <div class="row ml-2">
       <h2>Let's Connect</h2>
-      <div class="row ml-2">
+      <div class="row col-12">
         <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
           born and I will give you a complete account of the system, and expound the actual teachings of the
           great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or
@@ -350,9 +357,14 @@
       </div>
     </div>
   </div>
-  <div class="container form-container mt-5 pt-5">
-    <div class="row">
+  <div class="container text-center mx-auto form-container mt-5 pt-5">
+    <div class="row-fluid">
       <h2>Drop us a note!</h2>
+    </div>
+    <div class="row-fluid">
+      <p class="text-center">If you have anything to discuss, or want to give suggestions, as long as it is related to
+        us or our domain,
+        we're all ears.</p>
     </div>
     <form method="POST" action="/contactMailer">
       <div class="form-group wow slideInLeft">

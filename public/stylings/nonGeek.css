@@ -44,12 +44,6 @@ footer {
   color: #6C757D;
 }
 
-.footerDivision:nth-child(3), .footerDivision:nth-child(4), .footerDivision:nth-child(5) {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .itemContainer {
   margin: auto;
 }
@@ -92,7 +86,7 @@ footer {
 }
 
 .homepage {
-  width: 100vw;
+  width: 100vw !important;
   height: 100vh;
   background-image: url("../images/backgrounds/homeBackground.jpg");
   background-position: center center;
