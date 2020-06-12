@@ -97,7 +97,7 @@ app.post("/contactMailer", function (req, res) {
 });
 
 app.get("/news", function (req, res) {
-  res.sendFile(__dirname + "/public/news.html");
+  res.sendFile(__dirname + "/public/newstemp.html");
 });
 
 app.get("/getNews", function (req, res) {
