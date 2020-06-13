@@ -72,31 +72,57 @@
         </div>
     </nav>
 
-    <div id="howToApply" class="">
-        <div id="closeButton">
-            <p id="Xbut" onclick="hideDialog()">&times;</p>
-        </div>
-        <div id="contentApply" class="container-fluid mt-5 pt-5">
-            <h1>How to be a part of MIST?</h1>
-            <howtoapply>
-                <li>We announce out recruitment dates every odd semester. These are the steps you need to follow to get
-                    in:</li><br />
-                <li>We don't care about your educational background. Cybersecurity is for everyone.</li><br />
-                <li>We have multiple domains. Decide what domain you want to be a part of. Even if you cannot make up
-                    your mind, we'll help you understand and find your interest.</li><br />
-                <li>Reach the venue on time. Venue and time will be on our posters. </li><br />
-                <li>You'll be given a question paper to solve and 60 minutes on the clock(trust us, you can finish it in
-                    30).</li><br />
-                <li>We'll let you know if you got in shortly after the test. You can keep track of the results on our
-                    Instagram and Facebook page </li><br />
-                <li>Even if you didn't get in, you can always attend our workshops to keep yourselves updated.</li>
-                <br />
-            </howtoapply>
-        </div>
-    </div>
     <div class="container col-12 p-0 previewPane">
         <div id="header">
-            <h1>Meet the team.</h1><a id="applyButton" onclick="showDialog()">How to apply</a>
+            <h1>Meet the team.</h1>
+            <button type="button" class="btn btn-light text-primary" data-toggle="modal"
+                data-target="#howToApplyDialog">
+                How to apply
+            </button>
+
+            <!-- modal for how to apply -->
+            <div class="modal fade" id="howToApplyDialog" tabindex="-1" role="dialog" aria-labelledby="howToApplyDIalog"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="howToApplyDIalog">How to be a part of MIST?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-left">
+                            <p>We announce out recruitment dates every odd semester. These are the steps you need
+                                to follow to get in:</p>
+                            <ul>
+                                <li>We don't care about your educational background. Cybersecurity is for everyone.</li>
+                                <li>We have multiple domains. Decide what domain you want to be a part of. Even if you
+                                    cannot
+                                    make up
+                                    your mind, we'll help you understand and find your interest.</li>
+                                <li>Reach the venue on time. Venue and time will be on our posters. </li>
+                                <li>You'll be given a question paper to solve and 60 minutes on the clock(trust us, you
+                                    can
+                                    finish it in
+                                    30).</li>
+                                <li>We'll let you know if you got in shortly after the test. You can keep track of the
+                                    results
+                                    on our
+                                    Instagram and Facebook page </li>
+                                <li>Even if you didn't get in, you can always attend our workshops to keep yourselves
+                                    updated.
+                                </li>
+                                <li>Join our open WhatsApp Group 'Cyber Manipal' using <a
+                                        href="https://chat.whatsapp.com/CZjebXa635h8xlzLadgCRn" target="_blank">this
+                                        link</a>.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container-fluid col-12 text-center">
@@ -162,6 +188,44 @@
             </div>
         </div>
     </footer>
+    <!-- modal for how to apply -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="howToApplyDialog"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="howToApplyDialog">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h1>How to be a part of MIST?</h1>
+                    <li>We announce out recruitment dates every odd semester. These are the steps you need to follow
+                        to get
+                        in:</li><br />
+                    <li>We don't care about your educational background. Cybersecurity is for everyone.</li><br />
+                    <li>We have multiple domains. Decide what domain you want to be a part of. Even if you cannot
+                        make up
+                        your mind, we'll help you understand and find your interest.</li><br />
+                    <li>Reach the venue on time. Venue and time will be on our posters. </li><br />
+                    <li>You'll be given a question paper to solve and 60 minutes on the clock(trust us, you can
+                        finish it in
+                        30).</li><br />
+                    <li>We'll let you know if you got in shortly after the test. You can keep track of the results
+                        on our
+                        Instagram and Facebook page </li><br />
+                    <li>Even if you didn't get in, you can always attend our workshops to keep yourselves updated.
+                    </li>
+                    <br />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
 </body>
 
 </html>

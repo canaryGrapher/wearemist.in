@@ -171,16 +171,6 @@ function showWC() {
   mcCards.style.display = "none";
 }
 
-function showDialog() {
-  var dialogGrabber = document.getElementById("howToApply");
-  dialogGrabber.style.display = "inline-flex";
-}
-
-function hideDialog() {
-  var dialogGrabber = document.getElementById("howToApply");
-  dialogGrabber.style.display = "none";
-}
-
 function changeLinkTexts() {
   var ccLinkName = document.getElementById("ccLink");
   var mcLinkName = document.getElementById("mcLink");
