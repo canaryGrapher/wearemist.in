@@ -1,4 +1,3 @@
-const path = require("path");
 const express = require("express");
 const pug = require("pug");
 const bodyParser = require("body-parser");
@@ -193,6 +192,19 @@ app.get("/getNewsdata", function (req, res) {
   });
 });
 
+app.get("/verifyWriter", function (req, res) {
+  collectionWriters.findOne({ 'name': req.query.writername })
+    .then(function (doc) {
+      if (!doc) {
+        res.send("false");
+      }
+      else {
+        res.send("true");//else case
+      }
+    });
+
+});
+
 app.get("/getClubNewsdata", function (req, res) {
   var CnewsList = "";
   collectionClubNews.find().sort({ "sortingDate": -1 }).toArray((err, result1) => {
@@ -224,6 +236,7 @@ app.listen(PORT, () => {
       collectionWC = database1.collection("WorkingCommittee");
       collectionNews = database2.collection("news");
       collectionClubNews = database2.collection("clubNews");
+      collectionWriters = database2.collection("verifiedWriters");
       collectionMailingList = database3.collection("mailingList");
       console.log("Connected to mongoDB Atlas");
     }

@@ -1,14 +1,9 @@
 document.addEventListener("DOMContentLoaded", function (event) {
+    // document.getElementById("loaderContainer").style.display = "none";
     setNewsCards();
     setClubNews();
-    hideLoader();
     setSidebarHeight();
 });
-
-function hideLoader() {
-    console.log("Entered Here");
-    document.getElementById("loaderContainer").style.display = "none";
-}
 
 const categoryObject = {
     "category1": "Vulnerabilities",
@@ -78,14 +73,28 @@ async function setClubNews() {
     }
 }
 
+async function checkVerify(writerName) {
+    let getVerifiedUser = new XMLHttpRequest();
+    getVerifiedUser.open("GET", `/verifyWriter?writername=${writerName}`, false);
+    getVerifiedUser.send();
+    let isVerified = getVerifiedUser.responseText;
+    if (isVerified == "true") {
+        return isVerified;
+    }
+    else {
+        return isVerified;
+    }
+}
+
 async function setNewsCards() {
     const bulletinBoardNews = document.getElementById("newsBulletin");
     let xhttp = new XMLHttpRequest();
-    await xhttp.open("GET", "/getNews", false);
-    await xhttp.send();
+    xhttp.open("GET", "/getNews", false);
+    xhttp.send();
     let recievedData = JSON.parse(xhttp.responseText);
     bulletinBoardNews.innerHTML = "";
     for (let newsData in recievedData) {
+        let isVerifiedWriter = await checkVerify(recievedData[newsData].author);
         let IdOfThisFilter = searchObject(`${recievedData[newsData].filterTags}`);
         let cardNews = `<div class="card rounded mb-4 col-12 p-0 m-0">
         <div class="col-12 d-md-flex">
@@ -106,8 +115,11 @@ async function setNewsCards() {
             cardNews += addIt;
         }
         cardNews += `</div></div></div><div class="card-footer border-0">
-        <p class="text-muted">Summary by <span class="text-dark">${recievedData[newsData].author}</span></p>
-        <a href="#" class="card-link"></a></div></div>`;
+        <p class="text-muted">Summary by <span class="text-dark">${recievedData[newsData].author}</span>`;
+        if (isVerifiedWriter == "true") {
+            cardNews += `<i class="pl-1 text-primary fas fa-check-circle"></i>`;
+        }
+        cardNews += `</p><a href="#" class="card-link"></a></div></div>`;
         bulletinBoardNews.innerHTML += cardNews;
     }
 }
@@ -165,7 +177,7 @@ async function renderFilteredContent(filter) {
     await xhttp.open("GET", "/getNews", false);
     await xhttp.send();
     bulletinBoardNews.innerHTML = "";
-    bulletinBoardNews.innerHTML = `<div class="pt-5 d-flex d-xs-block pb-2 pl-3"><p class="text-secondary mr-lg-3 mr-1 p-1">Applied Filter: </p><p class="p-1 text-info bg-cyan-light">${filter}</span></p><p onClick="setNewsCards();" class="p-1 ml-3 rounded bg-darkTransparent text-light">Clear Filter<span class="badge badge-primary ml-1">X</p></div>`
+    bulletinBoardNews.innerHTML = `<div class="pt-5 d-flex d-xs-block pb-2 pl-3"><p class="text-secondary mr-lg-3 mr-1 p-1">Applied Filter: </p><p class="p-1 text-info bg-cyan-light">${filter}</span></p><p onClick="setNewsCards();" class="p-1 ml-3 rounded bg-darkTransparent text-light clearFilter">Clear Filter<span class="badge badge-primary ml-1">X</p></div>`
     let recievedData = JSON.parse(xhttp.responseText);
     for (let newsData in recievedData) {
         let newsTag = recievedData[newsData].filterTags.split(" ").join("");

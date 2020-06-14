@@ -7,7 +7,7 @@ window.onload = function () {
 };
 
 var txtcounter = 0;
-var txt = "Manipal Information Security Team - version - Stable-Version_1.4.3-def:08.04.2020 2020 MIST, Manipal. All rights reserved.";
+var txt = "Manipal Information Security Team - version - Stable-Version_2.4.7-def:14.06.2020 2020 MIST, Manipal. All rights reserved.";
 var speed = 5;
 
 function typeWriter() {
@@ -88,12 +88,40 @@ async function handleEnter(e) {
         var cln = itm.cloneNode(true);
         document.getElementById("accessPanel").appendChild(cln);
         if (userInputCommand.trim() == "ls") {
-            document.getElementById(`commandOutput${i}`).innerHTML = `<pre class="file">about    news    team    announcements</pre>`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `<pre class="file" style="padding-bottom: 20px;">about    news    team    announcements</pre>`;
             addCommand();
         }
 
         else if (userInputCommand == "exit") {
             exitTerminal();
+        }
+
+        else if (first == "loadgui") {
+            if (third == null) {
+                if (second == "news") {
+                    window.location.replace("/news");
+                }
+                else if (second == "team") {
+                    window.location.replace("/team");
+                }
+                else if (second == "nongeek") {
+                    window.location.replace("/nonGeek");
+                }
+
+                else if (second == "-h" || second == "-H") {
+                    document.getElementById(`commandOutput${i}`).innerHTML = `List of graphical destinations [destination] -<table style="padding-bottom: 20px;"><tr><td class="pr-5">news</td><td class="commandDescription">News page</td></tr><tr class="pr-5"><td>nongeek</td><td class="commandDescription">nongeek page, GUI mode home page</td></tr><tr><td class="pr-5">team</td><td class="commandDescription">Team page</td></tr></table>`;
+                    addCommand();
+                }
+                else if (second == null) {
+                    document.getElementById(`commandOutput${i}`).innerHTML = `Illegal use of 'loadgui'  |  USAGE: loadgui [destination]<br>Use 'loadgui -h' for info`;
+                    addCommand();
+                }
+
+            }
+            else {
+                document.getElementById(`commandOutput${i}`).innerHTML = `Illegal use of 'loadgui' <br> USAGE: loadgui [destination] <br>use 'loadgui -h' for info`;
+                addCommand();
+            }
         }
 
         else if (first == "cat") {
@@ -187,7 +215,7 @@ async function handleEnter(e) {
         }
 
         else if (userInputCommand == "help") {
-            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><div id="availableCommands"><div class="commandIs">ls</div><div class="commandIs">cat</div><div class="commandIs">clear</div><div class="commandIs">date</div><div class="commandIs">help</div><div class="commandIs">whoami</div><div class="commandIs">man</div><div class="commandIs">pwd</div><div class="commandIs">exit</div></div><br>`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><div id="availableCommands"><div class="commandIs">ls</div><div class="commandIs">cat</div><div class="commandIs">clear</div><div class="commandIs">date</div><div class="commandIs">help</div><div class="commandIs">whoami</div><div class="commandIs">man</div><div class="commandIs">pwd</div><div class="commandIs">loadgui</div><div class="commandIs">exit</div></div><br>`;
             addCommand();
         }
 
@@ -209,7 +237,9 @@ async function handleEnter(e) {
               <td class="commandDescription">: Show file contents</td></tr><tr><td>clear</td><td class="commandDescription">: Refresh screen</td>
             </tr><tr><td>date</td><td class="commandDescription">: Print date and time</td></tr><tr><td>help</td><td class="commandDescription">: Available commands</td>
             </tr><tr><td>whoami</td><td class="commandDescription">: Display IP Address</td></tr><tr><td>man</td><td class="commandDescription">: Command help</td>
-            </tr><tr><td>pwd</td><td class="commandDescription">: Current location</td></tr><tr><td>exit</td><td class="commandDescription">: Previous page</td>
+            </tr><tr><td>pwd</td><td class="commandDescription">: Current location</td></tr>
+            <tr><td>loadgui [destination]</td><td class="commandDescription">: Go to graphical page</td></tr>
+            <tr><td>exit</td><td class="commandDescription">: Previous page</td>
             </tr></table><br>`;
             document.getElementById(`commandOutput${i}`).innerHTML = `${manualPage}`;
             addCommand();

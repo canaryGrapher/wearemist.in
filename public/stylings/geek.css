@@ -198,6 +198,10 @@ td {
     text-align: center;
 }
 
+.pr-5 {
+    padding-right: 50px;;
+}
+
 @media screen and (max-width: 1000px) {
     #window {
         width: 100vw;
