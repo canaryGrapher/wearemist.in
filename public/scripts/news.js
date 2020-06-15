@@ -47,7 +47,7 @@ async function setClubNews() {
                     </div>
                     <div class="modal-body text-wrap">
                         <div class="col-10 mx-auto wrap-content">
-                            <h2 class="text-center">WC's are now testing the website</h2>
+                            <h2 class="text-center">${crecievedData[club].heading}</h2>
                             <p class="text-center"><small>${crecievedData[club].date}</small></p>`;
         if (crecievedData[club].image != "") {
             addModalCode += `<img class="img-fluid pb-5" style="width:100%;"
