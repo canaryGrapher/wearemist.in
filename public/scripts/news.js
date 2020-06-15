@@ -108,7 +108,7 @@ async function setNewsCards() {
                     <h3 class="col-lg-12 col-12">${recievedData[newsData].newsHeading}</h3>
                     <p class="ml-3">${recievedData[newsData].para}</p>
                     <p class="ml-3 text-primary linkToOriginal" onclick="window.open('${recievedData[newsData].about}')">View the full article</p>
-                    <p class="card-text pl-3"><small class="text-muted">Uploaded on June 4, 2020</small></p>
+                    <p class="card-text pl-3"><small class="text-muted">Uploaded on ${recievedData[newsData].date}</small></p>
                     <div class="card-tag-holder ml-3">`;
         for (let tagname in recievedData[newsData].tags) {
             let addIt = `<span class="p-1 text-primary">#${recievedData[newsData].tags[tagname]}</span>   `;

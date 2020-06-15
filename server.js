@@ -100,7 +100,7 @@ app.get("/news", function (req, res) {
 });
 
 app.get("/getNews", function (req, res) {
-  collectionNews.find().sort({ _id: -1 }).toArray((err, news) => {
+  collectionNews.find().sort({ sortingQuery: 1 }).toArray((err, news) => {
     newsPosts = news.reverse();
     res.send(newsPosts);
   });
@@ -184,7 +184,7 @@ app.get("/getWCdata", function (req, res) {
 
 app.get("/getNewsdata", function (req, res) {
   var newsList = "";
-  collectionNews.find().toArray((err, result1) => {
+  collectionNews.find({ $query: {}, $orderby: { sortingQuery: -1 } }).toArray((err, result1) => {
     for (var val in result1) {
       newsList = newsList + result1[val].newsHeading + ",";
     }
