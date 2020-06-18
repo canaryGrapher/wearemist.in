@@ -180,34 +180,37 @@ async function renderFilteredContent(filter) {
     bulletinBoardNews.innerHTML = `<div class="pt-5 d-flex d-xs-block pb-2 pl-3"><p class="text-secondary mr-lg-3 mr-1 p-1">Applied Filter: </p><p class="p-1 text-info bg-cyan-light">${filter}</span></p><p onClick="setNewsCards();" class="p-1 ml-3 rounded bg-darkTransparent text-light clearFilter">Clear Filter<span class="badge badge-primary ml-1">X</p></div>`
     let recievedData = JSON.parse(xhttp.responseText);
     for (let newsData in recievedData) {
+        let isVerifiedWriter = await checkVerify(recievedData[newsData].author);
+        let IdOfThisFilter = searchObject(`${recievedData[newsData].filterTags}`);
         let newsTag = recievedData[newsData].filterTags.split(" ").join("");
         let searchTag = newsTag.toLowerCase();
         let compatibleFilter = filter.split(" ").join("");
         let optimizedFilter = compatibleFilter.toLowerCase();
         if (searchTag == optimizedFilter) {
             let cardNews = `<div class="card rounded mb-4">
-        <div class="col-12 d-md-flex">
-            <img class="img-responsive col-12 col-md-4 p-3 mr-3 ml-3"
-                src="${recievedData[newsData].highlightPhoto}"
-                alt="${recievedData[newsData].newsHeading}" href="${recievedData[newsData].about}">
-                <div class="card-body col-md-8 col-12">
-                    <h5 class="ml-3 mb-1">
-                        <span class="text-primary mr-1 text-primary sourceWebsite" onclick="window.open('${recievedData[newsData].source}')">${recievedData[newsData].credit}</span><small
-                            class="bg-cyan-light ml-3 text-primary p-1">${recievedData[newsData].filterTags}</small>
-                    </h5>
-                    <p></p>
-                    <h3 class="col-lg-12 col-12">${recievedData[newsData].newsHeading}</h3>
-                    <p class="ml-3">${recievedData[newsData].para}</p>
-                    <p class="ml-3 text-primary linkToOriginal" onclick="window.open('${recievedData[newsData].about}')">View the full article</p>
-                    <p class="card-text pl-3"><small class="text-muted">Uploaded on June 4, 2020</small></p>
-                    <div class="card-tag-holder ml-3">`;
+            <div class="col-12 d-md-flex">
+                <img class="img-responsive col-12 col-md-4 p-3 mr-3 ml-3"
+                    src="${recievedData[newsData].highlightPhoto}"
+                    alt="${recievedData[newsData].newsHeading}" href="${recievedData[newsData].about}">
+                    <div class="card-body col-md-8 col-12">
+                            <h5 class="ml-2 mb-1 sourceInformation text-primary text-primary"><filter class="sourceWebsite" onclick="window.open('${recievedData[newsData].source}')">${recievedData[newsData].credit}</filter><small
+                                class="bg-cyan-light ml-3 text-primary p-1 paraFilterSelector" id="${IdOfThisFilter}" onclick="filteredNews(this.id)">${recievedData[newsData].filterTags}</small></h5>
+                        <p></p>
+                        <h3 class="col-lg-12 col-12">${recievedData[newsData].newsHeading}</h3>
+                        <p class="ml-3">${recievedData[newsData].para}</p>
+                        <p class="ml-3 text-primary linkToOriginal" onclick="window.open('${recievedData[newsData].about}')">View the full article</p>
+                        <p class="card-text pl-3"><small class="text-muted">Uploaded on ${recievedData[newsData].date}</small></p>
+                        <div class="card-tag-holder ml-3">`;
             for (let tagname in recievedData[newsData].tags) {
-                let addIt = `<span class="p-1 mr-2 text-primary">#${recievedData[newsData].tags[tagname]}</span>`;
+                let addIt = `<span class="p-1 text-primary">#${recievedData[newsData].tags[tagname]}</span>   `;
                 cardNews += addIt;
             }
             cardNews += `</div></div></div><div class="card-footer border-0">
-        <p class="text-muted">Summary by <span class="text-dark">${recievedData[newsData].author}</span></p>
-        <a href="#" class="card-link"></a></div></div>`;
+            <p class="text-muted">Summary by <span class="text-dark">${recievedData[newsData].author}</span>`;
+            if (isVerifiedWriter == "true") {
+                cardNews += `<i class="pl-1 text-primary fas fa-check-circle"></i>`;
+            }
+            cardNews += `</p><a href="#" class="card-link"></a></div></div>`;
             bulletinBoardNews.innerHTML += cardNews;
         }
     }
