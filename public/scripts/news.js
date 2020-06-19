@@ -38,15 +38,13 @@ async function setClubNews() {
         aria-labelledby="ClubAnnouncement${count}" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Modal title</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body text-wrap">
-                        <div class="col-10 mx-auto wrap-content">
+                    <div class="modal-body text-wrap col-10 mx-auto wrap-content">
                             <h2 class="text-center">${crecievedData[club].heading}</h2>
                             <p class="text-center"><small>${crecievedData[club].date}</small></p>`;
         if (crecievedData[club].image != "") {
@@ -57,14 +55,12 @@ async function setClubNews() {
                             <b>Venue:</b> ${crecievedData[club].venue}<br />
                             <b>Timings:</b> ${crecievedData[club].timing}<br />
                             <p><b>Link:</b> <a target="_blank" href="${crecievedData[club].link}" class="text-info">${crecievedData[club].link}</a></p>
-                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary mx-auto"
                             data-dismiss="modal">Close</button>
                     </div>
                 </div>
-            </div>
         </div>
     </div>`;
         count += 1;
@@ -98,13 +94,14 @@ async function setNewsCards() {
         let IdOfThisFilter = searchObject(`${recievedData[newsData].filterTags}`);
         let cardNews = `<div class="card rounded mb-4 col-12 p-0 m-0">
         <div class="col-12 d-md-flex">
-            <img class="img-responsive col-12 col-md-4 p-3 mr-3 ml-3"
+            <img class="img col-12 col-md-4 mh-75 p-3 w-100 ml-3"
                 src="${recievedData[newsData].highlightPhoto}"
-                alt="${recievedData[newsData].newsHeading}" href="${recievedData[newsData].about}">
+                alt="${recievedData[newsData].newsHeading}" width="100" height="250">
                 <div class="card-body col-md-8 col-12">
-                        <h5 class="ml-2 mb-1 sourceInformation text-primary text-primary"><filter class="sourceWebsite" onclick="window.open('${recievedData[newsData].source}')">${recievedData[newsData].credit}</filter><small
-                            class="bg-cyan-light ml-3 text-primary p-1 paraFilterSelector" id="${IdOfThisFilter}" onclick="filteredNews(this.id)">${recievedData[newsData].filterTags}</small></h5>
-                    <p></p>
+                <div class="d-sm-block d-md-inline-flex w-100" style="word-break: keep-all; line-height: 30px; justify-content: flex-start">
+                        <h5 class="ml-2 mb-1 mr-3 sourceInformation text-primary" style="width: fit-content;"><filter class="sourceWebsite" onclick="window.open('${recievedData[newsData].source}')">${recievedData[newsData].credit}</filter></h5>
+                        <small class="bg-cyan-light text-primary ml-2 ml-md-0 paraFilterSelector pr-1 pl-1" id="${IdOfThisFilter}" onclick="filteredNews(this.id)">${recievedData[newsData].filterTags}</small>
+                </div>
                     <h3 class="col-lg-12 col-12">${recievedData[newsData].newsHeading}</h3>
                     <p class="ml-3">${recievedData[newsData].para}</p>
                     <p class="ml-3 text-primary linkToOriginal" onclick="window.open('${recievedData[newsData].about}')">View the full article</p>
@@ -191,11 +188,12 @@ async function renderFilteredContent(filter) {
             <div class="col-12 d-md-flex">
                 <img class="img-responsive col-12 col-md-4 p-3 mr-3 ml-3"
                     src="${recievedData[newsData].highlightPhoto}"
-                    alt="${recievedData[newsData].newsHeading}" href="${recievedData[newsData].about}">
+                    alt="${recievedData[newsData].newsHeading}"  width="100" height="250">
                     <div class="card-body col-md-8 col-12">
-                            <h5 class="ml-2 mb-1 sourceInformation text-primary text-primary"><filter class="sourceWebsite" onclick="window.open('${recievedData[newsData].source}')">${recievedData[newsData].credit}</filter><small
-                                class="bg-cyan-light ml-3 text-primary p-1 paraFilterSelector" id="${IdOfThisFilter}" onclick="filteredNews(this.id)">${recievedData[newsData].filterTags}</small></h5>
-                        <p></p>
+                    <div class="d-sm-block d-md-inline-flex w-100" style="word-break: keep-all; line-height: 30px; justify-content: flex-start">
+                    <h5 class="ml-2 mb-1 mr-3 sourceInformation text-primary" style="width: fit-content;"><filter class="sourceWebsite" onclick="window.open('${recievedData[newsData].source}')">${recievedData[newsData].credit}</filter></h5>
+                    <small class="bg-cyan-light text-primary ml-2 ml-md-0 paraFilterSelector pr-1 pl-1" id="${IdOfThisFilter}" onclick="filteredNews(this.id)">${recievedData[newsData].filterTags}</small>
+                    </div>
                         <h3 class="col-lg-12 col-12">${recievedData[newsData].newsHeading}</h3>
                         <p class="ml-3">${recievedData[newsData].para}</p>
                         <p class="ml-3 text-primary linkToOriginal" onclick="window.open('${recievedData[newsData].about}')">View the full article</p>
