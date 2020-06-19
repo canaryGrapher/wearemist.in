@@ -92,7 +92,7 @@ async function setNewsCards() {
     for (let newsData in recievedData) {
         let isVerifiedWriter = await checkVerify(recievedData[newsData].author);
         let IdOfThisFilter = searchObject(`${recievedData[newsData].filterTags}`);
-        let cardNews = `<div class="card rounded mb-4 col-12 p-0 m-0">
+        let cardNews = `<div class="card rounded mb-4 col-12 p-0 m-0 newsCard">
         <div class="col-12 d-md-flex">
             <img class="img col-12 col-md-4 mh-75 p-3 w-100 ml-3"
                 src="${recievedData[newsData].highlightPhoto}"
@@ -184,7 +184,7 @@ async function renderFilteredContent(filter) {
         let compatibleFilter = filter.split(" ").join("");
         let optimizedFilter = compatibleFilter.toLowerCase();
         if (searchTag == optimizedFilter) {
-            let cardNews = `<div class="card rounded mb-4">
+            let cardNews = `<div class="card rounded mb-4 newsCard">
             <div class="col-12 d-md-flex">
                 <img class="img-responsive col-12 col-md-4 p-3 mr-3 ml-3"
                     src="${recievedData[newsData].highlightPhoto}"

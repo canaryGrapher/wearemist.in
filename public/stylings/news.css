@@ -248,3 +248,9 @@ div.scrollmenu .card {
 .clearFilter {
   cursor: pointer;
 }
+
+@-moz-document url-prefix() {
+  .newsCard {
+      margin-bottom: 10vh;
+  }
+}
