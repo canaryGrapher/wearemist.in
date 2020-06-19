@@ -20,13 +20,13 @@ async function setClubNews() {
     let crecievedData = JSON.parse(xhttp.responseText);
     let count = 1;
     const bulletinAnnouncement = document.getElementById("scrollAnnouncements");
-    colorPallete = ["bg-primary", "bg-secondary", "bg-success", "bg-danger", "bg-warning", "bg-info", "bg-dark", "bg-color1", "bg-color2", "bg-color3"];
+    colorPallete = ["bg-primary", "bg-success", "bg-danger", "bg-warning", "bg-info", "bg-color1", "bg-color2", "bg-color3"];
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     for (var club in crecievedData) {
         let classForModal = crecievedData[club].heading.split(" ").join("");
-        let card_color = getRndInteger(0, 6);
+        let card_color = getRndInteger(0, 7);
         let addCode = `<div class="card text-white ${colorPallete[card_color]} mb-3 ml-3 mr-3 clubAnnouncementCardHorizontal" data-toggle="modal"
             data-target=".${classForModal}" style="width: 22rem;">
             <div class="card-body">
