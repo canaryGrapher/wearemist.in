@@ -9,7 +9,7 @@ const categoryObject = {
     "category1": "Vulnerabilities",
     "category2": "Breaches",
     "category3": "Research and Development",
-    "category4": "Frauds and Thefts",
+    "category4": "Frauds and Scams",
     "category5": "Policies and Regulations"
 }
 
