@@ -99,11 +99,33 @@ app.get("/news", function (req, res) {
   res.sendFile(__dirname + "/public/news.html");
 });
 
-app.get("/getNews", function (req, res) {
+app.get("/getNews", async function (req, res) {
+  let sentTrimmedNewsData = [];
+  let lowerLimit = parseInt(req.query.loadingIndex) * 5;
+  let upperLimit = (lowerLimit + 5) - 1;
+  let totalDocs = await collectionNews.countDocuments();
+  if (upperLimit >= totalDocs) {
+    upperLimit = totalDocs - 1;
+  }
   collectionNews.find().sort({ sortingQuery: 1 }).toArray((err, news) => {
     newsPosts = news.reverse();
-    res.send(newsPosts);
+    if (req.query.loadingIndex != "NA") {
+      for (let iteratingThroughAllNews = lowerLimit; iteratingThroughAllNews <= upperLimit; iteratingThroughAllNews++) {
+        let newsArticle = newsPosts[iteratingThroughAllNews];
+        sentTrimmedNewsData.push(newsArticle);
+      }
+      if (lowerLimit >= totalDocs) {
+        res.send({ "message": 'eof' });
+      }
+      else {
+        res.send(sentTrimmedNewsData);
+      }
+    }
+    else {
+      res.send(newsPosts);
+    }
   });
+
 });
 
 app.get("/getClubNews", function (req, res) {
@@ -186,7 +208,7 @@ app.get("/getNewsdata", function (req, res) {
   var newsList = "";
   collectionNews.find({ $query: {}, $orderby: { sortingQuery: -1 } }).toArray((err, result1) => {
     for (var val in result1) {
-      newsList = newsList + result1[val].newsHeading + ",";
+      newsList = newsList + result1[val].newsHeading + "~";
     }
     res.send(newsList);
   });
@@ -199,7 +221,7 @@ app.get("/verifyWriter", function (req, res) {
         res.send("false");
       }
       else {
-        res.send("true");//else case
+        res.send("true");
       }
     });
 

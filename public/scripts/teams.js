@@ -6,7 +6,6 @@ var animationChooser = ["fadeInLeft", "fadeInUp", "fadeInRight"];
 window.onload = function () {
   showCC();
   changeLinkTexts();
-  document.getElementById("loaderContainer").style.display = "none";
   renderTeammates();
 };
 
@@ -28,17 +27,15 @@ function makeCross(x) {
 
 async function renderTeammates() {
   let bootstrapColorChooser = ["bg-primary", "bg-success", "bg-danger", "bg-warning", "bg-info", "bg-dark", "bg-secondary", "bg-dark", "bg-olive", "bg-orange"];
-  var xhttp = new XMLHttpRequest();
-  await xhttp.open("GET", "/teaminfo", false);
-  await xhttp.send();
-  recievedData = JSON.parse(xhttp.responseText);
+  let res = await fetch(`/teaminfo`);
+  recievedData = await res.json();
   let insertElementToBoard = document.getElementById('insertionareaforboard');
   let insertElementToManComm = document.getElementById('insertionareaformancomm');
   let insertElementToWorkComm = document.getElementById('insertionareaforworkcomm');
   recievedData.CC.forEach(insertBoard);
   recievedData.MC.forEach(insertManComm);
   recievedData.WC.forEach(insertWorkComm);
-
+  document.getElementById("loaderContainer").style.display = "none";
   function insertBoard(itemBoard) {
     let counterCorrection = ccCounter % 3;
     let ccAnimation = animationChooser[counterCorrection];

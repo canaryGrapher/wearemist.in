@@ -3,11 +3,10 @@ window.onload = function () {
     loadBrowser();
     document.getElementById("command1").focus();
     document.getElementById("accessIdentifier").innerHTML = `guest@wearemist:<span class="accessIndicator">~$</span>`;
-    document.getElementById("terminalTitle").innerHTML = `${recievedData}@wearemist.in`;
 };
 
 var txtcounter = 0;
-var txt = "Manipal Information Security Team - version - Stable-Version_2.5.1-def:18.06.2020 2020 MIST, Manipal. All rights reserved.";
+var txt = "Manipal Information Security Team - version - Stable-Version_2.7.3-def:24.06.2020 2020 MIST, Manipal. All rights reserved.";
 var speed = 5;
 
 function typeWriter() {
@@ -21,52 +20,40 @@ function exitTerminal() {
     window.location.replace("/home");
 }
 
-function loadBrowser() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/getData", false);
-    xhttp.send();
-    recievedData = xhttp.responseText;
+async function loadBrowser() {
+    let res = await fetch(`/getData`);
+    recievedData = await res.text();
+    document.getElementById("terminalTitle").innerHTML = `${recievedData}@wearemist.in`;
 }
 
-function loadCCdata() {
-    var CCxhttp = new XMLHttpRequest();
-    CCxhttp.open("GET", "/getCCdata", false);
-    CCxhttp.send();
-    recievedCCData = CCxhttp.responseText;
+async function loadCCdata() {
+    let res = await fetch(`/getCCdata`);
+    recievedCCData = await res.text();
     return recievedCCData;
 }
 
-function loadMCdata() {
-    var MCxhttp = new XMLHttpRequest();
-    MCxhttp.open("GET", "/getMCdata", false);
-    MCxhttp.send();
-    recievedMCData = MCxhttp.responseText;
+async function loadMCdata() {
+    let res = await fetch(`/getMCdata`);
+    recievedMCData = await res.text();
     return recievedMCData;
 }
 
-function loadNewsdata() {
-    var Newsxhttp = new XMLHttpRequest();
-    Newsxhttp.open("GET", "/getNewsdata", false);
-    Newsxhttp.send();
-    recievedNewsData = Newsxhttp.responseText;
+async function loadWCdata() {
+    let res = await fetch(`/getWCdata`);
+    recievedWCData = await res.text();
+    return recievedWCData;
+}
+
+async function loadNewsdata() {
+    let res = await fetch(`/getNewsdata`);
+    recievedNewsData = await res.text();
     return recievedNewsData;
 }
 
-function loadClubNewsdata() {
-    var CNewsxhttp = new XMLHttpRequest();
-    CNewsxhttp.open("GET", "/getClubNewsdata", false);
-    CNewsxhttp.send();
-    recievedClubNewsData = CNewsxhttp.responseText;
-    console.log(recievedClubNewsData);
+async function loadClubNewsdata() {
+    let res = await fetch(`/getClubNewsdata`);
+    recievedClubNewsData = await res.text();
     return recievedClubNewsData;
-}
-
-function loadWCdata() {
-    var WCxhttp = new XMLHttpRequest();
-    WCxhttp.open("GET", "/getWCdata", false);
-    WCxhttp.send();
-    recievedWCData = WCxhttp.responseText;
-    return recievedWCData;
 }
 
 var i = 1;
@@ -80,7 +67,6 @@ async function handleEnter(e) {
         var first = commandIndi[0];
         var second = commandIndi[1];
         var third = commandIndi[2];
-        //storing previous commands
         document.getElementById(`command${i}`).style.display = "none";
         document.getElementById(`commandStore${i}`).style.display = "inherit";
         document.getElementById(`commandStore${i}`).innerHTML = userInputCommand;
@@ -129,21 +115,21 @@ async function handleEnter(e) {
                 if (second == "team") {
                     //making CoreComm array
                     var cc = `<span class="teamHeading">Board</span><br><div class="teamViewer">`;
-                    var ccArray = loadCCdata();
+                    var ccArray = await loadCCdata();
                     var ccArr = ccArray.split(",");
                     for (var val1 in ccArr) {
                         cc = cc + `<div class="teamMember">` + ccArr[val1] + "</div>" + " ";
                     }
                     //making ManComm array
                     var mc = `<span class="teamHeading">Management Committee</span><br><div class="teamViewer">`;
-                    var mcArray = loadMCdata();
+                    var mcArray = await loadMCdata();
                     var mcArr = mcArray.split(",");
                     for (var val2 in mcArr) {
                         mc = mc + `<div class="teamMember">` + mcArr[val2] + "</div>" + " ";
                     }
                     //making WorkComm array
                     var wc = `<span class="teamHeading">Working Committee</span><br><div class="teamViewer">`;
-                    var wcArray = loadWCdata();
+                    var wcArray = await loadWCdata();
                     var wcArr = wcArray.split(",");
                     for (var val3 in wcArr) {
                         wc = wc + `<div class="teamMember">` + wcArr[val3] + "</div>" + " ";
@@ -153,8 +139,8 @@ async function handleEnter(e) {
                 }
                 else if (second == "news") {
                     var news = `<span class="newsHeading" id="newsMessage">Recent news</span><br>`;
-                    var newsArray = loadNewsdata();
-                    var newsArr = newsArray.split(",");
+                    var newsArray = await loadNewsdata();
+                    var newsArr = newsArray.split("~");
                     for (var val4 in newsArr) {
                         news = news + newsArr[val4] + "<br><br>";
                         if (val4 == 9) {
@@ -179,10 +165,9 @@ async function handleEnter(e) {
                 }
                 else if (second == "announcements") {
                     cNews = `<span class="newsHeading" id="newsMessage">Club Announcements</span><br>`;
-                    var clubNewsArray = loadClubNewsdata();
+                    var clubNewsArray = await loadClubNewsdata();
                     console.log(clubNewsArray);
                     var CnewsArr = clubNewsArray.split(",");
-                    console.log(CnewsArr);
                     for (var val5 in CnewsArr) {
                         cNews = cNews + CnewsArr[val5] + "<br><br>";
                     }
@@ -205,17 +190,23 @@ async function handleEnter(e) {
         }
 
         else if (userInputCommand == "pwd") {
-            document.getElementById(`commandOutput${i}`).innerHTML = `https://www.wearemist.in/Geek`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `${window.location.href}`;
             addCommand();
         }
         else if (userInputCommand == "date") {
-            var dateToday = new Date();
+            let dateToday = new Date();
             document.getElementById(`commandOutput${i}`).innerHTML = `${dateToday}<br>`;
             addCommand();
         }
 
+        else if (userInputCommand == "time") {
+            let timeNow = new Date();
+            document.getElementById(`commandOutput${i}`).innerHTML = `The current time is: ${timeNow.getHours()}:${timeNow.getMinutes()}:${timeNow.getSeconds()}<br>`;
+            addCommand();
+        }
+
         else if (userInputCommand == "help") {
-            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><div id="availableCommands"><div class="commandIs">ls</div><div class="commandIs">cat</div><div class="commandIs">clear</div><div class="commandIs">date</div><div class="commandIs">help</div><div class="commandIs">whoami</div><div class="commandIs">man</div><div class="commandIs">pwd</div><div class="commandIs">loadgui</div><div class="commandIs">exit</div></div><br>`;
+            document.getElementById(`commandOutput${i}`).innerHTML = `List of available commands:<br><div id="availableCommands"><div class="commandIs">ls</div><div class="commandIs">cat</div><div class="commandIs">clear</div><div class="commandIs">date</div><div class="commandIs">time</div><div class="commandIs">help</div><div class="commandIs">whoami</div><div class="commandIs">man</div><div class="commandIs">pwd</div><div class="commandIs">loadgui</div><div class="commandIs">exit</div></div><br>`;
             addCommand();
         }
 
@@ -235,7 +226,7 @@ async function handleEnter(e) {
         else if (userInputCommand == "man") {
             var manualPage = `<table><tr><td>ls</th><td class="commandDescription">: List files</th> </tr><tr><td>cat [filename]</td>
               <td class="commandDescription">: Show file contents</td></tr><tr><td>clear</td><td class="commandDescription">: Refresh screen</td>
-            </tr><tr><td>date</td><td class="commandDescription">: Print date and time</td></tr><tr><td>help</td><td class="commandDescription">: Available commands</td>
+            </tr><tr><td>date</td><td class="commandDescription">: Print date and time</td></tr><tr><td>time</td><td class="commandDescription">: Print full time</td></tr><tr><td>help</td><td class="commandDescription">: Available commands</td>
             </tr><tr><td>whoami</td><td class="commandDescription">: Display IP Address</td></tr><tr><td>man</td><td class="commandDescription">: Command help</td>
             </tr><tr><td>pwd</td><td class="commandDescription">: Current location</td></tr>
             <tr><td>loadgui [destination]</td><td class="commandDescription">: Go to graphical page</td></tr>

@@ -1,6 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./stylings/news.css">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>CyberManipal | MIST</title>
     <meta name="title" content="CyberManipal | MIST">
@@ -32,16 +37,6 @@
     <meta name="msapplication-square150x150logo" content="./images/favicon/mstile-150x150.png">
     <meta name="msapplication-wide310x150logo" content="./images/favicon/mstile-310x150.png">
     <meta name="msapplication-square310x310logo" content="./images/favicon/mstile-310x310.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
-    <script type="text/javascript" src="./scripts/wow.js"></script>
-    <link rel="stylesheet" type="text/css" href="./stylings/animate.css">
-    <link rel="stylesheet" type="text/css" href="./stylings/news.css">
-    <script type="text/javascript" src="./scripts/news.js"></script>
 </head>
 
 <body>
@@ -49,15 +44,7 @@
         <div id="loaderRipple">
         </div>
         <p>Loading</p>
-        <script>
-            window.onload = function () {
-                document.getElementById("loaderContainer").style.display = "none";
-            }
-        </script>
     </div>
-    <script>
-        new WOW().init();
-    </script>
     <nav class="navbar fixed-top mb-5 navbar-expand-lg navbar-dark bg-dark overflow-auto" style="width:100vw"
         id="navigationBar">
         <a class="navbar-brand logo pl-4" href="/"><img class="img" src="./images/logo/logoLight.png" height="30px">
@@ -195,23 +182,28 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p class="text-info ml-2" style="font-weight: normal;" onclick="filteredNews(this.id);"
-                        data-dismiss="modal" id="category1">
+                    <p class="text-info ml-2" style="font-weight: normal;" data-toggle="collapse"
+                        data-target=".navbar-collapse" onclick="filteredNews(this.id);" data-dismiss="modal"
+                        id="category1">
                         Vulnerabilities</p>
-                    <p class="text-info ml-2" style="font-weight: normal;" onclick="filteredNews(this.id);"
-                        data-dismiss="modal" id="category2">
+                    <p class="text-info ml-2" style="font-weight: normal;" data-toggle="collapse"
+                        data-target=".navbar-collapse" onclick="filteredNews(this.id);" data-dismiss="modal"
+                        id="category2">
                         Breaches
                     </p>
-                    <p class="text-info ml-2" style="font-weight: normal;" onclick="filteredNews(this.id);"
-                        data-dismiss="modal" id="category3">
+                    <p class="text-info ml-2" style="font-weight: normal;" data-toggle="collapse"
+                        data-target=".navbar-collapse" onclick="filteredNews(this.id);" data-dismiss="modal"
+                        id="category3">
                         Research and Development</p>
-                    <p class="text-info ml-2" style="font-weight: normal;" onclick="filteredNews(this.id);"
-                        data-dismiss="modal" id="category4">
+                    <p class="text-info ml-2" style="font-weight: normal;" data-toggle="collapse"
+                        data-target=".navbar-collapse" onclick="filteredNews(this.id);" data-dismiss="modal"
+                        id="category4">
                         Frauds
                         and
                         Scams</p>
-                    <p class="text-info ml-2" style="font-weight: normal;" onclick="filteredNews(this.id);"
-                        data-dismiss="modal" id="category5">
+                    <p class="text-info ml-2" style="font-weight: normal;" data-toggle="collapse"
+                        data-target=".navbar-collapse" onclick="filteredNews(this.id);" data-dismiss="modal"
+                        id="category5">
                         Policies
                         and Regulations</p>
                 </div>
@@ -264,6 +256,7 @@
                             <button type="submit" class="pr-3 pl-3 mt-2 btn btn-primary mx-auto">Submit</button>
                         </div>
                     </form>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Nevermind</button>
@@ -292,6 +285,9 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./scripts/news.js"></script>
 </body>
 
 </html>
