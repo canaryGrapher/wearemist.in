@@ -1,6 +1,6 @@
 window.addEventListener("scroll", async () => {
     // End of the document reached?
-    if ($(document).height() - $(this).height() - 150 < $(this).scrollTop()) {
+    if ($(document).height() - $(this).height() - 350 < $(this).scrollTop()) {
         const bulletinBoardNews = document.getElementById("newsBulletin");
         if (loadedContent == true) {
             loadedContent = false;
