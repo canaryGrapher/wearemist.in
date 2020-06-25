@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./stylings/news.css">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -131,7 +129,6 @@
                 <h2 class="pt-5 text-secondary" style="font-weight: normal;">Cybersecurity News</h2>
                 <h5 class="pl-1 text-secondary" style="font-weight: normal;">Latest News, from MIST</h5>
                 <div class="container-fluid p-0" id="newsBulletin"></div>
-                <!-- col-12 col-md-6 col-lg-4 -->
             </div>
         </div>
     </div>
@@ -227,6 +224,7 @@
                 </div>
                 <div class="modal-body">
                     <form method="POST" action="/addToMailingList">
+                        <img class="img mx-auto mb-3 d-block" src="./images/assets/subscribeForm.png" width="60%">
                         <div class="form-group">
                             <label for="emailSubscribe">Name</label>
                             <input type="text" class="form-control" id="nameSubscribe" aria-describedby="nameHelp"
