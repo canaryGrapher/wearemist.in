@@ -29,9 +29,7 @@ footer {
 }
 
 .footerDivision:first-child {
-  line-height: 15vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 40px;
+  padding: 50px;
 }
 
 .biggerText {
@@ -108,8 +106,13 @@ footer {
   overflow-y: scroll;
   background-image: url("../images/backgrounds/worldMap.jpg");
   background-position: center;
-
   background-attachment: fixed;
+}
+
+.temp-flowChart {
+  background-image: url("../images/backgrounds/worldMap.jpg");
+  background-position: center center;
+  background-size: cover;
 }
 
 /* width */

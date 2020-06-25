@@ -14,16 +14,6 @@ window.onresize = function () {
 };
 
 showMenu = 0;
-//for changing the navigation bar based on the size of the screen
-function makeCross(x) {
-  x.classList.toggle("change");
-  if (showMenu == 0) {
-    showResNav();
-  }
-  else if (showMenu == 1) {
-    hideResNav();
-  }
-}
 
 async function renderTeammates() {
   let bootstrapColorChooser = ["bg-primary", "bg-success", "bg-danger", "bg-warning", "bg-info", "bg-dark", "bg-secondary", "bg-dark", "bg-olive", "bg-orange"];
@@ -173,7 +163,7 @@ function changeLinkTexts() {
   var mcLinkName = document.getElementById("mcLink");
   var wcLinkName = document.getElementById("wcLink");
   if (window.matchMedia('(max-width: 700px)').matches) { // If media query matches
-    ccLinkName.innerHTML = "CC";
+    ccLinkName.innerHTML = "Board";
     mcLinkName.innerHTML = "MC";
     wcLinkName.innerHTML = "WC";
   }

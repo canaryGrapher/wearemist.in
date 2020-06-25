@@ -100,9 +100,7 @@ footer {
 }
   
 .footerDivision:first-child {
-  line-height: 15vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 40px;
+  padding: 50px;
 }
   
 .biggerText {
@@ -251,6 +249,10 @@ div.scrollmenu .card {
 
 @-moz-document url-prefix() {
   .newsCard {
-      margin-bottom: 10vh;
+      margin-bottom: 6rem !important;
+  }
+
+  .sourceInformation {
+    width: auto;
   }
 }

@@ -5,6 +5,7 @@ const nodemailer = require("nodemailer");
 const dotenv = require("dotenv").config({ path: '.env' });
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
+const fs = require('fs');
 let CCdata, MCdata, WCdata;
 const CONNECTION_URL = process.env.DATABASE_URL;
 const DATABASE_NAME1 = "Members"; //enter Database Name here
@@ -228,14 +229,21 @@ app.get("/verifyWriter", function (req, res) {
 });
 
 app.get("/getClubNewsdata", function (req, res) {
-  var CnewsList = "";
+  let CnewsList = "";
   collectionClubNews.find().sort({ "sortingDate": -1 }).toArray((err, result1) => {
-    for (var val in result1) {
+    for (let val in result1) {
       CnewsList = CnewsList + result1[val].heading + ",";
     }
     res.send(CnewsList);
   });
 });
+
+app.get("/getHistoryTimeline", function (req, res) {
+  fs.readFile("./storeData/history.txt", (err, data) => {
+    if (err) throw err;
+    res.send(data);
+  })
+})
 
 app.get("*", function (req, res) {
   res.sendFile(__dirname + "/public/errorPage.html");
