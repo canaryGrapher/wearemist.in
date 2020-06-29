@@ -1,7 +1,7 @@
 <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/alanTuring.jpg">
+            src="./images/historyChart/alanTuring.png" alt="Alan Turing">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">1939</h4>
             <p class="pl-3 pb-5">Alan Turing and his team invent the Bombe, a code breaking
@@ -12,7 +12,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/capitol.jpg">
+            src="./images/historyChart/capitol.png" alt="Picture of the Capitol Building, Washington DC">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">1966</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The first federally prosecuted computer crime,
@@ -25,7 +25,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/arpanet.jpg">
+            src="./images/historyChart/arpanet.png" alt="Scientists working on the Arpanet">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">1971</h4>
             <p class="pl-3 pb-5">The first real computer virus was released in lab by an employee of a
@@ -35,7 +35,7 @@
       </div>
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
-          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/at&t.jpg">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/at&t.png" alt="AT&T logo">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">1981</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Ian Murphy, known as Captain Zap, was the first person
@@ -48,7 +48,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/elkCloner.jpg">
+            src="./images/historyChart/elkCloner.png" alt="An image of a skull in a terminal">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">1982</h4>
             <p class="pl-3 pb-5">Elk Cloner, a virus, is written as a joke by a 15 year old kid. It is one of the first
@@ -59,7 +59,7 @@
       </div>
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
-          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/414+.jpg">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/414+.png" alt="414 teenage hacker group's member">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">1983</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The FBI busts the "414s," a group of young hackers who
@@ -71,7 +71,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/creditcardFraud.jpg">
+            src="./images/historyChart/creditcardFraud.png" alt="A picture of credit cards hooked to a fishhook">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">1984</h4>
             <p class="pl-3 pb-5">The Credit Card Fraud Act of 1984: This law was enacted primarily in the interest of
@@ -83,7 +83,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/Brain-virus.jpg">
+            src="./images/historyChart/Brain-virus.png" alt="A virus's hex values">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">1985</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The first PC virus is created. Named Brain, the virus is
@@ -95,7 +95,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/electronic-communications-privacy-act.jpg">
+            src="./images/historyChart/electronic-communications-privacy-act.png" alt="Electronic Communication Privacy Act">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">1986</h4>
             <p class="pl-3 pb-5">The 1986 Electronic Privacy Act extends the current privacy guarantees for traditional
@@ -109,7 +109,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/Ronald-Reagan.jpg">
+            src="./images/historyChart/Ronald-Reagan.png" alt="A piture of Ronal Reagan, former president of the United States">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">1987</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">President Ronald Reagan signs the Computer Security Act
@@ -121,10 +121,10 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/Robert_Tappan_Morris.jpg">
+            src="./images/historyChart/Robert_Tappan_Morris.png" alt="A picture of Robert Morris">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">1988</h4>
-            <p class="pl-3 pb-5">Robert Morris, 22, launches the Internet Worm. It spreads to 6,000 computers, 1/10 of
+            <p class="pl-3 pb-5">Robert Morris, at the age of 22, launches the Internet Worm. It spreads to 6,000 computers, 1/10 of
               all computers on the Internet.</p>
           </div>
         </div>
@@ -132,7 +132,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/uc-berkeley-logo.jpg">
+            src="./images/historyChart/uc-berkeley-logo.png" alt="Logo of UC Berkeley">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">1989</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Five West German computer users are arrested on
@@ -146,7 +146,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/electronic-frontier-foundation.jpg">
+            src="./images/historyChart/electronic-frontier-foundation.png" alt="Electronic Frontier Foundation">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">1990</h4>
             <p class="pl-3 pb-5">The Electronic Frontier Foundation is created, with the primary goal of defending the
@@ -157,7 +157,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/michelangelo.jpg">
+            src="./images/historyChart/michelangelo.png" alt="A picture of a bug on a printed paper with binary data">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">1991</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The Michelangelo virus was first discovered in February
@@ -170,7 +170,7 @@
       </div>
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
-          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/kaos.jpg">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/kaos.png" alt="A coded file">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">1994</h4>
             <p class="pl-3 pb-5">A virus writer utilizes the Internet to spread malicious code when the Kaos virus is
@@ -182,7 +182,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/Kevin_Mitnick.jpg">
+            src="./images/historyChart/Kevin_Mitnick.png" alt="A picture of Kevin Mitnick">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">1995</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Kevin Mitnick, "America's Most Wanted Computer
@@ -196,7 +196,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/windows-nt.jpg">
+            src="./images/historyChart/windows-nt.png" alt="Windows NT logo">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">1998</h4>
             <p class="pl-3 pb-5">NASA, the U.S. Navy, and university campuses across the United States are targets of
@@ -207,7 +207,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/melissaVirus.jpg">
+            src="./images/historyChart/melissaVirus.png" alt="A fancy image of code">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">1999</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Melissa virus spread so fast that a number of big
@@ -218,7 +218,7 @@
       </div>
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
-          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/yahoo.jpg">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/yahoo.png" alt="Logo of Yahoo">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">2000</h4>
             <p class="pl-3 pb-5">DoS attacks shut down Yahoo!, Buy.com, Amazon, eBay, and CNN. Yahoo! estimates that its
@@ -229,7 +229,7 @@
       </div>
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
-          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/ncsa.jpg">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/ncsa.png" alt="National Cybersecurity Association Alliance Logo">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">2001</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The National Cyber Security Alliance (NCSA) is
@@ -240,7 +240,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/United_States_Department_of_Homeland_Security.png">
+            src="./images/historyChart/United_States_Department_of_Homeland_Security.png" alt="Logo of the United States Department of Homeland Security">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">2002</h4>
             <p class="pl-3 pb-5">The Bush administration files a bill to create the Department of Homeland Security,
@@ -251,7 +251,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/anonymous.jpg">
+            src="./images/historyChart/anonymous.png" alt="Logo of Anonymous hacktivist group">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">2003</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The hacktivist group Anonymous was formed.</p>
@@ -262,7 +262,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/newzealand.jpg">
+            src="./images/historyChart/newzealand.png" alt="The flag of New Zealand">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">2004</h4>
             <p class="pl-3 pb-5">New Zealand's Government (National Party) website defaced by a hacktivist group.</p>
@@ -272,7 +272,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/iSKORPiTX.jpg">
+            src="./images/historyChart/iSKORPiTX.png" alt="Banner showing 'Hacked by iSKORPiTX' message">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">2006</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The largest defacement in Web History as of that time is
@@ -286,7 +286,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/unitednations.jpg">
+            src="./images/historyChart/unitednations.png" alt="United Nation's logo">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">2007</h4>
             <p class="pl-3 pb-5">United Nations website hacked by Turkish Hacker Kerem125.</p>
@@ -296,7 +296,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/pentagon.jpg">
+            src="./images/historyChart/pentagon.png" alt="An image of the Pentagon, United States">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">2008</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Around 20 Chinese hackers claim to have gained access to
@@ -309,7 +309,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/conficker-worm-virus.jpg">
+            src="./images/historyChart/conficker-worm-virus.png" alt="Image of conficker worm">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">2009</h4>
             <p class="pl-3 pb-5"> Conficker worm infiltrated millions of PCs worldwide including many government-level
@@ -320,7 +320,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/MalCon_logo.jpg">
+            src="./images/historyChart/MalCon_logo.png" alt="MALCON Malware Image">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">2010</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The first Malware Conference, MALCON took place in
@@ -333,7 +333,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/Lulz_Security.jpg">
+            src="./images/historyChart/Lulz_Security.png" alt="Logo of the hacker group 'Lulz Security'">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">2011</h4>
             <p class="pl-3 pb-5">The hacker group Lulz Security is formed. The YouTube channel of Sesame Street was
@@ -345,7 +345,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/f0rtys3v3n.jpg">
+            src="./images/historyChart/f0rtys3v3n.png" alt="Silhouette of a man">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">2012</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The websites of several Turkish representative offices
@@ -358,7 +358,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/tumblr.png">
+            src="./images/historyChart/tumblr.png" alt="Logo of Tumblr social media">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">2013</h4>
             <p class="pl-3 pb-5">The social networking website Tumblr is attacked by hackers. Consequently, 65,469,298
@@ -369,7 +369,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/globetelecom.jpg">
+            src="./images/historyChart/globetelecom.png" alt="Logo of globe telecom">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">2014</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The website of the Philippine telecommunications company
@@ -380,7 +380,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/AshleyMadison.jpg">
+            src="./images/historyChart/AshleyMadison.png" alt="Image showing Ashley Madison website">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">2015</h4>
             <p class="pl-3 pb-5">The servers of extramaritial affairs website Ashley Madison were breached.</p>
@@ -390,7 +390,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/julian.jpg">
+            src="./images/historyChart/julian.png" alt="Image of Julian Assange">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">2016</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The 2016 Dyn cyberattack is being conducted with a
@@ -403,7 +403,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/Wana_Decrypt0r.jpg">
+            src="./images/historyChart/Wana_Decrypt0r.png" alt="An image of the WannaCry ransomware">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">2017</h4>
             <p class="pl-3 pb-5">WannaCry ransomware attack started on Friday, 12 May 2017,[97] and has been described
@@ -415,7 +415,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/ontario.jpg">
+            src="./images/historyChart/ontario.png" alt="An image of Ontario in Canada">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">2018</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The town of Wasaga Beach in Ontario, Canada computer
@@ -426,7 +426,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/Baltimore.jpg">
+            src="./images/historyChart/Baltimore.png" alt="Image of Baltimore city in the United States">
           <div class="col-lg-10">
             <h4 class="pt-5 pl-3 mb-0">2019</h4>
             <p class="pl-3 pb-5">The city of Baltimore, Maryland USA computer systems are seized by hackers using
@@ -438,7 +438,7 @@
       <div class="row-fluid">
         <div class="row d-md-flex flex-md-row-reverse historyCards">
           <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
-            src="./images/historyChart/Flag_of_the_Republic_of_China.jpg">
+            src="./images/historyChart/Flag_of_the_Republic_of_China.png" alt="Flag of the Republic of China, Taiwan">
           <div class="col-lg-10">
             <h4 class="text-lg-right pt-5 pl-3 mb-0">2020</h4>
             <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Anonymous hacked the United Nation's website and created
