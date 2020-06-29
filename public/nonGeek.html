@@ -157,7 +157,7 @@
     </div>
     <div class="container sectionBox whatwedo mt-5" id="section1">
       <div class="row-fluid ml-2">
-        <h2 class=" text-center">Our domains</h2>
+        <h4 class=" text-center">Our domains</h4>
       </div>
       <div class="row cardHolder">
         <!-- Card for cryptography -->
@@ -338,24 +338,24 @@
       <p class="text-center">If you'd like to discuss, collaborate or drop some suggestions, write to us down below or
         drop an email at <a href="mailto:sudo@wearemist.in">sudo@wearemist.in</a></p>
     </div>
-    <form method="POST" action="/contactMailer">
+    <formcontainer>
       <div class="form-group wow slideInLeft">
-        <input type="name" class="form-control" id="userName" aria-describedby="name" placeholder="Full Name"
-          name="name">
+        <input type="name" class="form-control border-primary" id="userName" aria-describedby="name"
+          placeholder="Full Name" name="name" required>
       </div>
       <div class="form-group wow slideInLeft">
-        <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Email Address"
-          name="email">
+        <input type="email" class="form-control border-primary" id="userEmail" aria-describedby="emailHelp"
+          placeholder="Email Address" name="email" required>
       </div>
       <div class="form-group wow slideInLeft">
-        <textarea class="form-control" placeholder="Message" name="message"></textarea>
-        <small id="emailHelp" class="wow fadeIn pl-3 form-text text-muted">We don't share your email address with third
+        <textarea class="form-control border-primary" placeholder="Message" id="sendMessage" name="message"></textarea>
+        <small id="emailHelp" class="wow fadeIn pl-3 form-text text-muted">We do not share your email address with third
           party.
           You can take our word on that because we are true to our values</small>
       </div>
-
-      <button type="submit" class="wow zoomInUp btn btn-primary pr-5 pl-5 pt-3 pb-3">Submit</button>
-    </form>
+      <div id="errorHolder"></div>
+      <button id="submit" class="wow zoomInUp btn btn-primary pr-5 pl-5 pt-3 pb-3">Submit</button>
+    </formcontainer>
     <div class="row-fluid pt-5 mt-5">
       <div class="card pt-4 wow fadeIn">
         <blockquote class="blockquote d-lg-flex">
@@ -385,7 +385,7 @@
           <div class="lightText pb-xs-5 col-12">&copy; 2020 Manipal Information Security Team. All rights
             reserved
           </div>
-          <div class="pb-sm-5 pb-md-0 contributors col-12"><a href="/credits">Check out our
+          <div class="pb-3 pb-md-0 contributors col-12"><a href="/credits">Check out our
               contributors</a>
           </div>
         </div>

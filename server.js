@@ -87,7 +87,7 @@ app.get("/credits", function (req, res) {
 app.post("/contactMailer", function (req, res) {
   const mailOptions = {
     from: "sudo@wearemist.in", // sender address
-    to: "yasharyan307@outlook.com", // list of receivers
+    to: "f78c6659.manipal.edu@apac.teams.ms", // list of receivers
     subject: 'Message from wearemist website', // Subject line
     html: `<h4>${req.body.name}</h4><br><p>${req.body.message}</p><br><br><p>Message from ${req.body.name}, email ${req.body.email}.</p><br><br><br><p>All details are as follows: <br />${req.header('user-agent')}<br /> IP address of the sender is ${req.ips} or ${req.ip}</p>`// plain text body
   };
