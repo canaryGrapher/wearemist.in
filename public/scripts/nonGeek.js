@@ -26,8 +26,9 @@ $('#submit').click(function () {
   let emailofSender = document.getElementById("userEmail").value;
   let messageBySender = document.getElementById("sendMessage").value;
   let emailVerify = validateEmailAddress(emailofSender.trim());
-  if (emailVerify) {
-    if (nameOfSender.trim() != "" && emailofSender.trim() != "" && messageBySender.trim() != "") {
+
+  if (nameOfSender.trim() != "" && emailofSender.trim() != "" && messageBySender.trim() != "") {
+    if (emailVerify) {
       $.ajax({
         url: '/contactMailer',
         type: 'POST',
@@ -55,17 +56,17 @@ $('#submit').click(function () {
       });
     }
     else {
-      document.getElementById("errorHolder").innerHTML = `<div class="alert alert-danger alert-dismissible wow rubberBand" role="alert">
-        Please make sure you fill all the fields.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>`;
+      document.getElementById("errorHolder").innerHTML = `<div class="alert alert-warning alert-dismissible wow rubberBand" role="alert">
+          Email format is not valid. Enter a valid email address.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>`;
     }
   }
   else {
-    document.getElementById("errorHolder").innerHTML = `<div class="alert alert-warning alert-dismissible wow rubberBand" role="alert">
-        Email format is not valid. Enter a valid email address.
+    document.getElementById("errorHolder").innerHTML = `<div class="alert alert-danger alert-dismissible wow rubberBand" role="alert">
+        Please make sure you fill all the fields.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
