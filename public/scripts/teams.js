@@ -1,7 +1,7 @@
 var ccCounter = 0;
 var mcCounter = 0;
 var wcCounter = 0;
-var animationChooser = ["fadeInLeft", "fadeInUp", "fadeInRight"];
+var animationChooser = ["fadeInLeft", "fadeInUp", "bounceIn", "bounceInUp", "bounceInRight", "bounceInLeft", "fadeInRight", "lightSpeedIn"];
 
 window.onload = function () {
   showCC();
@@ -27,11 +27,11 @@ async function renderTeammates() {
   recievedData.WC.forEach(insertWorkComm);
   document.getElementById("loaderContainer").style.display = "none";
   function insertBoard(itemBoard) {
-    let counterCorrection = ccCounter % 3;
+    let counterCorrection = ccCounter % 8;
     let ccAnimation = animationChooser[counterCorrection];
     ccCounter = ccCounter + 1;
     let idForFooter = itemBoard.name.split(" ").join("");
-    insertElementToBoard.innerHTML += `<div class="wow ${ccAnimation} card col-12 col-sm-6 col-md-4 text-center pt-2 pb-5">
+    insertElementToBoard.innerHTML += `<div class="wow ${ccAnimation} card col-12 col-sm-6 col-md-4 col-lg-3 text-center pt-2 pb-5">
                 <img class="rounded-circle img card-img-top mx-auto ccImages"
                 src="${itemBoard.photo}"
                 alt="${itemBoard.name}">
@@ -49,11 +49,11 @@ async function renderTeammates() {
   }
 
   function insertManComm(itemManComm) {
-    let counterCorrection = mcCounter % 3;
+    let counterCorrection = mcCounter % 8;
     let mcAnimation = animationChooser[counterCorrection];
     mcCounter = mcCounter + 1;
     let idForFooter = itemManComm.name.split(" ").join("");
-    insertElementToManComm.innerHTML += `<div class="wow ${mcAnimation} card col-12 col-sm-6 col-md-4 text-center pt-2 pb-5">
+    insertElementToManComm.innerHTML += `<div class="wow ${mcAnimation} card col-12 col-sm-6 col-md-4 col-lg-3 text-center pt-2 pb-5">
                 <img class="rounded-circle img card-img-top mx-auto ccImages"
                 src="${itemManComm.photo}"
                 alt="${itemManComm.name}">
@@ -72,7 +72,7 @@ async function renderTeammates() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   function insertWorkComm(itemWorkComm) {
-    let counterCorrection = wcCounter % 3;
+    let counterCorrection = wcCounter % 8;
     let wcAnimation = animationChooser[counterCorrection];
     wcCounter = wcCounter + 1;
     let colorValue = getRndInteger(0, 9);
