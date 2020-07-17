@@ -22,24 +22,26 @@ function checkKey(buttonPress) {
     }
 }
 function switchToGUI() {
-    const guiSelector = document.getElementById("GUImode");
-    guiSelector.style.color = "white";
-    const cliSelector = document.getElementById("CLImode");
-    cliSelector.style.color = "black";
-    overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.692)";
-    overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+    if (screen.width > 1000) {
+        const guiSelector = document.getElementById("GUImode");
+        guiSelector.style.color = "white";
+        const cliSelector = document.getElementById("CLImode");
+        cliSelector.style.color = "black";
+        overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.692)";
+        overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+    }
 }
 function switchToCLI() {
-    const cliSelector = document.getElementById("CLImode");
-    cliSelector.style.color = "white";
-    const guiSelector = document.getElementById("GUImode");
-    guiSelector.style.color = "black";
-    const overlayGui = document.getElementById("overlayGui");
-    const overlayCli = document.getElementById("overlayCli");
-    overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
-    overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.692)";
-
-
+    if (screen.width > 1000) {
+        const cliSelector = document.getElementById("CLImode");
+        cliSelector.style.color = "white";
+        const guiSelector = document.getElementById("GUImode");
+        guiSelector.style.color = "black";
+        const overlayGui = document.getElementById("overlayGui");
+        const overlayCli = document.getElementById("overlayCli");
+        overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+        overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.692)";
+    }
 }
 function goToCLIPage() {
     window.location.replace("/Geek");
