@@ -39,18 +39,20 @@ body(onload='switchToCLI()')
         h2#grubHome
           | Manipal Information Security Team
           | &nbsp-&nbsp
-          | version - STABLE_2.7.8-def:07.07.2020
+          | version - STABLE_2.8.1-def:18.07.2020
       #grubSelector
         #CLImode(onmouseover='switchToCLI()' onclick='goToCLIPage()')
-          p#cliText
-            | Geek Mode (CLI mode) 
-            br
-            span.modeInfo Command Line Mode for the geek in you
+          #overlayCli
+            p#cliText
+              | Geek Mode (CLI mode) 
+              br
+              span.modeInfo Command Line Mode for the geek in you
         #GUImode(onmouseover='switchToGUI()' onclick='goToGUIPage()')
-          p
-            | Non-Geek Mode (GUI mode) 
-            br
-            span.modeInfo Graphical Mode for easy viewing
+          #overlayGui  
+            p
+              | Non-Geek Mode (GUI mode) 
+              br
+              span.modeInfo Graphical Mode for easy viewing
       #grubModeInfo
         p
           | Use the &larr; and &rarr; keys to select a mode.

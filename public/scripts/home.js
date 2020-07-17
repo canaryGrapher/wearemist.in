@@ -7,14 +7,14 @@ function checkKey(buttonPress) {
         const checkSelectedGUI = document.getElementById("GUImode");
         const checkSelectedCLI = document.getElementById("CLImode");
         const checkTextColor = document.getElementById("cliText");
-        if (checkSelectedGUI.style.color == "black") {
+        if (checkSelectedGUI.style.color == "white") {
             switchToCLI();
-        } else if (checkSelectedCLI.style.color == "black") {
+        } else if (checkSelectedCLI.style.color == "white") {
             switchToGUI();
         }
     } else if (buttonPress.keyCode == "13") {
         const checkSelectedGUI = document.getElementById("GUImode");
-        if (checkSelectedGUI.style.color == "black") {
+        if (checkSelectedGUI.style.color == "white") {
             window.location.replace("/nongeek");
         } else {
             window.location.replace("/geek");
@@ -23,19 +23,23 @@ function checkKey(buttonPress) {
 }
 function switchToGUI() {
     const guiSelector = document.getElementById("GUImode");
-    guiSelector.style.backgroundColor = "whitesmoke";
-    guiSelector.style.color = "black";
+    guiSelector.style.color = "white";
     const cliSelector = document.getElementById("CLImode");
-    cliSelector.style.color = "white";
-    cliSelector.style.backgroundColor = "#2a6296";
+    cliSelector.style.color = "black";
+    overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.692)";
+    overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
 }
 function switchToCLI() {
     const cliSelector = document.getElementById("CLImode");
-    cliSelector.style.backgroundColor = "whitesmoke";
-    cliSelector.style.color = "black";
+    cliSelector.style.color = "white";
     const guiSelector = document.getElementById("GUImode");
-    guiSelector.style.color = "white";
-    guiSelector.style.backgroundColor = "#2a6296";
+    guiSelector.style.color = "black";
+    const overlayGui = document.getElementById("overlayGui");
+    const overlayCli = document.getElementById("overlayCli");
+    overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+    overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.692)";
+
+
 }
 function goToCLIPage() {
     window.location.replace("/Geek");

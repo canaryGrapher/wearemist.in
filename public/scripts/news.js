@@ -132,7 +132,7 @@ async function setNewsCards() {
                 alt="${recievedData[newsData].newsHeading}" width="100" height="250">
                 <div class="card-body col-md-8 col-12">
                 <div class="d-sm-block d-md-inline-flex w-100" style="word-break: keep-all; line-height: 30px; justify-content: flex-start">
-                        <h5 class="ml-3 mb-1 mr-3 sourceInformation text-primary" style="width: fit-content;"><filter class="sourceWebsite" onclick="window.open('${recievedData[newsData].source}')">${recievedData[newsData].credit}</filter></h5>
+                        <h5 class="ml-2 mb-1 mr-2 sourceInformation text-primary" style="width: fit-content;"><filter class="sourceWebsite" onclick="window.open('${recievedData[newsData].source}')">${recievedData[newsData].credit}</filter></h5>
                         <small class="bg-cyan-light text-primary ml-2 ml-md-0 paraFilterSelector pr-1 pl-1" id="${IdOfThisFilter}" onclick="filteredNews(this.id)">${recievedData[newsData].filterTags}</small>
                 </div>
                     <h3 class="col-lg-12 col-12">${recievedData[newsData].newsHeading}</h3>

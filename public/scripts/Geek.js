@@ -6,7 +6,7 @@ window.onload = function () {
 };
 
 var txtcounter = 0;
-var txt = "Manipal Information Security Team - version - Stable-Version_2.7.8-def:07.07.2020 2020 MIST, Manipal. All rights reserved.";
+var txt = "Manipal Information Security Team - version - Stable-Version_2.8.1-def:18.07.2020 ©2020 MIST, Manipal. All rights reserved.";
 var speed = 5;
 
 function typeWriter() {
@@ -143,9 +143,6 @@ async function handleEnter(e) {
                     var newsArr = newsArray.split("~");
                     for (var val4 in newsArr) {
                         news = news + newsArr[val4] + "<br><br>";
-                        if (val4 == 9) {
-                            break;
-                        }
                     }
                     document.getElementById(`commandOutput${i}`).innerHTML = `${news}`;
                     addCommand();

@@ -238,10 +238,16 @@ app.get("/getWCdata", function (req, res) {
 });
 
 app.get("/getNewsdata", function (req, res) {
+  let limit = 0;
   let newsList = "";
-  collectionNews.find({ $query: {}, $orderby: { sortingQuery: -1 } }).toArray((err, result1) => {
-    for (let val in result1) {
-      newsList = newsList + result1[val].newsHeading + "~";
+  collectionNews.find().sort({ sortingQuery: 1 }).toArray((err, news) => {
+    newsPosts = news.reverse();
+    for (let val in newsPosts) {
+      newsList = newsList + news[val].newsHeading + "~";
+      if (limit >= 9) {
+        break;
+      }
+      limit += 1;
     }
     res.send(newsList);
   });
