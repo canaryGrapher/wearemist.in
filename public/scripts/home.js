@@ -26,7 +26,7 @@ function switchToGUI() {
         const guiSelector = document.getElementById("GUImode");
         guiSelector.style.color = "white";
         const cliSelector = document.getElementById("CLImode");
-        cliSelector.style.color = "black";
+        cliSelector.style.color = "rgb(200, 200, 200)";
         overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.692)";
         overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
     }
@@ -36,7 +36,7 @@ function switchToCLI() {
         const cliSelector = document.getElementById("CLImode");
         cliSelector.style.color = "white";
         const guiSelector = document.getElementById("GUImode");
-        guiSelector.style.color = "black";
+        guiSelector.style.color = "rgb(200, 200, 200)";
         const overlayGui = document.getElementById("overlayGui");
         const overlayCli = document.getElementById("overlayCli");
         overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
