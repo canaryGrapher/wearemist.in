@@ -149,7 +149,7 @@ body {
         margin-right: auto;
         font-size: 25px;
         text-align: center;
-        border-color: rgba(35, 72, 190, 0.7);
+        border-color: rgba(0, 60, 255, 0.7);
         border-bottom-width: 2px;
         border-style: solid;
         
@@ -172,13 +172,13 @@ body {
         margin-right: auto;
         font-size: 25px;
         text-align: center;
-        border-color: rgba(35, 72, 190, 0.7);
+        border-color: rgba(0, 60, 255, 0.7);
         border-top-width: 2px;
         border-style: solid;
     }
 
     #overlayGui, #overlayCli {
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0, 0.4);
         color: white;
     }
 
