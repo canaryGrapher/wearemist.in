@@ -1,6 +1,6 @@
 const pageLocations = {
   "instagram": "https://www.instagram.com/sudo.mist/",
-  "teams": "mailto:f78c6659.manipal.edu@apac.teams.ms?Subject=Message%20from%20website%20user",
+  "teams": "mailto:50123d1f.manipal.edu@apac.teams.ms?Subject=Message%20from%20website%20user",
   "github": "https://github.com/WeAreMIST",
   "linkedin": "https://in.linkedin.com/company/manipal-information-security-team",
   "facebook": "https://www.facebook.com/wearemist.in/",

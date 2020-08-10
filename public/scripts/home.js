@@ -3,7 +3,7 @@ document.onkeydown = checkKey;
 function checkKey(buttonPress) {
     buttonPress = buttonPress || window.event;
     if (buttonPress.keyCode == "37" || buttonPress.keyCode == "39") {
-        // detecting up or down key press
+        // detecting key press
         const checkSelectedGUI = document.getElementById("GUImode");
         const checkSelectedCLI = document.getElementById("CLImode");
         const checkTextColor = document.getElementById("cliText");
@@ -28,7 +28,7 @@ function switchToGUI() {
         const cliSelector = document.getElementById("CLImode");
         cliSelector.style.color = "rgb(200, 200, 200)";
         overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.692)";
-        overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+        overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
     }
 }
 function switchToCLI() {
@@ -36,11 +36,11 @@ function switchToCLI() {
         const cliSelector = document.getElementById("CLImode");
         cliSelector.style.color = "white";
         const guiSelector = document.getElementById("GUImode");
-        guiSelector.style.color = "rgb(200, 200, 200)";
+        guiSelector.style.color = "rgb(255, 255, 255)";
         const overlayGui = document.getElementById("overlayGui");
         const overlayCli = document.getElementById("overlayCli");
-        overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
-        overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.692)";
+        overlayGui.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+        overlayCli.style.backgroundColor = "rgba(0, 0, 0, 0.695)";
     }
 }
 function goToCLIPage() {
