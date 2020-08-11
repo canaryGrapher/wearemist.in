@@ -54,12 +54,12 @@
     };
     new WOW().init();
   </script>
-  <div id="loaderContainer" style="z-index: 5000;">
+  <div id="loaderContainer" class="flex-column justify-content-center" style="z-index: 5000;">
     <div class="spinner"></div>
     <script>
-      // window.onload = function () {
-      //   document.getElementById("loaderContainer").style.display = "none";
-      // }
+      window.onload = function () {
+        document.getElementById("loaderContainer").style.display = "none";
+      }
     </script>
   </div>
   <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark" style="width:100vw">

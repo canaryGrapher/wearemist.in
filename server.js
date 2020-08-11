@@ -10,9 +10,9 @@ const getMail = require("./modules/emailSubscriberProvider");
 const fs = require('fs');
 const md5 = require('md5');
 const CONNECTION_URL = process.env.DATABASE_URL;
-const DATABASE_NAME1 = "Members"; //enter Database Name here
-const DATABASE_NAME2 = "Website"; //enter Database Name here
-const DATABASE_NAME3 = "UserData";
+const DATABASE_NAME1 = process.env.DATABASE_1;
+const DATABASE_NAME2 = process.env.DATABASE_2;
+const DATABASE_NAME3 = process.env.DATABASE_3;
 const device = require("express-device");
 let CCdata, MCdata, WCdata;
 
@@ -326,7 +326,7 @@ function clearBlacklist() {
 
 app.listen(PORT, () => {
   setInterval(clearBlacklist, 43200000);
-  console.log(`Server listening on http://localhost:${PORT}`);
+  console.log(`Server listening on port ${PORT}`);
   MongoClient.connect(
     CONNECTION_URL,
     { useNewUrlParser: true, useUnifiedTopology: true },

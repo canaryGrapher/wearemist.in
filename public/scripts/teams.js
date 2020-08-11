@@ -16,6 +16,7 @@ window.onresize = function () {
 showMenu = 0;
 
 async function renderTeammates() {
+  document.getElementById("loaderContainer").style.display = "none";
   let bootstrapColorChooser = ["bg-primary", "bg-success", "bg-danger", "bg-warning", "bg-info", "bg-dark", "bg-secondary", "bg-dark", "bg-olive", "bg-orange"];
   let res = await fetch(`/teaminfo`);
   recievedData = await res.json();
@@ -25,7 +26,6 @@ async function renderTeammates() {
   recievedData.CC.forEach(insertBoard);
   recievedData.MC.forEach(insertManComm);
   recievedData.WC.forEach(insertWorkComm);
-  document.getElementById("loaderContainer").style.display = "none";
   function insertBoard(itemBoard) {
     let counterCorrection = ccCounter % 8;
     let ccAnimation = animationChooser[counterCorrection];
