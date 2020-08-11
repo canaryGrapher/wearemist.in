@@ -127,7 +127,7 @@ async function setNewsCards() {
         let IdOfThisFilter = searchObject(`${recievedData[newsData].filterTags}`);
         let cardNews = `<div class="card rounded mb-4 col-12 p-0 m-0 newsCard">
         <div class="col-12 d-md-flex">
-            <img class="img col-12 col-md-4 mh-75 p-3 w-100 ml-3"
+            <img class="img col-12 col-md-4 mh-75 p-3 w-100 ml-3 mx-auto"
                 src="${recievedData[newsData].highlightPhoto}" loading="lazy"
                 alt="${recievedData[newsData].newsHeading}" width="100" height="250">
                 <div class="card-body col-md-8 col-12">

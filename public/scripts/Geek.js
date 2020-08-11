@@ -6,7 +6,7 @@ window.onload = function () {
 };
 
 var txtcounter = 0;
-var txt = "Manipal Information Security Team - version - Stable-Version_2.8.1-def:18.07.2020 ©2020 MIST, Manipal. All rights reserved.";
+var txt = "Manipal Information Security Team - version - Stable-Version_2.9.2-def:11.08.2020 ©2020 MIST, Manipal. All rights reserved.";
 var speed = 5;
 
 function typeWriter() {
@@ -83,26 +83,31 @@ async function handleEnter(e) {
         }
 
         else if (first == "loadgui") {
-            if (third == null) {
-                if (second == "news") {
+            if (third == null && second != null) {
+                if (second.toLowerCase() == "news") {
                     window.location.replace("/news");
                 }
-                else if (second == "team") {
+                else if (second.toLowerCase() == "team") {
                     window.location.replace("/team");
                 }
-                else if (second == "nongeek") {
+                else if (second.toLowerCase() == "nongeek") {
                     window.location.replace("/nonGeek");
+                }
+                else if (second.toLowerCase() == "credits") {
+                    window.location.replace("/credits");
                 }
 
                 else if (second == "-h" || second == "-H") {
-                    document.getElementById(`commandOutput${i}`).innerHTML = `List of graphical destinations [destination] -<table style="padding-bottom: 20px;"><tr><td class="pr-5">news</td><td class="commandDescription">News page</td></tr><tr class="pr-5"><td>nongeek</td><td class="commandDescription">nongeek page, GUI mode home page</td></tr><tr><td class="pr-5">team</td><td class="commandDescription">Team page</td></tr></table>`;
+                    document.getElementById(`commandOutput${i}`).innerHTML = `List of graphical destinations [destination] -<table style="padding-bottom: 20px;"><tr><td class="pr-5">news</td><td class="commandDescription">News page</td></tr><tr class="pr-5"><td>nongeek</td><td class="commandDescription">nongeek page, GUI mode home page</td></tr><tr><td class="pr-5">team</td><td class="commandDescription">Team page</td></tr><tr><td class="pr-5">credits</td><td class="commandDescription">Credits page</td></tr></table>`;
                     addCommand();
                 }
-                else if (second == null) {
-                    document.getElementById(`commandOutput${i}`).innerHTML = `Illegal use of 'loadgui'  |  USAGE: loadgui [destination]<br>Use 'loadgui -h' for info`;
+                else if(second == null) {
+                    
+                }
+                else {
+                    document.getElementById(`commandOutput${i}`).innerHTML = `Could not find graphical location '${second}' |  <br />USAGE: loadgui [destination]<br>Use 'loadgui -h' for info`;
                     addCommand();
                 }
-
             }
             else {
                 document.getElementById(`commandOutput${i}`).innerHTML = `Illegal use of 'loadgui' <br> USAGE: loadgui [destination] <br>use 'loadgui -h' for info`;

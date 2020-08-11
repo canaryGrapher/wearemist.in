@@ -1,5 +1,6 @@
 const express = require("express");
 // const pug = require("pug");
+allowedOrNot = 0;
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv").config({ path: '.env' });
@@ -25,6 +26,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const app = express();
+let date = new Date();
 
 
 app.use(express.json()); // Make sure it comes back as json
@@ -84,19 +86,50 @@ app.get("/credits", function (req, res) {
   res.sendFile(__dirname + "/public/credits.html");
 });
 
-app.post("/contactMailer", function (req, res) {
-  const mailOptions = {
-    from: process.env.EMAIL_ID, // sender address
-    to: "50123d1f.manipal.edu@apac.teams.ms", // list of receivers
-    subject: 'Message from wearemist website', // Subject line
-    html: `<h4>${req.body.name}</h4><br><p>${req.body.message}</p><br><br><p>Message from ${req.body.name}, email ${req.body.email}.</p><br><br><br><p>All details are as follows: <br />${req.header('user-agent')}<br /> IP address of the sender is: <ul> <li>${req.ips}</li> <li>${req.ip}</li></ul>`// plain text body
-  };
-  transporter.sendMail(mailOptions, function (err, info) {
-    if (err)
-      console.log(err);
-  });
-  res.redirect("/nonGeek#section3");
+app.post("/contactMailer", async function (req, res) {
+  allowedOrNot = 0;
+  collectionBlacklist.findOne({ 'ipAddress': req.ip })
+    .then(function (doc) {
+      if (!doc) {
+        console.log('IP is allowed');
+        const mailOptions = {
+          from: process.env.EMAIL_ID, // sender address
+          to: "50123d1f.manipal.edu@apac.teams.ms", // list of receivers
+          subject: 'Message from wearemist website', // Subject line
+          html: `<h4>${req.body.name}</h4><br><p>${req.body.message}</p><br><br><p>Message from ${req.body.name}, email ${req.body.email}.</p><br><br><br><p>All details are as follows: <br />${req.header('user-agent')}<br /> IP address of the sender is: <ul> <li>${req.ips}</li> <li>${req.ip}</li></ul>`// plain text body
+        };
+        transporter.sendMail(mailOptions, function (err, info) {
+          if (err)
+            console.log(err);
+        });
+        collectionBlacklist.insertOne( { ipAddress: req.ip } );
+        console.log("Added to the blacklist");
+        res.redirect("/nonGeek#section3");
+      }
+      else {
+        console.log('IP is not allowed');
+        res.status(400).send({
+          message: 'not_allowed'
+       });
+      }
+    });
 });
+
+app.get("/checkblackliststatus", async function(req, res) {
+  collectionBlacklist.findOne({ 'ipAddress': req.ip })
+    .then(function (doc) {
+      if (!doc) {
+        console.log(`Document was not found ${doc}`)
+        result = "not_allowed";
+        res.send("true");
+      }
+      else {
+        console.log(`${doc} was found`)
+        result = "allowed";
+        res.send("false");
+      }
+    });
+})
 
 app.get("/news", function (req, res) {
   res.sendFile(__dirname + "/public/news.html");
@@ -263,7 +296,6 @@ app.get("/verifyWriter", function (req, res) {
         res.send("true");
       }
     });
-
 });
 
 app.get("/getClubNewsdata", function (req, res) {
@@ -287,7 +319,13 @@ app.get("*", function (req, res) {
   res.sendFile(__dirname + "/public/errorPage.html");
 });
 
+function clearBlacklist() {
+  console.log("deleting now");
+  collectionBlacklist.deleteMany({});
+}
+
 app.listen(PORT, () => {
+  setInterval(clearBlacklist, 43200000);
   console.log(`Server listening on http://localhost:${PORT}`);
   MongoClient.connect(
     CONNECTION_URL,
@@ -306,6 +344,7 @@ app.listen(PORT, () => {
       collectionClubNews = database2.collection("clubNews");
       collectionWriters = database2.collection("verifiedWriters");
       collectionMailingList = database3.collection("mailingList");
+      collectionBlacklist = database3.collection("blacklist");
       console.log("Connected to mongoDB Atlas");
     }
   );
