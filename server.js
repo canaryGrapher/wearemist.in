@@ -1,24 +1,20 @@
 const express = require("express");
-// const pug = require("pug");
-allowedOrNot = 0;
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv").config({ path: '.env' });
 const MongoClient = require("mongodb").MongoClient;
 const getMail = require("./modules/emailSubscriberProvider");
-// const ObjectId = require("mongodb").ObjectID;
 const fs = require('fs');
 const md5 = require('md5');
 const CONNECTION_URL = process.env.DATABASE_URL;
 const DATABASE_NAME1 = process.env.DATABASE_1;
 const DATABASE_NAME2 = process.env.DATABASE_2;
 const DATABASE_NAME3 = process.env.DATABASE_3;
-const device = require("express-device");
 let CCdata, MCdata, WCdata;
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.zoho.com",
-  port: 465,
+  host: process.env.HOST_NAME,
+  port: process.env.TRANSPORTER_MAILPORT,
   auth: {
     user: process.env.EMAIL_ID,
     pass: process.env.EMAIL_PASSWORD
@@ -30,7 +26,6 @@ let date = new Date();
 
 
 app.use(express.json()); // Make sure it comes back as json
-app.use(device.capture());
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.set('trust proxy', true); //setting up so that we get the IP of the user
@@ -87,14 +82,13 @@ app.get("/credits", function (req, res) {
 });
 
 app.post("/contactMailer", async function (req, res) {
-  allowedOrNot = 0;
   collectionBlacklist.findOne({ 'ipAddress': req.ip })
     .then(function (doc) {
       if (!doc) {
         console.log('IP is allowed');
         const mailOptions = {
           from: process.env.EMAIL_ID, // sender address
-          to: "50123d1f.manipal.edu@apac.teams.ms", // list of receivers
+          to: process.env.TEAMS_EMAIL, // list of receivers
           subject: 'Message from wearemist website', // Subject line
           html: `<h4>${req.body.name}</h4><br><p>${req.body.message}</p><br><br><p>Message from ${req.body.name}, email ${req.body.email}.</p><br><br><br><p>All details are as follows: <br />${req.header('user-agent')}<br /> IP address of the sender is: <ul> <li>${req.ips}</li> <li>${req.ip}</li></ul>`// plain text body
         };
@@ -193,9 +187,9 @@ app.post("/addToMailingList", function (req, res) {
       );
       let getHTMLforSubscription = getMail.emailCreator(req.body.subscriberName, unsubscribeString);
       let mailOptions = {
-        from: "sudo@wearemist.in", // sender address
-        to: `${req.body.subscriberEmail}`, // list of receivers
-        subject: 'Welcome onboard', // Subject line
+        from: "sudo@wearemist.in",
+        to: `${req.body.subscriberEmail}`,
+        subject: 'Welcome onboard',
         html: `${getHTMLforSubscription}`
       };
       transporter.sendMail(mailOptions, function (err, info) {
@@ -230,13 +224,8 @@ app.get("/unsubscribe", function (req, res) {
 })
 
 app.get("/getData", function (req, res) {
-  let ip = req.connection.remoteAddress;
-  let modifiedIP = ip.split(":");
-  let lengthOfIP = modifiedIP.length;
-  let lastElement = lengthOfIP - 1;
-  let otherOption = "127.0.0.1";
-  let sendingIP = modifiedIP[lastElement] || otherOption;
-  res.send(sendingIP);
+  let ip = req.ip;
+  res.send(ip);
 });
 
 app.get("/getCCdata", function (req, res) {
