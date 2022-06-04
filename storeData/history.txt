@@ -1,0 +1,451 @@
+<div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/alanTuring.png" alt="Alan Turing">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">1939</h4>
+            <p class="pl-3 pb-5">Alan Turing and his team invent the Bombe, a code breaking
+              machine</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/capitol.png" alt="Picture of the Capitol Building, Washington DC">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">1966</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The first federally prosecuted computer crime,
+              identified
+              as
+              such, was the alteration of bank records by computer in Minneapolis in 1966.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/arpanet.png" alt="Scientists working on the Arpanet">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">1971</h4>
+            <p class="pl-3 pb-5">The first real computer virus was released in lab by an employee of a
+              company working on building ARPANET.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/at&t.png" alt="AT&T logo">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">1981</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Ian Murphy, known as Captain Zap, was the first person
+              convicted
+              of a cyber crime. He hacked into the AT&T network and changed the internal clock to charge
+              off-hours rates at peak times.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/elkCloner.png" alt="An image of a skull in a terminal">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">1982</h4>
+            <p class="pl-3 pb-5">Elk Cloner, a virus, is written as a joke by a 15 year old kid. It is one of the first
+              known viruses to leave its original operating system and spread in the “wild”. It attacked Apple II
+              operating systems and spread by floppy disk.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/414+.png" alt="414 teenage hacker group's member">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">1983</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The FBI busts the "414s," a group of young hackers who
+              break into several U.S. government networks, in some cases using only an Apple II+ computer and a modem.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/creditcardFraud.png" alt="A picture of credit cards hooked to a fishhook">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">1984</h4>
+            <p class="pl-3 pb-5">The Credit Card Fraud Act of 1984: This law was enacted primarily in the interest of
+              controlling credit card fraud and card counterfeiting. Because the definition of credit card is broad, the
+              law covers many computer-related offenses.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/Brain-virus.png" alt="A virus's hex values">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">1985</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The first PC virus is created. Named Brain, the virus is
+              a boot viruses and, for the first time, uses stealth techniques.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/electronic-communications-privacy-act.png" alt="Electronic Communication Privacy Act">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">1986</h4>
+            <p class="pl-3 pb-5">The 1986 Electronic Privacy Act extends the current privacy guarantees for traditional
+              telephones to communications
+              involving cellular phones that operate by high frequency
+              radio waves, transmissions by private satellite, paging devices, and messages transmitted and stored in
+              computers, known as "electronic mail."</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/Ronald-Reagan.png" alt="A piture of Ronal Reagan, former president of the United States">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">1987</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">President Ronald Reagan signs the Computer Security Act
+              of 1987, an attempt to protect federal agencies' computer databases.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/Robert_Tappan_Morris.png" alt="A picture of Robert Morris">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">1988</h4>
+            <p class="pl-3 pb-5">Robert Morris, at the age of 22, launches the Internet Worm. It spreads to 6,000 computers, 1/10 of
+              all computers on the Internet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/uc-berkeley-logo.png" alt="Logo of UC Berkeley">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">1989</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Five West German computer users are arrested on
+              espionage charges after an administrator at UC Berkeley detects and tracks their intrusions into U.S.
+              government and university computer systems.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/electronic-frontier-foundation.png" alt="Electronic Frontier Foundation">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">1990</h4>
+            <p class="pl-3 pb-5">The Electronic Frontier Foundation is created, with the primary goal of defending the
+              rights of people accused of computer hacking.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/michelangelo.png" alt="A picture of a bug on a printed paper with binary data">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">1991</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The Michelangelo virus was first discovered in February
+              1991 by Australian veteran anti-virus expert Roger Riordan. On March 6th, the virus was programmed to
+              overwrite the first 17 sectors of every track on infected hard disks, heads zero to four. The consequence
+              of this payload was, of course, painful - you would be hard pressed to recover your data if the virus
+              triggered on your PC.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/kaos.png" alt="A coded file">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">1994</h4>
+            <p class="pl-3 pb-5">A virus writer utilizes the Internet to spread malicious code when the Kaos virus is
+              posted to a
+              newsgroup</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/Kevin_Mitnick.png" alt="A picture of Kevin Mitnick">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">1995</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Kevin Mitnick, "America's Most Wanted Computer
+              Outlaw," eluded the police, US Marshalls, and FBI for over two years after vanishing while on probation
+              for his 1989 conviction for
+              computer and access device fraud. Mitnick was arrested by the FBI in Raleigh, North Carolina, on February
+              15th, 1995.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/windows-nt.png" alt="Windows NT logo">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">1998</h4>
+            <p class="pl-3 pb-5">NASA, the U.S. Navy, and university campuses across the United States are targets of
+              denial of service (DoS) attacks on computers running MS Windows NT and Windows 95.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/melissaVirus.png" alt="A fancy image of code">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">1999</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Melissa virus spread so fast that a number of big
+              companies, including Intel and Microsoft, that used Outlook, had to shut down their email systems to hold
+              up the damage.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/yahoo.png" alt="Logo of Yahoo">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">2000</h4>
+            <p class="pl-3 pb-5">DoS attacks shut down Yahoo!, Buy.com, Amazon, eBay, and CNN. Yahoo! estimates that its
+              three-hour outage cost the company as much as 5 percent of its weekly ad revenue. In January 2001, a
+              16-year-old hacker from Canada pleads guilty to launching the attacks.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy" src="./images/historyChart/ncsa.png" alt="National Cybersecurity Association Alliance Logo">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">2001</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The National Cyber Security Alliance (NCSA) is
+              established in response to the September 11 attacks on the World Trade Center.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/United_States_Department_of_Homeland_Security.png" alt="Logo of the United States Department of Homeland Security">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">2002</h4>
+            <p class="pl-3 pb-5">The Bush administration files a bill to create the Department of Homeland Security,
+              which, among other things, will be responsible for protecting the nation's critical IT infrastructure.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/anonymous.png" alt="Logo of Anonymous hacktivist group">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">2003</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The hacktivist group Anonymous was formed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/newzealand.png" alt="The flag of New Zealand">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">2004</h4>
+            <p class="pl-3 pb-5">New Zealand's Government (National Party) website defaced by a hacktivist group.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/iSKORPiTX.png" alt="Banner showing 'Hacked by iSKORPiTX' message">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">2006</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The largest defacement in Web History as of that time is
+              performed by the Turkish hacker iSKORPiTX who successfully hacked 21,549 websites in one shot. Wikilieaks,
+              an international non-profit organization that publishes news leaks and classified media provided by
+              anonymous sources, was released.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/unitednations.png" alt="United Nation's logo">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">2007</h4>
+            <p class="pl-3 pb-5">United Nations website hacked by Turkish Hacker Kerem125.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/pentagon.png" alt="An image of the Pentagon, United States">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">2008</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Around 20 Chinese hackers claim to have gained access to
+              the world's most sensitive sites, including The Pentagon. They operated from an apartment on a Chinese
+              Island.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/conficker-worm-virus.png" alt="Image of conficker worm">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">2009</h4>
+            <p class="pl-3 pb-5"> Conficker worm infiltrated millions of PCs worldwide including many government-level
+              top-security computer networks.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/MalCon_logo.png" alt="MALCON Malware Image">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">2010</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The first Malware Conference, MALCON took place in
+              India. Founded by Rajshekhar Murthy, malware coders are invited to showcase their skills at this annual
+              event supported by the Government of India. An advanced malware for Symbian OS is released by hacker
+              A0drul3z.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/Lulz_Security.png" alt="Logo of the hacker group 'Lulz Security'">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">2011</h4>
+            <p class="pl-3 pb-5">The hacker group Lulz Security is formed. The YouTube channel of Sesame Street was
+              hacked, streaming pornographic content for
+              about 22 minutes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/f0rtys3v3n.png" alt="Silhouette of a man">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">2012</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The websites of several Turkish representative offices
+              of international IT-companies are defaced within the same day by F0RTYS3V3N (Turkish Hacker), including
+              the websites of Google, Yandex, Microsoft, Gmail, MSN, Hotmail, PayPal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/tumblr.png" alt="Logo of Tumblr social media">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">2013</h4>
+            <p class="pl-3 pb-5">The social networking website Tumblr is attacked by hackers. Consequently, 65,469,298
+              unique emails and passwords were leaked from Tumblr.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/globetelecom.png" alt="Logo of globe telecom">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">2014</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The website of the Philippine telecommunications company
+              Globe Telecom was hacked in response to the poor internet service they are distributing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/AshleyMadison.png" alt="Image showing Ashley Madison website">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">2015</h4>
+            <p class="pl-3 pb-5">The servers of extramaritial affairs website Ashley Madison were breached.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/julian.png" alt="Image of Julian Assange">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">2016</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The 2016 Dyn cyberattack is being conducted with a
+              botnet consisting of IOTs infected with Mirai by the hacktivist groups SpainSquad, Anonymous, and New
+              World Hackers, reportedly in retaliation for Ecuador's rescinding Internet access to WikiLeaks founder
+              Julian Assange at their embassy in London, where he has been granted asylum.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/Wana_Decrypt0r.png" alt="An image of the WannaCry ransomware">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">2017</h4>
+            <p class="pl-3 pb-5">WannaCry ransomware attack started on Friday, 12 May 2017,[97] and has been described
+              as unprecedented in scale, infecting more than 230,000 computers in over 150 countries.[98] A hacked
+              unreleased Disney film is held for ransom, to be paid in Bitcoin.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/ontario.png" alt="An image of Ontario in Canada">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">2018</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">The computer systems in the town of Wasaga Beach in Ontario, Canada, are seized by hackers with ransomware.</p>
+              
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/Baltimore.png" alt="Image of Baltimore city in the United States">
+          <div class="col-lg-10">
+            <h4 class="pt-5 pl-3 mb-0">2019</h4>
+            <p class="pl-3 pb-5">The city of Baltimore, Maryland USA computer systems are seized by hackers using
+              ransomware known as RobbinHood that encrypts files with a "file-locking" virus, as well as the tool
+              EternalBlue</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="row d-md-flex flex-md-row-reverse historyCards">
+          <img class="col-lg-2 mx-auto rounded-circle w-100 h-100" loading="lazy"
+            src="./images/historyChart/Flag_of_the_Republic_of_China.png" alt="Flag of the Republic of China, Taiwan">
+          <div class="col-lg-10">
+            <h4 class="text-lg-right pt-5 pl-3 mb-0">2020</h4>
+            <p class="text-lg-right pl-3 pb-5 changeThisToLeft">Anonymous hacked the United Nation's website and created
+              a page for Taiwan, a country which has not had a seat at the UN since 1971. The hacked page featured the
+              Flag of Taiwan, the KMT emblem, a Taiwan Independence flag, the Anonymous logo, and embedded YouTube
+              videos such as the Taiwanese national anthem and the closing score for the 2019 film Avengers: Endgame
+              titled "It's Been a Long, Long Time", along with a caption.</p>
+          </div>
+        </div>
+      </div>

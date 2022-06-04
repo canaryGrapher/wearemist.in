@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Cybermanipal is your destination for cybersecurity news from around the world.">
+    <meta name="keywords"
+        content="cybersecurity, privacy, Manipal, Manipal institute of technology, information security, computer science, seminars, workshops, student club, student organization, college, India, Indian, college students, cyber, hacking, cracking">
+    <meta name="theme-color" content="#343a40">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./stylings/news.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>CyberManipal | MIST</title>
+    <meta name="title" content="CyberManipal | MIST">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="MIST Web Dev Team">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./images/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./images/favicon/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-128.png" sizes="128x128">
+    <meta name="application-name" content=" ">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="./images/favicon/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="./images/favicon/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="./images/favicon/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="./images/favicon/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="./images/favicon/mstile-310x310.png">
+</head>
+
+<body>
+    <div id="loaderContainer" class="flex-column justify-content-center" style="z-index: 5000;">
+        <div class="spinndle"></div>
+      </div>
+    <nav class="navbar fixed-top mb-5 navbar-expand-lg navbar-dark bg-dark overflow-auto" style="width:100vw"
+        id="navigationBar">
+        <a class="navbar-brand logo pl-4" href="/"><img class="img" src="./images/logo/logoLight.png" height="30px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="ml-auto mr-5 navbar-nav change-nav">
+                <li class="nav-item">
+                    <h5 class="nav-link mr-3 active" href="#">CyberManipal</h5>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="/nongeek#section0">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="/nongeek#section1">What we do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="/nongeek#connect">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="/team">Team</a>
+                </li>
+                <li class="nav-item d-lg-none" data-toggle="modal" data-target="#categoryModal">
+                    <a class="nav-link mr-3">Filter</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link mr-3 active" href="/news">News</a>
+                </li>
+                <li class="nav-item" data-toggle="modal" data-target="#subscribeModal" style="cursor: pointer;">
+                    <a
+                        class="text-center nav-link text-light pr-lg-3 pl-lg-3 d-lg-inline-block d-none bg-primary">Subscribe</a>
+                    <a class="nav-link text-info d-lg-none">Subscribe</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="full-chart d-flex">
+        <div class="col-2 d-none d-lg-flex flex-column sidebar justify-center bg-transparent" id="sidebarContainer">
+            <div class="tagContainers mx-auto">
+                <h3 class="text-secondary mb-3" style="font-weight: normal;">Explore Categories</h3>
+                <p class="text-info ml-2 filterSelector" style="font-weight: normal;" onclick="filteredNews(this.id);"
+                    id="category1">
+                    Vulnerabilities</p>
+                <p class="text-info ml-2 filterSelector" style="font-weight: normal;" onclick="filteredNews(this.id);"
+                    id="category2">
+                    Breaches
+                </p>
+                <p class="text-info ml-2 filterSelector" style="font-weight: normal;" onclick="filteredNews(this.id);"
+                    id="category3">
+                    Research and Development
+                </p>
+                <p class="text-info ml-2 filterSelector" style="font-weight: normal;" onclick="filteredNews(this.id);"
+                    id="category4">
+                    Frauds
+                    and
+                    Scams</p>
+                <p class="text-info ml-2 filterSelector" style="font-weight: normal;" onclick="filteredNews(this.id);"
+                    id="category5">
+                    Policies and Regulations</p>
+            </div>
+        </div>
+        <div class="col-2 d-none d-lg-flex sidebarCover">
+        </div>
+        <div class="col-lg-10 col-12">
+            <div class="row-fluid">
+                <h1 class="pt-5 d-none d-lg-flex display-3 mt-5 text-center"
+                    style="font-weight: normal;justify-content: center;">
+                    CyberManipal</h1>
+                <h1 class="pt-5 d-lg-none mt-5 text-center" style="font-weight: normal;justify-content: center;">
+                    CyberManipal</h1>
+            </div>
+            <div class="row-fluid">
+                <div class="pt-1">
+                    <h2 class="pt-5 pl-3 text-secondary" style="font-weight: normal;">Club Announcements</h2>
+                    <p class="d-lg-none text-info text-center">Swipe for more <span class="mb-3 mt-3"
+                            style="font-weight: bolder;">&rarr;</span></p>
+                </div>
+                <div class="scrollmenu" id="scrollAnnouncements"></div>
+            </div>
+            <div class="container-fluid p-0">
+                <h2 class="pt-5 text-secondary" style="font-weight: normal;">Cybersecurity News</h2>
+                <h5 class="pl-1 text-secondary" style="font-weight: normal;">Latest News, from MIST</h5>
+                <div class="container-fluid p-0" id="newsBulletin"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-block bg-dark" id="footer">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 footerDivision">
+                <div class="footerLogo center-vertical text-center mx-auto col-12"><img class="img text-center mx-auto"
+                        src="./images/logo/logoLight.png" style="height: 50px;width: 120px;">
+                </div>
+            </div>
+            <div class="text-center col-lg-4 col-sm-12 footerDivision center-vertical pl-2">
+                <div class="row mx-auto">
+                    <div class="lightText pb-xs-5 col-12">&copy; 2020 Manipal Information Security Team. All
+                        rights
+                        reserved
+                    </div>
+                    <div class="pb-sm-5 pb-md-0 contributors col-12"><a href="/credits">Check out our
+                            contributors</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 footerDivision center-vertical pl-2">
+                <div class="row mx-auto text-center">
+                    <div class="pb-0 mb-0 mt-lg-0 mt-4 col-12">
+                        <h4>Other Links</h4>
+                    </div>
+                    <div class="pb-md-0 contributors col-12"><a
+                            href="mailto:sudo@wearemist.in?Subject=Reporting%20an%20article">Report an
+                            article</a>
+                    </div>
+                    <div class="pb-md-0 pb-3 contributors col-12"><a
+                            href="mailto:sudo@wearemist.in?Subject=Submit%20an%20Article">Submit Content</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Modal for choosing the news filter on mobile devices -->
+    <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="exploreCategories"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Explore Categories</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-info ml-2" style="font-weight: normal;" data-toggle="collapse"
+                        data-target=".navbar-collapse" onclick="filteredNews(this.id);" data-dismiss="modal"
+                        id="category1">
+                        Vulnerabilities</p>
+                    <p class="text-info ml-2" style="font-weight: normal;" data-toggle="collapse"
+                        data-target=".navbar-collapse" onclick="filteredNews(this.id);" data-dismiss="modal"
+                        id="category2">
+                        Breaches
+                    </p>
+                    <p class="text-info ml-2" style="font-weight: normal;" data-toggle="collapse"
+                        data-target=".navbar-collapse" onclick="filteredNews(this.id);" data-dismiss="modal"
+                        id="category3">
+                        Research and Development</p>
+                    <p class="text-info ml-2" style="font-weight: normal;" data-toggle="collapse"
+                        data-target=".navbar-collapse" onclick="filteredNews(this.id);" data-dismiss="modal"
+                        id="category4">
+                        Frauds
+                        and
+                        Scams</p>
+                    <p class="text-info ml-2" style="font-weight: normal;" data-toggle="collapse"
+                        data-target=".navbar-collapse" onclick="filteredNews(this.id);" data-dismiss="modal"
+                        id="category5">
+                        Policies
+                        and Regulations</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Nevermind</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for subscribing -->
+    <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribe"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="exampleModalLabel">Subscribe</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="/addToMailingList">
+                        <img class="img mx-auto mb-3 d-block" src="./images/assets/subscribeForm.png" width="60%">
+                        <div class="form-group">
+                            <label for="emailSubscribe">Name</label>
+                            <input type="text" class="form-control" id="nameSubscribe" aria-describedby="nameHelp"
+                                placeholder="Your Name" name="subscriberName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailSubscribe">Email</label>
+                            <input type="email" class="form-control" id="emailSubscribe" aria-describedby="emailHelp"
+                                placeholder="Your email address" name="subscriberEmail" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <p class="text-center">What do you want to subscribe for?</p>
+                        <div class="form-group d-md-flex align-items-center"
+                            style="margin: 0 auto; width: fit-content;">
+                            <div class="form-check mr-4">
+                                <input type="checkbox" class="form-check-input" id="checkForEvents"
+                                    name="eventsYESorNO">
+                                <label class="form-check-label" for="checkForEvents">Events</label>
+                            </div>
+                            <div class="form-check mr-4">
+                                <input type="checkbox" class="form-check-input" id="checkForNewsLetter"
+                                    name="newsYESorNO">
+                                <label class="form-check-label" for="checkForNewsLetter">Newsletter</label>
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <button type="submit" class="pr-3 pl-3 mt-2 btn btn-primary mx-auto">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Nevermind</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./scripts/news.js"></script>
+</body>
+
+</html>

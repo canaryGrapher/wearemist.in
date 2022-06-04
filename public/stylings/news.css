@@ -1,0 +1,237 @@
+#loaderContainer {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eeeeee;
+  z-index: 1000;
+  line-height: 100vh;
+  text-align: center;
+}
+
+.spinndle {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  margin: auto auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+  
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.bg-ambientdark {
+  background-color: #212121;
+}
+
+.top-spacing > .card {
+  border: 0;
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.white-border {
+  border-color: #fff;
+}
+
+footer {
+  /* margin-top: 20vh; */
+  height: fit-content;
+  width: 100vw;
+  background-color: #212529;
+  color: #D3D3D3;
+  z-index: 100;
+}
+  
+.center-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+  
+.footerDivision:first-child {
+  padding: 50px;
+}
+  
+.biggerText {
+  font-size: 1.5rem;
+}
+  
+.lightText {
+  color: #6C757D;
+}
+  
+.itemContainer {
+  margin: auto;
+}
+  
+.contact-us {
+  font-size: 25px;
+  margin-bottom: 10px;
+  padding-left: 65vw;
+}
+  
+#btn-1:hover, #btn-2:hover, #btn-3:hover, #btn-4:hover, #btn-5:hover, #btn-6:hover {
+  transition-duration: 0.6s;
+  color: #fff;
+}
+  
+.copyright {
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 23px;
+  color: rgb(156, 156, 156);
+}
+  
+.item:hover {
+  color: rgb(204, 204, 204);
+  transition-duration: 0.6s;
+}
+
+.mottoValuesCards {
+  display: flex;
+  flex-direction: row;
+}
+  
+.mottoValuesCards:nth-child(odd) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+div.scrollmenu {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+div.scrollmenu .card {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+}
+
+.full-chart {
+  width: 100vw;
+}
+
+.bg-cyan-light {
+  background-color: rgba(8, 130, 201, 0.123);
+}
+
+.card-tag-holder {
+  word-break: keep-all;  
+}
+
+.sidebar {
+  position: fixed;
+  flex-direction: column;
+  padding-top: 5%;
+  z-index: 1;
+}
+
+.modal-body{
+  word-wrap: break-word;
+}
+
+.card {
+  word-wrap: unset;
+}
+
+.bg-color1 {
+  background-color: #7a45ec;
+}
+
+.bg-color2 {
+  background-color: #00796b;
+}
+
+.bg-color3 {
+  background-color: #607d8b;
+}
+
+.bg-darkTransparent {
+  background-color: rgba(0, 0, 0, 0.418);
+}
+
+.linkToOriginal:hover {
+  color: rgb(53, 53, 53) !important;
+  cursor: pointer;
+}
+
+.sourceInformation {
+  width: 90%;
+  margin: 0 auto;
+  word-wrap: normal;
+  word-break: keep-all;
+}
+
+.sourceWebsite {
+  word-break: keep-all;
+}
+
+.sourceWebsite:hover {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+#newsBulletin {
+  display: grid;
+}
+
+.paraFilterSelector:hover {
+  background-color: rgba(67, 130, 202, 0.315);
+  cursor: pointer;
+}
+
+.filterSelector:hover {
+    cursor: pointer;
+    color: rgb(104, 104, 196) !important;
+}
+
+.clubAnnouncementCardHorizontal:hover {
+  cursor: pointer;
+}
+
+.clearFilter {
+  cursor: pointer;
+}
+
+@-moz-document url-prefix() {
+  .newsCard {
+      margin-bottom: 6rem !important;
+  }
+
+  .sourceInformation {
+    width: auto;
+  }
+}

@@ -1,0 +1,232 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+body {
+overflow-x: hidden;
+}
+
+/* For the loading screen */
+#loaderContainer {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eeeeee;
+  z-index: 1000;
+  line-height: 100vh;
+  text-align: center;
+}
+
+.spinning {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  margin: auto auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+footer {
+  margin-top: 20vh;
+  height: fit-content;
+  width: 100vw;
+  background-color: #212529;
+  color: #D3D3D3;
+}
+
+.center-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footerDivision:first-child {
+  padding: 50px;
+}
+
+.biggerText {
+  font-size: 1.5rem;
+}
+
+.lightText {
+  color: #6C757D;
+}
+
+
+#howToApply {
+width: 90%;
+height: 90%;
+position: fixed;
+z-index: 200;
+background-color: rgb(238, 238, 238);
+left: 5%;
+right: 5%;
+top: 7%;
+bottom: 3%;
+border-radius: 15px;
+display: none;
+flex-direction: column;
+}
+
+#closeButton {
+font-size: 40px;
+width: 100%;
+height: min-content;
+}
+
+#Xbut {
+padding: 1vh 1.5vw;
+color: rgb(0, 0, 0);
+width: min-content;
+float: inline-end;
+}
+
+#Xbut:hover {
+color: rgb(255, 0, 0);
+}
+
+#contentApply {
+width: 93%;
+color: rgb(8, 8, 8);
+overflow-y: scroll;
+scrollbar-width: none;
+margin: 2vh auto;
+}
+
+#contentApply > h1 {
+padding-bottom: 2vh;
+font-weight: bold;
+text-shadow: 3px 3px 3px #9696968c;
+}
+
+howtoapply {
+font-size: 20px;
+}
+
+#header {
+height: 60vh;
+width: 100vw;
+margin: auto;
+text-align: center;
+background-image: url("../images/assets/teams.jpg");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+#header > h1 {
+font-size: 5vh;
+padding-top: 25vh !important;
+color: aliceblue;
+padding-bottom: 2vh;
+}
+
+#applyButton {
+color: rgb(255, 255, 255);
+border-radius: 20px;
+border-width: 2.5px;
+border-style: solid;
+border-color: aliceblue;
+padding: 1.3vh 1vw;
+font-size: 2.5vh;
+}
+
+#applyButton:hover {
+background-color: aliceblue;
+color: black;
+transition-duration: 1s;
+}
+
+#teamLinksNavbar {
+width: 100vw;
+height: 6vh;
+display: flex;
+position: relative;
+justify-content: center;
+}
+
+.teamLinkBox {
+font-size: 120%;
+color: #fff;
+}
+
+.teamLinkBox:hover {
+color: #000;
+background-color: #fff;
+}
+
+#cc,
+#mc,
+#wc {
+height: 6vh;
+line-height: 6vh;
+}
+
+.card, .card-footer {
+border: 0;
+background-color: #fff;
+}
+
+.fab {
+font-size: 2.1rem;
+color: rgb(46, 46, 46);
+text-decoration: none;
+}
+
+.fab:hover {
+transform: scale(1.2);
+border: 5px 10px 20px #000000;
+color: #000;
+}
+
+.ccImages {
+height: 13rem;
+width: 13rem;
+}
+
+.bg-orange {
+background-color: #ff5722;
+}
+
+.bg-olive {
+background-color: #827717;
+}
+
+@media screen and (max-width: 600px) {
+.fab {
+  font-size: 1.5rem;
+} 
+}
+

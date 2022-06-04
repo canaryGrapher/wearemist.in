@@ -1,0 +1,190 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+body {
+  overflow-x: hidden;
+}
+
+footer {
+  margin-top: 20vh;
+  height: fit-content;
+  width: 100vw;
+  background-color: #212529;
+  color: #D3D3D3;
+}
+
+.center-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footerDivision:first-child {
+  padding: 50px;
+}
+
+.biggerText {
+  font-size: 1.5rem;
+}
+
+.lightText {
+  color: #6C757D;
+}
+
+.itemContainer {
+  margin: auto;
+}
+
+.contact-us {
+  font-size: 25px;
+  margin-bottom: 10px;
+  padding-left: 65vw;
+}
+
+#btn-1:hover, #btn-2:hover, #btn-3:hover, #btn-4:hover, #btn-5:hover, #btn-6:hover {
+  transition-duration: 0.6s;
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 23px;
+  color: rgb(156, 156, 156);
+}
+
+.item:hover {
+  color: rgb(204, 204, 204);
+  transition-duration: 0.6s;
+}
+
+.mottoValuesCards {
+  display: flex;
+  flex-direction: row;
+}
+
+.mottoValuesCards:nth-child(odd) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.sectionBox {
+  padding: auto 5vw;
+}
+
+.homepage {
+  width: 100vw !important;
+  height: 100vh;
+  background-image: url("../images/backgrounds/homeBackground.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.233);
+}
+
+.homeBanner {
+  padding: 5vh 5vw;
+  background-color: rgba(0, 0, 0, 0.623);
+  text-align: center;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.history-flow-chart {
+  height: 85vh;
+  overflow-y: scroll;
+  background-image: url("../images/backgrounds/worldMap.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.temp-flowChart {
+  background-image: url("../images/backgrounds/worldMap.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+/* width */
+.history-flow-chart::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.history-flow-chart::-webkit-scrollbar-track {
+  background: #c0c0c0;
+}
+
+/* Handle */
+.history-flow-chart::-webkit-scrollbar-thumb {
+  width: 20px;
+  background: rgb(61, 61, 61);
+}
+
+.contactImageContainer {
+    background-image: url("../images/assets/contactIllustration.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.socialLinks:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+
+/* For the loading screen */
+#loaderContainer {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eeeeee;
+  z-index: 1000;
+  line-height: 100vh;
+  text-align: center;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  margin: auto auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+@media screen and (max-width:991px) {
+.historyCards:nth-child(2n) {
+  flex-direction: column-reverse;
+}
+}

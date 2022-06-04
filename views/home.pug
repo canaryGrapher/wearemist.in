@@ -1,0 +1,63 @@
+doctype html
+head
+  meta(name='theme-color', content='#486e91')
+  meta(name='title', content='Boot | MIST')
+  meta(name='description', content='Manipal Information Security Team is a team of cybersecurity enthusiasts, helping people get acquainted and practice healthy cyber life.')
+  meta(name='keywords', content='cybersecurity, privacy, Manipal, Manipal institute of technology, information security, computer science, seminars, workshops, student club, student organization, college, India, Indian, college students, cyber, hacking, cracking')
+  meta(name='robots', content='index, follow')
+  meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+  meta(name='language', content='English')
+  meta(name='author', content='MIST Web Dev Team')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', type='text/css', href='./stylings/home.css')
+  link(rel='apple-touch-icon-precomposed', sizes='57x57', href='./images/favicon/apple-touch-icon-57x57.png')
+  link(rel='apple-touch-icon-precomposed', sizes='114x114', href='./images/favicon/apple-touch-icon-114x114.png')
+  link(rel='apple-touch-icon-precomposed', sizes='72x72', href='./images/favicon/apple-touch-icon-72x72.png')
+  link(rel='apple-touch-icon-precomposed', sizes='144x144', href='./images/favicon/apple-touch-icon-144x144.png')
+  link(rel='apple-touch-icon-precomposed', sizes='60x60', href='./images/favicon/apple-touch-icon-60x60.png')
+  link(rel='apple-touch-icon-precomposed', sizes='120x120', href='./images/favicon/apple-touch-icon-120x120.png')
+  link(rel='apple-touch-icon-precomposed', sizes='76x76', href='./images/favicon/apple-touch-icon-76x76.png')
+  link(rel='apple-touch-icon-precomposed', sizes='152x152', href='./images/favicon/apple-touch-icon-152x152.png')
+  link(rel='icon', type='image/png', href='./images/favicon/favicon-196x196.png', sizes='196x196')
+  link(rel='icon', type='image/png', href='./images/favicon/favicon-96x96.png', sizes='96x96')
+  link(rel='icon', type='image/png', href='./images/favicon/favicon-32x32.png', sizes='32x32')
+  link(rel='icon', type='image/png', href='./images/favicon/favicon-16x16.png', sizes='16x16')
+  link(rel='icon', type='image/png', href='./images/favicon/favicon-128.png', sizes='128x128')
+  meta(name='application-name', content=' ')
+  meta(name='msapplication-TileColor', content='#FFFFFF')
+  meta(name='msapplication-TileImage', content='./images/favicon/mstile-144x144.png')
+  meta(name='msapplication-square70x70logo', content='./images/favicon/mstile-70x70.png')
+  meta(name='msapplication-square150x150logo', content='./images/favicon/mstile-150x150.png')
+  meta(name='msapplication-wide310x150logo', content='./images/favicon/mstile-310x150.png')
+  meta(name='msapplication-square310x310logo', content='./images/favicon/mstile-310x310.png')
+  script(type='text/javascript', src='./scripts/home.js')
+  title Boot | MIST
+body(onload='switchToCLI()')
+  #container
+    #grubSide
+      #grubTitle
+        h2#grubHome
+          | Manipal Information Security Team
+          | &nbsp-&nbsp
+          | version - STABLE_2.9.3-def:11.08.2020
+      #grubSelector
+        #CLImode(onmouseover='switchToCLI()' onclick='goToCLIPage()')
+          #overlayCli
+            p#cliText
+              | Geek Mode (CLI mode) 
+              br
+              span.modeInfo Command Line Mode for the geek in you
+        #GUImode(onmouseover='switchToGUI()' onclick='goToGUIPage()')
+          #overlayGui  
+            p
+              | Non-Geek Mode (GUI mode) 
+              br
+              span.modeInfo Graphical Mode for easy viewing
+      #grubModeInfo
+        p
+          | Use the &larr; and &rarr; keys to select a mode.
+          | Press enter to boot.
+        p
+          | If you are facing troubles, contact the system administrator 
+          a#mailMist(href='mailto:sudo@wearemist.in?Subject=Trouble%20operating%20the%20website')
+            | sudo@wearemist.in
